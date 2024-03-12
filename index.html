@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strategy4Schools | HomePage</title>
+    <link rel="stylesheet" href="styles.css">
+     <!-- Login Modal styles -->
+    <style>
+        .modal { /* Modal styles */ }
+        .modal-content { /* Modal content styles */ }
+        .close { /* Close button styles */ }
+        /* Add other styles here */
+    </style>
+</head>
+<body>
+    <header>
+        <div class="auth-buttons">
+            <button id="login-btn">Login</button>
+            <a href="quote_details.html">
+    <button id="subscribe-btn">Subscribe</button>
+</a>
+        </div>
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="https://mail.google.com/mail/u/1?ui=2&ik=de49c6e04d&attid=0.1&permmsgid=msg-f:1793163480349249653&th=18e298af4e6b9075&view=fimg&fur=ip&sz=s0-l75-ft&attbid=ANGjdJ_RmYTSzhXGWsdCDdVc8rpAKoxg8kBW-Vmq4uwM2ooGFjCeF-RT3OOq-yLl4hZqtL6m0qr1xUXHwG9GQxsSCXMgrwtAjiQwaswyJOBOsEHMY6loU1IfMp712wY&disp=emb&realattid=ii_ltltrcmp0" alt="logo">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="javascript:void(0);" onclick="scrollToTop()">Home</a></li>
+                <li class="dropdown">
+                    <a href="#about">About</a>
+                    <div class="dropdown-content">
+                        <p>Our Team </p>
+                        <p>Our Mission </p>
+                        <p>FAQs </p>
+                    </div>
+                </li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#investors">Investors</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Login Modal -->
+     <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form id="loginForm">
+                <label for="username">Username:</label><br>
+                <input type="text" id="username" name="username"><br>
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password"><br><br>
+                <input type="submit" value="Login">
+                <p id="loginError" style="color:red;"></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("loginModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("login-btn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+    <main>
+        <!-- Your existing main content -->
+    </main>
+    <footer>
+        <p>&copy; Strategy4Schools</p>
+    </footer>
+</body>
+</html>

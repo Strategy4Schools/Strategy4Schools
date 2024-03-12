@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strategy4Schools | MinigamePage</title>
+    <link rel="stylesheet" href="minigames_styles.css">
+</head>
+<body>
+    <header>
+        <div class="profile-container">
+    <img src="https://cdn.pixabay.com/photo/2023/01/25/21/10/lion-7744604_1280.png" alt="Profile" class="profile-pic" onclick="toggleDropdown()"/>
+    <div class="dropdown-menu" id="dropdownMenu">
+        <a href="edit_profile.html">Edit Profile</a>
+        <a href="#">Settings</a>
+        <a href="index.html">Log Out</a>
+    </div>
+</div>
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="https://mail.google.com/mail/u/1?ui=2&ik=de49c6e04d&attid=0.1&permmsgid=msg-f:1793163480349249653&th=18e298af4e6b9075&view=fimg&fur=ip&sz=s0-l75-ft&attbid=ANGjdJ_RmYTSzhXGWsdCDdVc8rpAKoxg8kBW-Vmq4uwM2ooGFjCeF-RT3OOq-yLl4hZqtL6m0qr1xUXHwG9GQxsSCXMgrwtAjiQwaswyJOBOsEHMY6loU1IfMp712wY&disp=emb&realattid=ii_ltltrcmp0" alt="logo">
+            </div>
+    </header>
+
+    <main>
+       <section id="featured-games">
+    <h2>Featured Games</h2>
+    <!-- Featured Games Section -->
+<div class="featuredgames-container">
+    <div class="featuredgame-thumbnail">
+        <a href="anagram_game.html">
+            <img src="game_image.jpg">
+            <p>Anagram Adventures</p>
+        </a>
+        <div class="info-icon">?</div>
+        <div class="info-text">Information about Anagram Adventures...</div>
+    </div>
+    <div class="featuredgame-thumbnail">
+        <a href="WordQuest.html">
+            <img src="game_image_wordquest.jpg">
+            <p>Word Quest</p>
+        </a>
+        <div class="info-icon">?</div>
+        <div class="info-text">Information about Word Quest...</div>
+    </div>
+    <div class="featuredgame-thumbnail">
+        <a href="gamelink.html">
+            <img src="game3.jpg">
+            <p>Game Title 3</p>
+        </a>
+        <div class="info-icon">?</div>
+        <div class="info-text">Information about Game Title 3...</div>
+    </div>
+    <!-- More games can be added here following the same pattern -->
+</div>
+</section>
+
+
+        <section id="games">
+            <div class="games-header">
+            <h2>Games</h2>
+        </div>
+             <div class="games-container">
+             <div class="game-thumbnail">
+  <img src="game_image.jpg" alt="Game 1">
+  <p>Game 1</p>
+  <button type="button">Enter</button>
+</div>
+        <div class="game-thumbnail"><img src="" alt="Game 2"><p>Game 2</p>
+            <button type="button">Enter</button>
+</div>
+        <div class="game-thumbnail"><img src="game3.jpg" alt="Game 3"><p>Game 3</p>
+            <button type="button">Enter</button>
+</div>
+        <div class="game-thumbnail"><img src="game4.jpg" alt="Game 4"><p>Game 4</p>
+            <button type="button">Enter</button>
+</div>
+        <div class="game-thumbnail"><img src="game5.jpg" alt="Game 5"><p>Game 5</p>
+             <button type="button">Enter</button>
+</div>
+    </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Strategy4Schools</p>
+        <!-- Social media links -->
+    </footer>
+    <script>
+    function toggleDropdown() {
+        var dropdown = document.getElementById("dropdownMenu");
+        if (dropdown.style.display === "block") {
+            dropdown.style.display = "none";
+        } else {
+            dropdown.style.display = "block";
+        }
+    }
+
+    function toggleInfo(infoId) {
+  var info = document.getElementById(infoId);
+  if (info.style.display === "block") {
+    info.style.display = "none";
+  } else {
+    info.style.display = "block";
+  }
+}
+
+</script>
+
+</body>
+</html>

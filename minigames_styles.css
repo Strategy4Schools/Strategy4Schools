@@ -1,0 +1,221 @@
+body {
+    font-family: 'Bubblegum Sans', cursive;
+    margin: 0;
+    padding: 0;
+    background-color: #E8F9FD;
+    color: #333;
+    background-image: url('path-to-a-child-friendly-background-image');
+}
+
+header {
+    background-color: #1c1c84;
+    color: #fff;
+    padding-bottom: 40px;
+    padding-top: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container img {
+    height: 150px;
+    width: 200px;
+}
+
+.logo-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0px;
+}
+
+main {
+    padding: 70px;
+    margin-bottom: 1000px;
+
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+
+/* Example of a stylized game thumbnail */
+.featuredgame-thumbnail {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.featuredgame-thumbnail:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive design elements */
+@media screen and (max-width: 768px) {
+    /* Adjust styles for mobile view */
+}
+
+#featured-games h2 {
+    text-align: center;
+}
+
+#games {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.featuredgames-container {
+    display: flex;
+    justify-content: space-around; /* Equal spacing */
+    flex-wrap: wrap;
+}
+
+.featuredgame-thumbnail {
+    flex: 0 0 30%; /* Adjust the percentage as needed */
+    margin-bottom: 20px; /* Space between rows */
+    text-align: center;
+    position: relative;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.featuredgame-thumbnail:hover {
+    transform: scale(1.05);
+}
+
+
+.featuredgame-thumbnail img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.games-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.game-thumbnail {
+    width: 300px;
+    height: 200px;
+}
+
+.game-thumbnail img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.game-thumbnail {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.game-thumbnail:hover {
+    transform: scale(1.05);
+}
+
+.profile-container {
+    position: relative;
+    float: right;
+    padding: 10px;
+    margin-left: 50px;
+    margin-top: 20px;
+
+}
+
+.profile-pic:hover {
+    transform: scale(1.05); /* Slightly larger on hover */
+    border-color: #4CAF50; /* Change border color */
+}
+
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 70%;
+    border: 3px solid #E8F9FD;
+    cursor: pointer;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #E8F9FD;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+    border: none;
+    border-radius: 6px;
+}
+
+.dropdown-menu a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f1f1f1;
+}
+
+.info-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    z-index: 10;
+    border: 2px solid #333; /* Circular border */
+    border-radius: 50%; /* Make it round */
+    width: 25px; /* Adjust size as needed */
+    height: 25px; /* Adjust size as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif; /* Change font here */
+    font-size: 16px; /* Adjust font size as needed */
+    background-color: #fff; /* Background color */
+    color: #333; /* Font color */
+}
+
+.info-text {
+    display: none;
+    position: absolute;
+    right: 10px; /* Adjust as needed */
+    top: 45px; /* Adjust as needed */
+    border: 1px solid black;
+    background-color: white;
+    text-align: left;
+}
+
+.info-icon:hover + .info-text {
+    display: block;
+    /* Position and style as needed */
+}
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+    .featuredgame-thumbnail {
+        flex-basis: 48%; /* Adjust for fewer items per row on smaller screens */
+        width: calc(50% - 20px); /* Adjust accordingly */
+    }
+}
+
+

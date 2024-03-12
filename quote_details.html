@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational Product Quote</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="quote_styles.css">
+</head>
+<body>
+    <header>
+        <!-- Optional: Add a header for your site -->
+    </header>
+     <main class="container">
+        <section id="step1" class="step">
+            <h2>Choose Your School Location:</h2>
+            <select id="country" name="country" class="select-box">
+                <option value="uk">United Kingdom</option>
+            </select>
+            <button onclick="transitionTo('step2')" class="submit-btn">Submit</button>
+            <button onclick="location.href='index.html'" class="back-btn">Back to Home</button>
+        </section>
+
+        <section id="step2" class="step hidden">
+    <h2>Where in the UK is your school located?</h2>
+    <div class="options">
+        <button class="region-btn" onclick="selectRegion('England')">England</button>
+        <button class="region-btn" onclick="selectRegion('Wales')">Wales</button>
+        <button class="region-btn" onclick="selectRegion('Scotland')">Scotland</button>
+        <button class="region-btn" onclick="selectRegion('Northern Ireland')">Northern Ireland</button>
+    </div>
+    <button onclick="transitionTo('step1')" class="back-btn">Back</button> <!-- Back to previous step button -->
+</section>
+
+    </main>
+    <script src="quote_script.js"></script>
+</body>
+</html>
