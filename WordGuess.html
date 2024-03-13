@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
+
+    <title>Word Guess Game</title>
+    <link rel="stylesheet" type="text/css" href="WordGuessStyle.css">
+</head>
+<body>
+    <div id="wordleGrid"></div>
+
+    <!-- Virtual Keyboard -->
+    <div id="virtualKeyboard">
+        <!-- Row 1 -->
+        <div class="keyboard-row">
+            <button class="keyboard-key">Q</button>
+            <button class="keyboard-key">W</button>
+            <button class="keyboard-key">E</button>
+            <button class="keyboard-key">R</button>
+            <button class="keyboard-key">T</button>
+            <button class="keyboard-key">Y</button>
+            <button class="keyboard-key">U</button>
+            <button class="keyboard-key">I</button>
+            <button class="keyboard-key">O</button>
+            <button class="keyboard-key">P</button>
+        </div>
+        <!-- Row 2 -->
+        <div class="keyboard-row">
+            <button class="keyboard-key">A</button>
+            <button class="keyboard-key">S</button>
+            <button class="keyboard-key">D</button>
+            <button class="keyboard-key">F</button>
+            <button class="keyboard-key">G</button>
+            <button class="keyboard-key">H</button>
+            <button class="keyboard-key">J</button>
+            <button class="keyboard-key">K</button>
+            <button class="keyboard-key">L</button>
+        </div>
+        <!-- Row 3 -->
+        <div class="keyboard-row">
+            <button class="keyboard-key">Z</button>
+            <button class="keyboard-key">X</button>
+            <button class="keyboard-key">C</button>
+            <button class="keyboard-key">V</button>
+            <button class="keyboard-key">B</button>
+            <button class="keyboard-key">N</button>
+            <button class="keyboard-key">M</button>
+            <button class="keyboard-key" id="keyBackspace">⌫</button>
+        </div>
+        <button class="keyboard-key" id="keyEnter">ENTER</button>
+    </div>
+
+    <!-- Custom Popup Box -->
+    <div id="popupBox" class="popup-box" style="display:none;">
+        <div class="popup-content">
+            <p id="popupMessage"></p>
+            <button onclick="closePopup()">Play Again</button>
+        </div>
+    </div>
+
+    <script src="WordGuessScript.js"></script>
+</body>
+</html>
