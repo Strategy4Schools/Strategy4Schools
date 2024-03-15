@@ -35,6 +35,7 @@ function loadWords(url) {
 
 function startGame() {
     setupGame(wordLength); // wordLength is already defined as 5
+    loadWords(`https://raw.githubusercontent.com/Strategy4Schools/Strategy4Schools/main/${wordLength}_Letter_Words_CSW21_With_Definitions.json`);
 }
 
 // Initialize the game grid
