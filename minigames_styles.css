@@ -1,4 +1,5 @@
 body {
+    padding-top: 140px;
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
@@ -16,16 +17,23 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed; /* Lock the header in place at the top of the screen */
+    top: 0; /* Align the top edge of the header with the top of the viewport */
+    left: 0; /* Align the left edge of the header with the left of the viewport */
+    width: 100%; /* Ensure the header spans the full width of the viewport */
+    z-index: 10; /* Ensure the header layer is above other content */
+    border-bottom: 1px solid #4f4e4f;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .logo-container img {
     height: 120px;
-    width: 150px;
+    width: 120px;
 }
 
 .logo-container {
     position: absolute;
-    left: 0;
+    left: 70px;
     transform: translateX(0%);
     top: -10px;
 }
@@ -33,6 +41,7 @@ header {
 main {
     padding: 70px;
     margin-bottom: 1000px;
+    margin-top: 200px;
 
 }
 
@@ -126,13 +135,14 @@ footer {
 .game-thumbnail:hover {
     transform: scale(1.05);
 }
-
 .profile-container {
-    margin-left: 1720px;
-    position: relative;
-
-
+    position: absolute;
+    right: 65px; /* Adjust this value as needed to position it from the right edge of the viewport */
+    top: 20px; /* You can also adjust the vertical position if needed */
 }
+
+
+
 
 .profile-pic:hover {
     transform: scale(1.05); /* Slightly larger on hover */
@@ -162,7 +172,7 @@ footer {
     transform: translateX(50%);
     border: none;
     border-radius: 6px;
-    margin-top: 30px;
+    margin-top: 33px;
 }
 
 .dropdown-menu .arrow {
@@ -183,6 +193,7 @@ footer {
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    font-weight: bold;
 }
 
 .dropdown-menu a:hover {
@@ -209,8 +220,8 @@ footer {
 }
 
 .info-icon:hover {
-    border-color: #45d14e;
-    color: #45d14e;
+    border-color: #43af51;
+    color: #43af51;
 }
 
 .info-text {
@@ -304,3 +315,110 @@ footer {
 #gameSearch:focus {
     outline: 3px solid #43af51;
 }
+
+.btn-navigation-nav-menu-md {
+    position: relative;
+    background-color: #eeeeee; /* Light grey background */
+    border: none;
+    border-radius: 20%; /* Circular shape */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    display: flex; /* To center the icon horizontally and vertically */
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px; /* Added margin to move the button to the right */
+    padding: 10px; /* Padding to keep the button size consistent */
+}
+
+.btn-navigation-nav-menu-md:hover {
+    background-color: #43af51;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.icon-nav-menu::before {
+    content: '\2630'; /* Unicode for the hamburger icon */
+    font-size: 30px; /* Increased icon size for a larger appearance */
+    color: #4f4e4f; 
+}
+
+.nav-menu-dropdown {
+    display: none; /* Hidden initially */
+    position: fixed; /* Positions the dropdown absolutely within the relative parent */
+    left: 0; /* Aligns to the left of the button */
+    top: 99px; /* Positions the dropdown right below the button */
+    background-color: #eeeeee; /* Change background color as needed */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow for depth */
+    width: 250px; /* Adjust width as needed */
+    z-index: 1000;
+    height: 100%;
+}
+
+/* Style for the links within the dropdown */
+.nav-menu-dropdown a {
+    color: black; /* Text color */
+    padding: 10px 15px; /* Padding for each link */
+    text-decoration: none; /* Removes underline from links */
+    display: block; /* Makes each link take up its own line */
+    border-bottom: 3px solid #dddddd; /* Optional: adds a separator between links */
+}
+
+.nav-menu-dropdown a:last-child {
+    border-bottom: none; /* Removes border from the last link */
+}
+
+.nav-menu-dropdown a:hover {
+    background-color: #eeeeee; /* Change background color on hover */
+}
+
+
+.dropdown-profile-section {
+    padding: 10px;
+    border-bottom: 3px solid #4f4e4f;
+    border-top: 1px solid #4f4e4f;
+    text-align: center;
+    background-color: #dddddd; /* Light grey background for the profile section */
+}
+
+.dropdown-avatar {
+    width: 50px; /* Adjust as necessary */
+    height: 50px; /* Adjust as necessary */
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.dropdown-username {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.dropdown-link {
+    padding: 15px;
+    display: block;
+    color: #333;
+    text-decoration: none;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.dropdown-icon {
+    margin-right: 10px;
+}
+
+.dropdown-premium-button {
+    padding: 15px;
+    text-align: center;
+    background-color: #000;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.dropdown-premium-button:hover {
+    background-color: #444;
+}
+
+/* Add your icon font styles or classes here */
+.icon-home::before { content: "🏠"; } /* Replace with actual icons */
+.icon-dictionary::before { content: "📚"; } /* Replace with actual icons */
+.icon-collection::before { content: "🔖" }
+.icon-achievements::before { content: "🏆" }
+/* ... more icons ... */

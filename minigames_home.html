@@ -10,8 +10,26 @@
     <!-- Header Section -->
     <header>
         <div class="header-container">
-            <div class="logo-container">
-                <img src="https://static.thenounproject.com/png/217340-200.png" alt="logo">
+<!-- New Menu Button -->
+<button type="button" class="menu-button btn-navigation-nav-menu-md" onclick="toggleNavMenu()" title="nav menu">
+    <span class="icon-nav-menu"></span>
+</button>
+
+<!-- Dropdown Menu -->
+<div id="navMenuDropdown" class="nav-menu-dropdown">
+    <div class="dropdown-profile-section">
+        <img class="dropdown-avatar" src="avatar-url.jpg" alt="Taemin">
+        <div class="dropdown-username">Meopham School</div>
+    </div>
+    <a href="#" class="dropdown-link"><span class="dropdown-icon icon-home"></span>Home</a>
+    <a href="#" class="dropdown-link"><span class="dropdown-icon icon-dictionary"></span>Dictionary</a>
+    <a href="#" class="dropdown-link"><span class="dropdown-icon icon-collection"></span>My Collection</a>
+    <a href="#" class="dropdown-link"><span class="dropdown-icon icon-achievements"></span>My Achievements</a>
+
+    <!-- more links -->
+</div>
+   <div class="logo-container">
+                <img src="https://mail.google.com/mail/u/1?ui=2&ik=de49c6e04d&attid=0.1&permmsgid=msg-f:1793163480349249653&th=18e298af4e6b9075&view=fimg&fur=ip&sz=s0-l75-ft&attbid=ANGjdJ9V4RBgeuY404vJk7jq8serXqpBCS-B1k_vnQ8tCMqj0pE9HvYAM7uJgiBs_-zJ8E8g4I7y4rOYFsL1idabhsCIKVPW2ik84B6EVGUdTj_UyUSdGuFZWL1WD1A&disp=emb&realattid=ii_ltltrcmp0" alt="logo">
             </div>
            <div class="search-container">
     <div class="search-input-container">
@@ -118,5 +136,15 @@
         }
     </script>
     <script src="minigames.js"></script>
+    <script>
+    function toggleNavMenu() {
+        var navMenu = document.getElementById("navMenuDropdown");
+        if (navMenu.style.display === "block") {
+            navMenu.style.display = "none";
+        } else {
+            navMenu.style.display = "block";
+        }
+    }
+</script>
 </body>
 </html>
