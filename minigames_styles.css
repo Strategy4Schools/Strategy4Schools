@@ -1,16 +1,16 @@
 body {
-    font-family: 'Bubblegum Sans', cursive;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #E8F9FD;
-    color: #333;
+    background-color: white;
+    color: black;
     background-image: url('path-to-a-child-friendly-background-image');
 }
 
 header {
-    background-color: #1c1c84;
+    background-color: #eeeeee;
     color: #fff;
-    padding-bottom: 40px;
+    padding-bottom: 20px;
     padding-top: 20px;
     text-align: center;
     display: flex;
@@ -19,15 +19,15 @@ header {
 }
 
 .logo-container img {
-    height: 150px;
-    width: 200px;
+    height: 120px;
+    width: 150px;
 }
 
 .logo-container {
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 0px;
+    left: 0;
+    transform: translateX(0%);
+    top: -10px;
 }
 
 main {
@@ -128,24 +128,22 @@ footer {
 }
 
 .profile-container {
+    margin-left: 1720px;
     position: relative;
-    float: right;
-    padding: 10px;
-    margin-left: 50px;
-    margin-top: 20px;
+
 
 }
 
 .profile-pic:hover {
     transform: scale(1.05); /* Slightly larger on hover */
-    border-color: #4CAF50; /* Change border color */
+    border-color: #43af51; /* Change border color */
 }
 
 .profile-pic {
     width: 50px;
     height: 50px;
     border-radius: 70%;
-    border: 3px solid #E8F9FD;
+    border: 3px solid #4f4e4f;
     cursor: pointer;
     object-fit: cover;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -155,15 +153,30 @@ footer {
 .dropdown-menu {
     display: none;
     position: absolute;
-    background-color: #E8F9FD;
+    background-color: #dddddd;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-    left: 50%;
-    transform: translateX(-50%);
+    right: 100%;
+    top: 100%;
+    transform: translateX(50%);
     border: none;
     border-radius: 6px;
+    margin-top: 30px;
 }
+
+.dropdown-menu .arrow {
+    position: absolute;
+    top: -10px; /* Position it above the dropdown */
+    left: 66.5%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #dddddd; /* Same color as your dropdown background */
+}
+
 
 .dropdown-menu a {
     color: black;
@@ -173,19 +186,19 @@ footer {
 }
 
 .dropdown-menu a:hover {
-    background-color: #f1f1f1;
+    background-color: #43af51;
 }
 
 .info-icon {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 5px;
+    right: 5px;
     cursor: pointer;
     z-index: 10;
-    border: 2px solid #333; /* Circular border */
+    border: 2px solid #4f4e4f; /* Circular border */
     border-radius: 50%; /* Make it round */
-    width: 25px; /* Adjust size as needed */
-    height: 25px; /* Adjust size as needed */
+    width: 15px; /* Adjust size as needed */
+    height: 15px; /* Adjust size as needed */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -193,6 +206,11 @@ footer {
     font-size: 16px; /* Adjust font size as needed */
     background-color: #fff; /* Background color */
     color: #333; /* Font color */
+}
+
+.info-icon:hover {
+    border-color: #45d14e;
+    color: #45d14e;
 }
 
 .info-text {
@@ -218,4 +236,71 @@ footer {
     }
 }
 
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* other styles */
+}
 
+.search-container {
+    position: absolute;
+   left: calc(70% - 40px); /* Move slightly to the left to make room for the button */
+    transform: translateX(-50%);
+}
+
+.search-input-container {
+    display: flex; /* Use flexbox to align the input and button */
+    align-items: center; /* Align items vertically */
+    width: 640px; /* Set a width that includes both the input and button */
+}
+
+#gameSearch {
+    padding: 15px 5px;
+    border: 0px solid #eeeeee;
+    border-radius: 4px 4px 4px 4px; /* Rounded corners on the left side only */
+    width: 100%; /* Take the full width of the parent container */
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+#searchButton {
+    cursor: pointer;
+    background-color: white; /* Matching the header color */
+    border: none;
+    color: white;
+    font-size: 1.2em;
+    padding: 12.5px;
+    border: 3px solid #eeeeee;
+    border-radius: 0 50px 50px 0; /* Rounded corners on the right side */
+}
+
+#searchButton:hover {
+    background-color: #43af51; /* New background color on hover */
+}
+
+/* Adjustments for the responsive design */
+@media (max-width: 600px) {
+    .search-container {
+        left: 50%;
+        width: 90%; /* Adjust the width on smaller screens */
+    }
+
+    .search-input-container {
+        width: 100%; /* Take the full width of the parent container */
+    }
+
+    #gameSearch {
+        /* Adjust the width to leave space for the button */
+        width: calc(100% - 60px); /* Adjust the width of the search bar */
+    }
+
+
+    #searchButton {
+        padding: 10px; /* Slightly less padding on smaller screens */
+    }
+}
+
+#gameSearch:focus {
+    outline: 3px solid #43af51;
+}
