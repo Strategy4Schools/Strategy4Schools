@@ -344,7 +344,7 @@ function getDefaultWordList() {
 
 // Start the game
 async function startGame() {
-    await loadWords(`http://localhost:8000/${wordLength}_Letter_Words_CSW21_With_Definitions.json`);
+    await loadWords(`https://raw.githubusercontent.com/Strategy4Schools/Strategy4Schools/main/${selectedWordLength}_Letter_Words_CSW21_With_Definitions.json`);
     correctWord = getNewWord();
     initializeGrid();
     document.addEventListener('keydown', handleKeydown);
