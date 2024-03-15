@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+    <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
 
-    <title>Word Guess Game</title>
+    <title>WordGuess</title>
     <link rel="stylesheet" type="text/css" href="WordGuessStyle.css">
 </head>
 <body>
+    <div id="gameTitle">
+    <h1>WordGuess</h1>
+    </div>
+
+    <!-- Word Length Selection Dropdown -->
+    <div id="wordLengthSelector">
+        <select id="wordLengthDropdown" onchange="setupGame(parseInt(this.value))">
+            <option value="5">5 Letters</option>
+            <option value="6">6 Letters</option>
+            <!-- Additional options if needed -->
+        </select>
+    </div>
+
     <div id="wordleGrid"></div>
 
     <!-- Virtual Keyboard -->
@@ -51,13 +64,28 @@
         <button class="keyboard-key" id="keyEnter">ENTER</button>
     </div>
 
-    <!-- Custom Popup Box -->
+    <!-- Back to minigames button -->
+    <div id="backButtonContainer">
+    <button id="backToMinigames" onclick="window.location.href='#'">← Back to Minigames</button>
+</div>
+
+    <!-- Game End Popup Box -->
     <div id="popupBox" class="popup-box" style="display:none;">
         <div class="popup-content">
+            <div class="close-btn">&times;</div> <!-- Close button -->
             <p id="popupMessage"></p>
             <button onclick="closePopup()">Play Again</button>
+            <button onclick="showDefinitionPopup()">Show Definition</button>
         </div>
     </div>
+
+    <!-- Definition Popup Box -->
+<div id="definitionPopupBox" class="popup-box" style="display:none;">
+    <div class="popup-content">
+        <p id="definitionPopupMessage"></p>
+        <button onclick="closeDefinitionPopup()">Close</button>
+    </div>
+</div>
 
     <script src="WordGuessScript.js"></script>
 </body>

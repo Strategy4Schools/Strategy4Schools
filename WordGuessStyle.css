@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap');
-
 body {
     font-family: 'Source Code Pro', monospace;
     display: flex;
@@ -7,136 +5,234 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #f4f4f4;
+    background-color: #FFFFFF;
     margin: 0;
     color: #333;
+    padding-top: 10px; /* Added to prevent overlap with the back button */
 }
 
-#wordleGrid {
-    display: grid;
-    gap: 5px;
-    margin-bottom: 20px;
+#gameTitle {
+    font-family: 'Source Code Pro', monospace;
+    text-align: center;
+    margin-top: -60px; /* Reduced top margin */
+    margin-bottom: 20px; /* You can adjust this as needed */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Drop shadow added */
 }
 
-#wordleGrid div {
-    width: 60px;
-    height: 60px;
-    border: 2px solid #ddd;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2em;
-    background-color: white;
-    font-weight: 700;
-    transition: background-color 0.3s, transform 0.3s, opacity 0.3s;
-    transform: scale(0.9);
-    opacity: 0.7;
+
+h1 {
+    font-size: 2.5em;
+    margin: 0; /* Remove default margin of h1 */
+    font-weight: 550;
+    color: #000000;
 }
 
-@keyframes bounce {
-    0% {
-        transform: scale(1);
+#wordLengthSelector {
+    margin-bottom: 20px; /* Adjust as needed */
+    text-align: center;
+}
+
+#wordLengthDropdown {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 1em;
+    padding: 8px 15px;
+    border-radius: 4px;
+    border: 2px solid #000000;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+#wordLengthDropdown:hover {
+    background-color: #FFFFFF; /* Lighter shade on hover */
+    border-color: #333333; /* Darker border on hover */
+}
+
+#wordLengthDropdown:focus {
+    outline: none; /* Removes the default focus outline */
+    border-color: #4CAF50; /* Highlight color when focused */
+}
+
+    #wordleGrid {
+        display: grid;
+        gap: 0.1px;
+        margin-bottom: 50px;
     }
-    50% {
-        transform: scale(1.1); /* Slightly larger to create a bounce */
-    }
-    100% {
-        transform: scale(1);
-    }
-}
 
-.bounce {
-    animation: bounce 0.3s ease;
-}
-
-/* Gentle fade-in and scale animation */
-@keyframes gentleReveal {
-    from {
+    #wordleGrid div {
+        width: 66.66px;
+        height: 66.66px;
+        border: 2px solid #000000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.77em;
+        background-color: #FFFFFF;
+        font-weight: 700;
+        transition: background-color 0.2s, transform 0.2s, opacity 0.2s;
         transform: scale(0.9);
-        opacity: 0.7;
+        opacity: 2.5;
     }
-    to {
-        transform: scale(1);
-        opacity: 1;
+
+    @keyframes bounce {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.1);
+        }
+        100% {
+            transform: scale(1);
+        }
     }
+
+    .bounce {
+        animation: bounce 0.1s ease;
+    }
+
+    @keyframes gentleReveal {
+        from {
+            transform: scale(0.9);
+            opacity: 0.7;
+        }
+        to {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+
+    .guessed {
+        animation: gentleReveal 0.6s ease-out forwards;
+    }
+
+    #virtualKeyboard {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .keyboard-row {
+        display: flex;
+        justify-content: center;
+        margin: 5px 0;
+    }
+
+    .keyboard-key {
+        font-family: 'Source Code Pro', monospace;
+        background-color: #e0e0e0;
+        border: 1px solid #bdbdbd;
+        padding: 10px 15px;
+        margin: 2px;
+        border-radius: 4px;
+        font-size: 1em;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        font-weight: 700;
+    }
+
+    .keyboard-key:hover {
+        background-color: #d5d5d5;
+    }
+
+    /* Updated styles for keys based on their state */
+    .keyboard-key.correct {
+        background-color: green !important;
+    }
+
+    .keyboard-key.present {
+        background-color: yellow !important;
+    }
+
+    .keyboard-key.absent {
+        background-color: gray !important;
+    }
+
+    .popup-box {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        z-index: 1000;
+        width: 80%;
+        max-width: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
 }
 
-.guessed {
-    animation: gentleReveal 0.6s ease-out forwards;
+/* Optional: Style for hover effect */
+.close-btn:hover {
+    color: #ff0000;
 }
 
-#virtualKeyboard {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+#backButtonContainer {
+    position: absolute;
+    top: 10px;
+    left: 10px;
 }
 
-.keyboard-row {
-    display: flex;
-    justify-content: center;
-    margin: 5px 0;
-}
-
-.keyboard-key {
+#backToMinigames {
     font-family: 'Source Code Pro', monospace;
     background-color: #e0e0e0;
-    border: 1px solid #bdbdbd;
-    padding: 10px 15px;
-    margin: 2px;
-    border-radius: 4px;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    font-weight: 700;
-}
-
-.keyboard-key:hover {
-    background-color: #d5d5d5;
-}
-
-.popup-box {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    z-index: 1000;
-    width: 80%;
-    max-width: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.popup-content p {
-    font-family: 'Source Code Pro', monospace;
-    font-size: 1.2em;
-    margin-bottom: 20px;
-    color: #333;
-    font-weight: 700;
-}
-
-.popup-content button {
-    font-family: 'Source Code Pro', monospace;
-    background-color: #4CAF50;
-    color: white;
+    color: black;
     border: none;
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 4px 2px;
     cursor: pointer;
     border-radius: 5px;
     font-weight: 700;
 }
 
-.popup-content button:hover {
+#backToMinigames:hover {
     background-color: #45a049;
 }
+
+    .popup-content p {
+        font-family: 'Source Code Pro', monospace;
+        font-size: 1em;
+        margin-bottom: 20px;
+        color: #333;
+        font-weight: 650;
+    }
+
+    .popup-content button {
+        font-family: 'Source Code Pro', monospace;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 5px;
+        font-weight: 700;
+    }
+
+    .popup-content button:hover {
+        background-color: #45a049;
+    }
+
+    .definition-link, .definition-link:visited, .definition-link:hover, .definition-link:active {
+    color: blue; /* or any color you prefer */
+}
+
