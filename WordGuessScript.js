@@ -34,11 +34,8 @@ function loadWords(url) {
 }
 
 function startGame() {
-    // No longer calling getNewWord or initializeGrid here.
+    setupGame(wordLength); // wordLength is already defined as 5
 }
-
-// Call loadWords with the initial word length
-loadWords(`https://raw.githubusercontent.com/Strategy4Schools/Strategy4Schools/main/${selectedWordLength}_Letter_Words_CSW21_With_Definitions.json`);
 
 // Initialize the game grid
 function initializeGrid() {
