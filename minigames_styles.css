@@ -137,7 +137,7 @@ footer {
 }
 .profile-container {
     position: absolute;
-    right: 30px; /* Adjust this value as needed to position it from the right edge of the viewport */
+    right: 27px; /* Adjust this value as needed to position it from the right edge of the viewport */
     top: 20px; /* You can also adjust the vertical position if needed */
 }
 
