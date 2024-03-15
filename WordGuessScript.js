@@ -15,7 +15,7 @@ let keyState = {};
 // Setup Game Function
 function setupGame(selectedWordLength) {
     wordLength = selectedWordLength;
-    loadWords(`${selectedWordLength}_Letter_Words_CSW21_With_Definitions.json`);
+    loadWords(`https://raw.githubusercontent.com/Strategy4Schools/Strategy4Schools/main/${selectedWordLength}_Letter_Words_CSW21_With_Definitions.json`);
 }
 
 // Load JSON Data
