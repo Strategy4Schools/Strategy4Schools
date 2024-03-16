@@ -54,6 +54,9 @@ footer {
     padding: 1em 0;
 }
 
+.game-thumbnail:hover, .featuredgame-thumbnail:hover {
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5); /* Creates an inner shadow */
+}
 
 /* Example of a stylized game thumbnail */
 .featuredgame-thumbnail {
