@@ -1,3 +1,4 @@
+
 body {
     padding-top: 140px;
     font-family: 'Roboto', sans-serif;
@@ -5,7 +6,7 @@ body {
     padding: 0;
     background-color: white;
     color: black;
-    background-image: url('path-to-a-child-friendly-background-image');
+    background-image: url('https://img.freepik.com/free-photo/white-simple-textured-design-background_53876-106174.jpg');
 }
 
 header {
@@ -28,9 +29,10 @@ header {
 
 .logo-container {
     position: absolute;
-    left: 70px;
-    transform: translateX(0%);
+    left: 50%; /* Position the left edge of the container at the center of the header */
     top: 2.5px;
+    transform: translateX(-50%); /* Move the container back by half of its own width */
+    /* ... other styles ... */
 }
 
 .logo-container img {
@@ -262,13 +264,13 @@ footer {
 .search-container {
     position: absolute;
    left: calc(70% - 40px); /* Move slightly to the left to make room for the button */
-    transform: translateX(-50%);
+    transform: translateX(-30%);
 }
 
 .search-input-container {
     display: flex; /* Use flexbox to align the input and button */
     align-items: center; /* Align items vertically */
-    width: 640px; /* Set a width that includes both the input and button */
+    width: 570px; /* Set a width that includes both the input and button */
 }
 
 #gameSearch {
