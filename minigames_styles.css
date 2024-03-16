@@ -27,8 +27,9 @@ header {
 }
 
 .logo-container img {
-    max-width: 500px; /* Set maximum width; the image won't stretch beyond this */
-    height: 250; /* Height adjusts automatically to maintain aspect ratio */
+    max-width: 500px; /* Maximum width, the image won't stretch beyond this */
+    max-height: 100px; /* Adjust this value based on your header's height */
+    height: auto; /* Height adjusts automatically to maintain aspect ratio */
     object-fit: contain; /* Ensures the image is scaled correctly within the set dimensions */
 }
 
