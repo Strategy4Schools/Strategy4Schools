@@ -26,18 +26,19 @@ header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+.logo-container {
+    flex: 0 0 auto; /* Allows the container to maintain its size */
+    position: absolute;
+    left: 70px;
+    transform: translateX(0%);
+    top: -10px;
+}
+
 .logo-container img {
     max-width: 500px; /* Maximum width, the image won't stretch beyond this */
     max-height: 100px; /* Adjust this value based on your header's height */
     height: auto; /* Height adjusts automatically to maintain aspect ratio */
     object-fit: contain; /* Ensures the image is scaled correctly within the set dimensions */
-}
-
-.logo-container {
-    position: absolute;
-    left: 70px;
-    transform: translateX(0%);
-    top: -10px;
 }
 
 main {
