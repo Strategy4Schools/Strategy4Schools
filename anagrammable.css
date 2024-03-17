@@ -1,0 +1,152 @@
+    body {
+        font-family: 'Source Code Pro', monospace;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; 
+        height: 100vh;
+        background-color: #FAF9F6;
+        margin: 0;
+        color: #333;
+    }
+
+    h1 {
+        font-size: 3em;
+        margin: 0;
+        font-weight: 600;
+        color: #222;
+        position: absolute;
+        top: 60px; /* Increased space above the title */
+        left: 50%;
+        transform: translateX(-50%);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Drop shadow added */
+    }
+
+#backButtonContainer {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+#backToMinigames {
+    font-family: 'Source Code Pro', monospace;
+    background-color: #e0e0e0;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+#backToMinigames:hover {
+    background-color: #45a049;
+}
+
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        max-width: 800px;
+        padding: 20px;
+        text-align: center;
+        margin-top: 120px; /* Adjusted to maintain overall balance */
+    }
+
+    .input-shuffle-container {
+        position: relative;
+        margin: 20px 0;
+        width: 100%;
+    }
+
+    #user-input {
+        padding: 12px;
+        width: calc(100% - 48px);
+        border: 2px solid black; /* Darker border color for a bolder effect */
+        border-radius: 5px;
+        font-size: 1.1em;
+        background-color: #fafafa;
+        text-align: center;
+    }
+
+    #user-input::placeholder {
+        text-align: center; /* Centers the placeholder text */
+    }
+
+    .shuffle-icon {
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: black;
+        font-size: 24px;
+    }
+
+    .shuffle-icon:hover {
+        color: #4CAF50;
+    }
+
+    .buttons-container {
+        display: flex;
+        justify-content: center;
+        gap: 5px; /* Reduced gap between buttons */
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    button {
+        padding: 12px 20px;
+        font-size: 1em;
+        background-color: #d9d9d9; /* Grayscale color for buttons */
+        color: #333; /* Dark text for contrast */
+        border: 2px solid black; /* Darker border for a bolder effect */
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    button:hover {
+        background-color: #c0c0c0; /* Slightly darker on hover */
+    }
+
+    #next-word-container {
+        margin-top: 20px;
+    }
+
+    #guessed-words, #anagrams-container {
+        width: 100%;
+        margin-top: 20px;
+        padding: 0 20px;
+    }
+
+    #guessed-words p, #anagrams-container p {
+        margin-bottom: 10px;
+    }
+
+    #result {
+        font-size: 1.5em;
+        margin-top: 20px;
+    }
+
+    #anagram {
+        margin-top: 20px;
+        font-size: 2.5em;
+        padding: 15px;
+        background-color: #e0e0e0;
+        border: 2px solid black; /* Darker border for a more pronounced effect */
+        border-radius: 0; /* Keeping edges sharp */
+    }
+
+    .letter-tile {
+        margin: 12px; /* Increased margin for more spacing */
+        padding: 10px 15px;
+        font-size: 1.5em;
+        background-color: #4CAF50;
+        color: white;
+        border-radius: 5px;
+    }   
