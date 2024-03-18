@@ -304,6 +304,7 @@ footer {
     width: 100%; /* Take the full width of the parent container */
     font-size: 15px;
     box-sizing: border-box;
+    font-family: 'Source Code Pro', monospace;
 }
 
 #searchButton {
