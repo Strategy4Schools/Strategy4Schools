@@ -299,22 +299,25 @@ footer {
 
 #gameSearch {
     padding: 15px 5px;
-    border: 0px solid #eeeeee;
+    border: 1px solid #4f4e4f;
     border-radius: 4px 4px 4px 4px; /* Rounded corners on the left side only */
     width: 100%; /* Take the full width of the parent container */
     font-size: 15px;
     box-sizing: border-box;
     font-family: 'Source Code Pro', monospace;
+    background-color: #ddd;
+    font-weight: bold;
+
 }
 
 #searchButton {
     cursor: pointer;
-    background-color: white; /* Matching the header color */
+    background-color: #ddd; /* Matching the header color */
     border: none;
     color: white;
     font-size: 1.2em;
     padding: 12.5px;
-    border: 3px solid #eeeeee;
+    border: 1px solid #4f4e4f;
     border-radius: 0 50px 50px 0; /* Rounded corners on the right side */
 }
 
