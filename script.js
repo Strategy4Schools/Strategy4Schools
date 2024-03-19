@@ -31,7 +31,7 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
     var username = document.getElementById('username').value;
     var password = document.getElementById('password').value;
 
-    if(username === 'tempusername' && password === 'tempusername') {
+    if(username === 'dariusjeong' && password === 'dariusjeong') {
         // Redirect to mini-games homepage upon successful login
         window.location.href = 'minigames_home.html';
     } else {
