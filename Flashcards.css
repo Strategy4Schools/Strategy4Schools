@@ -105,3 +105,28 @@ button:hover {
     justify-content: center;
     gap: 10px;
 }
+
+#backButtonContainer {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+#backToMinigames {
+    font-family: 'Source Code Pro', monospace;
+    background-color: #e0e0e0;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+#backToMinigames:hover {
+    background-color: #45a049;
+}
