@@ -354,6 +354,8 @@ function getDefaultWordList() {
     ];
 }
 
+
+
 startGame();
 
 document.querySelector('.close-btn').addEventListener('click', function() {
