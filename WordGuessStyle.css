@@ -231,6 +231,26 @@ h1 {
     .popup-content button:hover {
         background-color: #45a049;
     }
+#play-again-bottom {
+ font-family: 'Source Code Pro', monospace;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 5px;
+        font-weight: 700;
+}
+
+#play-again-bottom:hover {
+background-color: #45a049;
+    }
+
 
     .definition-link, .definition-link:visited, .definition-link:hover, .definition-link:active {
     color: blue; /* or any color you prefer */
