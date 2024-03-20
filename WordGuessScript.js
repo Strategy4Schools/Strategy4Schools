@@ -252,6 +252,10 @@ function showPopup(message) {
     popupMessage.innerHTML = message;
     popupBox.style.display = 'flex';
 
+    // Disable the play-again-bottom button
+    document.getElementById('play-again-bottom').style.pointerEvents = 'none';
+    document.getElementById('play-again-bottom').style.opacity = '0.5';
+
     // Add keydown listener for 'Enter' key to restart the game
     document.addEventListener('keydown', handlePopupKeydown);
 }
@@ -262,12 +266,14 @@ function handlePopupKeydown(event) {
     }
 }
 
-// Close the popup and reset the game
 function closePopup() {
     const popupBox = document.getElementById('popupBox');
     popupBox.style.display = 'none';
     document.removeEventListener('keydown', handlePopupKeydown); // Remove the keydown listener
     resetGame();
+
+    // Hide the play-again-bottom button
+    document.getElementById('play-again-bottom').style.display = 'none';
 }
 
 // Show Definition Popup
@@ -290,7 +296,17 @@ function closeDefinitionPopup() {
 // End the game
 function endGame() {
     document.removeEventListener('keydown', handleKeydown);
+    const playAgainButton = document.getElementById('play-again-bottom');
+    playAgainButton.style.display = 'block'; // Show the play again button
+    playAgainButton.style.pointerEvents = 'none'; // Keep it disabled
+    playAgainButton.style.opacity = '0.5'; // Visually indicate it's disabled
 }
+
+document.getElementById('play-again-bottom').addEventListener('click', function() {
+    this.style.display = 'none'; // Hide the button
+    resetGame();
+});
+
 
 // Reset the game to start again
 function resetGame() {
@@ -342,5 +358,9 @@ startGame();
 
 document.querySelector('.close-btn').addEventListener('click', function() {
     document.getElementById('popupBox').style.display = 'none';
+    
+    // Re-enable the play-again-bottom button
+    const playAgainButton = document.getElementById('play-again-bottom');
+    playAgainButton.style.pointerEvents = 'auto';
+    playAgainButton.style.opacity = '1';
 });
-
