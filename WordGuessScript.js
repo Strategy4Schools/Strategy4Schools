@@ -25,7 +25,7 @@ function startGameWithDifficulty(difficulty) {
     let wordListURL;
     switch(difficulty) {
         case 'easy':
-            wordListURL = 'http://localhost:8000/5_Letter_Words_CSW21_With_Definitions.json';
+            wordListURL = 'https://raw.githubusercontent.com/Strategy4Schools/Strategy4Schools/main/5_Letter_Words_CSW21_With_Definitions.json';
             break;
         case 'medium':
             wordListURL = 'path/to/medium_word_list.json';
