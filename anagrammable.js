@@ -35,6 +35,7 @@ function determineWordListURL(difficulty) {
 }
 
 function loadWords(url) {
+    console.log(`Attempting to load words from ${url}`); // Log the URL being fetched
     return fetch(url)
         .then(response => {
             if (!response.ok) {
@@ -43,14 +44,13 @@ function loadWords(url) {
             return response.json();
         })
         .then(data => {
-            // Make sure the data structure matches your expectations.
-            // If "data" directly contains the words array, assign it to "words".
-            // Adjust this line if your data structure is different.
-            words = data.anagrams || []; // Adjusted for your data structure
-            setNewWord();
-            // Hide the difficulty selection and show the main game content.
-            document.getElementById('difficultySelectionContainer').style.display = 'none';
-            document.querySelector('.main-content').style.display = 'flex';
+            console.log('Words loaded:', data); // Log the data to verify structure
+            if (data.anagrams && Array.isArray(data.anagrams)) { // Check if 'anagrams' is present and is an array
+                words = data.anagrams;
+                setNewWord();
+            } else {
+                console.error('Unexpected data structure:', data);
+            }
         })
         .catch(error => {
             console.error('Failed to load words:', error);
