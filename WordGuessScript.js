@@ -1,41 +1,52 @@
 // Elements from DOM
 const wordleGrid = document.getElementById('wordleGrid');
 const virtualKeyboard = document.getElementById('virtualKeyboard');
+const difficultySelection = document.getElementById('difficultySelection'); // Added for difficulty selection
 
 // Game variables
 let wordList = []
 let currentGuess = [];
 let guesses = [];
-let wordLength = 5; // Default word length
+const wordLength = 5; // Fixed word length
 let correctWord; // Declare without assigning
 
 // Key state tracking
 let keyState = {};
 
-// Setup Game Function
-function setupGame(selectedWordLength) {
-    wordLength = selectedWordLength;
-    loadWords(`https://raw.githubusercontent.com/Strategy4Schools/Strategy4Schools/main/${selectedWordLength}_Letter_Words_CSW21_With_Definitions.json`);
-}
+// Modify or remove the initial startGame() call
+// startGame(); // This is now initiated by selecting difficulty
 
-// Load JSON Data
-function loadWords(url) {
-    fetch(url)
-        .then(response => response.json())
-        .then(data => {
-            wordList = data;
-            correctWord = getNewWord();
-            initializeGrid(); // Initialize the grid
-            resetGame(); // Reset game state
-        })
-        .catch(error => {
-            console.error('Error loading words:', error);
-        });
-}
+// Difficulty selection event listeners
+document.getElementById('easy').addEventListener('click', function() { startGameWithDifficulty('easy'); });
+document.getElementById('medium').addEventListener('click', function() { startGameWithDifficulty('medium'); });
+document.getElementById('hard').addEventListener('click', function() { startGameWithDifficulty('hard'); });
 
-function startGame() {
-    setupGame(wordLength); // wordLength is already defined as 5
-    loadWords(`https://raw.githubusercontent.com/Strategy4Schools/Strategy4Schools/main/${wordLength}_Letter_Words_CSW21_With_Definitions.json`);
+function startGameWithDifficulty(difficulty) {
+    let wordListURL;
+    switch(difficulty) {
+        case 'easy':
+            wordListURL = 'http://localhost:8000/5_Letter_Words_CSW21_With_Definitions.json';
+            break;
+        case 'medium':
+            wordListURL = 'path/to/medium_word_list.json';
+            break;
+        case 'hard':
+            wordListURL = 'path/to/hard_word_list.json';
+            break;
+        default:
+            wordListURL = 'path/to/default_word_list.json'; // Fallback to a default word list if needed
+    }
+    loadWords(wordListURL);
+
+    document.getElementById('infoButtonContainer').style.display = 'none'; // Hide the info button container
+
+    difficultySelection.style.display = 'none';
+
+
+    difficultySelection.style.display = 'none';
+
+    wordleGrid.style.display = 'grid'; // Or 'flex' depending on your layout
+    virtualKeyboard.style.display = 'flex'; // Adjust this according to your layout
 }
 
 // Initialize the game grid
@@ -49,6 +60,85 @@ function initializeGrid() {
     wordleGrid.style.gridTemplateColumns = `repeat(${wordLength}, 1fr)`;
 }
 
+// Virtual keyboard event listener
+virtualKeyboard.addEventListener('click', function(event) {
+    if (event.target.classList.contains('keyboard-key')) {
+        const key = event.target.textContent;
+        console.log(`Virtual keyboard key pressed: ${key}`); // Debug log
+        if (key === '⌫') {
+            console.log('Deleting last letter');
+            deleteLastLetter();
+        } else if (key === 'ENTER') {
+            console.log('Submitting guess');
+            submitGuess();
+        } else {
+            console.log(`Adding letter: ${key}`);
+            addLetter(key);
+        }
+    }
+});
+
+// Load JSON Data
+async function loadWords(url) {
+    try {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        wordList = data;
+        correctWord = getNewWord();
+        initializeGrid(); // Initialize the grid
+        resetGame(); // Reset game state
+    } catch (error) {
+        console.error('Error loading words:', error);
+        // Fallback to a default word list if necessary
+        wordList = getDefaultWordList();
+        correctWord = getNewWord();
+        initializeGrid();
+        resetGame();
+    }
+}
+
+// Add a letter to the current guess
+function addLetter(letter) {
+    if (currentGuess.length < wordLength) {
+        currentGuess.push(letter);
+        updateGrid();
+    }
+}
+
+// All the other functions (deleteLastLetter, updateGrid, getNewWord, submitGuess, etc.) remain unchanged
+
+// Default word list for fallback
+function getDefaultWordList() {
+    return [
+        { word: "apple", definition: "A fruit" },
+        // Add more default words here
+    ];
+}
+
+// Initialize the game grid
+function initializeGrid() {
+    wordleGrid.innerHTML = '';
+    let gridSize = wordLength * 6; // 6 attempts
+    for (let i = 0; i < gridSize; i++) {
+        let div = document.createElement('div');
+        wordleGrid.appendChild(div);
+    }
+    wordleGrid.style.gridTemplateColumns = `repeat(${wordLength}, 1fr)`;
+}
+
+function deleteLastLetter() {
+    if (currentGuess.length > 0) {
+        // Remove the last letter from the current guess
+        currentGuess.pop();
+        console.log(`Current guess after deletion: ${currentGuess.join('')}`); // Log the current guess for debugging
+        updateGrid(); // Call updateGrid to refresh the display
+    } else {
+        console.log("No letters to delete.");
+    }
+}
 
 // Function to handle keydown events
 function handleKeydown(event) {
@@ -61,34 +151,6 @@ function handleKeydown(event) {
     } else if (key.length === 1 && key >= 'A' && key <= 'Z' && currentGuess.length < wordLength) {
         addLetter(key);
     }
-}
-
-// Virtual keyboard event listener
-virtualKeyboard.addEventListener('click', function(event) {
-    if (event.target.classList.contains('keyboard-key')) {
-        const key = event.target.textContent;
-        if (key === '⌫') {
-            deleteLastLetter();
-        } else if (key === 'ENTER') {
-            submitGuess();
-        } else {
-            addLetter(key);
-        }
-    }
-});
-
-// Add a letter to the current guess
-function addLetter(letter) {
-    if (currentGuess.length < wordLength) {
-        currentGuess.push(letter);
-        updateGrid();
-    }
-}
-
-// Delete the last letter of the current guess
-function deleteLastLetter() {
-    currentGuess.pop();
-    updateGrid();
 }
 
 // Update the grid display
@@ -269,12 +331,19 @@ function handlePopupKeydown(event) {
 function closePopup() {
     const popupBox = document.getElementById('popupBox');
     popupBox.style.display = 'none';
-    document.removeEventListener('keydown', handlePopupKeydown); // Remove the keydown listener
-    resetGame();
 
-    // Hide the play-again-bottom button
-    document.getElementById('play-again-bottom').style.display = 'none';
+    // Enable the 'Play Again' button at the bottom
+    const playAgainBottomButton = document.getElementById('play-again-bottom');
+    playAgainBottomButton.style.pointerEvents = 'auto'; // Make it clickable
+    playAgainBottomButton.style.opacity = '1'; // Make it fully visible
+
+    // Add click event listener to 'Play Again' button at the bottom if it doesn't already have one
+    playAgainBottomButton.removeEventListener('click', resetGame); // Remove any existing event listener to prevent duplicates
+    playAgainBottomButton.addEventListener('click', resetGame); // Add the event listener
+
+    document.removeEventListener('keydown', handlePopupKeydown); // Remove the keydown listener
 }
+
 
 // Show Definition Popup
 function showDefinitionPopup() {
@@ -319,10 +388,7 @@ function resetGame() {
     document.addEventListener('keydown', handleKeydown);
 }
 
-// Start the game
-function startGame() {
-    setupGame(wordLength); // wordLength is already defined as 5
-}
+
 
 // Load JSON Data
 async function loadWords(url) {
@@ -354,15 +420,6 @@ function getDefaultWordList() {
     ];
 }
 
-
-
-startGame();
-
-document.querySelector('.close-btn').addEventListener('click', function() {
-    document.getElementById('popupBox').style.display = 'none';
-    
-    // Re-enable the play-again-bottom button
-    const playAgainButton = document.getElementById('play-again-bottom');
-    playAgainButton.style.pointerEvents = 'auto';
-    playAgainButton.style.opacity = '1';
+document.getElementById('closePopupButton').addEventListener('click', function() {
+    closePopup();
 });

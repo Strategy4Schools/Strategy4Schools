@@ -12,22 +12,25 @@
     <h1>WordGuess</h1>
     </div>
 
-    <!-- Word Length Selection Dropdown -->
-    <div id="wordLengthSelector">
-        <select id="wordLengthDropdown" onchange="setupGame(parseInt(this.value))">
-            <option value="5">5 Letters</option>
-            <option value="6">6 Letters</option>
-            <!-- Additional options if needed -->
-        </select>
-         <button id="infoButton">?</button>
+    <div id="infoButtonContainer">
+    <button id="infoButton">?</button>
     <div id="infoTooltip" class="tooltip">Here are the rules of the game...</div>
+</div>
+
+    <div id="difficultySelectionContainer">
+    <div id="difficultySelection">
+        <h2>Select Difficulty:</h2>
+        <button id="easy">Easy</Abutton>
+        <button id="medium">Medium</button>
+        <button id="hard">Hard</button>
     </div>
+</div>
 
     <div id="wordleGrid"></div>
 
     <!-- Virtual Keyboard -->
     <div id="virtualKeyboard">
-        <!-- Row 1 -->
+        <!-- Row 1 -->  
         <div class="keyboard-row">
             <button class="keyboard-key">Q</button>
             <button class="keyboard-key">W</button>
@@ -74,7 +77,8 @@
     <!-- Game End Popup Box -->
     <div id="popupBox" class="popup-box" style="display:none;">
         <div class="popup-content">
-            <div class="close-btn">&times;</div> <!-- Close button -->
+            <div class="close-btn" id="closePopupButton">&times;</div>
+
             <p id="popupMessage"></p>
             <button onclick="closePopup()">Play Again</button>
             <button onclick="showDefinitionPopup()">Show Definition</button>
