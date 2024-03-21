@@ -1,3 +1,69 @@
+document.addEventListener('DOMContentLoaded', function() {
+    setupBackButton();
+    setupDifficultySelection();
+    // Removed the fetchWordsAndStartGame call to avoid premature execution.
+});
+
+function setupDifficultySelection() {
+    document.getElementById('easy').addEventListener('click', () => startGameWithDifficulty('easy'));
+    document.getElementById('medium').addEventListener('click', () => startGameWithDifficulty('medium'));
+    document.getElementById('hard').addEventListener('click', () => startGameWithDifficulty('hard'));
+}
+
+function startGameWithDifficulty(difficulty) {
+    let wordListURL = determineWordListURL(difficulty);
+    if (wordListURL) {
+        loadWords(wordListURL);
+    }
+}
+
+function determineWordListURL(difficulty) {
+    switch (difficulty) {
+        case 'easy': 
+            // Use the correct path for your easy word list
+            return 'http://localhost:8000/5_Letter_Words_CSW21_With_Definitions_Anagrammable.json';
+        case 'medium': 
+            // Use the correct path for your medium word list
+            return 'path/to/medium_word_list.json';
+        case 'hard': 
+            // Use the correct path for your hard word list
+            return 'path/to/hard_word_list.json';
+        default:
+            console.error('Invalid difficulty level');
+            return null;
+    }
+}
+
+function loadWords(url) {
+    return fetch(url)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            // Make sure the data structure matches your expectations.
+            // If "data" directly contains the words array, assign it to "words".
+            // Adjust this line if your data structure is different.
+            words = data.anagrams || []; // Adjusted for your data structure
+            setNewWord();
+            // Hide the difficulty selection and show the main game content.
+            document.getElementById('difficultySelectionContainer').style.display = 'none';
+            document.querySelector('.main-content').style.display = 'flex';
+        })
+        .catch(error => {
+            console.error('Failed to load words:', error);
+        });
+}
+
+function setupBackButton() {
+    const backButton = document.getElementById('backToMinigames');
+    backButton.addEventListener('click', function() {
+        window.location.href = 'minigames_home.html';
+    });
+}
+
 let words = [];
 let currentAnagrams = [];
 let guessedAnagrams = new Set();
