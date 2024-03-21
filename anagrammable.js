@@ -178,7 +178,7 @@ window.shuffleAnagram = function() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    fetch(`https://raw.githubusercontent.com/Strategy4Schools/Strategy4Schools/main/5_Letter_Words_CSW21_With_Definitions_Anagrammable.json`)
+    fetch(`https://raw.githubusercontent.com/Strategy4Schools/Strategy4Schools/main/Year_7_Word_List_With_Definitions.json`)
     .then(response => response.json())
     .then(data => {
         words = data.anagrams;
