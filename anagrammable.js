@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', function() {
     setupBackButton();
     setupDifficultySelection();
@@ -21,7 +22,7 @@ function determineWordListURL(difficulty) {
     switch (difficulty) {
         case 'easy': 
             // Use the correct path for your easy word list
-            return 'https://raw.githubusercontent.com/Strategy4Schools/Strategy4Schools/main/Year_7_Word_List_With_Definitions.json';
+            return 'http://localhost:8000/5_Letter_Words_CSW21_With_Definitions_Anagrammable.json';
         case 'medium': 
             // Use the correct path for your medium word list
             return 'path/to/medium_word_list.json';
@@ -35,7 +36,6 @@ function determineWordListURL(difficulty) {
 }
 
 function loadWords(url) {
-    console.log(`Attempting to load words from ${url}`); // Log the URL being fetched
     return fetch(url)
         .then(response => {
             if (!response.ok) {
@@ -44,13 +44,14 @@ function loadWords(url) {
             return response.json();
         })
         .then(data => {
-            console.log('Words loaded:', data); // Log the data to verify structure
-            if (data.anagrams && Array.isArray(data.anagrams)) { // Check if 'anagrams' is present and is an array
-                words = data.anagrams;
-                setNewWord();
-            } else {
-                console.error('Unexpected data structure:', data);
-            }
+            // Make sure the data structure matches your expectations.
+            // If "data" directly contains the words array, assign it to "words".
+            // Adjust this line if your data structure is different.
+            words = data.anagrams || []; // Adjusted for your data structure
+            setNewWord();
+            // Hide the difficulty selection and show the main game content.
+            document.getElementById('difficultySelectionContainer').style.display = 'none';
+            document.querySelector('.main-content').style.display = 'flex';
         })
         .catch(error => {
             console.error('Failed to load words:', error);
@@ -178,7 +179,7 @@ window.shuffleAnagram = function() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    fetch(`https://raw.githubusercontent.com/Strategy4Schools/Strategy4Schools/main/Year_7_Word_List_With_Definitions.json`)
+    fetch(`https://raw.githubusercontent.com/Strategy4Schools/Strategy4Schools/main/5_Letter_Words_CSW21_With_Definitions_Anagrammable.json`)
     .then(response => response.json())
     .then(data => {
         words = data.anagrams;
