@@ -178,18 +178,17 @@ window.shuffleAnagram = function() {
     document.getElementById('anagram').innerText = shuffledWord;
 }
 
-    document.body.addEventListener('keydown', function(event) {
-        if (event.key === "Enter") {
-            event.preventDefault();
-            if (event.ctrlKey) {
-                window.skipWord();
-            } else if (document.getElementById('next-word').style.display === 'block') {
-                window.nextWord();
-            } else if (!document.getElementById('user-input').disabled) {
-                window.checkAnagram();
-            }
+document.body.addEventListener('keydown', function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        if (event.ctrlKey) {
+            window.skipWord();
+        } else if (document.getElementById('next-word').style.display === 'block') {
+            window.nextWord();
+        } else if (!document.getElementById('user-input').disabled) {
+            window.checkAnagram();
         }
-    });
+    }
 });
 
 function checkAnagramLogic() {
