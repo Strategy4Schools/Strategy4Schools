@@ -1,0 +1,107 @@
+body {
+    font-family: 'Source Code Pro', monospace;
+    background-color: #FAF9F6; /* Soft background color */
+    color: #333;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center content vertically */
+    min-height: 100vh;
+}
+
+#title-container {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0; /* Adjust padding for spacing */
+    position: fixed;
+    top: 20px; /* Spacing from the top */
+    left: 0;
+    z-index: 1000; /* Stay on top of other elements */
+    background-color: transparent; /* Removed white background */
+    backdrop-filter: none; /* Remove blur effect for a cleaner look */
+    box-shadow: none; /* No shadow for a flat design */
+}
+
+h2 {
+    font-size: 2.5em;
+    font-weight: 550;
+    color: #000000;
+    text-shadow: none; /* Optional: Removed text shadow for a flatter look */
+    margin: 0;
+}
+
+#backButtonContainer {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2000;
+}
+
+#backToMinigames {
+    font-family: 'Source Code Pro', monospace;
+    background-color: #e0e0e0;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+#backToMinigames:hover {
+    background-color: #45a049;
+}
+
+#centering-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex: 1;
+    padding-top: 60px; /* Give some space for the title, adjust as needed */
+}
+
+#categories-container {
+    /* No specific adjustments needed here, centering handled by #centering-container */
+}
+
+#categories-list {
+    display: flex; /* Align items in a row */
+    flex-direction: row; /* Horizontal alignment */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    gap: 30px; /* Increased space between buttons */
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Ensure alignment is not affected by default margins */
+}
+
+#categories-list li {
+    width: 220px;
+    height: 220px;
+    padding: 20px;
+    background: linear-gradient(145deg, #D6D6D6, #CCCCCC); /* Darker gradient for the button */
+    color: #222; /* Darker text color for better contrast and readability */
+    font-weight: 500;
+    font-size: 1.2em;
+    border-radius: 0px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Slightly darker shadow for more depth */
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-wrap: wrap;
+}
+
+#categories-list li:hover {
+    background: linear-gradient(145deg, #CCCCCC, #BBBBBB); /* Even darker gradient on hover */
+    transform: translateY(-5px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.25); /* Enhanced shadow for a lifted effect */
+}

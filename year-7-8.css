@@ -1,0 +1,112 @@
+body {
+    font-family: 'Source Code Pro', monospace;
+    background-color: #FAF9F6; /* Soft background color for consistency */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center content vertically */
+    min-height: 100vh;
+}
+
+#title-container {
+    width: 100%;
+    position: fixed; /* Stays at the top */
+    top: 20px;
+    left: 0;
+    text-align: center;
+    padding: 20px 0;
+    background-color: transparent;
+    box-shadow: none;
+    z-index: 1000; /* Ensures title stays above other content */
+}
+
+h2 {
+    font-size: 2.5em;
+    font-weight: 550;
+    color: #000000;
+    text-shadow: none;
+    margin: 0;
+}
+
+#backButtonContainer {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2000;
+}
+
+#backToMinigames {
+    font-family: 'Source Code Pro', monospace;
+    background-color: #e0e0e0;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+#backToMinigames:hover {
+    background-color: #45a049;
+}
+
+#centering-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex: 1;
+    padding-top: 60px; /* Offset for the fixed title */
+}
+
+#categories-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* Space between buttons */
+    padding-top: 100px; /* Avoid overlap with the title */
+    flex-wrap: wrap; /* Allows wrapping */
+}
+
+.navigation-set, #categories-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap; /* Wrap items as needed */
+}
+
+.navigation-button, #categories-list li {
+    width: 220px;
+    height: 220px;
+    padding: 20px;
+    background: linear-gradient(145deg, #D6D6D6, #CCCCCC);
+    color: #222;
+    font-weight: 500;
+    font-size: 1.2em;
+    border-radius: 0    px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none; /* Removed border outline */
+}
+
+.navigation-button:hover, #categories-list li:hover {
+    background: linear-gradient(145deg, #CCCCCC, #BBBBBB);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.25);
+}
+
