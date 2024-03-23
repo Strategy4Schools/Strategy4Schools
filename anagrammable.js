@@ -22,7 +22,7 @@ function determineWordListURL(difficulty) {
     switch (difficulty) {
         case 'easy': 
             // Use the correct path for your easy word list
-            return 'https://raw.githubusercontent.com/Strategy4Schools/Strategy4Schools/main/5_Letter_Words_CSW21_With_Definitions_Anagrammable.json';
+            return 'https://raw.githubusercontent.com/Strategy4Schools/Strategy4Schools/main/anagrammable_year_7_word_list.json';
         case 'medium': 
             // Use the correct path for your medium word list
             return 'path/to/medium_word_list.json';
