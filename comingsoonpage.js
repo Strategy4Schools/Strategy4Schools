@@ -16,6 +16,12 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
   event.preventDefault();
   var username = document.getElementById('username').value;
   var password = document.getElementById('password').value;
-  console.log('Login attempted by: ' + username); // Replace with actual login logic
-  document.getElementById('loginModal').style.display = 'none';
+
+  if(username === 'dariusjeong' && password === 'dariusjeong') {
+    // Redirect to minigames_home.html if login is successful
+    window.location.href = 'minigames_home.html';
+  } else {
+    // Optional: Display an error message or handle incorrect login
+    console.log('Incorrect username or password');
+  }
 });
