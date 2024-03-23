@@ -22,7 +22,7 @@ function determineWordListURL(difficulty) {
     switch (difficulty) {
         case 'easy': 
             // Use the correct path for your easy word list
-            return 'https://raw.githubusercontent.com/Strategy4Schools/Strategy4Schools/main/anagrammable_year_7_word_list.json';
+            return 'https://raw.githubusercontent.com/Strategy4Schools/Strategy4Schools/main/5_Letter_Words_CSW21_With_Definitions_Anagrammable.json';
         case 'medium': 
             // Use the correct path for your medium word list
             return 'path/to/medium_word_list.json';
@@ -44,14 +44,15 @@ function loadWords(url) {
             return response.json();
         })
         .then(data => {
-            // Make sure the data structure matches your expectations.
-            // If "data" directly contains the words array, assign it to "words".
-            // Adjust this line if your data structure is different.
-            words = data.anagrams || []; // Adjusted for your data structure
-            setNewWord();
-            // Hide the difficulty selection and show the main game content.
-            document.getElementById('difficultySelectionContainer').style.display = 'none';
-            document.querySelector('.main-content').style.display = 'flex';
+            // Added check to ensure data.anagrams exists
+            if (data && data.anagrams) {
+                words = data.anagrams.map(entry => entry.words).flat(); // Assuming each entry has a words array
+                setNewWord();
+                document.getElementById('difficultySelectionContainer').style.display = 'none';
+                document.querySelector('.main-content').style.display = 'flex';
+            } else {
+                console.error('Unexpected data structure:', data);
+            }
         })
         .catch(error => {
             console.error('Failed to load words:', error);
