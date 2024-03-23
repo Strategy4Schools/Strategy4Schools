@@ -176,10 +176,12 @@ function updateGrid() {
 function getNewWord() {
     if (wordList.length === 0) {
         console.error('Word list is empty');
-        return null; // Or handle this case as appropriate
+        return null; // Handle this case as appropriate
     }
     const randomIndex = Math.floor(Math.random() * wordList.length);
-    return wordList[randomIndex];
+    correctWord = wordList[randomIndex]; // Assuming correctWord is an object with word details
+    checkIfFavorite(); // Check if the new word is a favorite
+    return correctWord;
 }
 
 // Submit a guess
@@ -332,6 +334,8 @@ function closePopup() {
     const popupBox = document.getElementById('popupBox');
     popupBox.style.display = 'none';
 
+    hideConfirmationMessageInstantly();
+
     // Enable the 'Play Again' button at the bottom
     const playAgainBottomButton = document.getElementById('play-again-bottom');
     playAgainBottomButton.style.pointerEvents = 'auto'; // Make it clickable
@@ -344,6 +348,16 @@ function closePopup() {
     document.removeEventListener('keydown', handlePopupKeydown); // Remove the keydown listener
 }
 
+function hideConfirmationMessageInstantly() {
+    const confirmationMessage = document.getElementById('confirmationMessage');
+    if (confirmationMessage) {
+        confirmationMessage.style.opacity = '0';
+        confirmationMessage.style.visibility = 'hidden';
+        confirmationMessage.classList.remove('show');
+        // Also, clear any timeout set for automatically hiding the confirmation message
+        clearTimeout(confirmationMessage.hideTimeout);
+    }
+}
 
 // Show Definition Popup
 function showDefinitionPopup() {
@@ -423,3 +437,81 @@ function getDefaultWordList() {
 document.getElementById('closePopupButton').addEventListener('click', function() {
     closePopup();
 });
+
+function resetAndStartNewGame() {
+    closePopup(); // Close the popup window
+    resetGame();  // Reset the game state and start a new game
+
+    // Hide the 'play again bottom' button
+    const playAgainBottomButton = document.getElementById('play-again-bottom');
+    playAgainBottomButton.style.display = 'none'; // This hides the button
+}
+
+document.getElementById('favoriteButton').addEventListener('click', function() {
+    let favorites = JSON.parse(localStorage.getItem('wordGuessFavorites')) || [];
+    const favoriteIcon = this.querySelector('i');
+    const confirmationMessage = document.createElement('div');
+
+    if (!favorites.includes(correctWord.word)) {
+        favorites.push(correctWord.word);
+        favoriteIcon.className = 'fas fa-star'; // Filled star
+        this.classList.add('favorite-active');
+        showConfirmation('Word added to favorites!');
+    } else {
+        // If removing from favorites is allowed
+        const index = favorites.indexOf(correctWord.word);
+        favorites.splice(index, 1);
+        favoriteIcon.className = 'far fa-star'; // Outline star
+        this.classList.remove('favorite-active');
+        showConfirmation('Word removed from favorites.');
+    }
+    localStorage.setItem('wordGuessFavorites', JSON.stringify(favorites));
+    checkIfFavorite();
+});
+
+function showConfirmation(message) {
+    const confirmationBox = document.getElementById('confirmationMessage') || document.createElement('div');
+    confirmationBox.setAttribute('id', 'confirmationMessage');
+    confirmationBox.textContent = message;
+    if (!document.contains(confirmationBox)) {
+        document.body.appendChild(confirmationBox);
+    }
+
+    confirmationBox.style.opacity = '1';
+    confirmationBox.style.visibility = 'visible';
+    confirmationBox.classList.add('show');
+
+    // Clear any previous timeout to hide the message
+    clearTimeout(confirmationBox.hideTimeout);
+
+    // Set a new timeout to automatically hide the message
+    confirmationBox.hideTimeout = setTimeout(() => {
+        hideConfirmationMessageInstantly();
+    }, 1000); // Adjust the time as necessary
+}
+
+function addToFavorites(word) {
+    let favorites = JSON.parse(localStorage.getItem('wordGuessFavorites')) || [];
+    if (!favorites.includes(word)) {
+        favorites.push(word);
+        localStorage.setItem('wordGuessFavorites', JSON.stringify(favorites));
+        console.log(`${word} added to favorites!`);
+    } else {
+        console.log(`${word} is already in favorites.`);
+    }
+}
+
+function checkIfFavorite() {
+    let favorites = JSON.parse(localStorage.getItem('wordGuessFavorites')) || [];
+    const favoriteButton = document.getElementById('favoriteButton');
+    const favoriteIcon = favoriteButton.querySelector('i'); // Assuming the icon is within the button
+
+    // Check if the current word is in favorites and update the button state accordingly
+    if (favorites.some(favWord => favWord === correctWord.word)) {
+        favoriteButton.classList.add('favorite-active');
+        favoriteIcon.className = 'fas fa-star'; // Solid star for favorited words
+    } else {
+        favoriteButton.classList.remove('favorite-active');
+        favoriteIcon.className = 'far fa-star'; // Outline star otherwise
+    }
+}

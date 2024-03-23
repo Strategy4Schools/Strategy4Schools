@@ -1,317 +1,421 @@
-body {
-    font-family: 'Source Code Pro', monospace;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start; /* Change from 'center' to 'flex-start' */
-    height: 100vh;
-    background-color: #FAF9F6;
-    margin: 0;
-    color: #333;
-    padding-top: 10px;
-}
-
-#gameTitle {
-    font-family: 'Source Code Pro', monospace;
-    text-align: center;
-    margin-top: 40px; /* Adjust this value to position the title appropriately */
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-
-h1 {
-    font-size: 2.5em;
-    margin: 0; /* Remove default margin of h1 */
-    font-weight: 550;
-    color: #000000;
-}
-
-    #wordleGrid {
-        display: grid;
-        gap: 0.1px;
-        margin-bottom: 50px;
-    }
-
-    #wordleGrid div {
-        width: 66.66px;
-        height: 66.66px;
-        border: 2px solid #000000;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 1.77em;
-        background-color: #FFFFFF;
-        font-weight: 700;
-        transition: background-color 0.2s, transform 0.2s, opacity 0.2s;
-        transform: scale(0.9);
-        opacity: 2.5;
-    }
-
-    @keyframes bounce {
-        0% {
-            transform: scale(1);
+        body {
+            font-family: 'Source Code Pro', monospace;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start; /* Change from 'center' to 'flex-start' */
+            height: 100vh;
+            background-color: #FAF9F6;
+            margin: 0;
+            color: #333;
+            padding-top: 10px;
         }
-        50% {
-            transform: scale(1.1);
-        }
-        100% {
-            transform: scale(1);
-        }
-    }
 
-    .bounce {
-        animation: bounce 0.1s ease;
-    }
-
-    @keyframes gentleReveal {
-        from {
-            transform: scale(0.9);
-            opacity: 0.7;
+        #gameTitle {
+            font-family: 'Source Code Pro', monospace;
+            text-align: center;
+            margin-top: 40px; /* Adjust this value to position the title appropriately */
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
-        to {
-            transform: scale(1);
+
+
+        h1 {
+            font-size: 2.5em;
+            margin: 0; /* Remove default margin of h1 */
+            font-weight: 550;
+            color: #000000;
+        }
+
+            #wordleGrid {
+                display: grid;
+                gap: 0.1px;
+                margin-bottom: 50px;
+            }
+
+            #wordleGrid div {
+                width: 66.66px;
+                height: 66.66px;
+                border: 2px solid #000000;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 1.77em;
+                background-color: #FFFFFF;
+                font-weight: 700;
+                transition: background-color 0.2s, transform 0.2s, opacity 0.2s;
+                transform: scale(0.9);
+                opacity: 2.5;
+            }
+
+            @keyframes bounce {
+                0% {
+                    transform: scale(1);
+                }
+                50% {
+                    transform: scale(1.1);
+                }
+                100% {
+                    transform: scale(1);
+                }
+            }
+
+            .bounce {
+                animation: bounce 0.1s ease;
+            }
+
+            @keyframes gentleReveal {
+                from {
+                    transform: scale(0.9);
+                    opacity: 0.7;
+                }
+                to {
+                    transform: scale(1);
+                    opacity: 1;
+                }
+            }
+
+            .guessed {
+                animation: gentleReveal 0.6s ease-out forwards;
+            }
+
+            #virtualKeyboard {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .keyboard-row {
+                display: flex;
+                justify-content: center;
+                margin: 5px 0;
+            }
+
+            .keyboard-key {
+                font-family: 'Source Code Pro', monospace;
+                background-color: #e0e0e0;
+                border: 1px solid #bdbdbd;
+                padding: 10px 15px;
+                margin: 2px;
+                border-radius: 4px;
+                font-size: 1em;
+                cursor: pointer;
+                transition: background-color 0.3s;
+                font-weight: 700;
+            }
+
+            .keyboard-key:hover {
+                background-color: #d5d5d5;
+            }
+
+            /* Updated styles for keys based on their state */
+            .keyboard-key.correct {
+                background-color: green !important;
+            }
+
+            .keyboard-key.present {
+                background-color: yellow !important;
+            }
+
+            .keyboard-key.absent {
+                background-color: gray !important;
+            }
+
+            .popup-box {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: white;
+                padding: 25px;
+                border-radius: 10px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+                text-align: center;
+                z-index: 1000;
+                width: 80%;
+                max-width: 400px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        /* Optional: Style for hover effect */
+        .close-btn:hover {
+            color: #ff0000;
+        }
+
+        #backButtonContainer {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        #backToMinigames {
+            font-family: 'Source Code Pro', monospace;
+            background-color: #e0e0e0;
+            color: black;
+            border: 3px solid black;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: 700;
+        }
+
+        #backToMinigames:hover {
+            background-color: #45a049;
+        }
+
+            .popup-content p {
+                font-family: 'Source Code Pro', monospace;
+                font-size: 1em;
+                margin-bottom: 20px;
+                color: #333;
+                font-weight: 650;
+            }
+
+            .popup-content button {
+                font-family: 'Source Code Pro', monospace;
+                background-color: #4CAF50;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+                border-radius: 5px;
+                font-weight: 700;
+            }
+
+            .popup-content button:hover {
+                background-color: #45a049;
+            }
+
+        #play-again-bottom {
+         font-family: 'Source Code Pro', monospace;
+                background-color: #4CAF50;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+                border-radius: 5px;
+                font-weight: 700;
+        }
+
+        #play-again-bottom:hover {
+        background-color: #45a049;
+            }
+
+
+            .definition-link, .definition-link:visited, .definition-link:hover, .definition-link:active {
+            color: blue; /* or any color you prefer */
+        }
+
+        #infoButtonContainer {
+            position: relative;
+            display: inline-block; /* Aligns the button and tooltip correctly */
+        }
+
+        #infoButton {
+            font-family: 'Source Code Pro', monospace;
+            font-size: 1em;
+            font-weight: bold;
+            padding: 5px 10px;
+            border: 2px solid #000000; /* Solid black border */
+            background-color: #FAF9F6; /* Matching background */
+            border-radius: 50%; /* Circular button */
+            cursor: pointer;
+            margin-top: 10px; /* Adjust as necessary */
+        }
+
+        .tooltip {
+            display: none;
+            position: absolute;
+            background-color: white;
+            border: 1px solid #333;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            width: 220px; /* Adjust width as needed */
+            top: 130%; /* Position below the button */
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+        }
+
+        #infoButton:hover + .tooltip {
+            display: block;
+        }
+
+        #difficultySelectionContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        #difficultySelection {
+            text-align: center; /* Center-align the text and buttons within the div */
+            margin: 20px 0; /* Add some margin for spacing */
+        }
+
+        #difficultySelection h2 {
+            font-family: 'Source Code Pro', monospace;
+            color: #333; /* Adjust color as needed */
+            margin-bottom: 15px; /* Space between the heading and buttons */
+        }
+
+        #difficultySelection button {
+            font-family: 'Source Code Pro', monospace;
+            font-size: 1em;
+            font-weight: bold;
+            color: white; /* Text color */
+            background-color: #4CAF50; /* Button background color */
+            border: none;
+            padding: 10px 20px; /* Adjust padding as needed */
+            margin: 0 10px; /* Spacing between buttons */
+            cursor: pointer;
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s, transform 0.2s; /* Smooth transition for hover effect */
+        }
+
+        #difficultySelection button:hover {
+            background-color: #45a049; /* Darker shade on hover */
+            transform: scale(1.05); /* Slightly increase size on hover */
+        }
+
+        #difficultySelection button:focus {
+            outline: none; /* Removes the outline to keep the design clean */
+            border: 2px solid #333; /* Optional: add a border to indicate focus */
+        }
+
+        #wordleGrid, #virtualKeyboard {
+            display: none; /* Initially hide the grid and keyboard */
+        }
+
+        #favoriteButtonContainer {
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+        }
+
+        #favoriteButton {
+            font-size: 24px;
+            cursor: pointer;
+            background-color: transparent;
+            border: none;
+        }
+
+        #favoriteButton i {
+            color: #ccc; /* Light grey to ensure the outline is visible */
+            transition: color 0.3s; /* Smooth transition for color change */
+        }
+
+        #favoriteButton:hover i,
+        #favoriteButton.favorite-active i {
+            color: gold; /* Change to gold on hover or when active */
+        }
+
+        .tooltip-container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+        .tooltip-text {
+            visibility: hidden;
+            width: 220px;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -110px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .tooltip-container:hover .tooltip-text {
+            visibility: visible;
             opacity: 1;
         }
+
+        @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translate(-100%, -50%) rotate(-45deg);
+        }
+        to {
+            opacity: 1;
+            transform: translate(-100%, -50%) rotate(-45deg);
+        }
     }
 
-    .guessed {
-        animation: gentleReveal 0.6s ease-out forwards;
+    @keyframes fadeOut {
+        from {
+            opacity: 1;
+            transform: translate(-100%, -50%) rotate(-45deg);
+        }
+        to {
+            opacity: 0;
+            transform: translate(-100%, -50%) rotate(-45deg);
+        }
     }
 
-    #virtualKeyboard {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+        /* Adjusted styles for the confirmation message */
+        #confirmationMessage {
+            position: fixed; /* Position relative to the viewport */
+            top: calc(45% - 20px); /* Adjust the 20px to move it up/down based on the pop-up box's height */
+            left: calc(50% - 20px); /* Adjust the 20px to move it left/right based on the pop-up box's width */
+            transform: translate(-100%, -50%) rotate(-45deg); /* Rotate and adjust placement */
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            z-index: 1010; /* Ensure it's above the pop-up box */
+            text-align: center;
+            align-items: center;
+            justify-content: cen;
+            width: 250px; /* Ensures a consistent width. */
+            min-height: 30px; /* Ensures a consistent minimum height. */
+            max-height: 45px; /* Optional: Prevents the box from growing too large. */
+            transition: opacity 0.5s ease-out, visibility 0s 0.5s;
+        }
 
-    .keyboard-row {
-        display: flex;
-        justify-content: center;
-        margin: 5px 0;
-    }
-
-    .keyboard-key {
-        font-family: 'Source Code Pro', monospace;
-        background-color: #e0e0e0;
-        border: 1px solid #bdbdbd;
-        padding: 10px 15px;
-        margin: 2px;
-        border-radius: 4px;
-        font-size: 1em;
-        cursor: pointer;
-        transition: background-color 0.3s;
-        font-weight: 700;
-    }
-
-    .keyboard-key:hover {
-        background-color: #d5d5d5;
-    }
-
-    /* Updated styles for keys based on their state */
-    .keyboard-key.correct {
-        background-color: green !important;
-    }
-
-    .keyboard-key.present {
-        background-color: yellow !important;
-    }
-
-    .keyboard-key.absent {
-        background-color: gray !important;
-    }
-
-    .popup-box {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: white;
-        padding: 25px;
-        border-radius: 10px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        text-align: center;
-        z-index: 1000;
-        width: 80%;
-        max-width: 400px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .close-btn {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 20px;
-    cursor: pointer;
+        #confirmationMessage.show {
+    animation: fadeIn 0.5s forwards;
+    visibility: visible; /* Ensures the message is seen during fade-in */
 }
 
-/* Optional: Style for hover effect */
-.close-btn:hover {
-    color: #ff0000;
-}
-
-#backButtonContainer {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-}
-
-#backToMinigames {
-    font-family: 'Source Code Pro', monospace;
-    background-color: #e0e0e0;
-    color: black;
-    border: 3px solid black;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-weight: 700;
-}
-
-#backToMinigames:hover {
-    background-color: #45a049;
-}
-
-    .popup-content p {
-        font-family: 'Source Code Pro', monospace;
-        font-size: 1em;
-        margin-bottom: 20px;
-        color: #333;
-        font-weight: 650;
-    }
-
-    .popup-content button {
-        font-family: 'Source Code Pro', monospace;
-        background-color: #4CAF50;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin: 4px 2px;
-        cursor: pointer;
-        border-radius: 5px;
-        font-weight: 700;
-    }
-
-    .popup-content button:hover {
-        background-color: #45a049;
-    }
-#play-again-bottom {
- font-family: 'Source Code Pro', monospace;
-        background-color: #4CAF50;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin: 4px 2px;
-        cursor: pointer;
-        border-radius: 5px;
-        font-weight: 700;
-}
-
-#play-again-bottom:hover {
-background-color: #45a049;
-    }
-
-
-    .definition-link, .definition-link:visited, .definition-link:hover, .definition-link:active {
-    color: blue; /* or any color you prefer */
-}
-
-#infoButtonContainer {
-    position: relative;
-    display: inline-block; /* Aligns the button and tooltip correctly */
-}
-
-#infoButton {
-    font-family: 'Source Code Pro', monospace;
-    font-size: 1em;
-    font-weight: bold;
-    padding: 5px 10px;
-    border: 2px solid #000000; /* Solid black border */
-    background-color: #FAF9F6; /* Matching background */
-    border-radius: 50%; /* Circular button */
-    cursor: pointer;
-    margin-top: 10px; /* Adjust as necessary */
-}
-
-.tooltip {
-    display: none;
-    position: absolute;
-    background-color: white;
-    border: 1px solid #333;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    width: 220px; /* Adjust width as needed */
-    top: 130%; /* Position below the button */
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1000;
-}
-
-#infoButton:hover + .tooltip {
-    display: block;
-}
-
-#difficultySelectionContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-#difficultySelection {
-    text-align: center; /* Center-align the text and buttons within the div */
-    margin: 20px 0; /* Add some margin for spacing */
-}
-
-#difficultySelection h2 {
-    font-family: 'Source Code Pro', monospace;
-    color: #333; /* Adjust color as needed */
-    margin-bottom: 15px; /* Space between the heading and buttons */
-}
-
-#difficultySelection button {
-    font-family: 'Source Code Pro', monospace;
-    font-size: 1em;
-    font-weight: bold;
-    color: white; /* Text color */
-    background-color: #4CAF50; /* Button background color */
-    border: none;
-    padding: 10px 20px; /* Adjust padding as needed */
-    margin: 0 10px; /* Spacing between buttons */
-    cursor: pointer;
-    border-radius: 5px; /* Rounded corners */
-    transition: background-color 0.3s, transform 0.2s; /* Smooth transition for hover effect */
-}
-
-#difficultySelection button:hover {
-    background-color: #45a049; /* Darker shade on hover */
-    transform: scale(1.05); /* Slightly increase size on hover */
-}
-
-#difficultySelection button:focus {
-    outline: none; /* Removes the outline to keep the design clean */
-    border: 2px solid #333; /* Optional: add a border to indicate focus */
-}
-
-#wordleGrid, #virtualKeyboard {
-    display: none; /* Initially hide the grid and keyboard */
+#confirmationMessage.hide {
+    animation: fadeOut 0.5s forwards;
+    visibility: hidden; /* Ensures the message becomes hidden after fade-out */
 }

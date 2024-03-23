@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Collection</title>
+    <style>
+        /* Basic styles for layout */
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .favorite-word {
+            margin: 10px 0;
+            padding: 5px;
+            border-bottom: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h1>My Favorite Words</h1>
+    <div id="favoritesContainer"></div>
+
+    <script>
+        // Script to load and display favorites
+        document.addEventListener('DOMContentLoaded', function() {
+            const favoritesContainer = document.getElementById('favoritesContainer');
+            const favorites = JSON.parse(localStorage.getItem('wordGuessFavorites')) || [];
+
+            if (favorites.length === 0) {
+                favoritesContainer.innerHTML = '<p>No favorite words added yet.</p>';
+            } else {
+                favorites.forEach(word => {
+                    const div = document.createElement('div');
+                    div.className = 'favorite-word';
+                    div.textContent = word;
+                    favoritesContainer.appendChild(div);
+                });
+            }
+        });
+    </script>
+</body>
+</html>

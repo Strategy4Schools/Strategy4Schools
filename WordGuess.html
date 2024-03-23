@@ -6,6 +6,7 @@
 
     <title>WordGuess</title>
     <link rel="stylesheet" type="text/css" href="WordGuessStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
     <div id="gameTitle">
@@ -80,7 +81,12 @@
             <div class="close-btn" id="closePopupButton">&times;</div>
 
             <p id="popupMessage"></p>
-            <button onclick="closePopup()">Play Again</button>
+           <div id="favoriteButtonContainer">
+    <button id="favoriteButton"><i class="far fa-star"></i></button>
+</div>
+<span class="tooltip-text">Click to save this word to your favorites!</span>
+
+            <button onclick="resetAndStartNewGame()">Play Again</button>
             <button onclick="showDefinitionPopup()">Show Definition</button>
         </div>
     </div>
