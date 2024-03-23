@@ -44,15 +44,14 @@ function loadWords(url) {
             return response.json();
         })
         .then(data => {
-            // Added check to ensure data.anagrams exists
-            if (data && data.anagrams) {
-                words = data.anagrams.map(entry => entry.words).flat(); // Assuming each entry has a words array
-                setNewWord();
-                document.getElementById('difficultySelectionContainer').style.display = 'none';
-                document.querySelector('.main-content').style.display = 'flex';
-            } else {
-                console.error('Unexpected data structure:', data);
-            }
+            // Make sure the data structure matches your expectations.
+            // If "data" directly contains the words array, assign it to "words".
+            // Adjust this line if your data structure is different.
+            words = data.anagrams || []; // Adjusted for your data structure
+            setNewWord();
+            // Hide the difficulty selection and show the main game content.
+            document.getElementById('difficultySelectionContainer').style.display = 'none';
+            document.querySelector('.main-content').style.display = 'flex';
         })
         .catch(error => {
             console.error('Failed to load words:', error);
