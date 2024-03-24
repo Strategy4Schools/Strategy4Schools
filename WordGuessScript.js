@@ -2,7 +2,7 @@
 const wordleGrid = document.getElementById('wordleGrid');
 const virtualKeyboard = document.getElementById('virtualKeyboard');
 const difficultySelection = document.getElementById('difficultySelection'); // Added for difficulty selection
-const comprehensiveDictURL = `http://localhost:8000/5_Letter_Words_CSW21_With_Definitions.json`;
+const comprehensiveDictURL = `https://raw.githubusercontent.com/Strategy4Schools/Strategy4Schools/main/5_Letter_Words_CSW21_With_Definitions.json`;
 
 // Game variables
 let wordList = []
