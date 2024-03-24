@@ -1,38 +1,31 @@
 body {
     font-family: 'Source Code Pro', monospace;
-    background-color: #FAF9F6; /* Soft background color for consistency */
+    background-color: #FAF9F6;
     color: #333;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* Center content vertically */
+    justify-content: center;
     min-height: 100vh;
 }
 
+#title-container, #backButtonContainer {
+    position: fixed;
+}
+
 #title-container {
-    width: 100%;
-    position: fixed; /* Stays at the top */
     top: 20px;
-    left: 0;
+    width: 100%;
     text-align: center;
     padding: 20px 0;
     background-color: transparent;
     box-shadow: none;
-    z-index: 1000; /* Ensures title stays above other content */
-}
-
-h2 {
-    font-size: 2.5em;
-    font-weight: 550;
-    color: #000000;
-    text-shadow: none;
-    margin: 0;
+    z-index: 1000;
 }
 
 #backButtonContainer {
-    position: absolute;
     top: 10px;
     left: 10px;
     z-index: 2000;
@@ -44,9 +37,6 @@ h2 {
     color: black;
     border: none;
     padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
     font-size: 16px;
     cursor: pointer;
     border-radius: 5px;
@@ -58,22 +48,19 @@ h2 {
 }
 
 #centering-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    flex: 1;
-    padding-top: 60px; /* Offset for the fixed title */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
 }
 
 #categories-container {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    gap: 30px; /* Space between buttons */
-    padding-top: 100px; /* Avoid overlap with the title */
-    flex-wrap: wrap; /* Allows wrapping */
+    gap: 30px;
+    padding-top: 100px; /* Adjusted to match the offset of the title */
 }
 
 .navigation-set, #categories-list {
@@ -82,31 +69,30 @@ h2 {
     justify-content: center;
     align-items: center;
     gap: 30px;
-    flex-wrap: wrap; /* Wrap items as needed */
+    flex-wrap: wrap;
 }
 
 .navigation-button, #categories-list li {
-    width: 220px;
-    height: 220px;
-    padding: 20px;
-    background: linear-gradient(145deg, #D6D6D6, #CCCCCC);
+    font-family: 'Source Code Pro', monospace; /* Ensuring font consistency */
+    background: #ffffff;
     color: #222;
     font-weight: 500;
-    font-size: 1.2em;
-    border-radius: 0    px;
+    font-size: 1em; /* Keeping font size consistent with your specification */
+    border-radius: 10px; /* Rounded corners for a softer look */
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    transition: all 0.2s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px; /* Consistent internal spacing */
     cursor: pointer;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: none; /* Removed border outline */
+    flex-direction: column;
+    width: 276px; /* Scaled up slightly for a bigger appearance */
+    height: 161px; /* Maintaining the rectangular shape */
 }
 
 .navigation-button:hover, #categories-list li:hover {
-    background: linear-gradient(145deg, #CCCCCC, #BBBBBB);
-    transform: translateY(-5px);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.25);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
 }
-
