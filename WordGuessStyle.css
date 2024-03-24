@@ -331,13 +331,13 @@
         }
 
         #favoriteButton i {
-            color: #ccc; /* Light grey to ensure the outline is visible */
-            transition: color 0.3s; /* Smooth transition for color change */
+        color: gold; /* Light grey to ensure visibility */
+        transition: color 0.3s; /* Smooth transition for color change */
         }
 
         #favoriteButton:hover i,
-        #favoriteButton.favorite-active i {
-            color: gold; /* Change to gold on hover or when active */
+        .favorite-active i {
+        color: gold; /* or any gold-like color */
         }
 
         .tooltip-container {

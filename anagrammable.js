@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function() {
     setupBackButton();
     setupDifficultySelection();
@@ -77,12 +76,62 @@ function shuffleWord(word) {
     return shuffled === word ? shuffleWord(word) : shuffled;
 }
 
+document.getElementById('favoriteButton').addEventListener('click', function() {
+    // Retrieve the current list of favorites or initialize an empty array if none exists
+    let favorites = JSON.parse(localStorage.getItem('gameFavorites')) || [];
+    const word = currentWord; // Adapt based on how you set the current word in your game
+
+    // Determine if the word is currently favorited
+    const isFavorited = favorites.includes(word);
+
+    if (isFavorited) {
+        // If the word is currently a favorite, remove it from the favorites list
+        favorites = favorites.filter(favorite => favorite !== word);
+    } else {
+        // If the word is not a favorite, add it to the favorites list
+        favorites.push(word);
+    }
+
+    // Update localStorage with the new list of favorites
+    localStorage.setItem('gameFavorites', JSON.stringify(favorites));
+
+    // Toggle the favorite-active class based on the new state
+    this.classList.toggle('favorite-active', !isFavorited);
+
+    // Update the button text immediately to reflect the new state
+    updateFavoriteButtonText(!isFavorited);
+});
+
+function updateFavoriteButtonText(isFavorited) {
+    const favoriteButton = document.getElementById('favoriteButton');
+    // Use innerHTML or textContent depending on whether you're including other HTML elements in your button
+    favoriteButton.innerHTML = isFavorited ? '<i class="fas fa-star"></i> Remove from Collection' : '<i class="far fa-star"></i> Add Word to Collection';
+    
+    // Optionally update the icon color immediately
+    const favoriteIcon = favoriteButton.querySelector('i');
+    favoriteIcon.style.color = isFavorited ? 'gold' : 'gold';
+}
+
+function checkIfFavorite(word) {
+    const favorites = JSON.parse(localStorage.getItem('gameFavorites')) || [];
+    // Determine if the current word is in the list of favorites
+    const isFavorited = favorites.includes(word);
+
+    // Update the favorite button to reflect whether the current word is favorited
+    updateFavoriteButtonText(isFavorited);
+
+    // Toggle the favorite-active class based on whether the word is favorited
+    document.getElementById('favoriteButton').classList.toggle('favorite-active', isFavorited);
+}
+
+
 function setNewWord() {
     randomEntry = words[Math.floor(Math.random() * words.length)];
     currentAnagrams = randomEntry.words.map(w => w.toUpperCase());
     guessedAnagrams.clear();
     pickNewAnagram();
-    updateAnagramCounter(); // Update counter here
+    updateAnagramCounter();
+    document.getElementById('favoriteButtonContainer').style.display = 'none';
 }
 
 function pickNewAnagram() {
@@ -103,6 +152,15 @@ function pickNewAnagram() {
     document.getElementById('result').innerText = '';
     document.getElementById('definition').innerText = '';
     document.getElementById('user-input').focus();
+    // After setting a new anagram, check if it's favorited and update button text
+    checkIfFavorite(currentWord);
+}
+
+function checkIfFavorite(currentWord) {
+    const favorites = JSON.parse(localStorage.getItem('anagramFavorites')) || [];
+    const isFavorited = favorites.includes(currentWord);
+    updateFavoriteButtonText(isFavorited);
+    document.getElementById('favoriteButton').classList.toggle('favorite-active', isFavorited);
 }
 
 function updateGuessedWordsDisplay(guessedWord) {
@@ -147,9 +205,30 @@ function displayAllAnagrams() {
             anagramElement.style.color = 'red';
 
             anagramsDiv.appendChild(anagramElement);
+
+            document.getElementById('favoriteButtonContainer').style.display = 'block';
         }
+        
     });
 }
+
+function finishGame() {
+    // Hide the 'Submit' and 'Skip' buttons
+    document.querySelector('.buttons-container').style.display = 'none';
+
+    // Show the 'Next Word' button and adjust its position/style if needed
+    let nextWordButton = document.getElementById('next-word');
+    nextWordButton.style.display = 'block';
+    // Adjust styling as needed, e.g., centering the button
+    nextWordButton.style.margin = '0 auto';
+
+    // Additional logic for when the game finishes can be added here
+}
+
+// Initial setup for the 'Next Word' button to ensure it starts hidden
+window.onload = function() {
+    document.getElementById('next-word').style.display = 'none';
+};
 
 window.checkAnagram = function() {
     checkAnagramLogic();
@@ -195,6 +274,9 @@ function checkAnagramLogic() {
     let userInput = document.getElementById('user-input').value.trim().toUpperCase();
     if (currentAnagrams.includes(userInput) && !guessedAnagrams.has(userInput)) {
         document.getElementById('result').innerText = 'Correct!';
+        checkIfFavorite(currentWord); // Ensure this is called with the correct current word
+        document.getElementById('favoriteButtonContainer').style.display = 'flex'; // Make favorite button visible
+
         guessedAnagrams.add(userInput);
         updateGuessedWordsDisplay(userInput);
     } else {
@@ -209,6 +291,11 @@ function checkAnagramLogic() {
     } else {
         document.getElementById('user-input').value = '';
         document.getElementById('user-input').focus();
+
+            if (guessedAnagrams.size === currentAnagrams.length) {
+        checkIfFavorite(currentWord); // Ensure this is called with the correct current word
+        document.getElementById('favoriteButtonContainer').style.display = 'flex'; // Make favorite button visible
+        }
     }
 }
 

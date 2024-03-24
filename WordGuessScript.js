@@ -467,26 +467,43 @@ function resetAndStartNewGame() {
 }
 
 document.getElementById('favoriteButton').addEventListener('click', function() {
-    let favorites = JSON.parse(localStorage.getItem('wordGuessFavorites')) || [];
+    let favorites = JSON.parse(localStorage.getItem('gameFavorites')) || []; // Use 'gameFavorites' as the key
     const favoriteIcon = this.querySelector('i');
-    const confirmationMessage = document.createElement('div');
 
+    // If the current word is not in favorites, add it and update the icon to filled star
     if (!favorites.includes(correctWord.word)) {
         favorites.push(correctWord.word);
-        favoriteIcon.className = 'fas fa-star'; // Filled star
-        this.classList.add('favorite-active');
+        favoriteIcon.className = 'fas fa-star'; // Change to filled star
+        this.classList.add('favorite-active'); // Visually indicate favorited
         showConfirmation('Word added to favorites!');
     } else {
-        // If removing from favorites is allowed
+        // If the word is already in favorites, remove it and update the icon to outline star
         const index = favorites.indexOf(correctWord.word);
         favorites.splice(index, 1);
-        favoriteIcon.className = 'far fa-star'; // Outline star
-        this.classList.remove('favorite-active');
+        favoriteIcon.className = 'far fa-star'; // Change to outline star
+        this.classList.remove('favorite-active'); // Visually indicate not favorited
         showConfirmation('Word removed from favorites.');
     }
-    localStorage.setItem('wordGuessFavorites', JSON.stringify(favorites));
-    checkIfFavorite();
+
+    // Update the local storage with the new list of favorites
+    localStorage.setItem('gameFavorites', JSON.stringify(favorites));
+    checkIfFavorite(); // Re-check the favorite status to update UI accordingly
 });
+
+function checkIfFavorite() {
+    let favorites = JSON.parse(localStorage.getItem('gameFavorites')) || [];
+    const favoriteButton = document.getElementById('favoriteButton');
+    const favoriteIcon = favoriteButton.querySelector('i');
+
+    // Check if the current word is in favorites and update the icon and button style accordingly
+    if (favorites.includes(correctWord.word)) {
+        favoriteIcon.className = 'fas fa-star'; // Solid star for favorited words
+        favoriteButton.classList.add('favorite-active');
+    } else {
+        favoriteIcon.className = 'far fa-star'; // Outline star otherwise
+        favoriteButton.classList.remove('favorite-active');
+    }
+}
 
 function showConfirmation(message) {
     const confirmationBox = document.getElementById('confirmationMessage') || document.createElement('div');
@@ -517,20 +534,5 @@ function addToFavorites(word) {
         console.log(`${word} added to favorites!`);
     } else {
         console.log(`${word} is already in favorites.`);
-    }
-}
-
-function checkIfFavorite() {
-    let favorites = JSON.parse(localStorage.getItem('wordGuessFavorites')) || [];
-    const favoriteButton = document.getElementById('favoriteButton');
-    const favoriteIcon = favoriteButton.querySelector('i'); // Assuming the icon is within the button
-
-    // Check if the current word is in favorites and update the button state accordingly
-    if (favorites.some(favWord => favWord === correctWord.word)) {
-        favoriteButton.classList.add('favorite-active');
-        favoriteIcon.className = 'fas fa-star'; // Solid star for favorited words
-    } else {
-        favoriteButton.classList.remove('favorite-active');
-        favoriteIcon.className = 'far fa-star'; // Outline star otherwise
     }
 }

@@ -25,7 +25,8 @@
         // Script to load and display favorites
         document.addEventListener('DOMContentLoaded', function() {
             const favoritesContainer = document.getElementById('favoritesContainer');
-            const favorites = JSON.parse(localStorage.getItem('wordGuessFavorites')) || [];
+            // Use 'gameFavorites' as the key to fetch the favorites
+            const favorites = JSON.parse(localStorage.getItem('gameFavorites')) || [];
 
             if (favorites.length === 0) {
                 favoritesContainer.innerHTML = '<p>No favorite words added yet.</p>';

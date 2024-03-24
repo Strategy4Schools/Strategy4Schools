@@ -121,7 +121,7 @@
 
     #guessed-words, #anagrams-container {
         width: 100%;
-        margin-top: 20px;
+        margin-top: 0px;
         padding: 0 20px;
     }
 
@@ -198,4 +198,33 @@
 #difficultySelection button:focus {
     outline: none; /* Removes the outline to keep the design clean */
     border: 2px solid #333; /* Optional: add a border to indicate focus */
+}
+
+#favoriteButton {
+    font-size: 24px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    justify-content: center;
+    font-family: 'Source Code Pro', monospace;
+    padding: 10px; /* Add padding for spacing */
+    color: gold;
+}
+
+#favoriteButton i {
+    margin-bottom: 8px; /* Space between the icon and text */
+    color: #ccc; /* Default color */
+    transition: color 0.3s; /* Smooth transition for color change */
+}
+
+#favoriteButton.favorite-active i {
+    color: gold; /* Change to gold when active */
+}
+
+#favoriteButton span {
+    display: block; /* Ensure the text aligns correctly under the icon */
+    font-size: 16px; /* Adjust text size as needed */
 }
