@@ -2,6 +2,7 @@
 const wordleGrid = document.getElementById('wordleGrid');
 const virtualKeyboard = document.getElementById('virtualKeyboard');
 const difficultySelection = document.getElementById('difficultySelection'); // Added for difficulty selection
+const comprehensiveDictURL = `http://localhost:8000/5_Letter_Words_CSW21_With_Definitions.json`;
 
 // Game variables
 let wordList = []
@@ -12,14 +13,48 @@ let correctWord; // Declare without assigning
 
 // Key state tracking
 let keyState = {};
+let comprehensiveDictionary = []
 
 // Modify or remove the initial startGame() call
 // startGame(); // This is now initiated by selecting difficulty
+
+let isComprehensiveDictLoaded = false;
+
+async function loadComprehensiveDictionary(url) {
+    try {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        comprehensiveDictionary = await response.json();
+        isComprehensiveDictLoaded = true; // Set to true only after successful load
+        console.log("Comprehensive dictionary loaded:", comprehensiveDictionary);
+    } catch (error) {
+        console.error('Error loading comprehensive dictionary:', error);
+        isComprehensiveDictLoaded = false; // Ensure this remains false if loading fails
+    }
+}
+
+// Call this function when your application starts, for example:
+document.addEventListener('DOMContentLoaded', (event) => {
+    loadComprehensiveDictionary(comprehensiveDictURL).then(() => {
+        if (isComprehensiveDictLoaded) {
+            console.log("Comprehensive dictionary is now ready to use.");
+        }
+    });
+});
 
 // Difficulty selection event listeners
 document.getElementById('easy').addEventListener('click', function() { startGameWithDifficulty('easy'); });
 document.getElementById('medium').addEventListener('click', function() { startGameWithDifficulty('medium'); });
 document.getElementById('hard').addEventListener('click', function() { startGameWithDifficulty('hard'); });
+
+function isWordInList(word) {
+    const wordUpper = word.toUpperCase(); // Convert the guessed word to uppercase for case-insensitive comparison
+    // Check only in the comprehensive dictionary
+    const inComprehensiveDict = comprehensiveDictionary.some(item => item.word.toUpperCase() === wordUpper);
+    return inComprehensiveDict; // Return true if the word is found in the comprehensive dictionary
+}
 
 function startGameWithDifficulty(difficulty) {
     let wordListURL;
@@ -47,17 +82,6 @@ function startGameWithDifficulty(difficulty) {
 
     wordleGrid.style.display = 'grid'; // Or 'flex' depending on your layout
     virtualKeyboard.style.display = 'flex'; // Adjust this according to your layout
-}
-
-// Initialize the game grid
-function initializeGrid() {
-    wordleGrid.innerHTML = '';
-    let gridSize = wordLength * 6; // 6 attempts
-    for (let i = 0; i < gridSize; i++) {
-        let div = document.createElement('div');
-        wordleGrid.appendChild(div);
-    }
-    wordleGrid.style.gridTemplateColumns = `repeat(${wordLength}, 1fr)`;
 }
 
 // Virtual keyboard event listener
@@ -199,11 +223,6 @@ function submitGuess() {
     } else {
         alert('Not enough letters');
     }
-}
-
-// Utility function to check if a word is in the wordList
-function isWordInList(word) {
-    return wordList.some(item => item.word.toUpperCase() === word);
 }
 
 // Check the submitted guess
