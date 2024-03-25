@@ -82,6 +82,13 @@ function setNewWord() {
     guessedAnagrams.clear();
     pickNewAnagram();
     updateAnagramCounter();
+
+    // Splitting definition if it contains the word itself
+    currentDefinition = randomEntry.definitions[0].includes(':') ? randomEntry.definitions[0].split(': ')[1] : randomEntry.definitions[0];
+
+    hideAnagramsContainer(); // Ensure the container is hidden when a new word is set
+
+    updateFavoriteIcon();
 }
 
 function pickNewAnagram() {
@@ -104,50 +111,44 @@ function pickNewAnagram() {
     document.getElementById('user-input').focus();
 }
 
-function updateGuessedWordsDisplay(guessedWord) {
-    let guessedWordsDiv = document.getElementById('guessed-words');
-    let definitionIndex = currentAnagrams.indexOf(guessedWord);
-    
+// Unified function to create and append an anagram with its definition
+function createAndAppendAnagramDefinition(parentElement, anagram, definition, isGuessed) {
     let wordElement = document.createElement('p');
-    let definition = randomEntry.definitions[definitionIndex];
-    definition = definition.replace(guessedWord + ': ', '');
+    let anagramLink = document.createElement('a');
+    anagramLink.href = `https://www.collinsdictionary.com/dictionary/english/${anagram.toLowerCase()}`;
+    anagramLink.textContent = anagram;
+    anagramLink.target = '_blank';
+    anagramLink.title = "View definition on Collins Dictionary";
 
-    let wordLink = document.createElement('a');
-    wordLink.href = `https://www.collinsdictionary.com/dictionary/english/${guessedWord.toLowerCase()}`;
-    wordLink.textContent = guessedWord;
-    wordLink.target = '_blank';
-    wordLink.title = "View definition on Collins Dictionary";
+    wordElement.appendChild(anagramLink);
+    wordElement.innerHTML += ": " + definition.replace(anagram + ': ', '');
+    wordElement.style.color = isGuessed ? 'green' : 'red'; // Green if guessed, red otherwise
 
-    wordElement.appendChild(wordLink);
-    wordElement.innerHTML += ": " + definition;
-    wordElement.style.color = 'green';
-
-    guessedWordsDiv.appendChild(wordElement);
+    parentElement.appendChild(wordElement);
 }
 
+// Modified updateGuessedWordsDisplay function
+function updateGuessedWordsDisplay(guessedWord) {
+    let anagramsDiv = document.getElementById('anagrams-container');
+    anagramsDiv.innerHTML = '';
+
+    let guessedWordsDiv = document.getElementById('guessed-words');
+    let definitionIndex = currentAnagrams.indexOf(guessedWord);
+    let definition = randomEntry.definitions[definitionIndex];
+    createAndAppendAnagramDefinition(guessedWordsDiv, guessedWord, definition, true);
+}
+
+// Modified displayAllAnagrams function
 function displayAllAnagrams() {
     let anagramsDiv = document.getElementById('anagrams-container');
     anagramsDiv.innerHTML = '';
 
     currentAnagrams.forEach((anagram, index) => {
+        let definition = randomEntry.definitions[index];
+        // Only display unguessed anagrams or modify this as needed to display all
         if (!guessedAnagrams.has(anagram)) {
-            let anagramElement = document.createElement('p');
-            let definition = randomEntry.definitions[index];
-            definition = definition.replace(anagram + ': ', '');
-
-            let anagramLink = document.createElement('a');
-            anagramLink.href = `https://www.collinsdictionary.com/dictionary/english/${anagram.toLowerCase()}`;
-            anagramLink.textContent = anagram;
-            anagramLink.target = '_blank';
-            anagramLink.title = "View definition on Collins Dictionary";
-
-            anagramElement.appendChild(anagramLink);
-            anagramElement.innerHTML += ": " + definition;
-            anagramElement.style.color = 'red';
-
-            anagramsDiv.appendChild(anagramElement);
+            createAndAppendAnagramDefinition(anagramsDiv, anagram, definition, false);
         }
-        
     });
 }
 
@@ -161,7 +162,7 @@ function finishGame() {
     // Adjust styling as needed, e.g., centering the button
     nextWordButton.style.margin = '0 auto';
 
-    // Additional logic for when the game finishes can be added here
+    showAnagramsContainer(); // Show the anagrams when the game ends
 }
 
 // Initial setup for the 'Next Word' button to ensure it starts hidden
@@ -176,10 +177,13 @@ window.checkAnagram = function() {
 window.skipWord = function() {
     let skipMessageDiv = document.getElementById('anagrams-container');
     skipMessageDiv.innerHTML = '<div style="color: orange;">Skipped!</div>';
-    displayAllAnagrams();
+    displayAllAnagrams(); // Show all anagrams, indicating the round is over
     document.getElementById('user-input').disabled = true;
     document.getElementById('next-word').style.display = 'block';
     updateAnagramCounter(); // Update counter here
+    document.getElementById('favoriteButton').style.display = 'inline-block'; // Show the star when skipped
+    showAnagramsContainer(); // Also show the container when a word is skipped
+    roundEnd();
 }
 
 window.nextWord = function() {
@@ -189,6 +193,7 @@ window.nextWord = function() {
     document.getElementById('next-word').style.display = 'none';
     document.getElementById('user-input').disabled = false;
     document.getElementById('user-input').focus();
+    document.getElementById('favoriteContainer').style.display = 'none';    
 }
 
 window.shuffleAnagram = function() {
@@ -213,9 +218,9 @@ function checkAnagramLogic() {
     let userInput = document.getElementById('user-input').value.trim().toUpperCase();
     if (currentAnagrams.includes(userInput) && !guessedAnagrams.has(userInput)) {
         document.getElementById('result').innerText = 'Correct!';
-
         guessedAnagrams.add(userInput);
         updateGuessedWordsDisplay(userInput);
+        document.getElementById('favoriteButton').style.display = 'inline-block'; // Show the star when correct
     } else {
         document.getElementById('result').innerText = 'Try Again!';
     }
@@ -223,19 +228,27 @@ function checkAnagramLogic() {
 
     if (guessedAnagrams.size === currentAnagrams.length) {
         document.getElementById('next-word').style.display = 'block';
-        document.getElementById('user-input').value = '';
         document.getElementById('user-input').disabled = true;
+        displayAllAnagrams(); // Assuming this is where you'd logically conclude a round
+        roundEnd();
     } else {
         document.getElementById('user-input').value = '';
         document.getElementById('user-input').focus();
-        }
     }
+}
 
+function showAnagramsContainer() {
+    document.getElementById('anagrams-container').style.display = 'block'; // Show the container
+}
+
+function hideAnagramsContainer() {
+    document.getElementById('anagrams-container').style.display = 'none'; // Hide the container
+}
 
 function updateGuessedWordsDisplay(guessedWord) {
     let guessedWordsDiv = document.getElementById('guessed-words');
     let definitionIndex = currentAnagrams.indexOf(guessedWord);
-    
+        
     let wordElement = document.createElement('p');
     let definition = randomEntry.definitions[definitionIndex];
     definition = definition.replace(guessedWord + ': ', '');
@@ -259,3 +272,39 @@ function updateAnagramCounter() {
 
     document.getElementById('anagram-counter').innerText = counterText;
 }
+
+document.getElementById('favoriteContainer').addEventListener('click', function() {
+    let favorites = JSON.parse(localStorage.getItem('gameFavorites')) || [];
+    const word = currentWord; // Ensure this is the currently displayed word.
+    const definition = currentDefinition; // Ensure this holds the current definition.
+
+    // Toggle favorite status
+    const index = favorites.findIndex(fav => fav.word === word);
+    if (index === -1) {
+        favorites.push({ word, definition });
+    } else {
+        favorites.splice(index, 1);
+    }
+
+    localStorage.setItem('gameFavorites', JSON.stringify(favorites));
+
+    // Update icon and label text
+    updateFavoriteIcon();
+});
+
+function updateFavoriteIcon() {
+    let favorites = JSON.parse(localStorage.getItem('gameFavorites')) || [];
+    const isFavorite = favorites.some(favorite => favorite.word === currentWord);
+
+    document.getElementById('favoriteButton').className = isFavorite ? 'fas fa-star' : 'far fa-star';
+
+    document.getElementById('favoriteLabel').textContent = isFavorite ? 'Remove from Collection' : 'Add Word to Collection';
+
+    document.getElementById('favoriteButton').className = isFavorite ? 'fas fa-star star' : 'far fa-star star';
+};
+
+function roundEnd() {
+    document.getElementById('favoriteContainer').style.display = 'inline-block'; // Show favorite container
+    updateFavoriteIcon(); // This will update the icon and the label according to the current word's favorite status
+}
+    
