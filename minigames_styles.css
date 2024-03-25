@@ -1,4 +1,3 @@
-
 body {
     padding-top: 70px;
     font-family: 'Roboto', sans-serif;
@@ -76,7 +75,7 @@ footer {
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5); /* Creates an inner shadow */
 }
 
-/* Example of a stylized game thumbnail */
+/* Individual featured games */
 .featuredgame-thumbnail {
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -100,31 +99,75 @@ footer {
 }
 
 #featured-games h2 {
-    /* If you have specific styles for the h2, adjust them here. For example: */
-    margin-top: 20; /* Reducing the top margin of the h2 element */
-    padding-top: 0; /* Reducing the top padding if necessary */
+    font-size: 2em; /* Larger font size */
+    font-weight: bold; /* Bold font */
+    color: #4f4e4f; /* Adjust the color as needed */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional text shadow */
+    padding: 0px; /* Padding around the text */
+    margin-bottom: 20px; /* Space below the title */
+    text-align: center; /* Center alignment */
+    animation: fadeInScaleUp 1s ease-out forwards;
 }
+
+@keyframes fadeInScaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#featured-games h2, .featured-games-mask {
+  opacity: 0; /* Start with the elements being transparent */
+  animation: fadeIn 1s ease-out forwards;
+}
+
+
+
 
 #games {
     text-align: center;
     margin-top: 100px;
 }
 
-.featuredgames-container {
-    display: flex;
-    justify-content: space-around; /* Equal spacing */
-    flex-wrap: wrap;
+/* Container for the featured games */
+.featured-games {
+    position: relative; /* Needed for absolute positioning of arrows */
+    max-width: 100%; /* Adjust as needed */
+    margin: 0 auto; /* Center the container */
+
 }
 
+.featuredgames-container {
+    display: flex;
+    justify-content: center; /* Center the items horizontally */
+    align-items: center; /* Center the items vertically (if needed) */
+    flex-wrap: wrap; /* Allow items to wrap */
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Styling for individual game thumbnails */
 .featuredgame-thumbnail {
-    flex: 0 0 30%; /* Adjust the percentage as needed */
-    margin-bottom: 20px; /* Space between rows */
+    flex: 0 0 30%; /* Each game will take up 30% of the container width */
+    margin: 20px; /* Add space around thumbnails */
     text-align: center;
-    position: relative;
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease; /* For the hover effect to scale the thumbnail */
 }
 
 .featuredgame-thumbnail:hover {
@@ -135,7 +178,32 @@ footer {
 .featuredgame-thumbnail img {
     max-width: 100%;
     height: auto;
-    border-radius: 10px;
+    border-radius: 10px; /* Maintain original border radius */
+}
+
+/* Since you're using arrows to navigate, you need to ensure that the container does not wrap */
+@media screen and (max-width: 768px) {
+    .featuredgames-container {
+        flex-wrap: nowrap; /* Prevent wrapping on smaller screens */
+        overflow-x: auto; /* Allow horizontal scrolling if needed */
+        justify-content: flex-start; /* Align items to the start to avoid spacing issues */
+        margin: 0; /* Reset margin for consistent alignment */
+        padding: 0 10px; /* Add padding to prevent content from touching the edges */
+    }
+    
+    .featuredgame-thumbnail {
+        flex: 0 0 auto; /* Allow each item to shrink to fit its content */
+        width: 80%; /* Adjust this to fit the size of the screen better */
+        margin: 20px 10px; /* Adjust margins for spacing */
+    }
+}
+
+/* Responsive design for featured games container */
+@media screen and (max-width: 768px) {
+    .featuredgame-thumbnail {
+        flex-basis: 48%; /* Adjust for fewer items per row on smaller screens */
+        width: calc(50% - 20px); /* Adjust accordingly */
+    }
 }
 
 .games-container {
@@ -236,11 +304,11 @@ footer {
     top: 5px;
     right: 5px;
     cursor: pointer;
-    z-index: 10;
+    z-index: 2;
     border: 2px solid #4f4e4f; /* Circular border */
     border-radius: 50%; /* Make it round */
-    width: 15px; /* Adjust size as needed */
-    height: 15px; /* Adjust size as needed */
+    width: 20px; /* Adjust size as needed */
+    height: 20px; /* Adjust size as needed */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -259,10 +327,13 @@ footer {
     display: none;
     position: absolute;
     right: 10px; /* Adjust as needed */
-    top: 45px; /* Adjust as needed */
+    top: 30px; /* Adjust as needed */
     border: 1px solid black;
     background-color: white;
-    text-align: left;
+    text-align: center;
+    width: 200px;
+    height: 40px;
+    align-content: center;
 }
 
 .info-icon:hover + .info-text {
@@ -439,21 +510,98 @@ footer {
     margin-right: 10px;
 }
 
-.dropdown-premium-button {
-    padding: 15px;
-    text-align: center;
-    background-color: #000;
-    color: #FFF;
-    cursor: pointer;
-}
-
-.dropdown-premium-button:hover {
-    background-color: #444;
-}
-
 /* Add your icon font styles or classes here */
 .icon-home::before { content: "🏠"; } /* Replace with actual icons */
 .icon-dictionary::before { content: "📚"; } /* Replace with actual icons */
 .icon-collection::before { content: "🔖" }
 .icon-achievements::before { content: "🏆" }
 /* ... more icons ... */
+
+.arrow-button {
+    background-color: transparent; /* Dark grey background for visibility */
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    border-radius: 0%; /* Circular shape */
+    width: 60px; /* Width of the button */
+    height: 60px; /* Height of the button */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    border-width: 0 10px 10px 0;
+    border-color: black;
+}
+
+.arrow-button:hover {
+    border-color: black; /* White border on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+}
+
+/* Arrow shape */
+.arrow-button::before {
+    content: '';
+    display: block;
+    border-style: solid;
+    border-color: transparent;
+    border-width: 0 5px 5px 0; /* Right-angle triangle shape */
+    width: 20px; /* Arrow width */
+    height: 20px; /* Arrow height */
+}
+
+
+
+/* Left arrow facing left */
+#left-arrow {
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%) rotate(135deg); /* Rotate to point left */
+}
+
+/* Right arrow facing right */
+#right-arrow {
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg); /* Rotate to point right */
+}
+
+
+/* Continuous pulse effect for visibility */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+    }
+    70% {
+        box-shadow: 20px 20px 0 0 rgba(0, 0, 0, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0px rgba(0, 0, 0, 0);
+    }
+}
+
+.arrow-button {
+    animation: pulse 3.5s infinite;
+}
+
+@media screen and (max-width: 768px) {
+    .arrow-button {
+        /* Adjust size, position, or visibility for smaller screens */
+        left: 5px; /* Example for smaller left-arrow */
+        right: 5px; /* Example for smaller right-arrow */
+    }
+}
+
+.featured-games-slider {
+    position: relative; /* Position context for the arrows */
+}
+
+.featured-games-mask {
+    overflow: visible; /* Allow the arrows to be outside the mask area */
+    width: calc(100% - 120px); /* You can adjust or remove this if not needed */
+    padding: 0 60px; /* Add padding to create space for the arrows */
+    margin: 0 auto;
+    position: relative;
+}

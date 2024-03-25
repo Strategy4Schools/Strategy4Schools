@@ -1,51 +1,95 @@
 document.addEventListener('DOMContentLoaded', function() {
-  const games = [
-    { name: "Anagram Adventures", url: "anagram_game.html" },
-    { name: "Word Quest", url: "WordQuest.html" },
-    // Add more games here
-  ];
+    const allFeaturedGames = [
+        [
+            { name: "Anagrammable", url: "anagrammable.html", img: "anagrammable_thumbnail_url" },
+            { name: "WordGuess", url: "WordGuess.html", img: "wordguess_thumbnail_url" },
+            { name: "Flashcards", url: "flashcardscategories.html", img: "flashcards_thumbnail_url" }
+        ],
+        [
+            { name: "Game 4", url: "game4.html", img: "game4_thumbnail_url" },
+            { name: "Game 5", url: "game5.html", img: "game5_thumbnail_url" },
+            { name: "Game 6", url: "game6.html", img: "game6_thumbnail_url" }
+        ]
+        // ... Add more sets as needed
+    ];
 
-  function setCurrentUserProfilePic() {
-  // This is a mock function; replace with the actual code to get the user's profile picture URL.
-  const getCurrentUserProfilePic = () => "path_to_current_user's_profile_pic.jpg";
+    let currentSetIndex = 0;
+    const featuredGamesContainer = document.querySelector('.featuredgames-container');
+    const maskWidth = document.querySelector('.featured-games-mask').offsetWidth;
 
-  // Get the profile picture element by its class name.
-  const profilePicElement = document.querySelector('.dropdown-avatar');
-  
-  // Set the 'src' attribute of the profile picture to the URL from the getCurrentUserProfilePic function.
-  profilePicElement.src = getCurrentUserProfilePic();
+    function updateInfoIcons() {
+    // Remove existing event listeners for all info icons
+    const allInfoIcons = document.querySelectorAll('.info-icon');
+    allInfoIcons.forEach(icon => {
+        icon.removeEventListener('mouseover', infoIconMouseover);
+        icon.removeEventListener('mouseout', infoIconMouseout);
+    });
+
+    // Attach event listeners only to info icons in the current set of featured games
+    const currentSetInfoIcons = document.querySelectorAll('.featuredgames-container .info-icon');
+    currentSetInfoIcons.forEach(icon => {
+        icon.addEventListener('mouseover', infoIconMouseover);
+        icon.addEventListener('mouseout', infoIconMouseout);
+    });
+
 }
+    // Mouseover event handler for info icon
+    function infoIconMouseover(event) {
+        const infoText = event.target.nextElementSibling;
+        if (infoText && infoText.classList.contains('info-text')) {
+            infoText.style.display = 'block';
+        }
+    }
 
-// Call this function on page load or when the user's profile picture changes.
-setCurrentUserProfilePic();
+    // Mouseout event handler for info icon
+    function infoIconMouseout(event) {
+        const infoText = event.target.nextElementSibling;
+        if (infoText && infoText.classList.contains('info-text')) {
+            infoText.style.display = 'none';
+        }
+    }
 
+    // Function to slide featured games to the left or right
+    function slideFeaturedGames(direction) {
+        if (direction === 'left' && currentSetIndex > 0) {
+            currentSetIndex--;
+        } else if (direction === 'right' && currentSetIndex < allFeaturedGames.length - 1) {
+            currentSetIndex++;
+        }
 
-  function searchGames() {
-    const searchInput = document.getElementById('gameSearch').value.toLowerCase();
-    const resultsContainer = document.getElementById('searchResults');
-    resultsContainer.innerHTML = '';
-    resultsContainer.style.display = 'none';
+        const newTransformValue = -(currentSetIndex * maskWidth);
+        featuredGamesContainer.style.transform = `translateX(${newTransformValue}px)`;
 
-    document.getElementById('searchButton').addEventListener('click', function(event) {
-    event.preventDefault(); // Prevent the default form submission if wrapped in a form
-    searchGames();
+        // Reattach event listeners to info-icons after sliding
+        featuredGamesContainer.addEventListener('transitionend', updateInfoIcons, { once: true });
+    }
+
+    // Attach event listeners to arrow buttons
+    document.getElementById('left-arrow').addEventListener('click', function() {
+        slideFeaturedGames('left');
+    });
+
+    document.getElementById('right-arrow').addEventListener('click', function() {
+        slideFeaturedGames('right');
+    });
+
+    // Initial setup for info icons
+    updateInfoIcons();
 });
 
 
-    if (searchInput.length > 0) {
-        var filteredGames = games.filter(game => game.name.toLowerCase().includes(input));
-        
-        if (filteredGames.length > 0) {
-            resultsContainer.style.display = 'block';
-            filteredGames.forEach(game => {
-                var resultItem = document.createElement('div');
-                resultItem.textContent = game.name;
-                resultItem.onclick = function() {
-                    window.location.href = game.url; // Navigate to the game page on click
-                };
-                resultsContainer.appendChild(resultItem);
-            });
-        }
-    }
-}
 
+
+document.addEventListener('scroll', function() {
+  var featuredGamesTitle = document.querySelector('#featured-games h2');
+  var featuredGamesContainer = document.querySelector('.featured-games-mask');
+
+  var titlePosition = featuredGamesTitle.getBoundingClientRect().top;
+  var containerPosition = featuredGamesContainer.getBoundingClientRect().top;
+  var screenPosition = window.innerHeight / 1.3;
+
+  if (titlePosition < screenPosition && containerPosition < screenPosition) {
+    featuredGamesTitle.style.opacity = '1'; // Trigger the animation
+    featuredGamesContainer.style.opacity = '1'; // Trigger the animation
+  }
+});
