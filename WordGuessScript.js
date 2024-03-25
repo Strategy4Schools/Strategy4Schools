@@ -467,71 +467,79 @@ function resetAndStartNewGame() {
 }
 
 document.getElementById('favoriteButton').addEventListener('click', function() {
-    let favorites = JSON.parse(localStorage.getItem('gameFavorites')) || []; // Use 'gameFavorites' as the key
+    // Retrieve the current list of favorites
+    let favorites = JSON.parse(localStorage.getItem('gameFavorites')) || [];
     const favoriteIcon = this.querySelector('i');
 
-    // If the current word is not in favorites, add it and update the icon to filled star
-    if (!favorites.includes(correctWord.word)) {
-        favorites.push(correctWord.word);
-        favoriteIcon.className = 'fas fa-star'; // Change to filled star
-        this.classList.add('favorite-active'); // Visually indicate favorited
+    // Check if the word is already favorited
+    const wordExists = favorites.some(fav => fav.word === correctWord.word);
+
+    if (!wordExists) {
+        // Add to favorites if not already favorited
+        addToFavorites(correctWord.word, correctWord.definition);
+        favoriteIcon.className = 'fas fa-star'; // This might be redundant due to checkIfFavorite call later
+        this.classList.add('favorite-active');
         showConfirmation('Word added to favorites!');
     } else {
-        // If the word is already in favorites, remove it and update the icon to outline star
-        const index = favorites.indexOf(correctWord.word);
-        favorites.splice(index, 1);
-        favoriteIcon.className = 'far fa-star'; // Change to outline star
-        this.classList.remove('favorite-active'); // Visually indicate not favorited
+        // Remove from favorites if already favorited
+        favorites = favorites.filter(fav => fav.word !== correctWord.word);
+        localStorage.setItem('gameFavorites', JSON.stringify(favorites));
+        favoriteIcon.className = 'far fa-star'; // This might be redundant due to checkIfFavorite call later
+        this.classList.remove('favorite-active');
         showConfirmation('Word removed from favorites.');
     }
 
-    // Update the local storage with the new list of favorites
-    localStorage.setItem('gameFavorites', JSON.stringify(favorites));
-    checkIfFavorite(); // Re-check the favorite status to update UI accordingly
+    // Update UI to reflect the current favorite state
+    checkIfFavorite();
 });
 
 function checkIfFavorite() {
+    // Retrieve the current list of favorites
     let favorites = JSON.parse(localStorage.getItem('gameFavorites')) || [];
-    const favoriteButton = document.getElementById('favoriteButton');
-    const favoriteIcon = favoriteButton.querySelector('i');
+    const favoriteIcon = document.querySelector('#favoriteButton i');
 
-    // Check if the current word is in favorites and update the icon and button style accordingly
-    if (favorites.includes(correctWord.word)) {
-        favoriteIcon.className = 'fas fa-star'; // Solid star for favorited words
-        favoriteButton.classList.add('favorite-active');
+    // Determine if the current word is in favorites
+    const wordExists = favorites.some(fav => fav.word === correctWord.word);
+
+    if (wordExists) {
+        // If the word is favorited, ensure the icon is a filled star
+        favoriteIcon.className = 'fas fa-star';
+        document.getElementById('favoriteButton').classList.add('favorite-active');
     } else {
-        favoriteIcon.className = 'far fa-star'; // Outline star otherwise
-        favoriteButton.classList.remove('favorite-active');
+        // If the word is not favorited, ensure the icon is an outline star
+        favoriteIcon.className = 'far fa-star';
+        document.getElementById('favoriteButton').classList.remove('favorite-active');
     }
 }
 
 function showConfirmation(message) {
-    const confirmationBox = document.getElementById('confirmationMessage') || document.createElement('div');
-    confirmationBox.setAttribute('id', 'confirmationMessage');
-    confirmationBox.textContent = message;
-    if (!document.contains(confirmationBox)) {
-        document.body.appendChild(confirmationBox);
+    const confirmationBox = document.getElementById('confirmationMessage');
+    if (!confirmationBox) {
+        // If there's no confirmation box, create it
+        const newConfirmationBox = document.createElement('div');
+        newConfirmationBox.setAttribute('id', 'confirmationMessage');
+        document.body.appendChild(newConfirmationBox);
     }
+    // Update the message and make it visible
+    document.getElementById('confirmationMessage').textContent = message;
+    document.getElementById('confirmationMessage').style.visibility = 'visible';
+    document.getElementById('confirmationMessage').style.opacity = '1';
 
-    confirmationBox.style.opacity = '1';
-    confirmationBox.style.visibility = 'visible';
-    confirmationBox.classList.add('show');
-
-    // Clear any previous timeout to hide the message
-    clearTimeout(confirmationBox.hideTimeout);
-
-    // Set a new timeout to automatically hide the message
-    confirmationBox.hideTimeout = setTimeout(() => {
-        hideConfirmationMessageInstantly();
-    }, 1000); // Adjust the time as necessary
+    // Hide the confirmation message after 3 seconds
+    setTimeout(() => {
+        document.getElementById('confirmationMessage').style.visibility = 'hidden';
+        document.getElementById('confirmationMessage').style.opacity = '0';
+    }, 3000);
 }
 
-function addToFavorites(word) {
-    let favorites = JSON.parse(localStorage.getItem('wordGuessFavorites')) || [];
-    if (!favorites.includes(word)) {
-        favorites.push(word);
-        localStorage.setItem('wordGuessFavorites', JSON.stringify(favorites));
-        console.log(`${word} added to favorites!`);
+function addToFavorites(word, definition) {
+    console.log("addToFavorites called with:", word, definition);
+    let favorites = JSON.parse(localStorage.getItem('gameFavorites')) || [];
+    // Check if the word is already in favorites to avoid duplicates
+    if (!favorites.some(favorite => favorite.word === word)) {
+        favorites.push({ word, definition });
+        localStorage.setItem('gameFavorites', JSON.stringify(favorites));
+        console.log(`${word} added to favorites with definition.`);
     } else {
         console.log(`${word} is already in favorites.`);
     }
