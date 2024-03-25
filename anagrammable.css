@@ -200,21 +200,6 @@
     border: 2px solid #333; /* Optional: add a border to indicate focus */
 }
 
-.definitions-container {
-    border: 1px solid #ccc; /* Adds a light gray border */
-    padding: 10px; /* Adds some padding inside the container */
-    margin-top: 20px; /* Adds some space above the container */
-    background-color: #f9f9f9; /* Light background color */
-    border-radius: 5px; /* Rounded corners */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
-    display: block; /* Ensures it's always visible */
-    width: 80%; /* Adjust based on your layout */
-    max-width: 600px; /* Prevents it from getting too wide */
-    margin: 20px auto; /* Centers it with margin */
-    overflow-y: auto; /* Adds scroll if content is too long */
-    max-height: 250px; /* Limits its height */
-}
-
 #favoriteButton {
     color: gold; /* Gold color for the star */
     cursor: pointer; /* Indicates the icon is clickable */
