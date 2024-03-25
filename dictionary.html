@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionary Search Page</title>
+    <link rel="stylesheet" href="dictionary.css">
+</head>
+<body>
+
+    <h1 class="page-title">Dictionary Search</h1>
+
+    <div class="centered-container">
+        <div class="search-container">
+            <!-- Back to minigames button moved inside body and styled -->
+            <div id="backButtonContainer" style="position: absolute; top: 10px; left: 10px;">
+                <button id="backToMinigames" onclick="window.location.href='minigames_home.html'">← Back to Minigames</button>
+            </div>
+
+            <!-- Filter Section -->
+            <div class="buttons-container">
+                <button id="addFilter">Add Filter</button>
+            </div>
+            <div id="filters">
+                <div class="filter">
+                    <button class="removeThisFilter" disabled>-</button>
+                    <select class="filterType">
+                        <option value="anagramMatch">Anagram Match</option>
+                        <option value="wordType">Word Type</option>
+                        <option value="wordLength">Word Length</option>
+                    </select>
+                    <div class="filterOptions">
+                        <input type="text" class="anagramMatch" placeholder="Anagram Match">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Search Button -->
+            <div class="search-button-container">
+                <button id="searchButton">Search</button>
+            </div>
+
+            <!-- Results Section -->
+            <div id="results" class="results-section"></div>
+        </div>
+    </div>
+    
+    <script src="dictionary.js"></script>
+</body>
+</html>

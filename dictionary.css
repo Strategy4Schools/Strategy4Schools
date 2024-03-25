@@ -1,0 +1,325 @@
+body {
+    font-family: 'Source Code Pro', monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center the content vertically */
+    min-height: 100vh;
+    background-color: #FAF9F6;
+    margin: 0;
+    color: #333;
+    padding-top: 30px; /* Adjusted to give space for the title */
+    position: relative;
+}
+
+.page-title {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Center the title horizontally */
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    z-index: 1000; /* Ensure title is above other content */
+}
+
+button {
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 500; /* Adjusted font weight */
+}
+
+.centered-container {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.search-container {
+    width: 100%;
+    max-width: 1250px;
+    max-height: 80vh; /* Limit the height to ensure it doesn't overlap the title */
+    overflow: auto; /* Allows scrolling within the container */
+    background-color: #FFFFFF;
+    padding: 20px;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    margin: 20px auto; /* Center the container horizontally */
+}
+
+.results-section {
+    max-height: 60vh; /* Adjust based on your needs */
+    overflow-y: auto; /* Enable vertical scrolling for the results */
+}
+
+    h1 {
+        font-family: 'Source Code Pro', monospace;
+        font-size: 2.5em;
+        margin-bottom: 20px;
+        font-weight: 550;
+        color: #000000;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        text-align: center;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    th, td {
+        border: 1px solid #ccc;
+        text-align: left;
+        padding: 8px;
+        color: #222;
+    }
+
+    th {
+        background-color: #f2f2f2;
+        font-weight: 700;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+
+    .custom-context-menu {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .filter, #results div {
+        margin-bottom: 15px;
+    }
+
+    #addFilter, #removeFilter {
+        background-color: #e0e0e0; /* Neutral color for less emphasis */
+        color: black; /* Black text for contrast */
+        border: 2px solid #000000; /* Consistent border style */
+    }
+
+    /* Hover effects for '+' and '-' buttons */
+    #addFilter:hover, #removeFilter:hover {
+        background-color: #d5d5d5; /* Slightly darker on hover for feedback */
+        box-shadow: none; /* Keep it simple without shadow */
+    }
+
+    .filter select, .filter input {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    max-width: 250px; /* Sets a max width for select elements and input fields */
+    width: 100%; /* Ensures they take up the available space up to the max-width */
+    text-align: center; /* Centers the text inside the box */
+    }
+    
+
+    .filter select:focus, .filter input:focus {
+        border-color: #2196F3; /* Highlight focus with a different border color */
+        box-shadow: 0 0 0 2px rgba(33,150,243,0.3); /* Subtle shadow to emphasize focus */
+        outline: none; /* Remove default focus outline */
+    }
+
+#addFilter {
+    font-size: 18px; /* Match the larger text size for readability */
+    padding: 12px 20px; /* Uniform padding for consistency */
+    background-color: #2196F3; /* Choose a distinct color, blue for adding something new */
+    color: white; /* White text for contrast */
+    border: none; /* Modern, flat design without border */
+    cursor: pointer; /* Cursor change to indicate clickability */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+    border-radius: 5px; /* Rounded corners for a modern look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    outline: none; /* Avoid outline on click for a cleaner look */
+    font-weight: bold; /* Bold text for clear visibility */
+    margin-bottom: 20px; /* Provide some spacing from the filter section */
+}
+
+#addFilter:hover, #addFilter:focus {
+    background-color: #1E88E5; /* Lighter blue on hover/focus for interaction feedback */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow for a "lifting" effect */
+}
+
+#addFilter:active {
+    background-color: #1976D2; /* Darker blue for a pressed effect */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Slightly reduce shadow to simulate pressing */
+}
+
+#removeFilter {
+    background-color: #ffebee; /* Light red background */
+    color: #333;
+    border: 2px solid #F44336; /* Red border */
+    font-weight: bold; /* Makes text bolder */
+    padding: 8px 12px; /* Slightly larger padding for a bolder look */
+    margin: 10px 0; /* Consistent spacing around the button */
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+#removeFilter:hover {
+    background-color: #ffcdd2; /* Darker red background on hover */
+    border-color: #d32f2f; /* Darker red border on hover */
+}
+
+    #results {
+        margin-top: 20px;
+    }
+
+    #results div {
+        padding: 10px;
+        border-left: 4px solid #007bff;
+        margin-bottom: 5px;
+        background-color: #f9f9f9;
+        border: 2px solid #000000;
+        transition: transform 0.2s, opacity 0.2s;
+    }
+
+    /* Styles for the container holding the '+' and '-' buttons */
+    .buttons-container, #results {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    #backButtonContainer {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: 2000;
+    }
+
+    #backToMinigames {
+        font-family: 'Source Code Pro', monospace;
+        background-color: #e0e0e0;
+        color: black;
+        border: 3px solid black;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    #backToMinigames:hover {
+        background-color: #45a049;
+    }
+
+    #searchButton {
+    font-size: 18px; /* Slightly larger text for better readability */
+    padding: 12px 20px; /* More padding for a larger, more clickable area */
+    background-color: #4CAF50; /* A green shade for a go/search action */
+    color: white; /* White text for contrast */
+    border: none; /* No border for a modern, flat design */
+    cursor: pointer; /* Cursor change to indicate clickability */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+    border-radius: 5px; /* Rounded corners for a softer, modern look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    outline: none; /* Remove the outline to avoid distraction on click */
+    font-weight: bold; /* Bold text for emphasis */
+}
+
+#searchButton:hover, #searchButton:focus {
+    background-color: #45a049; /* A slightly lighter green on hover/focus for interaction feedback */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow for a "lifting" effect */
+    outline: none; /* Ensure outline doesn't reappear on focus */
+}
+
+#searchButton:active {
+    background-color: #388e3c; /* Darker green for a pressed effect */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Slightly reduce shadow to simulate pressing */
+}
+
+    .search-button-container {
+            display: flex;
+    justify-content: center;
+    }
+
+    /* Container for all filters */
+#filters {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Adds space between each filter set */
+}
+
+/* Individual filter container to align filter type and options inline */
+.filter {
+    display: flex;
+    align-items: center; /* Aligns items vertically in the center */
+    justify-content: center; /* Centers the filter type and options horizontally */
+    gap: 10px; /* Space between filter type select box and options */
+    margin-bottom: 15px; /* Space below each filter for separation */
+}
+
+.removeThisFilter {
+    padding: 0 8px;
+    font-size: 16px;
+    height: fit-content; /* Adjust the height to fit its content, aligning it with the select box. */
+    align-self: center; /* Ensures the button is centered within its flex container. */
+    margin-right: 5px; /* Adds a small margin to the right for spacing. */
+    cursor: pointer;
+}
+
+
+/* Responsive adjustments could be added here if necessary */
+@media (max-width: 768px) {
+    .filter {
+        flex-direction: column; /* Stacks filter type and options vertically on smaller screens */
+    }
+}
+
+    .removeThisFilter {
+        margin: 0 0 5px 0; /* Adjust margin for vertical stacking. */
+        background-color: #ff6347; /* Tomato red for visibility */
+        color: white; /* White text for contrast */
+        border: 1px solid darkred; /* Dark red border for emphasis */
+    }
+
+.removeThisFilter:disabled {
+    color: #ccc; /* Change the text color to indicate the button is disabled */
+    cursor: not-allowed; /* Change the cursor to indicate the action is not allowed */
+    opacity: 0.5; /* Optionally, reduce opacity to further indicate it's disabled */
+}
+
+.filterOptions {
+    display: flex;
+    gap: 10px; /* Adjust as necessary */
+    align-items: center;
+}
+
+.filterOptions input {
+    flex: 1; /* This makes input fields flexibly expand but share the space equally */
+    max-width: 100px; /* Or any specific value that fits well in your design */
+}
+
+.wordLengthWrapper {
+    display: flex;
+    gap: 10px; /* Provides space between the min and max inputs */
+}
+
+@media (max-width: 400px) {
+    .filterOptions, .wordLengthWrapper {
+        flex-direction: column;
+    }
+}
+
+.warning-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%; /* Makes the icon circular */
+    color: white; /* Sets the icon color to white */
+    background-color: #ff6347; /* Red background for visibility */
+    border: 2px solid darkred; /* Dark red border for emphasis */
+    font-weight: bold; /* Makes the exclamation mark bold */
+    margin-left: 5px; /* Spacing from the filter or input */
+    font-size: 14px; /* Adjust size as needed */
+}
