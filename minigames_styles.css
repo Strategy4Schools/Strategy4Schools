@@ -1,15 +1,14 @@
 body {
     padding-top: 70px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Source Code Pro', monospace;
     margin: 0;
     padding: 0;
-    background-color: white;
-    color: black;
-    background-image: url('https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcm0zMS1hb20tMDAzLXdvb2RfMi5qcGc.jpg');
+    background-color: #243A4E;
+    color: white;
 }
 
 header {
-    background-color: #eeeeee;
+    background-color: #1C2D3D;
     color: #fff;
     padding-bottom: 20px;
     padding-top: 20px;
@@ -22,39 +21,22 @@ header {
     left: 0; /* Align the left edge of the header with the left of the viewport */
     width: 100%; /* Ensure the header spans the full width of the viewport */
     z-index: 10; /* Ensure the header layer is above other content */
-    border-bottom: 1px solid #4f4e4f;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid #14202b;
 }
 
 .logo-container {
     position: absolute;
     left: 7.5%; /* Position the left edge of the container at the center of the header */
-    top: 2.5px;
+    top: 15px;
     transform: translateX(-50%); /* Move the container back by half of its own width */
     /* ... other styles ... */
 }
 
 .logo-container img {
-    max-width: 450px; /* Maximum width, the image won't stretch beyond this */
-    max-height: 90px; /* Adjust this value based on your header's height */
+    max-width: 420px; /* Maximum width, the image won't stretch beyond this */
+    max-height: 70px; /* Adjust this value based on your header's height */
     height: auto; /* Height adjusts automatically to maintain aspect ratio */
     object-fit: contain; /* Ensures the image is scaled correctly within the set dimensions */
-}
-
-@keyframes twinkling {
-  0% {
-    filter: brightness(1) contrast(1);
-  }
-  50% {
-    filter: brightness(1.2) contrast(1.2);
-  }
-  100% {
-    filter: brightness(1) contrast(1);
-  }
-}
-
-.logo-container img:hover {
-  animation: twinkling 2s forwards;
 }
     
 main {
@@ -65,7 +47,7 @@ main {
 }
 
 footer {
-    background-color: #333;
+    background-color: #14202b;
     color: white;
     text-align: center;
     padding: 1em 0;
@@ -82,7 +64,7 @@ footer {
 .game-thumbnail {
     width: 300px;
     height: 200px;
-    border: 1px solid #ddd;
+    border: 1px solid white;
     border-radius: 8px;
     overflow: hidden;
     transition: transform 0.3s ease;
@@ -113,7 +95,7 @@ footer {
     margin-top: 50px; /* Adjust the margin as needed */
     font-size: 2em; /* Adjust the font size as needed */
     font-weight: bold;
-    color: #4f4e4f;
+    color: white;
     /* You can add other styling properties as needed */
 }
 
@@ -124,14 +106,10 @@ footer {
     }
 }
 
-.game-thumbnail:hover, .featuredgame-thumbnail:hover {
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5); /* Creates an inner shadow */
-}
-
 /* Individual featured games */
 .featuredgame-thumbnail {
     position: relative;
-    border: 1px solid #ddd;
+    border: 1px solid white;
     border-radius: 8px;
     overflow: hidden;
     transition: transform 0.3s ease;
@@ -155,8 +133,7 @@ footer {
 #featured-games h2 {
     font-size: 2em; /* Larger font size */
     font-weight: bold; /* Bold font */
-    color: #4f4e4f; /* Adjust the color as needed */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional text shadow */
+    color: white; /* Adjust the color as needed */
     padding: 0px; /* Padding around the text */
     margin-bottom: 20px; /* Space below the title */
     text-align: center; /* Center alignment */
@@ -218,7 +195,7 @@ footer {
     flex: 0 0 30%; /* Each game will take up 30% of the container width */
     margin: 20px; /* Add space around thumbnails */
     text-align: center;
-    border: 1px solid #ddd;
+    border: 1px solid white;
     border-radius: 8px;
     overflow: hidden;
     transition: transform 0.3s ease; /* For the hover effect to scale the thumbnail */
@@ -280,7 +257,7 @@ footer {
 
 .game-thumbnail {
     position: relative;
-    border: 1px solid #ddd;
+    border: 1px solid white;
     border-radius: 8px;
     overflow: hidden;
     transition: transform 0.3s ease;
@@ -298,22 +275,11 @@ footer {
     width: 100%; /* Ensure it spans the width of the thumbnail */
     text-align: center; /* Center the text */
     color: white; /* Choose a color that stands out */
-    font-weight: bold; /* Make the text bold */
     font-size: 1.5em; /* Adjust font size as needed */
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
     padding: 5px 0; /* Add padding for better readability */
     box-sizing: border-box; /* Include padding in the width */
     transition: background-color 0.3s ease; /* Smooth transition for hover effect */
-    text-shadow: 0 0 3px #fff, /* Outer glow */
-                 0 0 5px #fff; /* Inner glow */
-    animation: glowing 3s infinite alternate;
-}
-
-
-@keyframes glowing {
-    0% { text-shadow: 0 0 3px #fff, 0 0 5px #fff; }
-    50% { text-shadow: 0 0 6px #fff, 0 0 8px #fff; }
-    100% { text-shadow: 0 0 3px #fff, 0 0 5px #fff; }
 }
 
 
@@ -324,7 +290,6 @@ footer {
     width: 100%; /* Ensure it spans the width of the thumbnail */
     text-align: center; /* Center the text */
     color: white; /* Choose a color that stands out */
-    font-weight: bold; /* Make the text bold */
     font-size: 1.2em; /* Adjust font size as needed */
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
     padding: 5px 0; /* Add padding for better readability */
@@ -340,7 +305,6 @@ footer {
     width: 100%; /* Ensure it spans the width of the thumbnail */
     text-align: center; /* Center the text */
     color: white; /* Choose a color that stands out */
-    font-weight: bold; /* Make the text bold */
     font-size: 1.2em; /* Adjust font size as needed */
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
     padding: 5px 0; /* Add padding for better readability */
@@ -364,26 +328,23 @@ footer {
 
 .profile-pic:hover {
     transform: scale(1.05); /* Slightly larger on hover */
-    border-color: #43af51; /* Change border color */
+    border-color: #fdb740; /* Change border color */
 }
 
 .profile-pic {
     width: 50px;
     height: 50px;
     border-radius: 70%;
-    border: 3px solid #4f4e4f;
+    border: 3px solid #243A4E;
     cursor: pointer;
     object-fit: cover;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
 }
 
 .dropdown-menu {
     display: none;
     position: absolute;
-    background-color: #dddddd;
+    background-color: #14202B;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     right: 100%;
     top: 100%;
@@ -402,63 +363,22 @@ footer {
     height: 0;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
-    border-bottom: 10px solid #dddddd; /* Same color as your dropdown background */
+    border-bottom: 10px solid #14202B; /* Same color as your dropdown background */
 }
 
 
 .dropdown-menu a {
-    color: black;
-    padding: 12px 16px;
+    color: white;
+    padding: 13px 16px;
     text-decoration: none;
     display: block;
     font-weight: bold;
 }
 
 .dropdown-menu a:hover {
-    background-color: #43af51;
+    background-color: #fdb740;
 }
 
-.info-icon {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    cursor: pointer;
-    z-index: 2;
-    border: 2px solid #4f4e4f; /* Circular border */
-    border-radius: 50%; /* Make it round */
-    width: 20px; /* Adjust size as needed */
-    height: 20px; /* Adjust size as needed */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: Arial, sans-serif; /* Change font here */
-    font-size: 16px; /* Adjust font size as needed */
-    background-color: #fff; /* Background color */
-    color: #333; /* Font color */
-}
-
-.info-icon:hover {
-    border-color: #43af51;
-    color: #43af51;
-}
-
-.info-text {
-    display: none;
-    position: absolute;
-    right: 10px; /* Adjust as needed */
-    top: 30px; /* Adjust as needed */
-    border: 1px solid black;
-    background-color: white;
-    text-align: center;
-    width: 200px;
-    height: 40px;
-    align-content: center;
-}
-
-.info-icon:hover + .info-text {
-    display: block;
-    /* Position and style as needed */
-}
 
 /* Responsive adjustments for smaller screens */
 @media screen and (max-width: 768px) {
@@ -489,30 +409,30 @@ footer {
 
 #gameSearch {
     padding: 15px 5px;
-    border: 1px solid #4f4e4f;
+    border: 1px solid #14202b;
     border-radius: 4px 4px 4px 4px; /* Rounded corners on the left side only */
     width: 100%; /* Take the full width of the parent container */
     font-size: 15px;
     box-sizing: border-box;
     font-family: 'Source Code Pro', monospace;
-    background-color: #ddd;
+    background-color: #fff;
     font-weight: bold;
 
 }
 
 #searchButton {
     cursor: pointer;
-    background-color: #ddd; /* Matching the header color */
+    background-color: #fff; /* Matching the header color */
     border: none;
     color: white;
     font-size: 1.2em;
     padding: 12.5px;
-    border: 1px solid #4f4e4f;
+    border: 1px solid #14202b;
     border-radius: 0 50px 50px 0; /* Rounded corners on the right side */
 }
 
 #searchButton:hover {
-    background-color: #43af51; /* New background color on hover */
+    background-color: #fdb740; /* New background color on hover */
 }
 
 /* Adjustments for the responsive design */
@@ -538,12 +458,12 @@ footer {
 }
 
 #gameSearch:focus {
-    outline: 3px solid #43af51;
+    outline: 3px solid #fdb740;
 }
 
 .btn-navigation-nav-menu-md {
     position: relative;
-    background-color: #eeeeee; /* Light grey background */
+    background-color: transparent; /* Light grey background */
     border: none;
     border-radius: 20%; /* Circular shape */
     cursor: pointer;
@@ -557,14 +477,13 @@ footer {
 }
 
 .btn-navigation-nav-menu-md:hover {
-    background-color: #43af51;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    background-color: #fdb740;
 }
 
 .icon-nav-menu::before {
     content: '\2630'; /* Unicode for the hamburger icon */
     font-size: 30px; /* Increased icon size for a larger appearance */
-    color: #4f4e4f; 
+    color: white; 
 }
 
 .nav-menu-dropdown {
@@ -572,8 +491,7 @@ footer {
     position: fixed; /* Positions the dropdown absolutely within the relative parent */
     left: 0; /* Aligns to the left of the button */
     top: 99px; /* Positions the dropdown right below the button */
-    background-color: #eeeeee; /* Change background color as needed */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow for depth */
+    background-color: #1C2D3D; /* Change background color as needed */
     width: 250px; /* Adjust width as needed */
     z-index: 1000;
     height: 100%;
@@ -581,11 +499,11 @@ footer {
 
 /* Style for the links within the dropdown */
 .nav-menu-dropdown a {
-    color: black; /* Text color */
+    color: white; /* Text color */
     padding: 10px 15px; /* Padding for each link */
     text-decoration: none; /* Removes underline from links */
     display: block; /* Makes each link take up its own line */
-    border-bottom: 3px solid #dddddd; /* Optional: adds a separator between links */
+    border-bottom: 3px solid #14202b; /* Optional: adds a separator between links */
 }
 
 .nav-menu-dropdown a:last-child {
@@ -593,16 +511,16 @@ footer {
 }
 
 .nav-menu-dropdown a:hover {
-    background-color: #eeeeee; /* Change background color on hover */
+    background-color: #fdb740; /* Change background color on hover */
 }
 
 
 .dropdown-profile-section {
     padding: 10px;
-    border-bottom: 3px solid #4f4e4f;
-    border-top: 1px solid #4f4e4f;
+    border-bottom: 3px solid #fff;
+    border-top: 1px solid #14202b;
     text-align: center;
-    background-color: #dddddd; /* Light grey background for the profile section */
+    background-color: #14202b; /* Light grey background for the profile section */
 }
 
 .dropdown-avatar {
@@ -615,7 +533,7 @@ footer {
 .dropdown-username {
     font-weight: bold;
     margin-bottom: 10px;
-    color: black;
+    color: white;
 }
 
 .dropdown-link {
@@ -649,16 +567,14 @@ footer {
     justify-content: center;
     transition: all 0.3s ease; /* Smooth transition for hover effects */
     border-radius: 0%; /* Circular shape */
-    width: 60px; /* Width of the button */
-    height: 60px; /* Height of the button */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow */
-    border-width: 0 10px 10px 0;
-    border-color: black;
+    width: 30px; /* Width of the button */
+    height: 30px; /* Height of the button */
+    border-width: 0 5px 5px 0;
+    border-color: white;
 }
 
 .arrow-button:hover {
-    border-color: black; /* White border on hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+    border-color: #fdb740; 
 }
 
 /* Arrow shape */
