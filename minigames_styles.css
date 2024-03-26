@@ -31,6 +31,7 @@ header {
     left: 7.5%; /* Position the left edge of the container at the center of the header */
     top: 2.5px;
     transform: translateX(-50%); /* Move the container back by half of its own width */
+    /* ... other styles ... */
 }
 
 .logo-container img {
@@ -70,12 +71,66 @@ footer {
     padding: 1em 0;
 }
 
+/* Common Styles for Both Game Sections */
+.games-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.game-thumbnail {
+    width: 300px;
+    height: 200px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.game-thumbnail:hover {
+    transform: scale(1.05);
+}
+
+.game-thumbnail img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .game-thumbnail {
+        width: calc(50% - 20px); /* Adjust accordingly for smaller screens */
+        margin: 10px; /* Smaller margins on smaller screens */
+    }
+}
+
+
+#brain-engage-title, #brain-play-title {
+    text-align: center;
+    margin-top: 50px; /* Adjust the margin as needed */
+    font-size: 2em; /* Adjust the font size as needed */
+    font-weight: bold;
+    color: #4f4e4f;
+    /* You can add other styling properties as needed */
+}
+
+/* Responsive adjustments for titles */
+@media screen and (max-width: 768px) {
+    #brain-engage-title, #brain-play-title {
+        font-size: 1.5em; /* Smaller font size for smaller screens */
+    }
+}
+
 .game-thumbnail:hover, .featuredgame-thumbnail:hover {
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5); /* Creates an inner shadow */
 }
 
 /* Individual featured games */
 .featuredgame-thumbnail {
+    position: relative;
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
@@ -224,6 +279,7 @@ footer {
 }
 
 .game-thumbnail {
+    position: relative;
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
@@ -233,6 +289,70 @@ footer {
 .game-thumbnail:hover {
     transform: scale(1.05);
 }
+
+
+.featured-games-text {
+    position: absolute; /* Position the text over the thumbnail */
+    bottom: 0px; /* Position it at the bottom of the thumbnail */
+    left: 0;
+    width: 100%; /* Ensure it spans the width of the thumbnail */
+    text-align: center; /* Center the text */
+    color: white; /* Choose a color that stands out */
+    font-weight: bold; /* Make the text bold */
+    font-size: 1.5em; /* Adjust font size as needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 5px 0; /* Add padding for better readability */
+    box-sizing: border-box; /* Include padding in the width */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    text-shadow: 0 0 3px #fff, /* Outer glow */
+                 0 0 5px #fff; /* Inner glow */
+    animation: glowing 3s infinite alternate;
+}
+
+
+@keyframes glowing {
+    0% { text-shadow: 0 0 3px #fff, 0 0 5px #fff; }
+    50% { text-shadow: 0 0 6px #fff, 0 0 8px #fff; }
+    100% { text-shadow: 0 0 3px #fff, 0 0 5px #fff; }
+}
+
+
+.BrainEngage-games-text {
+    position: absolute; /* Position the text over the thumbnail */
+    bottom: 0px; /* Position it at the bottom of the thumbnail */
+    left: 0;
+    width: 100%; /* Ensure it spans the width of the thumbnail */
+    text-align: center; /* Center the text */
+    color: white; /* Choose a color that stands out */
+    font-weight: bold; /* Make the text bold */
+    font-size: 1.2em; /* Adjust font size as needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 5px 0; /* Add padding for better readability */
+    box-sizing: border-box; /* Include padding in the width */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+
+.BrainPlay-games-text {
+    position: absolute; /* Position the text over the thumbnail */
+    bottom: 0px; /* Position it at the bottom of the thumbnail */
+    left: 0;
+    width: 100%; /* Ensure it spans the width of the thumbnail */
+    text-align: center; /* Center the text */
+    color: white; /* Choose a color that stands out */
+    font-weight: bold; /* Make the text bold */
+    font-size: 1.2em; /* Adjust font size as needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 5px 0; /* Add padding for better readability */
+    box-sizing: border-box; /* Include padding in the width */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+
+.game-thumbnail:hover .featured-games-text {
+    background-color: rgba(0, 0, 0, 0.7); /* Slightly darker on hover */
+}
+
 .profile-container {
     position: absolute;
     right: 27px; /* Adjust this value as needed to position it from the right edge of the viewport */
@@ -357,14 +477,14 @@ footer {
 
 .search-container {
     position: absolute;
-   left: calc(70% - 40px); /* Move slightly to the left to make room for the button */
+    left: calc(70% - 40px); /* Move slightly to the left to make room for the button */
     transform: translateX(-30%);
 }
 
 .search-input-container {
     display: flex; /* Use flexbox to align the input and button */
     align-items: center; /* Align items vertically */
-    width: 570px; /* Set a width that includes both the input and button */
+    width: 600px; /* Set a width that includes both the input and button */
 }
 
 #gameSearch {
@@ -433,6 +553,7 @@ footer {
     align-items: center;
     margin-left: 10px; /* Added margin to move the button to the right */
     padding: 10px; /* Padding to keep the button size consistent */
+    z-index: 5;
 }
 
 .btn-navigation-nav-menu-md:hover {
