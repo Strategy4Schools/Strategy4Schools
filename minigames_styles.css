@@ -89,10 +89,17 @@ footer {
     }
 }
 
+#brain-engage-title {
+    margin-top: 150px;
+}
+
+#brain-play-title {
+    margin-top: 100px;
+}
+
 
 #brain-engage-title, #brain-play-title {
     text-align: center;
-    margin-top: 50px; /* Adjust the margin as needed */
     font-size: 2em; /* Adjust the font size as needed */
     font-weight: bold;
     color: white;
