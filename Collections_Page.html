@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Collection</title>
+    <link rel="stylesheet" href="Collections_Page_Styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script src="Collections_Page_Script.js" defer></script>
+</head>
+<body>
+    <div id="backButtonContainer">
+        <button id="backToMinigames" onclick="window.location.href='minigames_home.html'">← Back to Minigames</button>
+    </div>
+    <h1>My Word Collection</h1>
+    <table id="favoritesTable">
+        <thead>
+            <tr>
+                <th>Word</th>
+                <th>Definition</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Table rows will be dynamically inserted here -->
+        </tbody>
+    </table>
+    <ul class="custom-context-menu" id="customContextMenu">
+        <li id="addToFlashcardMenu">Add to Flashcard</li>
+    </ul>
+</body>
+</html>

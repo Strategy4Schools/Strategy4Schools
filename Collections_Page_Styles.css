@@ -1,0 +1,102 @@
+body {
+    font-family: 'Source Code Pro', monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    background-color: #FAF9F6;
+    margin: 0;
+    color: #333;
+    padding-top: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin: 0 0 20px;
+    font-weight: 550;
+    color: #000;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+table {
+    border-collapse: collapse;
+    width: 80%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    border: 1px solid #ccc;
+    text-align: left;
+    padding: 8px;
+    color: #222;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: 700;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.custom-context-menu {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    width: 150px;
+    background: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,.2);
+    padding: 10px 0;
+}
+
+.custom-context-menu li {
+    list-style: none;
+    padding: 8px 10px;
+    cursor: pointer;
+    color: #333;
+}
+
+.custom-context-menu li:hover {
+    background-color: #f1f1f1;
+}
+
+#backButtonContainer {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+#backToMinigames {
+    font-family: 'Source Code Pro', monospace;
+    background-color: #e0e0e0;
+    color: black;
+    border: 3px solid black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+#backToMinigames:hover {
+    background-color: #45a049;
+}
+
+.deleteBtn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #d9534f; /* Bootstrap's btn-danger hex color for reference */
+}
+
+.deleteBtn i { /* Directly style the icon if needed */
+    color: #d9534f; /* Red color */
+}
