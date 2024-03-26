@@ -29,14 +29,13 @@ header {
 .logo-container {
     position: absolute;
     left: 50%; /* Position the left edge of the container at the center of the header */
-    top: 2.5px;
-    transform: translateX(-50%); /* Move the container back by half of its own width */
-    /* ... other styles ... */
+    top: 5.5px;
+    transform: translateX(-500%); /* Move the container back by half of its own width */
 }
 
 .logo-container img {
-    max-width: 500px; /* Maximum width, the image won't stretch beyond this */
-    max-height: 100px; /* Adjust this value based on your header's height */
+    max-width: 450px; /* Maximum width, the image won't stretch beyond this */
+    max-height: 90px; /* Adjust this value based on your header's height */
     height: auto; /* Height adjusts automatically to maintain aspect ratio */
     object-fit: contain; /* Ensures the image is scaled correctly within the set dimensions */
 }
