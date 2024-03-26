@@ -28,9 +28,9 @@ header {
 
 .logo-container {
     position: absolute;
-    left: 50%; /* Position the left edge of the container at the center of the header */
-    top: 5.5px;
-    transform: translateX(-500%); /* Move the container back by half of its own width */
+    left: 7.5%; /* Position the left edge of the container at the center of the header */
+    top: 2.5px;
+    transform: translateX(-50%); /* Move the container back by half of its own width */
 }
 
 .logo-container img {
