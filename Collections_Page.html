@@ -13,11 +13,16 @@
         <button id="backToMinigames" onclick="window.location.href='minigames_home.html'">← Back to Minigames</button>
     </div>
     <h1>My Word Collection</h1>
+    <div class="table-actions">
+        <button id="deleteSelected" style="display:none;">Delete Selected</button>
+    </div>
     <table id="favoritesTable">
         <thead>
             <tr>
+                <th>Select</th>
                 <th>Word</th>
                 <th>Definition</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
@@ -25,7 +30,7 @@
         </tbody>
     </table>
     <ul class="custom-context-menu" id="customContextMenu">
-        <li id="addToFlashcardMenu">Add to Flashcard</li>
+        <li id="addToFlashcardMenu" onclick="addToFlashcard()">Add to Flashcard</li>
     </ul>
 </body>
 </html>

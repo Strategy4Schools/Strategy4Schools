@@ -5,9 +5,9 @@ body {
     align-items: center;
     justify-content: flex-start;
     height: 100vh;
-    background-color: #FAF9F6;
+    background-color: #243A4E;
     margin: 0;
-    color: #333;
+    color: #FAFAFA; /* Lightened for contrast */
     padding-top: 20px;
 }
 
@@ -16,8 +16,7 @@ h1 {
     font-size: 2.5em;
     margin: 0 0 20px;
     font-weight: 550;
-    color: #000;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: white; /* Ensured visibility against dark background */
 }
 
 table {
@@ -27,19 +26,19 @@ table {
 }
 
 th, td {
-    border: 1px solid #ccc;
+    border: 1px solid #777; /* Lighter border for contrast */
     text-align: left;
     padding: 8px;
-    color: #222;
+    color: #EEE; /* Lighter text color for readability */
 }
 
 th {
-    background-color: #f2f2f2;
+    background-color: #324A5F; /* Slightly lighter than body for subtle contrast */
     font-weight: 700;
 }
 
 tr:nth-child(even) {
-    background-color: #f9f9f9;
+    background-color: #2C3E50; /* A dark shade that contrasts with the text */
 }
 
 .custom-context-menu {
@@ -47,8 +46,8 @@ tr:nth-child(even) {
     position: fixed;
     z-index: 1000;
     width: 150px;
-    background: #f9f9f9;
-    border: 1px solid #ccc;
+    background: #2C3E50; /* Matches row color for consistency */
+    border: 1px solid #324A5F;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0,0,0,.2);
     padding: 10px 0;
@@ -58,11 +57,11 @@ tr:nth-child(even) {
     list-style: none;
     padding: 8px 10px;
     cursor: pointer;
-    color: #333;
+    color: #FAFAFA; /* Light color for readability */
 }
 
 .custom-context-menu li:hover {
-    background-color: #f1f1f1;
+    background-color: #324A5F;
 }
 
 #backButtonContainer {
@@ -73,9 +72,9 @@ tr:nth-child(even) {
 
 #backToMinigames {
     font-family: 'Source Code Pro', monospace;
-    background-color: #e0e0e0;
-    color: black;
-    border: 3px solid black;
+    background-color: #1C2D3D; /* A deep green for better visibility and aesthetics */
+    color: white; /* White text for high contrast and readability */
+    border: 2px solid black; /* Solid border to match the background */
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
@@ -84,19 +83,52 @@ tr:nth-child(even) {
     cursor: pointer;
     border-radius: 5px;
     font-weight: 700;
+    transition: all 0.3s ease; /* Smooth transition for a more interactive feel */
 }
 
 #backToMinigames:hover {
-    background-color: #45a049;
+    background-color: #fdb740; /* A slightly darker green for the hover state */
+    border-color: black; /* Darker border to emphasize the hover effect */
+    color: black;
+}
+
+#favoritesTable td {
+    text-align: center;
+    vertical-align: middle; /* Aligns content vertically in the middle */
 }
 
 .deleteBtn {
     background-color: transparent;
     border: none;
     cursor: pointer;
-    color: #d9534f; /* Bootstrap's btn-danger hex color for reference */
-}
+    color: #FF4136; /* Adjusted for visibility */
+}   
 
 .deleteBtn i { /* Directly style the icon if needed */
-    color: #d9534f; /* Red color */
+    color: #FF4136; /* Adjusted for visibility */
+}
+
+.table-actions {
+    display: flex;
+    justify-content: center; /* Ensures horizontal centering */
+    align-items: center; /* Ensures vertical centering */
+    width: 100%;
+    margin: 20px auto; /* Adjust the margin as necessary */
+    position: relative; /* Enables absolute positioning within */
+}
+
+#deleteSelected {
+    font-family: 'Source Code Pro', monospace;
+    padding: 5px 10px;
+    background-color: #f44336; /* Ensured visibility */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none; /* Remains hidden until a selection is made */
+    margin: 0 auto; /* Centers the button horizontally in the flex container */
+}
+
+#deleteSelected:hover {
+    background-color: #d32f2f;
 }

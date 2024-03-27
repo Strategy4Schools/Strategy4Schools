@@ -5,9 +5,9 @@
             align-items: center;
             justify-content: flex-start; /* Change from 'center' to 'flex-start' */
             height: 100vh;
-            background-color: #FAF9F6;
+            background-color: #243A4E;
             margin: 0;
-            color: #333;
+            color: white;
             padding-top: 10px;
         }
 
@@ -16,7 +16,7 @@
             text-align: center;
             margin-top: 40px; /* Adjust this value to position the title appropriately */
             margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            color: white;
         }
 
 
@@ -24,7 +24,7 @@
             font-size: 2.5em;
             margin: 0; /* Remove default margin of h1 */
             font-weight: 550;
-            color: #000000;
+            color: white;
         }
 
             #wordleGrid {
@@ -41,7 +41,8 @@
                 justify-content: center;
                 align-items: center;
                 font-size: 1.77em;
-                background-color: #FFFFFF;
+                color: #333;
+                background-color: #d9d9d9;
                 font-weight: 700;
                 transition: background-color 0.2s, transform 0.2s, opacity 0.2s;
                 transform: scale(0.9);
@@ -83,6 +84,7 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                z-index: 3000;
             }
 
             .keyboard-row {
@@ -154,29 +156,33 @@
         }
 
         #backButtonContainer {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-        }
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2000;
+}
 
-        #backToMinigames {
-            font-family: 'Source Code Pro', monospace;
-            background-color: #e0e0e0;
-            color: black;
-            border: 3px solid black;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 5px;
-            font-weight: 700;
-        }
+#backToMinigames {
+    font-family: 'Source Code Pro', monospace;
+    background-color: #1C2D3D; /* A deep green for better visibility and aesthetics */
+    color: white; /* White text for high contrast and readability */
+    border: 2px solid black; /* Solid border to match the background */
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: all 0.3s ease; /* Smooth transition for a more interactive feel */
+}
 
-        #backToMinigames:hover {
-            background-color: #45a049;
-        }
+#backToMinigames:hover {
+    background-color: #fdb740; /* A slightly darker green for the hover state */
+    border-color: black; /* Darker border to emphasize the hover effect */
+    color: black;
+}
 
             .popup-content p {
                 font-family: 'Source Code Pro', monospace;
@@ -267,51 +273,60 @@
             display: block;
         }
 
-        #difficultySelectionContainer {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            position: absolute;
-            width: 100%;
-            top: 50%;
-            transform: translateY(-50%);
-        }
+    #difficultySelectionContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 100vh; /* Adjust if necessary to fill the screen */
+    top: 0;
+    left: 0;
+    z-index: 2; /* Ensure it's above other content */
+}
 
-        #difficultySelection {
-            text-align: center; /* Center-align the text and buttons within the div */
-            margin: 20px 0; /* Add some margin for spacing */
-        }
+#difficultySelection {
+    text-align: center; /* Center-align the text and buttons within the div */
+    margin: 20px 0; /* Add some margin for spacing */
+}
 
-        #difficultySelection h2 {
-            font-family: 'Source Code Pro', monospace;
-            color: #333; /* Adjust color as needed */
-            margin-bottom: 15px; /* Space between the heading and buttons */
-        }
+#difficultySelection h2 {
+    font-family: 'Source Code Pro', monospace;
+    color: white; /* Adjust color as needed */
+    margin-bottom: 15px; /* Space between the heading and buttons */
+}
 
-        #difficultySelection button {
-            font-family: 'Source Code Pro', monospace;
-            font-size: 1em;
-            font-weight: bold;
-            color: white; /* Text color */
-            background-color: #4CAF50; /* Button background color */
-            border: none;
-            padding: 10px 20px; /* Adjust padding as needed */
-            margin: 0 10px; /* Spacing between buttons */
-            cursor: pointer;
-            border-radius: 5px; /* Rounded corners */
-            transition: background-color 0.3s, transform 0.2s; /* Smooth transition for hover effect */
-        }
+#difficultySelection button {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 1em;
+    color: black; /* Text color */
+    background-color: #d9d9d9; /* Button background color */
+    border: 2px solid black;
+    padding: 10px 20px; /* Adjust padding as needed */
+    margin: 0 10px; /* Spacing between buttons */
+    cursor: pointer;
+    border-radius: 25px; /* Rounded corners */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition for hover effect */
+}
 
-        #difficultySelection button:hover {
-            background-color: #45a049; /* Darker shade on hover */
-            transform: scale(1.05); /* Slightly increase size on hover */
-        }
+#easy:hover {
+    background-color: #FF4136; /* Red */
+}
 
-        #difficultySelection button:focus {
-            outline: none; /* Removes the outline to keep the design clean */
-            border: 2px solid #333; /* Optional: add a border to indicate focus */
-        }
+#medium:hover {
+    background-color: #FFDC00; /* Yellow */
+}
+
+#hard:hover {
+    background-color: #2ECC40; /* Green */
+}
+
+#difficultySelection button:focus {
+    outline: none; /* Removes the outline to keep the design clean */
+    border: 2px solid #333; /* Optional: add a border to indicate focus */
+}
+
 
         #wordleGrid, #virtualKeyboard {
             display: none; /* Initially hide the grid and keyboard */

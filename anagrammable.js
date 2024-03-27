@@ -83,6 +83,10 @@ function setNewWord() {
     pickNewAnagram();
     updateAnagramCounter();
 
+        // Reset button visibility for a new round
+    document.querySelector('.buttons-container').style.display = 'flex'; // Re-show 'Submit' and 'Skip'
+    document.getElementById('next-word').style.display = 'none'; // Hide 'Next Word' button
+
     // Splitting definition if it contains the word itself
     currentDefinition = randomEntry.definitions[0].includes(':') ? randomEntry.definitions[0].split(': ')[1] : randomEntry.definitions[0];
 
@@ -175,6 +179,10 @@ window.checkAnagram = function() {
 }
 
 window.skipWord = function() {
+    // Show the solved anagram when the user skips
+    document.getElementById('anagram').innerText = currentWord; // Display the solved word
+    document.getElementById('result').innerText = 'Skipped!';
+
     let skipMessageDiv = document.getElementById('anagrams-container');
     skipMessageDiv.innerHTML = '<div style="color: orange;">Skipped!</div>';
     displayAllAnagrams(); // Show all anagrams, indicating the round is over
@@ -184,7 +192,7 @@ window.skipWord = function() {
     document.getElementById('favoriteButton').style.display = 'inline-block'; // Show the star when skipped
     showAnagramsContainer(); // Also show the container when a word is skipped
     roundEnd();
-}
+}  
 
 window.nextWord = function() {
     setNewWord();
@@ -216,20 +224,25 @@ document.body.addEventListener('keydown', function(event) {
 
 function checkAnagramLogic() {
     let userInput = document.getElementById('user-input').value.trim().toUpperCase();
+    let inputShuffleContainer = document.querySelector('.input-shuffle-container');
+
     if (currentAnagrams.includes(userInput) && !guessedAnagrams.has(userInput)) {
         document.getElementById('result').innerText = 'Correct!';
+        document.getElementById('anagram').innerText = currentWord; // Show the solved word for correct guesses
         guessedAnagrams.add(userInput);
         updateGuessedWordsDisplay(userInput);
-        document.getElementById('favoriteButton').style.display = 'inline-block'; // Show the star when correct
+        document.getElementById('favoriteButton').style.display = 'inline-block';
     } else {
         document.getElementById('result').innerText = 'Try Again!';
+        inputShuffleContainer.classList.add('shake');
+        setTimeout(() => inputShuffleContainer.classList.remove('shake'), 500);
     }
-    updateAnagramCounter(); // Update counter here regardless of whether the guess was correct
+    updateAnagramCounter();
 
     if (guessedAnagrams.size === currentAnagrams.length) {
         document.getElementById('next-word').style.display = 'block';
         document.getElementById('user-input').disabled = true;
-        displayAllAnagrams(); // Assuming this is where you'd logically conclude a round
+        displayAllAnagrams();
         roundEnd();
     } else {
         document.getElementById('user-input').value = '';
@@ -304,7 +317,10 @@ function updateFavoriteIcon() {
 };
 
 function roundEnd() {
+    // Hide 'Submit' and 'Skip' buttons
+    document.querySelector('.buttons-container').style.display = 'none';
+    // Show 'Next Word' button
+    document.getElementById('next-word').style.display = 'inline-block';
     document.getElementById('favoriteContainer').style.display = 'inline-block'; // Show favorite container
     updateFavoriteIcon(); // This will update the icon and the label according to the current word's favorite status
-}
-    
+};

@@ -5,35 +5,34 @@
         align-items: center;
         justify-content: center; 
         height: 100vh;
-        background-color: #FAF9F6;
+        background-color: #243A4E;
         margin: 0;
-        color: #333;
+        color: white;
     }
 
     h1 {
         font-size: 3em;
         margin: 0;
         font-weight: 600;
-        color: #222;
+        color: white;
         position: absolute;
         top: 60px; /* Increased space above the title */
         left: 50%;
         transform: translateX(-50%);
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Drop shadow added */
     }
 
 #backButtonContainer {
     position: absolute;
     top: 10px;
     left: 10px;
-    z-index: 20; /* Ensure it's above the difficulty selection container */
+    z-index: 2000;
 }
 
 #backToMinigames {
     font-family: 'Source Code Pro', monospace;
-    background-color: #e0e0e0;
-    color: black;
-    border: 3px solid black;
+    background-color: #1C2D3D; /* A deep green for better visibility and aesthetics */
+    color: white; /* White text for high contrast and readability */
+    border: 2px solid black; /* Solid border to match the background */
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
@@ -42,18 +41,22 @@
     cursor: pointer;
     border-radius: 5px;
     font-weight: 700;
+    transition: all 0.3s ease; /* Smooth transition for a more interactive feel */
 }
 
 #backToMinigames:hover {
-    background-color: #45a049;
+    background-color: #fdb740; /* A slightly darker green for the hover state */
+    border-color: black; /* Darker border to emphasize the hover effect */
+    color: black;
 }
 
     .main-content {
+        position: relative;
         display: none;
         flex-direction: column;
         align-items: center;
         width: 90%;
-        max-width: 800px;
+        max-width: 600px;
         padding: 20px;
         text-align: center;
         margin-top: 120px; /* Adjusted to maintain overall balance */
@@ -71,8 +74,13 @@
         border: 2px solid black; /* Darker border color for a bolder effect */
         border-radius: 5px;
         font-size: 1.1em;
-        background-color: #fafafa;
+        background-color: #d9d9d9;
         text-align: center;
+        outline: none;
+    }
+
+    #user-input:focus {
+    border-color: grey; /* Change the border color to indicate focus */
     }
 
     #user-input::placeholder {
@@ -92,6 +100,18 @@
         color: #4CAF50;
     }
 
+    @keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+.shake {
+  animation: shake 0.5s ease-in-out;
+}
+
     .buttons-container {
         display: flex;
         justify-content: center;
@@ -106,7 +126,7 @@
         background-color: #d9d9d9; /* Grayscale color for buttons */
         color: #333; /* Dark text for contrast */
         border: 2px solid black; /* Darker border for a bolder effect */
-        border-radius: 5px;
+        border-radius: 25px;
         cursor: pointer;
         transition: background-color 0.3s;
     }
@@ -138,9 +158,9 @@
         margin-top: 20px;
         font-size: 2.5em;
         padding: 15px;
-        background-color: #e0e0e0;
+        background-color: #14202b;
         border: 2px solid black; /* Darker border for a more pronounced effect */
-        border-radius: 0; /* Keeping edges sharp */
+        border-radius: 45px; 
     }
 
     .letter-tile {
@@ -172,27 +192,33 @@
 
 #difficultySelection h2 {
     font-family: 'Source Code Pro', monospace;
-    color: #333; /* Adjust color as needed */
+    color: white; /* Adjust color as needed */
     margin-bottom: 15px; /* Space between the heading and buttons */
 }
 
 #difficultySelection button {
     font-family: 'Source Code Pro', monospace;
     font-size: 1em;
-    font-weight: bold;
-    color: white; /* Text color */
-    background-color: #4CAF50; /* Button background color */
-    border: none;
+    color: black; /* Text color */
+    background-color: #d9d9d9; /* Button background color */
+    border: 2px solid black;
     padding: 10px 20px; /* Adjust padding as needed */
     margin: 0 10px; /* Spacing between buttons */
     cursor: pointer;
-    border-radius: 5px; /* Rounded corners */
+    border-radius: 25px; /* Rounded corners */
     transition: background-color 0.3s, transform 0.2s; /* Smooth transition for hover effect */
 }
 
-#difficultySelection button:hover {
-    background-color: #45a049; /* Darker shade on hover */
-    transform: scale(1.05); /* Slightly increase size on hover */
+#easy:hover {
+    background-color: #FF4136; /* Red */
+}
+
+#medium:hover {
+    background-color: #FFDC00; /* Yellow */
+}
+
+#hard:hover {
+    background-color: #2ECC40; /* Green */
 }
 
 #difficultySelection button:focus {
@@ -200,11 +226,43 @@
     border: 2px solid #333; /* Optional: add a border to indicate focus */
 }
 
+/* Adjusting the container that holds the definitions */
+.definitions-container {
+    background-color: #1C2D3D; /* Light background for slight contrast */
+    border-radius: 5px; /* Rounded corners for a modern look */
+    padding: 10px; /* Padding for spacing inside the container */
+    margin-top: 20px; /* Ensure it's not too close to other elements */
+    width: calc(100% - 20px); /* Adjust width as necessary */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+}
+
+/* Styling for text and links within the container for visibility */
+.definitions-container p,
+.definitions-container a { /* This targets both paragraphs and hyperlinks */
+    color: #FFFFFF; /* Sets text and hyperlink color to white for readability */
+    margin: 10px 0; /* Spacing between paragraphs */
+    line-height: 1.4; /* Improves readability */
+    text-decoration: none; /* Removes underline from links for a cleaner look */
+}
+
+.definitions-container a:hover {
+    text-decoration: underline; /* Adds underline on hover for clarity */
+}
+
+#favoriteContainer {
+    display: flex; /* Aligns items horizontally */
+    align-items: center; /* Vertically centers items within the container */
+    gap: 5px; /* Provides some space between the icon and the label */
+    cursor: pointer; /* Indicates the entire container is clickable */
+}
+
 #favoriteButton {
     color: gold; /* Gold color for the star */
     cursor: pointer; /* Indicates the icon is clickable */
     display: none; /* Initially hidden */
-    font-size: 2em; /* Increase the size of the star */
+    font-size: 1.5em; /* Increase the size of the star */
+    margin: 20px;
+    margin-bottom: -20px;
 }
 
 /* Always gold outline, regardless of fill state */
