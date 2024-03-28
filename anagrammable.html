@@ -12,12 +12,17 @@
         <button id="backToMinigames" onclick="window.location.href='minigames_home.html'">← Back to Minigames</button>
     </div>
     <h1>Anagrammable</h1>
-    <div id="difficultySelectionContainer">
+<div id="difficultySelectionContainer">
     <div id="difficultySelection">
         <h2>Select Difficulty:</h2>
         <button id="easy">Easy</button>
         <button id="medium">Medium</button>
         <button id="hard">Hard</button>
+    </div>
+    <div id="reviewModeContainer">
+        <h3>Review:</h3>
+        <button id="review-mode" onclick="window.location.href='anagrammable_review.html'">Review Incorrect Words</button>
+        <button id="review-list" onclick="window.location.href='review_list.html'">Review List</button>
     </div>
 </div>
 
@@ -30,8 +35,8 @@
 
         <div id="anagram-counter">0/0</div>
         <div class="buttons-container">
-            <button onclick="window.checkAnagram()">Submit</button>
-            <button onclick="window.skipWord()">Skip</button>
+            <button id="submitWord" onclick="window.checkAnagram()">Submit</button>
+            <button id="skipWord" onclick="window.skipWord()">Skip</button>
         </div>
         <div id="next-word-container">
             <button onclick="window.nextWord()" id="next-word" style="display: none;">Next Word</button>

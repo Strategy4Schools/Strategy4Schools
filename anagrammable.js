@@ -57,6 +57,14 @@ function loadWords(url) {
         });
 }
 
+function saveIncorrectTargetWord(word, definition) {
+    let incorrectWords = JSON.parse(localStorage.getItem('incorrectWords')) || [];
+    if (!incorrectWords.some(entry => entry.word === word)) {
+        incorrectWords.push({ word, definition });
+        localStorage.setItem('incorrectWords', JSON.stringify(incorrectWords));
+    }
+}
+
 function setupBackButton() {
     const backButton = document.getElementById('backToMinigames');
     backButton.addEventListener('click', function() {
@@ -70,6 +78,7 @@ let guessedAnagrams = new Set();
 let currentWord = '';
 let currentDefinition = '';
 let randomEntry;
+let correctGuessMade = false;
 
 function shuffleWord(word) {
     let shuffled = word.split('').sort(() => 0.5 - Math.random()).join('');
@@ -86,6 +95,8 @@ function setNewWord() {
         // Reset button visibility for a new round
     document.querySelector('.buttons-container').style.display = 'flex'; // Re-show 'Submit' and 'Skip'
     document.getElementById('next-word').style.display = 'none'; // Hide 'Next Word' button
+
+    correctGuessMade = false; // Reset flag for new word
 
     // Splitting definition if it contains the word itself
     currentDefinition = randomEntry.definitions[0].includes(':') ? randomEntry.definitions[0].split(': ')[1] : randomEntry.definitions[0];
@@ -228,12 +239,19 @@ function checkAnagramLogic() {
 
     if (currentAnagrams.includes(userInput) && !guessedAnagrams.has(userInput)) {
         document.getElementById('result').innerText = 'Correct!';
+        correctGuessMade = true;
         document.getElementById('anagram').innerText = currentWord; // Show the solved word for correct guesses
         guessedAnagrams.add(userInput);
         updateGuessedWordsDisplay(userInput);
         document.getElementById('favoriteButton').style.display = 'inline-block';
     } else {
         document.getElementById('result').innerText = 'Try Again!';
+        // Incorrectly saving user input instead of the target word
+        // saveIncorrectTargetWord(userInput); // This is incorrect based on your goal
+
+        // Correct approach: Save the actual target word and its definition
+        saveIncorrectTargetWord(currentWord, currentDefinition);
+
         inputShuffleContainer.classList.add('shake');
         setTimeout(() => inputShuffleContainer.classList.remove('shake'), 500);
     }
@@ -323,4 +341,8 @@ function roundEnd() {
     document.getElementById('next-word').style.display = 'inline-block';
     document.getElementById('favoriteContainer').style.display = 'inline-block'; // Show favorite container
     updateFavoriteIcon(); // This will update the icon and the label according to the current word's favorite status
+
+    if (!correctGuessMade) {
+    saveIncorrectTargetWord(currentWord, currentDefinition);
+    }
 };

@@ -183,6 +183,7 @@
     top: 0;
     left: 0;
     z-index: 2; /* Ensure it's above other content */
+    transform: translateY(-50px);
 }
 
 #difficultySelection {
@@ -249,11 +250,54 @@
     text-decoration: underline; /* Adds underline on hover for clarity */
 }
 
+#reviewModeContainer {
+    margin-top: 20px; /* Adds some space between the difficulty selection and review mode */
+    text-align: center; /* Ensures the content is centered */
+}
+
+#reviewModeContainer h3 {
+    color: #FFFFFF; /* Adjust the color to fit your theme */
+    margin-bottom: 10px; /* Provides spacing between the heading and the button */
+}
+
+#review-mode {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 1em;
+    color: black; /* Text color */
+    background-color: #d9d9d9; /* Button background color */
+    border: 2px solid black;
+    padding: 10px 20px; /* Adjust padding as needed */
+    margin: 0 10px; /* Spacing between buttons */
+    cursor: pointer;
+    border-radius: 25px; /* Rounded corners */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition for hover effect */
+
+}
+
+#review-mode:hover {
+    // Make changes when want
+
+}
+
+#review-list {
+        font-family: 'Source Code Pro', monospace;
+    font-size: 1em;
+    color: black; /* Text color */
+    background-color: #d9d9d9; /* Button background color */
+    border: 2px solid black;
+    padding: 10px 20px; /* Adjust padding as needed */
+    margin: 0 10px; /* Spacing between buttons */
+    cursor: pointer;
+    border-radius: 25px; /* Rounded corners */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition for hover effect */
+}
+
 #favoriteContainer {
     display: flex; /* Aligns items horizontally */
     align-items: center; /* Vertically centers items within the container */
     gap: 5px; /* Provides some space between the icon and the label */
     cursor: pointer; /* Indicates the entire container is clickable */
+    z-index: 1000;
 }
 
 #favoriteButton {
