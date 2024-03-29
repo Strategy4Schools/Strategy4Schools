@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anagram Game Review Mode</title>
+    <link rel="stylesheet" href="anagrammable.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+    <div id="backButtonContainer">
+        <button id="backToMinigames" onclick="window.location.href='minigames_home.html'">← Back to Minigames</button>
+    </div>
+    <h1>Review</h1>
+    <div class="main-content">
+        <p id="anagram">Scrambled Word</p>
+        <div class="input-shuffle-container">
+            <input type="text" id="user-input" placeholder="Rearrange the letters" autocomplete="off"/>
+            <i class="fas fa-random shuffle-icon" onclick="window.shuffleAnagram()"></i>
+        </div>
+        <div id="anagram-counter">0/0</div>
+        <div class="buttons-container">
+            <button id="submitWord" onclick="window.checkAnagram()">Submit</button>
+            <button id="skipWord" onclick="window.skipWord()">Skip</button>
+        </div>
+        <div id="next-word-container">
+            <button onclick="window.nextWord()" id="next-word" style="display: none;">Next Word</button>
+        </div>
+        <p id="result"></p>
+        <p id="definition"></p>
+        <div id="guessed-words" class="definitions-container"></div>
+        <div id="anagrams-container" class="definitions-container"></div>
+        <div id="favoriteContainer" style="display: none;">
+            <div id="favoriteButton" class="far fa-star"></div>
+            <div id="favoriteLabel">Add Word to Collection</div>
+        </div>
+    </div>
+    <script src="anagrammable_review_script.js"></script>
+</body>
+</html>
