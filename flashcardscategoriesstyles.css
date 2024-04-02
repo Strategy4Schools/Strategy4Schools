@@ -1,7 +1,7 @@
 body {
-    font-family: 'Source Code Pro', monospace;
-    background-color: #FAF9F6;
-    color: #333;
+    font-family: "Electrolize", sans-serif;
+    background-color: #243A4E;
+    color: white;
     margin: 0;
     padding: 0;
     display: flex;
@@ -18,6 +18,7 @@ body {
 }
 
 #title-container {
+    font-size: 2em;
     top: 20px;
     width: 100%;
     text-align: center;
@@ -28,41 +29,69 @@ body {
 }
 
 #backButtonContainer {
+    position: absolute;
     top: 10px;
     left: 10px;
     z-index: 2000;
 }
 
 #backToMinigames {
-    font-family: 'Source Code Pro', monospace;
-    background-color: #e0e0e0;
-    color: black;
-    border: none;
+    font-family: "Electrolize", sans-serif;
+    background-color: #1C2D3D; /* A deep green for better visibility and aesthetics */
+    color: white; /* White text for high contrast and readability */
+    border: 2px solid black; /* Solid border to match the background */
     padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
     font-size: 16px;
     cursor: pointer;
     border-radius: 5px;
     font-weight: 700;
+    transition: all 0.3s ease; /* Smooth transition for a more interactive feel */
 }
 
 #backToMinigames:hover {
-    background-color: #45a049;
+    background-color: #fdb740; /* A slightly darker green for the hover state */
+    border-color: black; /* Darker border to emphasize the hover effect */
+    color: black;
 }
 
 #centering-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: auto; /* Allows the container to grow with its content */
-    /* No specified padding-top here; we're using transform to center */
+    display: flex;
+    justify-content: center; /* Center the children horizontally */
+    align-items: flex-start; /* Align items at the start of the container */
+    flex-wrap: wrap; /* Wrap items to next line on small screens */
+    gap: 10px; /* Reduced space between the two containers for closer alignment */
+    width: 50%; /* Ensures the container takes the full width */
 }
 
-#categories-container {
+#categories-container, #custom-flashcards-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* This centers the flex items horizontally */
-    gap: 30px; /* Keeps the gap as you wanted */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    flex: 1;
+    max-width: calc(50% - 10px); /* Adjusts max width to account for gap */
+}
+
+#categories-container, #custom-flashcards-container {
+    flex: 1; /* Each takes equal width */
+    max-width: 50%; /* Prevents either container from growing beyond 50% of their parent */
+}
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 768px) {
+    #categories-container, #custom-flashcards-container {
+        max-width: 100%; /* Each container takes full width on small screens */
+    }
+}
+
+#categories-container, #custom-flashcards-container {
+    flex-basis: 48%; /* Adjust this value to ensure they line up side by side */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: calc(50% - 20px); /* Account for the gap */
 }
 
 #categories-list {
@@ -74,20 +103,48 @@ body {
     margin: 0;
 }
 
-#categories-list li {
-    background: #ffffff;
-    color: #222;
-    font-weight: 500;
-    font-size: 1em;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    cursor: pointer;
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+#academic-flashcards-subheader h3, #custom-flashcards-container h3 {
+    font-family: "Electrolize", sans-serif;
+    font-size: 1.5em;
+    color: #FFF; /* White color for the text */
+    background-color: #2E5572; /* Slightly darker background for contrast */
+    padding: 10px 20px; /* Padding for aesthetics */
+    border-radius: 10px; /* Rounded corners */
+    margin: 20px auto 20px; /* Uniform margin for spacing around the title */
+    width: max-content; /* Adjust width based on content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
 }
 
-#categories-list li:hover {
+#categories-list li, #custom-flashcards-container button {
+    font-family: "Electrolize", sans-serif;
+        padding: 12px 20px;
+        font-size: 1em;
+        background-color: #d9d9d9; /* Grayscale color for buttons */
+        color: #333; /* Dark text for contrast */
+        border: 2px solid black; /* Darker border for a bolder effect */
+        border-radius: 25px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        text-align: center;
+}
+
+#custom-flashcards-container button {
+    margin: 12px; /* Adjust this value as needed to increase the gap */
+    font-family: "Electrolize", sans-serif;
+    padding: 12px 20px;
+    font-size: 1em;
+    background-color: #d9d9d9; /* Grayscale color for buttons */
+    color: #333; /* Dark text for contrast */
+    border: 2px solid black; /* Darker border for a bolder effect */
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+#categories-list li:hover, #custom-flashcards-container button:hover {
     transform: translateY(-3px);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    background-color: #fdb740; /* Hover state background color */
+    color: black; /* Hover state text color */
 }

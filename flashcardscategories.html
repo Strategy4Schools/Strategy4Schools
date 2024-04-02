@@ -4,22 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flashcard Categories</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="flashcardscategoriesstyles.css">
 </head>
-<body>
     <div id="backButtonContainer">
         <button id="backToMinigames" onclick="window.location.href='minigames_home.html'">← Back to Minigames</button>
     </div>
+<body>
     <div id="title-container">
         <h2>Flashcard Categories</h2>
     </div>
-    <div id="centering-container">
-        <div id="categories-container">
-            <ul id="categories-list">
-                <!-- Categories will be added here dynamically -->
-            </ul>
+<div id="centering-container">
+    <div id="categories-container">
+        <!-- Existing Subheader and Categories -->
+        <div id="academic-flashcards-subheader">
+            <h3>Premade Academic Flashcards</h3>
         </div>
+        <ul id="categories-list">
+            <!-- Categories added dynamically -->
+        </ul>
     </div>
+
+    <!-- New Section for Custom Flash Cards -->
+    <div id="custom-flashcards-container">
+        <h3>Custom Flashcards</h3>
+        <button id="view-flashcards">View Flashcards</button>
+        <button id="make-new-flashcard">Make New Flashcard</button>
+    </div>
+</div>
     <script src="flashcardscategoriesscript.js"></script>
 </body>
 </html>

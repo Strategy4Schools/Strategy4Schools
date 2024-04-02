@@ -1,11 +1,11 @@
 body {
-    font-family: 'Source Code Pro', monospace;
+    font-family: "Electrolize", sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center; /* Center the content vertically */
     min-height: 100vh;
-    background-color: #FAF9F6;
+    background-color: #243A4E;
     margin: 0;
     color: #333;
     padding-top: 30px; /* Adjusted to give space for the title */
@@ -21,10 +21,11 @@ body {
     text-align: center;
     margin-top: 30px;
     z-index: 1000; /* Ensure title is above other content */
+    color: white;
 }
 
 button {
-    font-family: 'Source Code Pro', monospace;
+    font-family: "Electrolize", sans-serif;
     font-weight: 500; /* Adjusted font weight */
 }
 
@@ -41,9 +42,8 @@ button {
     max-width: 1250px;
     max-height: 80vh; /* Limit the height to ensure it doesn't overlap the title */
     overflow: auto; /* Allows scrolling within the container */
-    background-color: #FFFFFF;
+    background-color: #243A4E;
     padding: 20px;
-    border: 2px solid #000000;
     border-radius: 5px;
     margin: 20px auto; /* Center the container horizontally */
 }
@@ -54,16 +54,16 @@ button {
 }
 
     h1 {
-        font-family: 'Source Code Pro', monospace;
+        font-family: "Electrolize", sans-serif;
         font-size: 2.5em;
         margin-bottom: 20px;
         font-weight: 550;
         color: #000000;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         text-align: center;
     }
 
     table {
+        font-family: "Electrolize", sans-serif;
         border-collapse: collapse;
         width: 100%;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -187,29 +187,34 @@ button {
         text-align: center;
     }
 
-    #backButtonContainer {
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        z-index: 2000;
-    }
+#backButtonContainer {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2000;
+}
 
-    #backToMinigames {
-        font-family: 'Source Code Pro', monospace;
-        background-color: #e0e0e0;
-        color: black;
-        border: 3px solid black;
-        padding: 10px 20px;
-        font-size: 16px;
-        border-radius: 5px;
-        font-weight: 700;
-        cursor: pointer;
-        transition: background-color 0.3s;
-    }
+#backToMinigames {
+    font-family: "Electrolize", sans-serif;
+    background-color: #1C2D3D; /* A deep green for better visibility and aesthetics */
+    color: white; /* White text for high contrast and readability */
+    border: 2px solid black; /* Solid border to match the background */
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: all 0.3s ease; /* Smooth transition for a more interactive feel */
+}
 
-    #backToMinigames:hover {
-        background-color: #45a049;
-    }
+#backToMinigames:hover {
+    background-color: #fdb740; /* A slightly darker green for the hover state */
+    border-color: black; /* Darker border to emphasize the hover effect */
+    color: black;
+}
 
     #searchButton {
     font-size: 18px; /* Slightly larger text for better readability */

@@ -193,6 +193,7 @@ window.skipWord = function() {
     // Show the solved anagram when the user skips
     document.getElementById('anagram').innerText = currentWord; // Display the solved word
     document.getElementById('result').innerText = 'Skipped!';
+    document.getElementById('result').style.color = 'red'; // Keep as orange or change to red for consistency
 
     let skipMessageDiv = document.getElementById('anagrams-container');
     skipMessageDiv.innerHTML = '<div style="color: orange;">Skipped!</div>';
@@ -224,7 +225,10 @@ document.body.addEventListener('keydown', function(event) {
     if (event.key === "Enter") {
         event.preventDefault();
         if (event.ctrlKey) {
-            window.skipWord();
+            // Only allow skipping if the next word button is not visible and a correct guess hasn't been made
+            if (document.getElementById('next-word').style.display === 'none' && !correctGuessMade) {
+                window.skipWord();
+            }
         } else if (document.getElementById('next-word').style.display === 'block') {
             window.nextWord();
         } else if (!document.getElementById('user-input').disabled) {
@@ -238,14 +242,16 @@ function checkAnagramLogic() {
     let inputShuffleContainer = document.querySelector('.input-shuffle-container');
 
     if (currentAnagrams.includes(userInput) && !guessedAnagrams.has(userInput)) {
-        document.getElementById('result').innerText = 'Correct!';
-        correctGuessMade = true;
+    document.getElementById('result').innerText = 'Correct!';
+    document.getElementById('result').style.color = 'green'; // Set text color to green for correct
+    correctGuessMade = true;
         document.getElementById('anagram').innerText = currentWord; // Show the solved word for correct guesses
         guessedAnagrams.add(userInput);
         updateGuessedWordsDisplay(userInput);
         document.getElementById('favoriteButton').style.display = 'inline-block';
     } else {
         document.getElementById('result').innerText = 'Try Again!';
+        document.getElementById('result').style.color = 'red'; // Set text color to red for try again
         // Incorrectly saving user input instead of the target word
         // saveIncorrectTargetWord(userInput); // This is incorrect based on your goal
 

@@ -1,5 +1,5 @@
 body {
-    font-family: 'Source Code Pro', monospace;
+    font-family: "Electrolize", sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -71,7 +71,7 @@ tr:nth-child(even) {
 }
 
 #backToMinigames {
-    font-family: 'Source Code Pro', monospace;
+    font-family: "Electrolize", sans-serif;
     background-color: #1C2D3D; /* A deep green for better visibility and aesthetics */
     color: white; /* White text for high contrast and readability */
     border: 2px solid black; /* Solid border to match the background */
@@ -118,7 +118,7 @@ tr:nth-child(even) {
 }
 
 #deleteSelected {
-    font-family: 'Source Code Pro', monospace;
+    font-family: "Electrolize", sans-serif;
     padding: 5px 10px;
     background-color: #f44336; /* Ensured visibility */
     color: white;

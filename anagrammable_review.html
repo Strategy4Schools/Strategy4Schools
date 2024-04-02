@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anagram Game Review Mode</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="anagrammable.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
@@ -19,6 +22,7 @@
             <input type="text" id="user-input" placeholder="Rearrange the letters" autocomplete="off"/>
             <i class="fas fa-random shuffle-icon" onclick="window.shuffleAnagram()"></i>
         </div>
+
         <div id="anagram-counter">0/0</div>
         <div class="buttons-container">
             <button id="submitWord" onclick="window.checkAnagram()">Submit</button>
@@ -32,10 +36,9 @@
         <div id="guessed-words" class="definitions-container"></div>
         <div id="anagrams-container" class="definitions-container"></div>
         <div id="favoriteContainer" style="display: none;">
-            <div id="favoriteButton" class="far fa-star"></div>
-            <div id="favoriteLabel">Add Word to Collection</div>
-        </div>
-    </div>
+    <div id="favoriteButton" class="far fa-star"></div>
+    <div id="favoriteLabel">Add Word to Collection</div>
+</div>
     <script src="anagrammable_review_script.js"></script>
 </body>
 </html>

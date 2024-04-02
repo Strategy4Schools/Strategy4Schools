@@ -123,7 +123,18 @@ window.skipWord = function() {
 };
 
 function displayDefinition() {
-    document.getElementById('definition').innerHTML = `<strong>Word:</strong> ${currentWord} <br><strong>Definition:</strong> ${currentDefinition}`;
+    // Clear existing content
+    document.getElementById('definition').innerHTML = '';
+
+    // Create a new container for the definition
+    let definitionContainer = document.createElement('div');
+    definitionContainer.className = 'definition-container'; // Add this class in your CSS for styling
+
+    // Add the word and its definition to the container
+    definitionContainer.innerHTML = `<strong>Word:</strong> ${currentWord} <br><strong>Definition:</strong> ${currentDefinition}`;
+
+    // Append the new container to the definition area
+    document.getElementById('definition').appendChild(definitionContainer);
 }
 
 window.nextWord = function() {
@@ -179,3 +190,4 @@ document.getElementById('user-input').addEventListener('keydown', function(event
         }
     }
 });
+

@@ -1,5 +1,5 @@
     body {
-        font-family: 'Source Code Pro', monospace;
+        font-family: "Electrolize", sans-serif;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -29,7 +29,7 @@
 }
 
 #backToMinigames {
-    font-family: 'Source Code Pro', monospace;
+    font-family: "Electrolize", sans-serif;
     background-color: #1C2D3D; /* A deep green for better visibility and aesthetics */
     color: white; /* White text for high contrast and readability */
     border: 2px solid black; /* Solid border to match the background */
@@ -192,13 +192,13 @@
 }
 
 #difficultySelection h2 {
-    font-family: 'Source Code Pro', monospace;
+    font-family: "Electrolize", sans-serif;
     color: white; /* Adjust color as needed */
     margin-bottom: 15px; /* Space between the heading and buttons */
 }
 
 #difficultySelection button {
-    font-family: 'Source Code Pro', monospace;
+    font-family: "Electrolize", sans-serif;
     font-size: 1em;
     color: black; /* Text color */
     background-color: #d9d9d9; /* Button background color */
@@ -261,7 +261,7 @@
 }
 
 #review-mode {
-    font-family: 'Source Code Pro', monospace;
+    font-family: "Electrolize", sans-serif;
     font-size: 1em;
     color: black; /* Text color */
     background-color: #d9d9d9; /* Button background color */
@@ -280,7 +280,7 @@
 }
 
 #review-list {
-        font-family: 'Source Code Pro', monospace;
+        font-family: "Electrolize", sans-serif;
     font-size: 1em;
     color: black; /* Text color */
     background-color: #d9d9d9; /* Button background color */
@@ -319,3 +319,12 @@
     color: gold; /* Ensures the fill is also gold; adjust as needed */
 }
 
+/* Definition container for anagramable_review */
+.definition-container {
+    background-color: #1C2D3D; /* Light background for slight contrast */
+    border-radius: 5px; /* Rounded corners for a modern look */
+    padding: 10px; /* Padding for spacing inside the container */
+    margin-top: 20px; /* Ensure it's not too close to other elements */
+    width: calc(100% - 20px); /* Adjust width as necessary */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+}

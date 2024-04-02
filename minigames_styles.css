@@ -1,6 +1,6 @@
 body {
     padding-top: 70px;
-    font-family: 'Source Code Pro', monospace;
+    font-family: "Electrolize", sans-serif;
     margin: 0;
     padding: 0;
     background-color: #243A4E;
@@ -421,7 +421,7 @@ footer {
     width: 100%; /* Take the full width of the parent container */
     font-size: 15px;
     box-sizing: border-box;
-    font-family: 'Source Code Pro', monospace;
+    font-family: "Electrolize", sans-serif;
     background-color: #fff;
     font-weight: bold;
 
