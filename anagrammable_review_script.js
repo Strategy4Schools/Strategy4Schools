@@ -130,11 +130,32 @@ function displayDefinition() {
     let definitionContainer = document.createElement('div');
     definitionContainer.className = 'definition-container'; // Add this class in your CSS for styling
 
-    // Add the word and its definition to the container
-    definitionContainer.innerHTML = `<strong>Word:</strong> ${currentWord} <br><strong>Definition:</strong> ${currentDefinition}`;
+    // Create the anchor element for the current word
+    let wordLink = document.createElement('a');
+    wordLink.href = `https://www.collinsdictionary.com/dictionary/english/${encodeURIComponent(currentWord.toLowerCase())}`;
+    wordLink.target = "_blank"; // Open the link in a new tab
+    wordLink.innerHTML = `${currentWord}<span style="color: white;">:</span>`; // Word and colon in white
+    wordLink.style.color = "white"; // Ensures the word is white
+    wordLink.style.textDecoration = "underline"; // Optionally, underline to indicate it's clickable
+
+    // Append the word link to the definition container
+    definitionContainer.appendChild(wordLink);
+
+    // Append a space and the definition text directly, without altering its color here
+    definitionContainer.innerHTML += ` <br>${currentDefinition}`;
 
     // Append the new container to the definition area
     document.getElementById('definition').appendChild(definitionContainer);
+
+    // Set the initial color for the definition based on whether it was guessed correctly or skipped
+    const currentWordObject = words.find(word => word.word.toUpperCase() === currentWord);
+    if (currentWordObject.guessedCorrectly) {
+        // Apply a specific color to the definition text if guessed correctly
+        definitionContainer.style.color = '#90EE90'; // Correct guess color
+    } else {
+        // Apply a different color to the definition text if skipped or incorrect
+        definitionContainer.style.color = 'red'; // Incorrect/skipped guess color
+    }
 }
 
 window.nextWord = function() {

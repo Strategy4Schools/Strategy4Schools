@@ -21,7 +21,7 @@ function determineWordListURL(difficulty) {
     switch (difficulty) {
         case 'easy': 
             // Use the correct path for your easy word list
-            return 'https://raw.githubusercontent.com/Strategy4Schools/Strategy4Schools/main/anagrammable_year_7_word_list.json';
+            return 'http://localhost:8000/easy_word_list_anagrammable.json';
         case 'medium': 
             // Use the correct path for your medium word list
             return 'path/to/medium_word_list.json';
@@ -126,20 +126,37 @@ function pickNewAnagram() {
     document.getElementById('user-input').focus();
 }
 
-// Unified function to create and append an anagram with its definition
 function createAndAppendAnagramDefinition(parentElement, anagram, definition, isGuessed) {
-    let wordElement = document.createElement('p');
+    let containerDiv = document.createElement('div'); // Container for each word-definition pair
+    containerDiv.style.display = 'inline-block'; // Make the container only as wide as its content
+    containerDiv.style.backgroundColor = 'transparent'; // Optional: Set background to transparent
+    containerDiv.style.marginRight = '10px'; // Add some margin to the right for spacing between entries
+    containerDiv.style.padding = '5px'; // Add padding around the content for better readability
+
+    // Create the anchor element for the anagram word
     let anagramLink = document.createElement('a');
     anagramLink.href = `https://www.collinsdictionary.com/dictionary/english/${anagram.toLowerCase()}`;
     anagramLink.textContent = anagram;
     anagramLink.target = '_blank';
     anagramLink.title = "View definition on Collins Dictionary";
+    anagramLink.style.color = "white"; // Set the word color to white
+    anagramLink.style.textDecoration = "underline"; // Indicate it's clickable
 
-    wordElement.appendChild(anagramLink);
-    wordElement.innerHTML += ": " + definition.replace(anagram + ': ', '');
-    wordElement.style.color = isGuessed ? 'green' : 'red'; // Green if guessed, red otherwise
+    containerDiv.appendChild(anagramLink);
 
-    parentElement.appendChild(wordElement);
+    // Append a new line break for stacking the definition below the word
+    containerDiv.appendChild(document.createElement('br'));
+
+    // Append the definition text with additional padding at the top
+    let definitionText = document.createElement('span');
+    definitionText.textContent = definition.replace(anagram + ': ', ''); // Adjust the definition text as necessary
+    definitionText.style.color = isGuessed ? '#90EE90' : 'red'; // Green if guessed, red otherwise
+    definitionText.style.display = 'block'; // Make the definition block-level for the padding to take effect
+
+    containerDiv.appendChild(definitionText);
+
+    // Append the whole container to the parent element
+    parentElement.appendChild(containerDiv);
 }
 
 // Modified updateGuessedWordsDisplay function
@@ -243,7 +260,7 @@ function checkAnagramLogic() {
 
     if (currentAnagrams.includes(userInput) && !guessedAnagrams.has(userInput)) {
     document.getElementById('result').innerText = 'Correct!';
-    document.getElementById('result').style.color = 'green'; // Set text color to green for correct
+    document.getElementById('result').style.color = '#90EE90'; // Set text color to green for correct
     correctGuessMade = true;
         document.getElementById('anagram').innerText = currentWord; // Show the solved word for correct guesses
         guessedAnagrams.add(userInput);
@@ -297,7 +314,7 @@ function updateGuessedWordsDisplay(guessedWord) {
 
     wordElement.appendChild(wordLink);
     wordElement.innerHTML += ": " + definition;
-    wordElement.style.color = 'green';
+    wordElement.style.color = '#90EE90';
 
     guessedWordsDiv.appendChild(wordElement);
 }

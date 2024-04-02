@@ -1,0 +1,3092 @@
+{
+    "anagrams": [
+        {
+            "words": [
+                "ADAMANT"
+            ],
+            "definitions": [
+                "ADAMANT: very firm [adj ADAMANTLY] / a legendary impenetrable stone; diamond [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "GARBAGE"
+            ],
+            "definitions": [
+                "GARBAGE: food waste [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "BARGAIN"
+            ],
+            "definitions": [
+                "BARGAIN: to haggle over costs [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "AQUATIC"
+            ],
+            "definitions": [
+                "AQUATIC: relating to water [adj AQUATICALLY] / an organism living in or near water [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "SARCASM"
+            ],
+            "definitions": [
+                "SARCASM: a sharply mocking or contemptuous remark [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "DAMAGE"
+            ],
+            "definitions": [
+                "DAMAGE: to damage [v DAMAGED, DAMAGING, DAMAGES]"
+            ]
+        },
+        {
+            "words": [
+                "AFRAID"
+            ],
+            "definitions": [
+                "AFRAID: struck with fear [adj]"
+            ]
+        },
+        {
+            "words": [
+                "ADAPT"
+            ],
+            "definitions": [
+                "ADAPT: to make suitable [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "PASSAGE"
+            ],
+            "definitions": [
+                "PASSAGE: to make a voyage [v PASSAGED, PASSAGING, PASSAGES]"
+            ]
+        },
+        {
+            "words": [
+                "RAVAGE"
+            ],
+            "definitions": [
+                "RAVAGE: to destroy [v RAVAGED, RAVAGING, RAVAGES]"
+            ]
+        },
+        {
+            "words": [
+                "ANALYSE"
+            ],
+            "definitions": [
+                "ANALYSE: to separate a whole into parts, also ANALYZE [v ANALYSED, ANALYSING, ANALYSES]"
+            ]
+        },
+        {
+            "words": [
+                "ANALYZE"
+            ],
+            "definitions": [
+                "ANALYZE: to subject to analysis, also ANALYSE [v ANALYZED, ANALYZING, ANALYZES]"
+            ]
+        },
+        {
+            "words": [
+                "APPEAR"
+            ],
+            "definitions": [
+                "APPEAR: to become visible [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "AREA"
+            ],
+            "definitions": [
+                "AREA: (Latin) a region [n AREAS] / part of the cerebral cortex [n AREAE]"
+            ]
+        },
+        {
+            "words": [
+                "SAFARI"
+            ],
+            "definitions": [
+                "SAFARI: (Swahili) a hunting expedition, also SUFFARI [n -S] / to go on a hunting expedition [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "FATALLY"
+            ],
+            "definitions": [
+                "FATALLY: FATAL, capable of causing death [adv]"
+            ]
+        },
+        {
+            "words": [
+                "FANTASY"
+            ],
+            "definitions": [
+                "FANTASY: to imagine, also PHANTASY [v FANTASIED, FANTASYING, FANTASIES]"
+            ]
+        },
+        {
+            "words": [
+                "SAMURAI"
+            ],
+            "definitions": [
+                "SAMURAI: (Japanese) a member of the military caste in feudal Japan [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "AVIATOR"
+            ],
+            "definitions": [
+                "AVIATOR: a pilot who flies aircraft [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "ANNUAL"
+            ],
+            "definitions": [
+                "ANNUAL: happening every year [adj ANNUALLY] / a plant that flowers for one year only [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "SPATULA"
+            ],
+            "definitions": [
+                "SPATULA: (Latin) a broad, blunt, flexible blade or flattened spoon, also SPATULE [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "TRAUMA"
+            ],
+            "definitions": [
+                "TRAUMA: (Greek) a severe emotional shock [n TRAUMAS or TRAUMATA]"
+            ]
+        },
+        {
+            "words": [
+                "QUASAR"
+            ],
+            "definitions": [
+                "QUASAR: a starlike object which emits radio waves [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "GRABBED"
+            ],
+            "definitions": [
+                "GRABBED: GRAB, to grasp suddenly [v]"
+            ]
+        },
+        {
+            "words": [
+                "BEACON"
+            ],
+            "definitions": [
+                "BEACON: to shine like a light on high [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "DEBATE"
+            ],
+            "definitions": [
+                "DEBATE: to deliberate [v DEBATED, DEBATING, DEBATES]"
+            ]
+        },
+        {
+            "words": [
+                "BREATHE"
+            ],
+            "definitions": [
+                "BREATHE: to inhale and exhale air [v BREATHED, BREATHING, BREATHES]"
+            ]
+        },
+        {
+            "words": [
+                "BARREL"
+            ],
+            "definitions": [
+                "BARREL: to move fast [v BARRELED or BARRELLED, BARRELING or BARRELLING, BARRELS]"
+            ]
+        },
+        {
+            "words": [
+                "LIBRARY"
+            ],
+            "definitions": [
+                "LIBRARY: a room containing books for reading or reference [n LIBRARIES]"
+            ]
+        },
+        {
+            "words": [
+                "VIBRANT"
+            ],
+            "definitions": [
+                "VIBRANT: vibrating, resonant [adj VIBRANTLY] / a sonant, a voiced sound [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "BRAWL"
+            ],
+            "definitions": [
+                "BRAWL: to fight rowdily [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "ACCORD"
+            ],
+            "definitions": [
+                "ACCORD: to bring into agreement [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "ACCESS"
+            ],
+            "definitions": [
+                "ACCESS: approach, admittance [n -ES] / to have entrance to [v -ED, -ING, -ES]"
+            ]
+        },
+        {
+            "words": [
+                "DANCED"
+            ],
+            "definitions": [
+                "DANCED: DANCE, to move rhythmically to music [v]"
+            ]
+        },
+        {
+            "words": [
+                "ESCAPED"
+            ],
+            "definitions": [
+                "ESCAPED: ESCAPE, to free oneself [v]"
+            ]
+        },
+        {
+            "words": [
+                "DANCING"
+            ],
+            "definitions": [
+                "DANCING: the act of dancing [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "ZODIAC"
+            ],
+            "definitions": [
+                "ZODIAC: an imaginary belt in the heavens [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "COMMAND"
+            ],
+            "definitions": [
+                "COMMAND: to direct with authority [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "ACHIEVE"
+            ],
+            "definitions": [
+                "ACHIEVE: to carry out successfully [v ACHIEVED, ACHIEVING, ACHIEVES]"
+            ]
+        },
+        {
+            "words": [
+                "MENACE"
+            ],
+            "definitions": [
+                "MENACE: to threaten [v MENACED, MENACING, MENACES]"
+            ]
+        },
+        {
+            "words": [
+                "GRIMACE"
+            ],
+            "definitions": [
+                "GRIMACE: to contort the facial features [v GRIMACED, GRIMACING, GRIMACES]"
+            ]
+        },
+        {
+            "words": [
+                "LEGACY"
+            ],
+            "definitions": [
+                "LEGACY: something bequeathed [n LEGACIES]"
+            ]
+        },
+        {
+            "words": [
+                "ARCHERY"
+            ],
+            "definitions": [
+                "ARCHERY: the sport of shooting with bows and arrows [n ARCHERIES]"
+            ]
+        },
+        {
+            "words": [
+                "EXCLAIM"
+            ],
+            "definitions": [
+                "EXCLAIM: to cry out in surprise [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "ACQUIRE"
+            ],
+            "definitions": [
+                "ACQUIRE: to come into possession of [v ACQUIRED, ACQUIRING, ACQUIRES]"
+            ]
+        },
+        {
+            "words": [
+                "CENTRAL"
+            ],
+            "definitions": [
+                "CENTRAL: a telephone exchange [n -S] / in the middle [adj CENTRALER, CENTRALEST, CENTRALLY]"
+            ]
+        },
+        {
+            "words": [
+                "RETRACT"
+            ],
+            "definitions": [
+                "RETRACT: to take back [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "SCARVES"
+            ],
+            "definitions": [
+                "SCARVES: SCARF, a piece of cloth worn for warmth or protection [n]"
+            ]
+        },
+        {
+            "words": [
+                "CALF"
+            ],
+            "definitions": [
+                "CALF: a young cow [n CALVES] / the skin of a calf, calfskin [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "FANCY"
+            ],
+            "definitions": [
+                "FANCY: to take a liking to [v FANCIED, FANCYING, FANCIES] / ornamental [adj FANCIER, FANCIEST, FANCILY]"
+            ]
+        },
+        {
+            "words": [
+                "LOGICAL"
+            ],
+            "definitions": [
+                "LOGICAL: pertaining to logic [adj LOGICALLY]"
+            ]
+        },
+        {
+            "words": [
+                "ORGANIC"
+            ],
+            "definitions": [
+                "ORGANIC: relating to living matter, also ORGANICAL [adj ORGANICALLY] / an organic substance [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "HATCH"
+            ],
+            "definitions": [
+                "HATCH: to bring forth young from an egg [v -ED, -ING, -ES]"
+            ]
+        },
+        {
+            "words": [
+                "ALCOHOL"
+            ],
+            "definitions": [
+                "ALCOHOL: (Arabic) a flammable liquid [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "LATCH"
+            ],
+            "definitions": [
+                "LATCH: to close a gate with a catch [v -ED, -ING, -ES]"
+            ]
+        },
+        {
+            "words": [
+                "MATCH"
+            ],
+            "definitions": [
+                "MATCH: to be equal to [v -ED, -ING, -ES]"
+            ]
+        },
+        {
+            "words": [
+                "WATCH"
+            ],
+            "definitions": [
+                "WATCH: to keep in view [v -ED, -ING, -ES]"
+            ]
+        },
+        {
+            "words": [
+                "CLARITY"
+            ],
+            "definitions": [
+                "CLARITY: the state of being clear [n CLARITIES]"
+            ]
+        },
+        {
+            "words": [
+                "LUNACY"
+            ],
+            "definitions": [
+                "LUNACY: insanity [n LUNACIES]"
+            ]
+        },
+        {
+            "words": [
+                "CRYSTAL"
+            ],
+            "definitions": [
+                "CRYSTAL: a transparent mineral [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "VACUUM"
+            ],
+            "definitions": [
+                "VACUUM: (Latin) a space completely empty of matter [n VACUUMS or VACUA] / to operate a cleaner that uses suction [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "DRAGGED"
+            ],
+            "definitions": [
+                "DRAGGED: DRAG, to pull along the ground [v]"
+            ]
+        },
+        {
+            "words": [
+                "APPLIED"
+            ],
+            "definitions": [
+                "APPLIED: APPLY, to bring to bear [v]"
+            ]
+        },
+        {
+            "words": [
+                "PLANNED"
+            ],
+            "definitions": [
+                "PLANNED: PLAN, to formulate an idea [v]"
+            ]
+        },
+        {
+            "words": [
+                "VERDANT"
+            ],
+            "definitions": [
+                "VERDANT: green with vegetation [adj VERDANTLY]"
+            ]
+        },
+        {
+            "words": [
+                "ATTEND"
+            ],
+            "definitions": [
+                "ATTEND: to be present at [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "WRAPPED"
+            ],
+            "definitions": [
+                "WRAPPED: WRAP, to enclose [v]"
+            ]
+        },
+        {
+            "words": [
+                "GUARD"
+            ],
+            "definitions": [
+                "GUARD: to protect [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "ISLAND"
+            ],
+            "definitions": [
+                "ISLAND: a mass of land (not a continent) surrounded with water [n -S] / to set or dot with or as with islands [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "DISMAY"
+            ],
+            "definitions": [
+                "DISMAY: to appall or alarm [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "LAUNDRY"
+            ],
+            "definitions": [
+                "LAUNDRY: a place where clothes are washed and ironed [n LAUNDRIES]"
+            ]
+        },
+        {
+            "words": [
+                "WELFARE"
+            ],
+            "definitions": [
+                "WELFARE: general wellbeing [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "FEATURE"
+            ],
+            "definitions": [
+                "FEATURE: to present prominently [v FEATURED, FEATURING, FEATURES]"
+            ]
+        },
+        {
+            "words": [
+                "ENGAGE"
+            ],
+            "definitions": [
+                "ENGAGE: to employ [v ENGAGED, ENGAGING, ENGAGES]"
+            ]
+        },
+        {
+            "words": [
+                "LEAGUE"
+            ],
+            "definitions": [
+                "LEAGUE: to come together for a common purpose [v LEAGUED, LEAGUING, LEAGUES]"
+            ]
+        },
+        {
+            "words": [
+                "SEWAGE"
+            ],
+            "definitions": [
+                "SEWAGE: the waste matter carried off by sewers, also SEWERAGE [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "EXHALE"
+            ],
+            "definitions": [
+                "EXHALE: to breathe out [v EXHALED, EXHALING, EXHALES]"
+            ]
+        },
+        {
+            "words": [
+                "EXAMINE"
+            ],
+            "definitions": [
+                "EXAMINE: to inspect [v EXAMINED, EXAMINING, EXAMINES]"
+            ]
+        },
+        {
+            "words": [
+                "MEASURE"
+            ],
+            "definitions": [
+                "MEASURE: to compare with a standard [v MEASURED, MEASURING, MEASURES]"
+            ]
+        },
+        {
+            "words": [
+                "FATTER"
+            ],
+            "definitions": [
+                "FATTER: FAT, having an abundance of flesh [adj]"
+            ]
+        },
+        {
+            "words": [
+                "GATHER"
+            ],
+            "definitions": [
+                "GATHER: to bring together in one place or group [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "IMAGINE"
+            ],
+            "definitions": [
+                "IMAGINE: to form a mental picture of [v IMAGINED, IMAGINING, IMAGINES]"
+            ]
+        },
+        {
+            "words": [
+                "ILLEGAL"
+            ],
+            "definitions": [
+                "ILLEGAL: not legal [adj ILLEGALLY] / a person who enters a country without authorization [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "GRAPPLE"
+            ],
+            "definitions": [
+                "GRAPPLE: to struggle or contend [v GRAPPLED, GRAPPLING, GRAPPLES]"
+            ]
+        },
+        {
+            "words": [
+                "RUMMAGE"
+            ],
+            "definitions": [
+                "RUMMAGE: to search thoroughly through [v RUMMAGED, RUMMAGING, RUMMAGES]"
+            ]
+        },
+        {
+            "words": [
+                "VOYAGE"
+            ],
+            "definitions": [
+                "VOYAGE: to travel [v VOYAGED, VOYAGING, VOYAGES]"
+            ]
+        },
+        {
+            "words": [
+                "HEALTH"
+            ],
+            "definitions": [
+                "HEALTH: sound physical or mental condition [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "HEAVILY"
+            ],
+            "definitions": [
+                "HEAVILY: HEAVY, of great weight [adv]"
+            ]
+        },
+        {
+            "words": [
+                "HALVES"
+            ],
+            "definitions": [
+                "HALVES: HALVE, to divide into two equal parts [v]"
+            ]
+        },
+        {
+            "words": [
+                "HAMPER"
+            ],
+            "definitions": [
+                "HAMPER: to hinder, obstruct [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "HAPPEN"
+            ],
+            "definitions": [
+                "HAPPEN: to occur [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "HARNESS"
+            ],
+            "definitions": [
+                "HARNESS: to equip with gear [v -ED, -ING, -ES]"
+            ]
+        },
+        {
+            "words": [
+                "LIAISE"
+            ],
+            "definitions": [
+                "LIAISE: to form a link with [v LIAISED, LIAISING, LIAISES]"
+            ]
+        },
+        {
+            "words": [
+                "EXPLAIN"
+            ],
+            "definitions": [
+                "EXPLAIN: to make clear and understandable [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "AISLE"
+            ],
+            "definitions": [
+                "AISLE: a passage between seats [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "LAZIEST"
+            ],
+            "definitions": [
+                "LAZIEST: LAZY, disinclined toward work or exertion [adj]"
+            ]
+        },
+        {
+            "words": [
+                "PATIENT"
+            ],
+            "definitions": [
+                "PATIENT: calm and uncomplaining [adj PATIENTER, PATIENTEST, PATIENTLY] / (Shakespeare) to make calm and uncomplaining [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "NATIVE"
+            ],
+            "definitions": [
+                "NATIVE: inborn [adj NATIVELY] / an original inhabitant of an area [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "NAIVETY"
+            ],
+            "definitions": [
+                "NAIVETY: the quality of being naive, also NAIVETE [n NAIVETIES]"
+            ]
+        },
+        {
+            "words": [
+                "VARIETY"
+            ],
+            "definitions": [
+                "VARIETY: diversity [n VARIETIES]"
+            ]
+        },
+        {
+            "words": [
+                "EQUALLY"
+            ],
+            "definitions": [
+                "EQUALLY: in an equal way, also EGALLY [adv]"
+            ]
+        },
+        {
+            "words": [
+                "NUMERAL"
+            ],
+            "definitions": [
+                "NUMERAL: according to number [adj NUMERALLY] / a symbol that expresses a number [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "ZEALOUS"
+            ],
+            "definitions": [
+                "ZEALOUS: filled with zeal [adj ZEALOUSLY]"
+            ]
+        },
+        {
+            "words": [
+                "LOAVES"
+            ],
+            "definitions": [
+                "LOAVES: LOAVE, to form a head as in a cabbage [v]"
+            ]
+        },
+        {
+            "words": [
+                "AMUSE"
+            ],
+            "definitions": [
+                "AMUSE: to entertain [v AMUSED, AMUSING, AMUSES]"
+            ]
+        },
+        {
+            "words": [
+                "TENANT"
+            ],
+            "definitions": [
+                "TENANT: a person who occupies property owned by another, in return for rent, service, etc. [n -S] / to occupy as tenant [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "PARTNER"
+            ],
+            "definitions": [
+                "PARTNER: to join with in a common interest [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "OPAQUE"
+            ],
+            "definitions": [
+                "OPAQUE: impervious to light [adj OPAQUER, OPAQUEST, OPAQUELY] / to make opaque [v OPAQUED, OPAQUING, OPAQUES]"
+            ]
+        },
+        {
+            "words": [
+                "WEARY"
+            ],
+            "definitions": [
+                "WEARY: tired [adj WEARIER, WEARIEST, WEARILY] / to make tired [v WEARIED, WEARYING, WEARIES]"
+            ]
+        },
+        {
+            "words": [
+                "FLAG"
+            ],
+            "definitions": [
+                "FLAG: to mark with a cloth used as a symbol [v FLAGGED, FLAGGING, FLAGS]"
+            ]
+        },
+        {
+            "words": [
+                "HALF"
+            ],
+            "definitions": [
+                "HALF: one of two equal parts [n HALVES] / a measure of whiskey [n HALFS]"
+            ]
+        },
+        {
+            "words": [
+                "HARMFUL"
+            ],
+            "definitions": [
+                "HARMFUL: capable of harming [adj HARMFULLY]"
+            ]
+        },
+        {
+            "words": [
+                "QUALIFY"
+            ],
+            "definitions": [
+                "QUALIFY: to be eligible after having the necessary requirements [v QUALIFIED, QUALIFYING, QUALIFIES]"
+            ]
+        },
+        {
+            "words": [
+                "FORMAL"
+            ],
+            "definitions": [
+                "FORMAL: regulated, not casual [adj FORMALLY] / a social event that requires evening dress [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "FLAW"
+            ],
+            "definitions": [
+                "FLAW: to make defective or imperfect [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "ZIGZAG"
+            ],
+            "definitions": [
+                "ZIGZAG: to turn sharply from side to side [v ZIGZAGGED, ZIGZAGGING, ZIGZAGS]"
+            ]
+        },
+        {
+            "words": [
+                "SHAKING"
+            ],
+            "definitions": [
+                "SHAKING: the act of shaking [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "TAUGHT"
+            ],
+            "definitions": [
+                "TAUGHT: TEACH, to impart knowledge or skill to [v]"
+            ]
+        },
+        {
+            "words": [
+                "ORIGAMI"
+            ],
+            "definitions": [
+                "ORIGAMI: (Japanese) the art of paper folding [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "MAKING"
+            ],
+            "definitions": [
+                "MAKING: material from which something can be developed [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "APOLOGY"
+            ],
+            "definitions": [
+                "APOLOGY: an explanation with expression of regret [n APOLOGIES]"
+            ]
+        },
+        {
+            "words": [
+                "GLOAT"
+            ],
+            "definitions": [
+                "GLOAT: to regard with great or excessive satisfaction [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "GRANT"
+            ],
+            "definitions": [
+                "GRANT: to bestow upon [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "HAPPILY"
+            ],
+            "definitions": [
+                "HAPPILY: HAPPY, marked by joy [adv]"
+            ]
+        },
+        {
+            "words": [
+                "ORPHAN"
+            ],
+            "definitions": [
+                "ORPHAN: to deprive of both parents [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "AUTHOR"
+            ],
+            "definitions": [
+                "AUTHOR: to bring into being [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "HAZY"
+            ],
+            "definitions": [
+                "HAZY: like a haze, unclear [adj HAZIER, HAZIEST, HAZILY]"
+            ]
+        },
+        {
+            "words": [
+                "SIMILAR"
+            ],
+            "definitions": [
+                "SIMILAR: being alike but not identical [adj SIMILARLY]"
+            ]
+        },
+        {
+            "words": [
+                "LIAISON"
+            ],
+            "definitions": [
+                "LIAISON: (French) a means of maintaining communication [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "RAISIN"
+            ],
+            "definitions": [
+                "RAISIN: (French) a dried grape [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "SAILOR"
+            ],
+            "definitions": [
+                "SAILOR: a member of a ship's crew [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "QUALITY"
+            ],
+            "definitions": [
+                "QUALITY: persons of the upper class collectively [n QUALITIES]"
+            ]
+        },
+        {
+            "words": [
+                "ANXIOUS"
+            ],
+            "definitions": [
+                "ANXIOUS: full of fear [adj ANXIOUSLY]"
+            ]
+        },
+        {
+            "words": [
+                "TRAITOR"
+            ],
+            "definitions": [
+                "TRAITOR: one who betrays another [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "TOTALLY"
+            ],
+            "definitions": [
+                "TOTALLY: TOTAL, whole [adv]"
+            ]
+        },
+        {
+            "words": [
+                "AUTUMN"
+            ],
+            "definitions": [
+                "AUTUMN: a season of the year [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "TYRANT"
+            ],
+            "definitions": [
+                "TYRANT: to play the oppressor, also TYRAN, TYRANNE [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "TAUNT"
+            ],
+            "definitions": [
+                "TAUNT: to goad or provoke [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "QUOTA"
+            ],
+            "definitions": [
+                "QUOTA: (Latin) a proportional share, a part assigned [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "QUAY"
+            ],
+            "definitions": [
+                "QUAY: a wharf for the loading or unloading of vessels [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "QUIBBLE"
+            ],
+            "definitions": [
+                "QUIBBLE: to argue over petty matters [v QUIBBLED, QUIBBLING, QUIBBLES]"
+            ]
+        },
+        {
+            "words": [
+                "ROBBER"
+            ],
+            "definitions": [
+                "ROBBER: one that robs [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "SUBURB"
+            ],
+            "definitions": [
+                "SUBURB: a residential area adjacent to a city [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "COMBINE"
+            ],
+            "definitions": [
+                "COMBINE: to join, mix [v COMBINED, COMBINING, COMBINES]"
+            ]
+        },
+        {
+            "words": [
+                "BOYCOTT"
+            ],
+            "definitions": [
+                "BOYCOTT: to refuse to have dealings with [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "BEHIND"
+            ],
+            "definitions": [
+                "BEHIND: the buttocks [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "NUMBED"
+            ],
+            "definitions": [
+                "NUMBED: NUMB, to deprive of feeling [v]"
+            ]
+        },
+        {
+            "words": [
+                "DEBT"
+            ],
+            "definitions": [
+                "DEBT: something that is owed [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "HYBRID"
+            ],
+            "definitions": [
+                "HYBRID: the offspring of genetically dissimilar parents [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "DUMB"
+            ],
+            "definitions": [
+                "DUMB: incapable of speech [adj DUMBER, DUMBEST, DUMBLY] / to deprive of speech [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "DOUBT"
+            ],
+            "definitions": [
+                "DOUBT: to be uncertain about [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "BELIEVE"
+            ],
+            "definitions": [
+                "BELIEVE: to accept as true [v BELIEVED, BELIEVING, BELIEVES]"
+            ]
+        },
+        {
+            "words": [
+                "BENEFIT"
+            ],
+            "definitions": [
+                "BENEFIT: to obtain an advantage [v BENEFITED or BENEFITTED, BENEFITING or BENEFITTING, BENEFITS]"
+            ]
+        },
+        {
+            "words": [
+                "BEIGE"
+            ],
+            "definitions": [
+                "BEIGE: a woollen fabric of undyed wool [n -S] / greyish buff with a hint of pink [adj BEIGER, BEIGEST]"
+            ]
+        },
+        {
+            "words": [
+                "BERRIES"
+            ],
+            "definitions": [
+                "BERRIES: BERRY, to collect berries [v]"
+            ]
+        },
+        {
+            "words": [
+                "BONFIRE"
+            ],
+            "definitions": [
+                "BONFIRE: a large fire in the open air [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "BIGGER"
+            ],
+            "definitions": [
+                "BIGGER: BIG, of large size [adj]"
+            ]
+        },
+        {
+            "words": [
+                "GRUMBLE"
+            ],
+            "definitions": [
+                "GRUMBLE: to mutter in discontent [v GRUMBLED, GRUMBLING, GRUMBLES]"
+            ]
+        },
+        {
+            "words": [
+                "EXHIBIT"
+            ],
+            "definitions": [
+                "EXHIBIT: to display publicly [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "HUMBLE"
+            ],
+            "definitions": [
+                "HUMBLE: to abase [v HUMBLED, HUMBLING, HUMBLES] / modest [adj HUMBLER, HUMBLEST, HUMBLY]"
+            ]
+        },
+        {
+            "words": [
+                "VISIBLE"
+            ],
+            "definitions": [
+                "VISIBLE: able to be seen [adj VISIBLY] / a visible thing [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "ZOMBIE"
+            ],
+            "definitions": [
+                "ZOMBIE: in West Indian magic, a reanimated corpse, also ZOMBI [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "BOUQUET"
+            ],
+            "definitions": [
+                "BOUQUET: (French) a bunch of flowers [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "BROUGHT"
+            ],
+            "definitions": [
+                "BROUGHT: BRING, to take with oneself to a place [v]"
+            ]
+        },
+        {
+            "words": [
+                "BOUGHT"
+            ],
+            "definitions": [
+                "BOUGHT: (Spenser) a coil, fold [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "BOUGH"
+            ],
+            "definitions": [
+                "BOUGH: a tree branch [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "PUBLISH"
+            ],
+            "definitions": [
+                "PUBLISH: to print and issue to the public [v -ED, -ING, -ES]"
+            ]
+        },
+        {
+            "words": [
+                "BURNISH"
+            ],
+            "definitions": [
+                "BURNISH: to polish [v -ED, -ING, -ES]"
+            ]
+        },
+        {
+            "words": [
+                "THUMB"
+            ],
+            "definitions": [
+                "THUMB: to leaf through with the short, thick digit of the hand [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "VISIBLY"
+            ],
+            "definitions": [
+                "VISIBLY: VISIBLE, able to be seen [adv]"
+            ]
+        },
+        {
+            "words": [
+                "OBVIOUS"
+            ],
+            "definitions": [
+                "OBVIOUS: easily understood [adj OBVIOUSLY]"
+            ]
+        },
+        {
+            "words": [
+                "NUMB"
+            ],
+            "definitions": [
+                "NUMB: lacking feeling [adj NUMBER, NUMBEST, NUMBLY] / to deprive of feeling [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "CONDUCT"
+            ],
+            "definitions": [
+                "CONDUCT: to lead or guide [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "LICENCE"
+            ],
+            "definitions": [
+                "LICENCE: to issue or grant authoritative permission to, also LICENSE [v LICENCED, LICENCING, LICENCES]"
+            ]
+        },
+        {
+            "words": [
+                "CONCERN"
+            ],
+            "definitions": [
+                "CONCERN: to be of interest to [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "CONCERT"
+            ],
+            "definitions": [
+                "CONCERT: to construct or devise together [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "CHRONIC"
+            ],
+            "definitions": [
+                "CHRONIC: long-lasting [adj CHRONICALLY] / a chronic invalid [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "CIRCUIT"
+            ],
+            "definitions": [
+                "CIRCUIT: to move around [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "OCCUPY"
+            ],
+            "definitions": [
+                "OCCUPY: to reside in, also OCCUPATE [v OCCUPIED, OCCUPYING, OCCUPIES]"
+            ]
+        },
+        {
+            "words": [
+                "OCCUR"
+            ],
+            "definitions": [
+                "OCCUR: to take place [v OCCURRED, OCCURRING, OCCURS]"
+            ]
+        },
+        {
+            "words": [
+                "DECIDED"
+            ],
+            "definitions": [
+                "DECIDED: DECIDE, to make a choice [v]"
+            ]
+        },
+        {
+            "words": [
+                "DECEIVE"
+            ],
+            "definitions": [
+                "DECEIVE: to mislead by falsehood [v DECEIVED, DECEIVING, DECEIVES]"
+            ]
+        },
+        {
+            "words": [
+                "SUICIDE"
+            ],
+            "definitions": [
+                "SUICIDE: to kill oneself intentionally [v SUICIDED, SUICIDING, SUICIDES]"
+            ]
+        },
+        {
+            "words": [
+                "PREDICT"
+            ],
+            "definitions": [
+                "PREDICT: to tell of or about in advance [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "VERDICT"
+            ],
+            "definitions": [
+                "VERDICT: the decision of a jury at the end of a legal proceeding [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "DECORUM"
+            ],
+            "definitions": [
+                "DECORUM: (Latin) proper behaviour [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "CHORD"
+            ],
+            "definitions": [
+                "CHORD: to play a combination of three or more musical notes [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "DOCTOR"
+            ],
+            "definitions": [
+                "DOCTOR: to treat medically [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "RECEIVE"
+            ],
+            "definitions": [
+                "RECEIVE: to come into possession of [v RECEIVED, RECEIVING, RECEIVES]"
+            ]
+        },
+        {
+            "words": [
+                "EXECUTE"
+            ],
+            "definitions": [
+                "EXECUTE: to perform or carry out [v EXECUTED, EXECUTING, EXECUTES]"
+            ]
+        },
+        {
+            "words": [
+                "EFFECT"
+            ],
+            "definitions": [
+                "EFFECT: to bring about [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "FIERCE"
+            ],
+            "definitions": [
+                "FIERCE: violently hostile or aggressive [adj FIERCER, FIERCEST, FIERCELY]"
+            ]
+        },
+        {
+            "words": [
+                "REFLECT"
+            ],
+            "definitions": [
+                "REFLECT: to be mirrored [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "COLLEGE"
+            ],
+            "definitions": [
+                "COLLEGE: a school of higher learning [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "VEHICLE"
+            ],
+            "definitions": [
+                "VEHICLE: a device used as a means of conveyance [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "REJOICE"
+            ],
+            "definitions": [
+                "REJOICE: to feel joyful [v REJOICED, REJOICING, REJOICES]"
+            ]
+        },
+        {
+            "words": [
+                "RECLINE"
+            ],
+            "definitions": [
+                "RECLINE: to lean or lie back [v RECLINED, RECLINING, RECLINES]"
+            ]
+        },
+        {
+            "words": [
+                "NIECE"
+            ],
+            "definitions": [
+                "NIECE: a daughter of one's brother of sister [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "PIECE"
+            ],
+            "definitions": [
+                "PIECE: to join into a whole [v PIECED, PIECING, PIECES]"
+            ]
+        },
+        {
+            "words": [
+                "RECEIPT"
+            ],
+            "definitions": [
+                "RECEIPT: to mark as having been paid [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "SPECIES"
+            ],
+            "definitions": [
+                "SPECIES: (Latin) a population of individuals which share the same gene pool and which is unable to interbreed with closely related populations to produce viable offspring [n]"
+            ]
+        },
+        {
+            "words": [
+                "EXCITE"
+            ],
+            "definitions": [
+                "EXCITE: to arouse the emotions of [v EXCITED, EXCITING, EXCITES]"
+            ]
+        },
+        {
+            "words": [
+                "CEMENT"
+            ],
+            "definitions": [
+                "CEMENT: to bind firmly [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "CONFINE"
+            ],
+            "definitions": [
+                "CONFINE: to shut within an enclosure [v CONFINED, CONFINING, CONFINES]"
+            ]
+        },
+        {
+            "words": [
+                "SPECIFY"
+            ],
+            "definitions": [
+                "SPECIFY: to state in detail [v SPECIFIED, SPECIFYING, SPECIFIES]"
+            ]
+        },
+        {
+            "words": [
+                "CONFER"
+            ],
+            "definitions": [
+                "CONFER: to bestow [v CONFERRED, CONFERRING, CONFERS]"
+            ]
+        },
+        {
+            "words": [
+                "COLOGNE"
+            ],
+            "definitions": [
+                "COLOGNE: (French) a perfumed mixture of alcohol and essential oils, first made at Cologne [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "URGENCY"
+            ],
+            "definitions": [
+                "URGENCY: a strong urgency or drive [n URGENCIES]"
+            ]
+        },
+        {
+            "words": [
+                "ETHNIC"
+            ],
+            "definitions": [
+                "ETHNIC: relating to race, also ETHNICAL [adj ETHNICALLY] / a member of a particular ethnos [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "QUENCH"
+            ],
+            "definitions": [
+                "QUENCH: to put out or extinguish [v -ED, -ING, -ES]"
+            ]
+        },
+        {
+            "words": [
+                "CHOPPER"
+            ],
+            "definitions": [
+                "CHOPPER: to travel by helicopter [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "ICE"
+            ],
+            "definitions": [
+                "ICE: to cover with frozen water [v ICED, ICING, ICES]"
+            ]
+        },
+        {
+            "words": [
+                "ELICIT"
+            ],
+            "definitions": [
+                "ELICIT: to draw forth [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "LUCKIER"
+            ],
+            "definitions": [
+                "LUCKIER: LUCKY, fortunate [adj]"
+            ]
+        },
+        {
+            "words": [
+                "WRECK"
+            ],
+            "definitions": [
+                "WRECK: to cause the ruin of, also WRACK [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "MUSCLE"
+            ],
+            "definitions": [
+                "MUSCLE: to force one's way [v MUSCLED, MUSCLING, MUSCLES]"
+            ]
+        },
+        {
+            "words": [
+                "COMPOSE"
+            ],
+            "definitions": [
+                "COMPOSE: to settle or soothe [v COMPOSED, COMPOSING, COMPOSES]"
+            ]
+        },
+        {
+            "words": [
+                "COMPUTE"
+            ],
+            "definitions": [
+                "COMPUTE: to calculate [v COMPUTED, COMPUTING, COMPUTES]"
+            ]
+        },
+        {
+            "words": [
+                "MERCURY"
+            ],
+            "definitions": [
+                "MERCURY: a metallic element [n MERCURIES]"
+            ]
+        },
+        {
+            "words": [
+                "CONTEXT"
+            ],
+            "definitions": [
+                "CONTEXT: a passage or words which explain the true meaning [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "CUTTER"
+            ],
+            "definitions": [
+                "CUTTER: a powerful motor-launch (as used by coastguard and navy) [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "CREW"
+            ],
+            "definitions": [
+                "CREW: to serve aboard a ship [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "CONFIRM"
+            ],
+            "definitions": [
+                "CONFIRM: to assure the validity of [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "CLOSING"
+            ],
+            "definitions": [
+                "CLOSING: a concluding part [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "HITCH"
+            ],
+            "definitions": [
+                "HITCH: to fasten with a knot or hook [v -ED, -ING, -ES]"
+            ]
+        },
+        {
+            "words": [
+                "WHICH"
+            ],
+            "definitions": [
+                "WHICH: what particular one [pron]"
+            ]
+        },
+        {
+            "words": [
+                "CHIRP"
+            ],
+            "definitions": [
+                "CHIRP: to utter a short, shrill sound [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "SWITCH"
+            ],
+            "definitions": [
+                "SWITCH: to beat with a flexible rod [v -ED, -ING, -ES]"
+            ]
+        },
+        {
+            "words": [
+                "SLOUCH"
+            ],
+            "definitions": [
+                "SLOUCH: to sit, stand, or move with a drooping posture [v -ED, -ING, -ES]"
+            ]
+        },
+        {
+            "words": [
+                "CHORUS"
+            ],
+            "definitions": [
+                "CHORUS: to sing in unison [v CHORUSSED or CHORUSED, CHORUSSING or CHORUSING, CHORUSSES or CHORUSES]"
+            ]
+        },
+        {
+            "words": [
+                "VICIOUS"
+            ],
+            "definitions": [
+                "VICIOUS: dangerously aggressive [adj VICIOUSLY]"
+            ]
+        },
+        {
+            "words": [
+                "LUCKILY"
+            ],
+            "definitions": [
+                "LUCKILY: LUCKY, fortunate [adv]"
+            ]
+        },
+        {
+            "words": [
+                "QUICKLY"
+            ],
+            "definitions": [
+                "QUICKLY: QUICK, acting or capable of acting with speed [adv]"
+            ]
+        },
+        {
+            "words": [
+                "QUICK"
+            ],
+            "definitions": [
+                "QUICK: acting or capable of acting with speed [adj QUICKER, QUICKEST, QUICKLY] / a sensitive area of flesh [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "CURIOUS"
+            ],
+            "definitions": [
+                "CURIOUS: inquisitive [adj CURIOUSER, CURIOUSEST, CURIOUSLY]"
+            ]
+        },
+        {
+            "words": [
+                "VICTOR"
+            ],
+            "definitions": [
+                "VICTOR: one who defeats an adversary [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "VICTORY"
+            ],
+            "definitions": [
+                "VICTORY: a successful outcome in a contest or struggle [n VICTORIES]"
+            ]
+        },
+        {
+            "words": [
+                "CITY"
+            ],
+            "definitions": [
+                "CITY: a large town [n CITIES]"
+            ]
+        },
+        {
+            "words": [
+                "SCULPT"
+            ],
+            "definitions": [
+                "SCULPT: to form an image from solid material, also SCULP [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "CORRUPT"
+            ],
+            "definitions": [
+                "CORRUPT: to make bad, debase [v -ED, -ING, -S] / debased [adj CORRUPTER, CORRUPTEST, CORRUPTLY]"
+            ]
+        },
+        {
+            "words": [
+                "TIDIED"
+            ],
+            "definitions": [
+                "TIDIED: TIDY, to make tidy [v]"
+            ]
+        },
+        {
+            "words": [
+                "DRIPPED"
+            ],
+            "definitions": [
+                "DRIPPED: DRIP, to fall in drops [v]"
+            ]
+        },
+        {
+            "words": [
+                "DROPPED"
+            ],
+            "definitions": [
+                "DROPPED: DROP, to let fall in globules [v]"
+            ]
+        },
+        {
+            "words": [
+                "ODDITY"
+            ],
+            "definitions": [
+                "ODDITY: one that is odd [n ODDITIES]"
+            ]
+        },
+        {
+            "words": [
+                "HEDGE"
+            ],
+            "definitions": [
+                "HEDGE: to enclose with a dense row of bushes [v HEDGED, HEDGING, HEDGES]"
+            ]
+        },
+        {
+            "words": [
+                "WEIGHED"
+            ],
+            "definitions": [
+                "WEIGHED: WEIGH, to determine the weight of [v]"
+            ]
+        },
+        {
+            "words": [
+                "PLEDGE"
+            ],
+            "definitions": [
+                "PLEDGE: to bind by solemn promise [v PLEDGED, PLEDGING, PLEDGES]"
+            ]
+        },
+        {
+            "words": [
+                "EVIDENT"
+            ],
+            "definitions": [
+                "EVIDENT: clear [adj EVIDENTLY] / that which serves as evidence [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "DESPITE"
+            ],
+            "definitions": [
+                "DESPITE: to treat with contempt [v DESPITED, DESPITING, DESPITES]"
+            ]
+        },
+        {
+            "words": [
+                "EXPLODE"
+            ],
+            "definitions": [
+                "EXPLODE: to blow up [v EXPLODED, EXPLODING, EXPLODES]"
+            ]
+        },
+        {
+            "words": [
+                "REMEDY"
+            ],
+            "definitions": [
+                "REMEDY: to relieve or cure [v REMEDIED, REMEDYING, REMEDIES]"
+            ]
+        },
+        {
+            "words": [
+                "FUDGE"
+            ],
+            "definitions": [
+                "FUDGE: to falsify [v FUDGED, FUDGING, FUDGES]"
+            ]
+        },
+        {
+            "words": [
+                "DENYING"
+            ],
+            "definitions": [
+                "DENYING: DENY, to declare to be untrue, also DENAY [v]"
+            ]
+        },
+        {
+            "words": [
+                "DIGEST"
+            ],
+            "definitions": [
+                "DIGEST: to assimilate food in the stomach, also DISGEST [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "JUDGE"
+            ],
+            "definitions": [
+                "JUDGE: to decide on critically [v JUDGED, JUDGING, JUDGES]"
+            ]
+        },
+        {
+            "words": [
+                "DUNGEON"
+            ],
+            "definitions": [
+                "DUNGEON: to confine in an underground prison [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "TRUDGE"
+            ],
+            "definitions": [
+                "TRUDGE: to walk tiredly [v TRUDGED, TRUDGING, TRUDGES]"
+            ]
+        },
+        {
+            "words": [
+                "HOPPED"
+            ],
+            "definitions": [
+                "HOPPED: HOP, to move by jumping on one foot [v]"
+            ]
+        },
+        {
+            "words": [
+                "HERD"
+            ],
+            "definitions": [
+                "HERD: to bring together a group of animals [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "SHREWD"
+            ],
+            "definitions": [
+                "SHREWD: having keen insight [adj SHREWDER, SHREWDEST, SHREWDLY]"
+            ]
+        },
+        {
+            "words": [
+                "DIRTIER"
+            ],
+            "definitions": [
+                "DIRTIER: DIRTY, soiled [adj]"
+            ]
+        },
+        {
+            "words": [
+                "YIELD"
+            ],
+            "definitions": [
+                "YIELD: to give up [v YIELDED or (obsolete) YOLD, YIELDING, YIELDS]"
+            ]
+        },
+        {
+            "words": [
+                "PROVIDE"
+            ],
+            "definitions": [
+                "PROVIDE: to supply [v PROVIDED, PROVIDING, PROVIDES]"
+            ]
+        },
+        {
+            "words": [
+                "PLUNDER"
+            ],
+            "definitions": [
+                "PLUNDER: to rob by force [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "DRUMMER"
+            ],
+            "definitions": [
+                "DRUMMER: one who plays a drum [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "POPPED"
+            ],
+            "definitions": [
+                "POPPED: POP, to make a sharp, small, explosive sound [v]"
+            ]
+        },
+        {
+            "words": [
+                "MODIFY"
+            ],
+            "definitions": [
+                "MODIFY: to alter slightly [v MODIFIED, MODIFYING, MODIFIES]"
+            ]
+        },
+        {
+            "words": [
+                "DIGGING"
+            ],
+            "definitions": [
+                "DIGGING: an excavation [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "DRYING"
+            ],
+            "definitions": [
+                "DRYING: the act of drying [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "PRODIGY"
+            ],
+            "definitions": [
+                "PRODIGY: a child with exceptional talent and ability [n PRODIGIES]"
+            ]
+        },
+        {
+            "words": [
+                "EERIE"
+            ],
+            "definitions": [
+                "EERIE: uncanny, also EERY [adj EERIER, EERIEST, EERILY]"
+            ]
+        },
+        {
+            "words": [
+                "EXTREME"
+            ],
+            "definitions": [
+                "EXTREME: the highest degree [n -S] / farthest from centre [adj EXTREMER, EXTREMEST, EXTREMELY]"
+            ]
+        },
+        {
+            "words": [
+                "PREFER"
+            ],
+            "definitions": [
+                "PREFER: to like better [v PREFERRED, PREFERRING, PREFERS]"
+            ]
+        },
+        {
+            "words": [
+                "HYGIENE"
+            ],
+            "definitions": [
+                "HYGIENE: the science of preserving health [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "ENGINE"
+            ],
+            "definitions": [
+                "ENGINE: to equip with machinery [v ENGINED, ENGINING, ENGINES]"
+            ]
+        },
+        {
+            "words": [
+                "GENTLE"
+            ],
+            "definitions": [
+                "GENTLE: to tame [v GENTLED, GENTLING, GENTLES] / mild and refined in manners [adj GENTLER, GENTLEST, GENTLY]"
+            ]
+        },
+        {
+            "words": [
+                "GESTURE"
+            ],
+            "definitions": [
+                "GESTURE: to express by bodily motion [v GESTURED, GESTURING, GESTURES]"
+            ]
+        },
+        {
+            "words": [
+                "WHETHER"
+            ],
+            "definitions": [
+                "WHETHER: if it be the case that [conj]"
+            ]
+        },
+        {
+            "words": [
+                "THIEVE"
+            ],
+            "definitions": [
+                "THIEVE: to steal [v THIEVED, THIEVING, THIEVES]"
+            ]
+        },
+        {
+            "words": [
+                "HELMET"
+            ],
+            "definitions": [
+                "HELMET: to supply with a protective covering for the head [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "LEISURE"
+            ],
+            "definitions": [
+                "LEISURE: free time, also LEASURE [n -S] / to have recreational time [v LEISURED, LEISURING, LEISURES]"
+            ]
+        },
+        {
+            "words": [
+                "EXILE"
+            ],
+            "definitions": [
+                "EXILE: to banish from one's own country [v EXILED, EXILING, EXILES]"
+            ]
+        },
+        {
+            "words": [
+                "IMMENSE"
+            ],
+            "definitions": [
+                "IMMENSE: huge [adj IMMENSER, IMMENSEST, IMMENSELY]"
+            ]
+        },
+        {
+            "words": [
+                "EPITOME"
+            ],
+            "definitions": [
+                "EPITOME: a typical example [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "MERRIER"
+            ],
+            "definitions": [
+                "MERRIER: MERRY, mirthful, also MERRIE [adj]"
+            ]
+        },
+        {
+            "words": [
+                "REWRITE"
+            ],
+            "definitions": [
+                "REWRITE: to write again [v REWROTE, REWRITTEN, REWRITING, REWRITES]"
+            ]
+        },
+        {
+            "words": [
+                "SEIZE"
+            ],
+            "definitions": [
+                "SEIZE: to take hold of suddenly and forcibly, also SEISE [v SEIZED, SEIZING, SEIZES]"
+            ]
+        },
+        {
+            "words": [
+                "KNEEL"
+            ],
+            "definitions": [
+                "KNEEL: to rest on the knees [v KNELT or KNEELED, KNEELING, KNEELS]"
+            ]
+        },
+        {
+            "words": [
+                "EVOKE"
+            ],
+            "definitions": [
+                "EVOKE: to call forth [v EVOKED, EVOKING, EVOKES]"
+            ]
+        },
+        {
+            "words": [
+                "EXPLORE"
+            ],
+            "definitions": [
+                "EXPLORE: to examine thoroughly [v EXPLORED, EXPLORING, EXPLORES]"
+            ]
+        },
+        {
+            "words": [
+                "EVOLVE"
+            ],
+            "definitions": [
+                "EVOLVE: to develop [v EVOLVED, EVOLVING, EVOLVES]"
+            ]
+        },
+        {
+            "words": [
+                "EMPEROR"
+            ],
+            "definitions": [
+                "EMPEROR: the ruler of an empire [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "EXPOSE"
+            ],
+            "definitions": [
+                "EXPOSE: to lay open to view [v EXPOSED, EXPOSING, EXPOSES]"
+            ]
+        },
+        {
+            "words": [
+                "QUEUE"
+            ],
+            "definitions": [
+                "QUEUE: to line up for service [v QUEUED, QUEUEING, QUEUES]"
+            ]
+        },
+        {
+            "words": [
+                "FOREIGN"
+            ],
+            "definitions": [
+                "FOREIGN: situated outside a place or country [adj FOREIGNLY]"
+            ]
+        },
+        {
+            "words": [
+                "GRIEF"
+            ],
+            "definitions": [
+                "GRIEF: intense mental stress [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "FIGURE"
+            ],
+            "definitions": [
+                "FIGURE: to compute [v FIGURED, FIGURING, FIGURES]"
+            ]
+        },
+        {
+            "words": [
+                "HEFTY"
+            ],
+            "definitions": [
+                "HEFTY: big of build [adj HEFTIER, HEFTIEST, HEFTILY]"
+            ]
+        },
+        {
+            "words": [
+                "VERIFY"
+            ],
+            "definitions": [
+                "VERIFY: to prove to be true [v VERIFIED, VERIFYING, VERIFIES]"
+            ]
+        },
+        {
+            "words": [
+                "FUNNEL"
+            ],
+            "definitions": [
+                "FUNNEL: to pass through a cone-shaped utensil [v FUNNELLED or FUNNELED, FUNNELLING or FUNNELING, FUNNELS]"
+            ]
+        },
+        {
+            "words": [
+                "FELONY"
+            ],
+            "definitions": [
+                "FELONY: a grave crime [n FELONIES]"
+            ]
+        },
+        {
+            "words": [
+                "FOE"
+            ],
+            "definitions": [
+                "FOE: an enemy [n FOES or (Spenser) FOEN or FONE]"
+            ]
+        },
+        {
+            "words": [
+                "FUTURE"
+            ],
+            "definitions": [
+                "FUTURE: the time yet to come [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "GINGER"
+            ],
+            "definitions": [
+                "GINGER: (Malay) to spice up, make spirited [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "WEIGHT"
+            ],
+            "definitions": [
+                "WEIGHT: to add heaviness to [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "WEIGH"
+            ],
+            "definitions": [
+                "WEIGH: to determine the weight of [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "GENIUS"
+            ],
+            "definitions": [
+                "GENIUS: (Latin) an exceptional natural aptitude [n GENIUSES or GENII]"
+            ]
+        },
+        {
+            "words": [
+                "TONGUE"
+            ],
+            "definitions": [
+                "TONGUE: to touch with the fleshy organ of the mouth [v TONGUED, TONGUING, TONGUES]"
+            ]
+        },
+        {
+            "words": [
+                "GUESS"
+            ],
+            "definitions": [
+                "GUESS: to form an opinion from little or no evidence [v -ED, -ING, -ES]"
+            ]
+        },
+        {
+            "words": [
+                "SLITHER"
+            ],
+            "definitions": [
+                "SLITHER: to slide from side to side [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "SHRIVEL"
+            ],
+            "definitions": [
+                "SHRIVEL: to contract into wrinkles [v SHRIVELED or SHRIVELLED, SHRIVELING or SHRIVELLING, SHRIVELS]"
+            ]
+        },
+        {
+            "words": [
+                "WHILE"
+            ],
+            "definitions": [
+                "WHILE: to pass time pleasantly [v WHILED, WHILING, WHILES]"
+            ]
+        },
+        {
+            "words": [
+                "ZENITH"
+            ],
+            "definitions": [
+                "ZENITH: the highest point [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "RHYME"
+            ],
+            "definitions": [
+                "RHYME: to compose verse with corresponding terminal sounds, also RIME [v RHYMED, RHYMING, RHYMES]"
+            ]
+        },
+        {
+            "words": [
+                "PHONEY"
+            ],
+            "definitions": [
+                "PHONEY: counterfeit, fake [adj PHONIER, PHONIEST, PHONILY] / to fake, counterfeit [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "MISSIVE"
+            ],
+            "definitions": [
+                "MISSIVE: a written communication [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "JITTERY"
+            ],
+            "definitions": [
+                "JITTERY: extremely nervous [adj JITTERIER, JITTERIEST]"
+            ]
+        },
+        {
+            "words": [
+                "KNIVES"
+            ],
+            "definitions": [
+                "KNIVES: KNIVE, to knife [v]"
+            ]
+        },
+        {
+            "words": [
+                "MERRILY"
+            ],
+            "definitions": [
+                "MERRILY: MERRY, mirthful, also MERRIE [adv]"
+            ]
+        },
+        {
+            "words": [
+                "EXPLOIT"
+            ],
+            "definitions": [
+                "EXPLOIT: to take advantage of [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "LIQUEUR"
+            ],
+            "definitions": [
+                "LIQUEUR: a potent alcoholic preparation flavoured or perfumed and sweetened [n -S] / to flavour with a liqueur [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "QUIETLY"
+            ],
+            "definitions": [
+                "QUIETLY: QUIET, making little or no noise [adv]"
+            ]
+        },
+        {
+            "words": [
+                "SWIMMER"
+            ],
+            "definitions": [
+                "SWIMMER: one that swims [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "MIXTURE"
+            ],
+            "definitions": [
+                "MIXTURE: the product of mixing [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "WINNER"
+            ],
+            "definitions": [
+                "WINNER: one that wins [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "EROSION"
+            ],
+            "definitions": [
+                "EROSION: the act of eroding [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "UNIQUE"
+            ],
+            "definitions": [
+                "UNIQUE: having no other of its kind [adj UNIQUER, UNIQUEST, UNIQUELY] / anything that is unique [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "QUIVER"
+            ],
+            "definitions": [
+                "QUIVER: to shake slightly [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "RUSTIER"
+            ],
+            "definitions": [
+                "RUSTIER: RUSTY, covered with rust [adj]"
+            ]
+        },
+        {
+            "words": [
+                "EXIT"
+            ],
+            "definitions": [
+                "EXIT: to go out [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "NETWORK"
+            ],
+            "definitions": [
+                "NETWORK: to form a structure like a net [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "SWOLLEN"
+            ],
+            "definitions": [
+                "SWOLLEN: SWELL, to increase in size or volume [v]"
+            ]
+        },
+        {
+            "words": [
+                "LONELY"
+            ],
+            "definitions": [
+                "LONELY: sad from lack of companionship [adj LONELIER, LONELIEST, LONELILY]"
+            ]
+        },
+        {
+            "words": [
+                "EMPLOY"
+            ],
+            "definitions": [
+                "EMPLOY: to hire, use [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "SURELY"
+            ],
+            "definitions": [
+                "SURELY: SURE, certain [adv]"
+            ]
+        },
+        {
+            "words": [
+                "MUSEUM"
+            ],
+            "definitions": [
+                "MUSEUM: a repository for the collection, exhibition and study of objects [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "WOMEN"
+            ],
+            "definitions": [
+                "WOMEN: WOMAN, a female [n]"
+            ]
+        },
+        {
+            "words": [
+                "PROMOTE"
+            ],
+            "definitions": [
+                "PROMOTE: to help forward [v PROMOTED, PROMOTING, PROMOTES]"
+            ]
+        },
+        {
+            "words": [
+                "RUNNER"
+            ],
+            "definitions": [
+                "RUNNER: one who runs [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "NERVOUS"
+            ],
+            "definitions": [
+                "NERVOUS: easily excited [adj NERVOUSLY]"
+            ]
+        },
+        {
+            "words": [
+                "EXPORT"
+            ],
+            "definitions": [
+                "EXPORT: to send goods out of a country [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "QUERY"
+            ],
+            "definitions": [
+                "QUERY: to question [v QUERIED, QUERYING, QUERIES]"
+            ]
+        },
+        {
+            "words": [
+                "FULFIL"
+            ],
+            "definitions": [
+                "FULFIL: to bring about the accomplishment of, also FULFILL [v FULFILLED, FULFILLING, FULFILS]"
+            ]
+        },
+        {
+            "words": [
+                "FOUGHT"
+            ],
+            "definitions": [
+                "FOUGHT: FIGHT, to contend in war, battle or single combat [v]"
+            ]
+        },
+        {
+            "words": [
+                "FURNISH"
+            ],
+            "definitions": [
+                "FURNISH: to equip [v -ED, -ING, -ES]"
+            ]
+        },
+        {
+            "words": [
+                "SHIFT"
+            ],
+            "definitions": [
+                "SHIFT: to move from one position to another [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "LIQUIFY"
+            ],
+            "definitions": [
+                "LIQUIFY: to make or become liquid, also LIQUEFY [v LIQUIFIED, LIQUIFYING, LIQUIFIES]"
+            ]
+        },
+        {
+            "words": [
+                "JUSTIFY"
+            ],
+            "definitions": [
+                "JUSTIFY: to vindicate [v JUSTIFIED, JUSTIFYING, JUSTIFIES]"
+            ]
+        },
+        {
+            "words": [
+                "WISTFUL"
+            ],
+            "definitions": [
+                "WISTFUL: yearning [adj WISTFULLY]"
+            ]
+        },
+        {
+            "words": [
+                "FORTY"
+            ],
+            "definitions": [
+                "FORTY: a number [n FORTIES]"
+            ]
+        },
+        {
+            "words": [
+                "THROUGH"
+            ],
+            "definitions": [
+                "THROUGH: by way of [prep]"
+            ]
+        },
+        {
+            "words": [
+                "THOUGH"
+            ],
+            "definitions": [
+                "THOUGH: despite the fact that [conj]"
+            ]
+        },
+        {
+            "words": [
+                "KNIGHT"
+            ],
+            "definitions": [
+                "KNIGHT: a man who has been awarded the rank immediately below baronet, with the title 'Sir' [n -S] / to confer the title of knight upon [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "HUMMING"
+            ],
+            "definitions": [
+                "HUMMING: the noise of bees [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "HOPPING"
+            ],
+            "definitions": [
+                "HOPPING: the harvesting of hops [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "PLOUGH"
+            ],
+            "definitions": [
+                "PLOUGH: to turn soil with a farm implement, also PLOW [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "LIKING"
+            ],
+            "definitions": [
+                "LIKING: a feeling of affection [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "POKING"
+            ],
+            "definitions": [
+                "POKING: POKE, to prod [v]"
+            ]
+        },
+        {
+            "words": [
+                "GRIZZLY"
+            ],
+            "definitions": [
+                "GRIZZLY: greyish [adj GRIZZLIER, GRIZZLIEST] / a kind of large bear [n GRIZZLIES]"
+            ]
+        },
+        {
+            "words": [
+                "GUILTY"
+            ],
+            "definitions": [
+                "GUILTY: worthy of blame for an offence [adj GUILTIER, GUILTIEST, GUILTILY]"
+            ]
+        },
+        {
+            "words": [
+                "ZOOLOGY"
+            ],
+            "definitions": [
+                "ZOOLOGY: the science of animals [n ZOOLOGIES]"
+            ]
+        },
+        {
+            "words": [
+                "RHYTHM"
+            ],
+            "definitions": [
+                "RHYTHM: a pattern of recurrence, also RHYTHMUS [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "TRIUMPH"
+            ],
+            "definitions": [
+                "TRIUMPH: to be victorious [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "HISTORY"
+            ],
+            "definitions": [
+                "HISTORY: to relate in a history or narrative [v HISTORIED, HISTORYING, HISTORIES]"
+            ]
+        },
+        {
+            "words": [
+                "WHOLLY"
+            ],
+            "definitions": [
+                "WHOLLY: WHOLE, entire [adv]"
+            ]
+        },
+        {
+            "words": [
+                "MYTH"
+            ],
+            "definitions": [
+                "MYTH: a type of traditional story, also MYTHOS, MYTHUS [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "TYPHOON"
+            ],
+            "definitions": [
+                "TYPHOON: (Chinese) a tropical hurricane [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "HONOUR"
+            ],
+            "definitions": [
+                "HONOUR: to treat with respect, also HONOR [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "HORROR"
+            ],
+            "definitions": [
+                "HORROR: intense repugnance or fear [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "MILLION"
+            ],
+            "definitions": [
+                "MILLION: a thousand thousand [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "MISSION"
+            ],
+            "definitions": [
+                "MISSION: to send to perform a specific task [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "TUITION"
+            ],
+            "definitions": [
+                "TUITION: a fee for instruction [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "INSIST"
+            ],
+            "definitions": [
+                "INSIST: to maintain very firmly [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "JOINT"
+            ],
+            "definitions": [
+                "JOINT: combined [adj JOINTLY] / to fit together by means of a junction [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "PUMPKIN"
+            ],
+            "definitions": [
+                "PUMPKIN: a plant of the gourd family, or its fruit, also POMPION, PUMPION, PUNKIN [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "QUIRKY"
+            ],
+            "definitions": [
+                "QUIRKY: twisted [adj QUIRKIER, QUIRKIEST, QUIRKILY]"
+            ]
+        },
+        {
+            "words": [
+                "QUILT"
+            ],
+            "definitions": [
+                "QUILT: to stitch together with padding in between [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "NOTION"
+            ],
+            "definitions": [
+                "NOTION: a general idea [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "PIVOT"
+            ],
+            "definitions": [
+                "PIVOT: to turn on a shaft or rod [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "QUIT"
+            ],
+            "definitions": [
+                "QUIT: to end one's engagement in or occupation with, also QUIGHT, QUITE, QUYTE [v QUIT or QUITTED, QUITTING, QUITS]"
+            ]
+        },
+        {
+            "words": [
+                "JUROR"
+            ],
+            "definitions": [
+                "JUROR: a member of a jury, also JURYMAN [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "SKULK"
+            ],
+            "definitions": [
+                "SKULK: to move about stealthily, also SCULK [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "PYLON"
+            ],
+            "definitions": [
+                "PYLON: a structure for supporting power-cables [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "POULTRY"
+            ],
+            "definitions": [
+                "POULTRY: farmyard fowls collectively [n POULTRIES]"
+            ]
+        },
+        {
+            "words": [
+                "TRULY"
+            ],
+            "definitions": [
+                "TRULY: TRUE, corresponding to fact, also TREW [adv]"
+            ]
+        },
+        {
+            "words": [
+                "RUMOR"
+            ],
+            "definitions": [
+                "RUMOR: to spread by hearsay, also RUMOUR [v -ED, -ING, -S]"
+            ]
+        }
+    ]
+}
