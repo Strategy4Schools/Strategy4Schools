@@ -21,7 +21,7 @@ function determineWordListURL(difficulty) {
     switch (difficulty) {
         case 'easy': 
             // Use the correct path for your easy word list
-            return 'http://localhost:8000/easy_word_list_anagrammable.json';
+            return 'https://raw.githubusercontent.com/Strategy4Schools/Strategy4Schools/main/easy_word_list_anagrammable.json';
         case 'medium': 
             // Use the correct path for your medium word list
             return 'path/to/medium_word_list.json';
