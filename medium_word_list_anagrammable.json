@@ -1,0 +1,2788 @@
+{
+    "anagrams": [
+        {
+            "words": [
+                "ABIDE"
+            ],
+            "definitions": [
+                "to wait for; to stay, dwell [v ABID or ABODE or ABIDED, ABIDDEN, ABIDING, ABIDES]"
+            ]
+        },
+        {
+            "words": [
+                "ACCESS"
+            ],
+            "definitions": [
+                "approach, admittance [n -ES] / to have entrance to [v -ED, -ING, -ES]"
+            ]
+        },
+        {
+            "words": [
+                "ACQUIRE"
+            ],
+            "definitions": [
+                "to come into possession of [v ACQUIRED, ACQUIRING, ACQUIRES]"
+            ]
+        },
+        {
+            "words": [
+                "ACTUALLY"
+            ],
+            "definitions": [
+                "ACTUAL, existing in fact [adv]"
+            ]
+        },
+        {
+            "words": [
+                "ADDITION"
+            ],
+            "definitions": [
+                "something added [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "ADVANCE"
+            ],
+            "definitions": [
+                "to put forward, to go forward [v ADVANCED, ADVANCING, ADVANCES]"
+            ]
+        },
+        {
+            "words": [
+                "AFFECT"
+            ],
+            "definitions": [
+                "to act upon [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "AGILITY"
+            ],
+            "definitions": [
+                "nimbleness [n AGILITIES]"
+            ]
+        },
+        {
+            "words": [
+                "ALIAS"
+            ],
+            "definitions": [
+                "(Latin) an assumed name [n -ES] / to assume an alternative name [v ALIASED, ALIASING, ALIASED]"
+            ]
+        },
+        {
+            "words": [
+                "ANAGRAM"
+            ],
+            "definitions": [
+                "a word or phrase formed by the letters of another in different order [n -S] / to transpose letters to form new words [v ANAGRAMMED, ANAGRAMMING, ANAGRAMS]"
+            ]
+        },
+        {
+            "words": [
+                "ANCIENT"
+            ],
+            "definitions": [
+                "very old, also ANTIENT [adj ANCIENTER, ANCIENTEST, ANCIENTLY] / an old person [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "ANNUITY"
+            ],
+            "definitions": [
+                "income paid at regular intervals [n ANNUITIES]"
+            ]
+        },
+        {
+            "words": [
+                "ANXIOUS"
+            ],
+            "definitions": [
+                "full of fear [adj ANXIOUSLY]"
+            ]
+        },
+        {
+            "words": [
+                "APPEAL"
+            ],
+            "definitions": [
+                "to make an earnest request [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "APPOINT"
+            ],
+            "definitions": [
+                "to assign to a job [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "APPROACH"
+            ],
+            "definitions": [
+                "to come near to [v -ED, -ING, -ES]"
+            ]
+        },
+        {
+            "words": [
+                "ARMOUR"
+            ],
+            "definitions": [
+                "to dress with defensive covering, also ARMOR [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "ATHLETE"
+            ],
+            "definitions": [
+                "a competitor in contests of strength and speed, also ATHLETA [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "ATTEMPT"
+            ],
+            "definitions": [
+                "to endeavour [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "AUDIBLE"
+            ],
+            "definitions": [
+                "able to be heard [adj AUDIBLY] / a tactic or game plan shouted out in coded form by a quarterback in American football [n -S] / to call out such a plan [v AUDIBLED, AUDIBLING, AUDIBLES]"
+            ]
+        },
+        {
+            "words": [
+                "AVAIL"
+            ],
+            "definitions": [
+                "to be of use or advantage to [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "AVOCADO"
+            ],
+            "definitions": [
+                "(Nahuatl) a rough-skinned pear-shaped edible fruit of a tropical tree [n AVOCADOS or AVOCADOES]"
+            ]
+        },
+        {
+            "words": [
+                "AVOID"
+            ],
+            "definitions": [
+                "to evade [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "BAGGAGE"
+            ],
+            "definitions": [
+                "luggage [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "BAULK"
+            ],
+            "definitions": [
+                "to refrain from proceeding, also BALK, BAUK [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "BENEFIT"
+            ],
+            "definitions": [
+                "to obtain an advantage [v BENEFITED or BENEFITTED, BENEFITING or BENEFITTING, BENEFITS]"
+            ]
+        },
+        {
+            "words": [
+                "BENT"
+            ],
+            "definitions": [
+                "a stiff wiry grass, also BENTGRASS [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "BERET"
+            ],
+            "definitions": [
+                "a flat round woollen cap, also BERRET [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "BIOLOGY"
+            ],
+            "definitions": [
+                "the science of life [n BIOLOGIES]"
+            ]
+        },
+        {
+            "words": [
+                "BOMB"
+            ],
+            "definitions": [
+                "to attack with an exploding device [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "BOTANY"
+            ],
+            "definitions": [
+                "the science of plants [n BOTANIES]"
+            ]
+        },
+        {
+            "words": [
+                "BOUNDARY"
+            ],
+            "definitions": [
+                "a final limit [n BOUNDARIES]"
+            ]
+        },
+        {
+            "words": [
+                "BREVITY"
+            ],
+            "definitions": [
+                "shortness of duration [n BREVITIES]"
+            ]
+        },
+        {
+            "words": [
+                "BRUTALLY"
+            ],
+            "definitions": [
+                "BRUTAL, cruel, savage [adj]"
+            ]
+        },
+        {
+            "words": [
+                "BUDGET"
+            ],
+            "definitions": [
+                "to estimate expenses [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "BUOY"
+            ],
+            "definitions": [
+                "to mark with a warning float [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "BYPASS"
+            ],
+            "definitions": [
+                "to avoid by going around [v -ED, -ING, -ES]"
+            ]
+        },
+        {
+            "words": [
+                "CAFFEINE"
+            ],
+            "definitions": [
+                "a bitter alkaloid used as a stimulant, also CAFFEIN [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "CAPACITY"
+            ],
+            "definitions": [
+                "the ability to receive or contain [n CAPACITIES]"
+            ]
+        },
+        {
+            "words": [
+                "CAPTURE"
+            ],
+            "definitions": [
+                "to take by force or cunning [v CAPTURED, CAPTURING, CAPTURES]"
+            ]
+        },
+        {
+            "words": [
+                "CARRIAGE"
+            ],
+            "definitions": [
+                "a wheeled horse-drawn vehicle [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "CARRYING"
+            ],
+            "definitions": [
+                "CARRY, to convey from one place to another [v]"
+            ]
+        },
+        {
+            "words": [
+                "CATCH"
+            ],
+            "definitions": [
+                "to capture after pursuit [v CATCHT or CAUGHT or CATCHED, CATCHING, CATCHES]"
+            ]
+        },
+        {
+            "words": [
+                "CATEGORY"
+            ],
+            "definitions": [
+                "a division in any system of classification [n CATEGORIES]"
+            ]
+        },
+        {
+            "words": [
+                "CAUGHT"
+            ],
+            "definitions": [
+                "CATCH, to capture after pursuit [v]"
+            ]
+        },
+        {
+            "words": [
+                "CELL"
+            ],
+            "definitions": [
+                "to store in a honeycomb [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "CEMETERY"
+            ],
+            "definitions": [
+                "a burial ground [n CEMETERIES]"
+            ]
+        },
+        {
+            "words": [
+                "CHANCE"
+            ],
+            "definitions": [
+                "to risk [v CHANCED, CHANCING, CHANCES]"
+            ]
+        },
+        {
+            "words": [
+                "CHATTED"
+            ],
+            "definitions": [
+                "CHAT, to talk informally [v]"
+            ]
+        },
+        {
+            "words": [
+                "CHEQUES"
+            ],
+            "definitions": [
+                "CHEQUE, a written order directing a bank to pay money [n]"
+            ]
+        },
+        {
+            "words": [
+                "CHOPPED"
+            ],
+            "definitions": [
+                "CHOP, to sever with a sharp tool [v]"
+            ]
+        },
+        {
+            "words": [
+                "CHROME"
+            ],
+            "definitions": [
+                "to plate with chromium [v CHROMED, CHROMING, CHROMES]"
+            ]
+        },
+        {
+            "words": [
+                "CLAPPING"
+            ],
+            "definitions": [
+                "the act of clapping [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "CLIMATIC"
+            ],
+            "definitions": [
+                "pertaining to climate [adj CLIMATICALLY]"
+            ]
+        },
+        {
+            "words": [
+                "CLIMB"
+            ],
+            "definitions": [
+                "to ascend [v CLAMBE or CLOMB or CLIMBED, CLIMBING, CLIMBS]"
+            ]
+        },
+        {
+            "words": [
+                "COINCIDE"
+            ],
+            "definitions": [
+                "to be identical [v COINCIDED, COINCIDING, COINCIDES]"
+            ]
+        },
+        {
+            "words": [
+                "COLOSSAL"
+            ],
+            "definitions": [
+                "of enormous size [adj COLOSSALLY]"
+            ]
+        },
+        {
+            "words": [
+                "COLOUR"
+            ],
+            "definitions": [
+                "to paint, also COLOR [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "COLUMN"
+            ],
+            "definitions": [
+                "a vertical cylindrical support [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "COMICAL"
+            ],
+            "definitions": [
+                "amusing, also COMIC [adj COMICALLY]"
+            ]
+        },
+        {
+            "words": [
+                "COMMIT"
+            ],
+            "definitions": [
+                "to perpetrate [v COMMITTED, COMMITTING, COMMITS]"
+            ]
+        },
+        {
+            "words": [
+                "COMPEL"
+            ],
+            "definitions": [
+                "to force [v COMPELLED, COMPELLING, COMPELS]"
+            ]
+        },
+        {
+            "words": [
+                "COMPLETE"
+            ],
+            "definitions": [
+                "to bring to an end [v COMPLETED, COMPLETING, COMPLETES] / having all necessary parts [adj COMPLETER, COMPLETEST, COMPLETELY]"
+            ]
+        },
+        {
+            "words": [
+                "CONCEIT"
+            ],
+            "definitions": [
+                "to form a conception of [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "CONCEPT"
+            ],
+            "definitions": [
+                "a general idea [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "CONDUCT"
+            ],
+            "definitions": [
+                "to lead or guide [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "COPIOUS"
+            ],
+            "definitions": [
+                "abundant [adj COPIOUSLY]"
+            ]
+        },
+        {
+            "words": [
+                "COUNTIES"
+            ],
+            "definitions": [
+                "COUNTY, an administrative division of a state [n]"
+            ]
+        },
+        {
+            "words": [
+                "COUPON"
+            ],
+            "definitions": [
+                "a voucher [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "COUSCOUS"
+            ],
+            "definitions": [
+                "the grain of the African millet, also COUSCOUSOU, CUSCUS, KHUSKHUS, KOUSKOUS [n -ES]"
+            ]
+        },
+        {
+            "words": [
+                "CRAZIER"
+            ],
+            "definitions": [
+                "CRAZY, insane [adj]"
+            ]
+        },
+        {
+            "words": [
+                "CREATURE"
+            ],
+            "definitions": [
+                "a living being [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "CRIMINAL"
+            ],
+            "definitions": [
+                "relating to crime [adj CRIMINALLY] / one who has committed a crime [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "CUDDLY"
+            ],
+            "definitions": [
+                "pleasant to cuddle [adj CUDDLIER, CUDDLIEST]"
+            ]
+        },
+        {
+            "words": [
+                "CURB"
+            ],
+            "definitions": [
+                "to restrain [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "CYCLING"
+            ],
+            "definitions": [
+                "the act of riding a bicycle [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "CYNICAL"
+            ],
+            "definitions": [
+                "distrusting [adj CYNICALLY]"
+            ]
+        },
+        {
+            "words": [
+                "DAMAGED"
+            ],
+            "definitions": [
+                "DAMAGE, to damage [v]"
+            ]
+        },
+        {
+            "words": [
+                "DAMAGING"
+            ],
+            "definitions": [
+                "DAMAGE, to damage [v]"
+            ]
+        },
+        {
+            "words": [
+                "DEAD"
+            ],
+            "definitions": [
+                "not alive [adj DEADER, DEADEST] / (obsolete) to lose vitality, become numb [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "DEFICIT"
+            ],
+            "definitions": [
+                "an inadequacy or insufficiency [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "DEFINITE"
+            ],
+            "definitions": [
+                "known for certain [adj DEFINITELY] / something that is known for certain [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "DEPRIVED"
+            ],
+            "definitions": [
+                "DEPRIVE, to take something away from [v]"
+            ]
+        },
+        {
+            "words": [
+                "DEVOTION"
+            ],
+            "definitions": [
+                "the act of devoting [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "DIAMOND"
+            ],
+            "definitions": [
+                "to adorn with precious gems [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "DICTATOR"
+            ],
+            "definitions": [
+                "one that dictates [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "DIGESTED"
+            ],
+            "definitions": [
+                "DIGEST, to assimilate food in the stomach, also DISGEST [v]"
+            ]
+        },
+        {
+            "words": [
+                "DISTANT"
+            ],
+            "definitions": [
+                "far off or apart [adj DISTANTLY]"
+            ]
+        },
+        {
+            "words": [
+                "DOLLOP"
+            ],
+            "definitions": [
+                "to dispense in small amounts [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "DRAUGHT"
+            ],
+            "definitions": [
+                "to draft [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "DRIVING"
+            ],
+            "definitions": [
+                "of rain, heavy and windblown [adj DRIVINGLY] / the act of driving [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "DROPPING"
+            ],
+            "definitions": [
+                "something that has been dropped [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "DROUGHT"
+            ],
+            "definitions": [
+                "a dry period [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "DWELL"
+            ],
+            "definitions": [
+                "to reside [v DWELT or DWELLED, DWELLING, DWELLS]"
+            ]
+        },
+        {
+            "words": [
+                "EASIEST"
+            ],
+            "definitions": [
+                "EASY, not difficult [adj]"
+            ]
+        },
+        {
+            "words": [
+                "EASILY"
+            ],
+            "definitions": [
+                "EASY, not difficult [adv]"
+            ]
+        },
+        {
+            "words": [
+                "EDIFICE"
+            ],
+            "definitions": [
+                "a building [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "ELITE"
+            ],
+            "definitions": [
+                "a socially select group [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "ENEMIES"
+            ],
+            "definitions": [
+                "ENEMY, one that is antagonistic toward another [n]"
+            ]
+        },
+        {
+            "words": [
+                "ENGINEER"
+            ],
+            "definitions": [
+                "to arrange or contrive [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "ENJOY"
+            ],
+            "definitions": [
+                "to take pleasure in [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "EPIDEMIC"
+            ],
+            "definitions": [
+                "occurring in many places [adj EPIDEMICALLY] / a rapid spread of a disease [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "ESCAPING"
+            ],
+            "definitions": [
+                "ESCAPE, to free oneself [v]"
+            ]
+        },
+        {
+            "words": [
+                "EXAM"
+            ],
+            "definitions": [
+                "an examination [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "EXAMINE"
+            ],
+            "definitions": [
+                "to inspect [v EXAMINED, EXAMINING, EXAMINES]"
+            ]
+        },
+        {
+            "words": [
+                "EXCITING"
+            ],
+            "definitions": [
+                "EXCITE, to arouse the emotions of [v]"
+            ]
+        },
+        {
+            "words": [
+                "EXERT"
+            ],
+            "definitions": [
+                "to make an effort [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "EXPEL"
+            ],
+            "definitions": [
+                "to force out [v EXPELLED, EXPELLING, EXPELS]"
+            ]
+        },
+        {
+            "words": [
+                "EXPLODED"
+            ],
+            "definitions": [
+                "EXPLODE, to blow up [v]"
+            ]
+        },
+        {
+            "words": [
+                "EXPLORE"
+            ],
+            "definitions": [
+                "to examine thoroughly [v EXPLORED, EXPLORING, EXPLORES]"
+            ]
+        },
+        {
+            "words": [
+                "EXTERIOR"
+            ],
+            "definitions": [
+                "outside [adj EXTERIORLY] / a part or surface that is outside [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "EXTERNAL"
+            ],
+            "definitions": [
+                "on the outside [adj EXTERNALLY] / an exterior [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "FABULOUS"
+            ],
+            "definitions": [
+                "amazing, excellent [adj FABULOUSLY]"
+            ]
+        },
+        {
+            "words": [
+                "FACILITY"
+            ],
+            "definitions": [
+                "ease in performance or action [n FACILITIES]"
+            ]
+        },
+        {
+            "words": [
+                "FAMILIAR"
+            ],
+            "definitions": [
+                "well-known [adj FAMILIARLY] / a close friend or associate [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "FAULT"
+            ],
+            "definitions": [
+                "to criticize [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "FAVOUR"
+            ],
+            "definitions": [
+                "to regard with goodwill, also FAVOR [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "FEATURES"
+            ],
+            "definitions": [
+                "FEATURE, to present prominently [v]"
+            ]
+        },
+        {
+            "words": [
+                "FIBROUS"
+            ],
+            "definitions": [
+                "containing, or consisting of, fibers [adj FIBROUSLY]"
+            ]
+        },
+        {
+            "words": [
+                "FINANCE"
+            ],
+            "definitions": [
+                "to supply the money for [v FINANCED, FINANCING, FINANCES]"
+            ]
+        },
+        {
+            "words": [
+                "FINICKY"
+            ],
+            "definitions": [
+                "difficult to please, also FINNICKY [adj FINICKIER, FINICKIEST]"
+            ]
+        },
+        {
+            "words": [
+                "FLAVOUR"
+            ],
+            "definitions": [
+                "to impart a special taste to, also FLAVOR [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "FORTY"
+            ],
+            "definitions": [
+                "a number [n FORTIES]"
+            ]
+        },
+        {
+            "words": [
+                "FRACTION"
+            ],
+            "definitions": [
+                "to divide into portions [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "FRAGRANT"
+            ],
+            "definitions": [
+                "having a pleasant perfume [adj FRAGRANTLY]"
+            ]
+        },
+        {
+            "words": [
+                "FRAUGHT"
+            ],
+            "definitions": [
+                "to load with tension [v -ED, -ING, -S] / laden with tension [adj FRAUGHTER, FRAUGHTEST]"
+            ]
+        },
+        {
+            "words": [
+                "FUCHSIA"
+            ],
+            "definitions": [
+                "a flowering shrub [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "FUNNIER"
+            ],
+            "definitions": [
+                "FUNNY, amusing [adj]"
+            ]
+        },
+        {
+            "words": [
+                "FURTHER"
+            ],
+            "definitions": [
+                "to help forward [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "FUTILE"
+            ],
+            "definitions": [
+                "ineffective [adj FUTILER, FUTILEST, FUTILELY]"
+            ]
+        },
+        {
+            "words": [
+                "GENEROUS"
+            ],
+            "definitions": [
+                "willing to give [adj GENEROUSLY]"
+            ]
+        },
+        {
+            "words": [
+                "GENTLY"
+            ],
+            "definitions": [
+                "GENTLE, mild and refined in manners [adv]"
+            ]
+        },
+        {
+            "words": [
+                "GETTING"
+            ],
+            "definitions": [
+                "begetting, procreation [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "GIGANTIC"
+            ],
+            "definitions": [
+                "huge, also GIGANTEAN [adj GIGANTICALLY]"
+            ]
+        },
+        {
+            "words": [
+                "GLAMOUR"
+            ],
+            "definitions": [
+                "to bewitch, also GLAMOR [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "GLOBAL"
+            ],
+            "definitions": [
+                "worldwide or comprehensive [adj GLOBALLY]"
+            ]
+        },
+        {
+            "words": [
+                "GNAWED"
+            ],
+            "definitions": [
+                "GNAW, to wear away by persistent biting [v]"
+            ]
+        },
+        {
+            "words": [
+                "GOBLET"
+            ],
+            "definitions": [
+                "a drinking vessel [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "GRAPH"
+            ],
+            "definitions": [
+                "to represent by a diagram [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "GRAPHICS"
+            ],
+            "definitions": [
+                "GRAPHIC, a painting or drawing [n]"
+            ]
+        },
+        {
+            "words": [
+                "GRUMBLY"
+            ],
+            "definitions": [
+                "muttering in discontent [adj GRUMBLIER, GRUMBLIEST]"
+            ]
+        },
+        {
+            "words": [
+                "GUIDANCE"
+            ],
+            "definitions": [
+                "advice [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "HAPPIER"
+            ],
+            "definitions": [
+                "HAPPY, marked by joy [adj]"
+            ]
+        },
+        {
+            "words": [
+                "HARRY"
+            ],
+            "definitions": [
+                "to plunder, ravage [v HARRIED, HARRYING, HARRIES]"
+            ]
+        },
+        {
+            "words": [
+                "HEAVIER"
+            ],
+            "definitions": [
+                "HEAVY, of great weight [adj]"
+            ]
+        },
+        {
+            "words": [
+                "HIDEOUS"
+            ],
+            "definitions": [
+                "very ugly [adj HIDEOUSLY]"
+            ]
+        },
+        {
+            "words": [
+                "HOMICIDE"
+            ],
+            "definitions": [
+                "the killing of one person by another [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "HONOR"
+            ],
+            "definitions": [
+                "to treat with respect, also HONOUR [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "HOPPER"
+            ],
+            "definitions": [
+                "a container for grain, also HOPPERCAR [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "HORRIBLE"
+            ],
+            "definitions": [
+                "dreadful [adj HORRIBLY] / something horrible [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "HORRIFIC"
+            ],
+            "definitions": [
+                "causing horror [adj HORRIFICALLY]"
+            ]
+        },
+        {
+            "words": [
+                "HUGGED"
+            ],
+            "definitions": [
+                "HUG, to clasp tightly in the arms [v]"
+            ]
+        },
+        {
+            "words": [
+                "HUGGING"
+            ],
+            "definitions": [
+                "HUG, to clasp tightly in the arms [v]"
+            ]
+        },
+        {
+            "words": [
+                "HUMOUR"
+            ],
+            "definitions": [
+                "to indulge, also HUMOR [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "HUNGRILY"
+            ],
+            "definitions": [
+                "HUNGRY, having a craving desire [adv]"
+            ]
+        },
+        {
+            "words": [
+                "HURRYING"
+            ],
+            "definitions": [
+                "the act of hurrying [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "IGNORANT"
+            ],
+            "definitions": [
+                "not knowing things [adj IGNORANTLY] / an ignorant person [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "IMMOBILE"
+            ],
+            "definitions": [
+                "stationary [adj]"
+            ]
+        },
+        {
+            "words": [
+                "IMMORAL"
+            ],
+            "definitions": [
+                "promiscuous or unscrupulous [adj IMMORALLY]"
+            ]
+        },
+        {
+            "words": [
+                "IMPEACH"
+            ],
+            "definitions": [
+                "to accuse of impropriety, also EMPEACH [v -ED, -ING, -ES]"
+            ]
+        },
+        {
+            "words": [
+                "IMPERIAL"
+            ],
+            "definitions": [
+                "commanding [adj IMPERIALLY] / an emperor or member of an imperial family [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "IMPOLITE"
+            ],
+            "definitions": [
+                "having bad manners [adj IMPOLITER, IMPOLITEST, IMPOLITELY]"
+            ]
+        },
+        {
+            "words": [
+                "IMPROPER"
+            ],
+            "definitions": [
+                "not proper [adj IMPROPERER, IMPROPEREST; IMPROPERLY]"
+            ]
+        },
+        {
+            "words": [
+                "INCLINED"
+            ],
+            "definitions": [
+                "INCLINE, to slant [v]"
+            ]
+        },
+        {
+            "words": [
+                "INEDIBLE"
+            ],
+            "definitions": [
+                "not fit to be eaten, also UNEDIBLE [adj INEDIBLY]"
+            ]
+        },
+        {
+            "words": [
+                "INERTIA"
+            ],
+            "definitions": [
+                "(Latin) the tendency of a body to resist acceleration [n INERTIAS or INERTIAE]"
+            ]
+        },
+        {
+            "words": [
+                "INITIAL"
+            ],
+            "definitions": [
+                "at the beginning [adj INITIALLY] / to mark with the first letters of one's name [v INITIALED or INITIALLED, INITIALING or INITIALLING, INITIALS]"
+            ]
+        },
+        {
+            "words": [
+                "INQUIRED"
+            ],
+            "definitions": [
+                "INQUIRE, to ask about, also ENQUIRE [v]"
+            ]
+        },
+        {
+            "words": [
+                "INSOLENT"
+            ],
+            "definitions": [
+                "impertinent [adj INSOLENTLY] / an insolent person [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "INSTANT"
+            ],
+            "definitions": [
+                "without delay [adj INSTANTER, INSTANTLY] / a very short period of time [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "INTIMATE"
+            ],
+            "definitions": [
+                "innermost [adj INTIMATELY] / to make known indirectly [v INTIMATED, INTIMATING, INTIMATES]"
+            ]
+        },
+        {
+            "words": [
+                "INTRIGUE"
+            ],
+            "definitions": [
+                "to arouse the curiosity of [v INTRIGUED, INTRIGUING, INTRIGUES]"
+            ]
+        },
+        {
+            "words": [
+                "INVITE"
+            ],
+            "definitions": [
+                "to request the presence of [v INVITED, INVITING, INVITES]"
+            ]
+        },
+        {
+            "words": [
+                "ISSUE"
+            ],
+            "definitions": [
+                "to put into circulation [v ISSUED, ISSUING, ISSUES]"
+            ]
+        },
+        {
+            "words": [
+                "JEOPARDY"
+            ],
+            "definitions": [
+                "a hazard or danger [n JEOPARDIES] / to put into jeopardy [v JEOPARDIED, JEOPARDYING, JEOPARDIES]"
+            ]
+        },
+        {
+            "words": [
+                "JOURNAL"
+            ],
+            "definitions": [
+                "a record of daily events [n -S] / to record in a journal [v JOURNALED or JOURNALLED, JOURNALING or JOURNALLING, JOURNALS]"
+            ]
+        },
+        {
+            "words": [
+                "JOVIAL"
+            ],
+            "definitions": [
+                "good-humoured [adj JOVIALLY]"
+            ]
+        },
+        {
+            "words": [
+                "JUSTIFY"
+            ],
+            "definitions": [
+                "to vindicate [v JUSTIFIED, JUSTIFYING, JUSTIFIES]"
+            ]
+        },
+        {
+            "words": [
+                "KINGDOM"
+            ],
+            "definitions": [
+                "an area ruled by a king [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "KIOSK"
+            ],
+            "definitions": [
+                "an open booth [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "KNOCK"
+            ],
+            "definitions": [
+                "to strike sharply [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "KNOWING"
+            ],
+            "definitions": [
+                "knowledge [n -S] / astute, crafty [adj KNOWINGER, KNOWINGEST, KNOWINGLY]"
+            ]
+        },
+        {
+            "words": [
+                "KNUCKLE"
+            ],
+            "definitions": [
+                "to hit with the joints of the fist [v KNUCKLED, KNUCKLING, KNUCKLES]"
+            ]
+        },
+        {
+            "words": [
+                "LANGUAGE"
+            ],
+            "definitions": [
+                "to express in a body of words serving as communication [v LANGUAGED, LANGUAGING, LANGUAGES]"
+            ]
+        },
+        {
+            "words": [
+                "LAVENDER"
+            ],
+            "definitions": [
+                "a labiate plant with fragrant pale-lilac flowers [n -S] / to perfume with lavender [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "LAZIER"
+            ],
+            "definitions": [
+                "LAZY, disinclined toward work or exertion [adj]"
+            ]
+        },
+        {
+            "words": [
+                "LAZINESS"
+            ],
+            "definitions": [
+                "the state of being lazy [n -ES]"
+            ]
+        },
+        {
+            "words": [
+                "LEGIBLE"
+            ],
+            "definitions": [
+                "capable of being read [adj LEGIBLY]"
+            ]
+        },
+        {
+            "words": [
+                "LEISURE"
+            ],
+            "definitions": [
+                "free time, also LEASURE [n -S] / to have recreational time [v LEISURED, LEISURING, LEISURES]"
+            ]
+        },
+        {
+            "words": [
+                "LEVEL"
+            ],
+            "definitions": [
+                "even [adj LEVELLER, LEVELLEST, LEVELLY] / to make even [v LEVELED or LEVELLED, LEVELING or LEVELLING, LEVELS]"
+            ]
+        },
+        {
+            "words": [
+                "LEVELING"
+            ],
+            "definitions": [
+                "LEVEL, to make even [v]"
+            ]
+        },
+        {
+            "words": [
+                "LEVITATE"
+            ],
+            "definitions": [
+                "to rise and float in the air [v LEVITATED, LEVITATING, LEVITATES]"
+            ]
+        },
+        {
+            "words": [
+                "LIBRARY"
+            ],
+            "definitions": [
+                "a room containing books for reading or reference [n LIBRARIES]"
+            ]
+        },
+        {
+            "words": [
+                "LINGUIST"
+            ],
+            "definitions": [
+                "a person skilled in several languages [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "LLAMA"
+            ],
+            "definitions": [
+                "(Quechua) a South American cud-chewing mammal which belongs to the same family as camels but is smaller and humpless [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "LOATHE"
+            ],
+            "definitions": [
+                "to detest greatly [v LOATHED, LOATHING, LOATHES]"
+            ]
+        },
+        {
+            "words": [
+                "LUCKIEST"
+            ],
+            "definitions": [
+                "LUCKY, fortunate [adj]"
+            ]
+        },
+        {
+            "words": [
+                "LULLABY"
+            ],
+            "definitions": [
+                "to lull to sleep with a soothing song [v LULLABIED, LULLABYING, LULLABIES]"
+            ]
+        },
+        {
+            "words": [
+                "LUXURY"
+            ],
+            "definitions": [
+                "ease, pleasure and indulgence [n LUXURIES]"
+            ]
+        },
+        {
+            "words": [
+                "MAGICAL"
+            ],
+            "definitions": [
+                "resembling magic [adj MAGICALLY]"
+            ]
+        },
+        {
+            "words": [
+                "MAJESTIC"
+            ],
+            "definitions": [
+                "having majesty, also MAJESTICAL [adj MAJESTICALLY]"
+            ]
+        },
+        {
+            "words": [
+                "MAJORITY"
+            ],
+            "definitions": [
+                "the greater number [n MAJORITIES]"
+            ]
+        },
+        {
+            "words": [
+                "MALT"
+            ],
+            "definitions": [
+                "barley or other grain prepared for brewing or distilling, also MAUT [n -S] / to treat or combine with malt [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "MARATHON"
+            ],
+            "definitions": [
+                "a long-distance race [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "MARRIAGE"
+            ],
+            "definitions": [
+                "the legal union of a man and woman [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "MARRYING"
+            ],
+            "definitions": [
+                "the act of marrying [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "MASSACRE"
+            ],
+            "definitions": [
+                "to slaughter [v MASSACRED, MASSACRING, MASSACRES]"
+            ]
+        },
+        {
+            "words": [
+                "MATADOR"
+            ],
+            "definitions": [
+                "the bullfighter who kills the bull in a bullfight, also MATADORE [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "MEADOW"
+            ],
+            "definitions": [
+                "a tract of grassland [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "MEASURE"
+            ],
+            "definitions": [
+                "to compare with a standard [v MEASURED, MEASURING, MEASURES]"
+            ]
+        },
+        {
+            "words": [
+                "MERINO"
+            ],
+            "definitions": [
+                "(Spanish) a soft woollen or wool and cotton cloth [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "MINIONS"
+            ],
+            "definitions": [
+                "MINION, a darling, a favourite [n]"
+            ]
+        },
+        {
+            "words": [
+                "MONOTONE"
+            ],
+            "definitions": [
+                "to sing or speak in a single unvaried tone or pitch [v MONOTONED, MONOTONING, MONOTONES]"
+            ]
+        },
+        {
+            "words": [
+                "MOREOVER"
+            ],
+            "definitions": [
+                "in addition [adv]"
+            ]
+        },
+        {
+            "words": [
+                "MOULT"
+            ],
+            "definitions": [
+                "to shed feathers or fur, also MOLT [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "MOVEMENT"
+            ],
+            "definitions": [
+                "the act of moving [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "MURMUR"
+            ],
+            "definitions": [
+                "to make a subdued muttered sound [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "MUSCULAR"
+            ],
+            "definitions": [
+                "pertaining to muscle [adj MUSCULARLY]"
+            ]
+        },
+        {
+            "words": [
+                "MUSICAL"
+            ],
+            "definitions": [
+                "relating to music [adj MUSICALLY] / a show punctuated by songs [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "MUSICIAN"
+            ],
+            "definitions": [
+                "one who performs or composes music [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "MYSTERY"
+            ],
+            "definitions": [
+                "something that cannot be understood or explained [n MYSTERIES]"
+            ]
+        },
+        {
+            "words": [
+                "NAMING"
+            ],
+            "definitions": [
+                "the act of naming [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "NORMAL"
+            ],
+            "definitions": [
+                "usual [adj NORMALLY] / a normal or usual value [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "NOVEL"
+            ],
+            "definitions": [
+                "new [adj NOVELLY] / a fictional prose narrative [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "NUISANCE"
+            ],
+            "definitions": [
+                "a source of annoyance [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "NUTRIENT"
+            ],
+            "definitions": [
+                "a nourishing substance [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "OBLIGE"
+            ],
+            "definitions": [
+                "to bind by some favour rendered, also OBLIGATE [v OBLIGED, OBLIGING, OBLIGES]"
+            ]
+        },
+        {
+            "words": [
+                "OCCASION"
+            ],
+            "definitions": [
+                "to cause [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "OFFICIAL"
+            ],
+            "definitions": [
+                "sanctioned by authority [adj OFFICIALLY] / one that holds a position of authority [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "OMINOUS"
+            ],
+            "definitions": [
+                "portending evil [adj OMINOUSLY]"
+            ]
+        },
+        {
+            "words": [
+                "OPAQUE"
+            ],
+            "definitions": [
+                "impervious to light [adj OPAQUER, OPAQUEST, OPAQUELY] / to make opaque [v OPAQUED, OPAQUING, OPAQUES]"
+            ]
+        },
+        {
+            "words": [
+                "OPERATOR"
+            ],
+            "definitions": [
+                "one who operates [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "ORDINARY"
+            ],
+            "definitions": [
+                "according to the common type [adj ORDINARIER, ORDINARIEST, ORDINARILY] / a rule, an ordinance [n ORDINARIES]"
+            ]
+        },
+        {
+            "words": [
+                "ORIGINAL"
+            ],
+            "definitions": [
+                "relating to the origin [adj ORIGINALLY] / the first form of something [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "PAGEANT"
+            ],
+            "definitions": [
+                "an elaborate public spectacle [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "PALACE"
+            ],
+            "definitions": [
+                "a royal residence [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "PAMPHLET"
+            ],
+            "definitions": [
+                "to circulate a small unbound printed work to [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "PARALLEL"
+            ],
+            "definitions": [
+                "of lines etc., extended in the same direction and equidistant in all parts [adj PARALLELLY] / to be extended in the same direction [v PARALLELED or PARALLELLED, PARALLELING or PARALLELLING, PARALLELS]"
+            ]
+        },
+        {
+            "words": [
+                "PASSION"
+            ],
+            "definitions": [
+                "to exhibit strong feeling [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "PATTED"
+            ],
+            "definitions": [
+                "PAT, to stroke gently [v]"
+            ]
+        },
+        {
+            "words": [
+                "PEACEFUL"
+            ],
+            "definitions": [
+                "undisturbed, calm [adj PEACEFULLER, PEACEFULLEST, PEACEFULLY]"
+            ]
+        },
+        {
+            "words": [
+                "PEDIGREE"
+            ],
+            "definitions": [
+                "a line of ancestors [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "PEOPLE"
+            ],
+            "definitions": [
+                "to stock with inhabitants [v PEOPLED, PEOPLING, PEOPLES]"
+            ]
+        },
+        {
+            "words": [
+                "PHANTOM"
+            ],
+            "definitions": [
+                "an immaterial form, a spectre, also PHANTOSME [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "PHOBIA"
+            ],
+            "definitions": [
+                "(Greek) an obsessive or irrational fear, also PHOBISM [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "PHONEYS"
+            ],
+            "definitions": [
+                "PHONEY, to fake, counterfeit [v]"
+            ]
+        },
+        {
+            "words": [
+                "PICTURED"
+            ],
+            "definitions": [
+                "PICTURE, to form a likeness of [v]"
+            ]
+        },
+        {
+            "words": [
+                "PINNED"
+            ],
+            "definitions": [
+                "PIN, to fasten with a pin [v]"
+            ]
+        },
+        {
+            "words": [
+                "PITCH"
+            ],
+            "definitions": [
+                "to throw [v PITCHED, (obsolete) YPIGHT, PITCHING, PITCHES]"
+            ]
+        },
+        {
+            "words": [
+                "PITIFUL"
+            ],
+            "definitions": [
+                "arousing pity, also PITEOUS [adj PITIFULLER, PITIFULLEST, PITIFULLY]"
+            ]
+        },
+        {
+            "words": [
+                "PLAIT"
+            ],
+            "definitions": [
+                "to braid [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "PLANNER"
+            ],
+            "definitions": [
+                "one who plans [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "PLANNING"
+            ],
+            "definitions": [
+                "the establishment of goals or policies [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "POLICY"
+            ],
+            "definitions": [
+                "an action or a procedure considered with reference to prudence or expediency, also POLLICIE, POLLICY [n POLICIES]"
+            ]
+        },
+        {
+            "words": [
+                "POPCORN"
+            ],
+            "definitions": [
+                "maize or Indian corn, the kernels of which swell up and burst open with a small explosive sound when heated [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "POSSIBLE"
+            ],
+            "definitions": [
+                "that can be done [adj POSSIBLER, POSSIBLEST, POSSIBLY] / something that is possible [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "PRECIOUS"
+            ],
+            "definitions": [
+                "valuable [adj PRECIOUSLY] / a sweetheart [n -ES]"
+            ]
+        },
+        {
+            "words": [
+                "PRESTIGE"
+            ],
+            "definitions": [
+                "charm, magic or glamour in the eyes of other people [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "PROBABLY"
+            ],
+            "definitions": [
+                "PROBABLE, likely to occur or prove true [adv]"
+            ]
+        },
+        {
+            "words": [
+                "PROJECT"
+            ],
+            "definitions": [
+                "to extend outward [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "PROPERTY"
+            ],
+            "definitions": [
+                "something owned [n PROPERTIES] / to make one's own property, appropriate, take or hold possession of [v PROPERTIED, PROPERTYING, PROPERTIES]"
+            ]
+        },
+        {
+            "words": [
+                "PSYCHIC"
+            ],
+            "definitions": [
+                "relating to the psyche, also PSYCHICAL [adj PSYCHICALLY] / one sensitive to extrasensory phenomena [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "PUNCTUAL"
+            ],
+            "definitions": [
+                "being on time [adj PUNCTUALLY]"
+            ]
+        },
+        {
+            "words": [
+                "PURSUIT"
+            ],
+            "definitions": [
+                "the act of pursuing, also POURSUIT [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "QUARREL"
+            ],
+            "definitions": [
+                "to become involved in an unfriendly dispute [v QUARRELED or QUARRELLED, QUARRELING or QUARRELLING, QUARRELS]"
+            ]
+        },
+        {
+            "words": [
+                "QUARTER"
+            ],
+            "definitions": [
+                "to divide into four parts [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "QUEEN"
+            ],
+            "definitions": [
+                "a female monarch [n -S] / to make a queen of [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "QUESTION"
+            ],
+            "definitions": [
+                "to ask [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "QUICHE"
+            ],
+            "definitions": [
+                "(French) a flan of plain pastry filled with a cooked egg mixture [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "RACIAL"
+            ],
+            "definitions": [
+                "pertaining to an ethnic group [adj RACIALLY]"
+            ]
+        },
+        {
+            "words": [
+                "RADIAL"
+            ],
+            "definitions": [
+                "having rays or spokes diverging from the centre [adj RADIALLY] / a radial artery [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "RANCID"
+            ],
+            "definitions": [
+                "rank in taste or smell [adj RANCIDER, RANCIDEST, RANCIDLY]"
+            ]
+        },
+        {
+            "words": [
+                "REBELLED"
+            ],
+            "definitions": [
+                "REBEL, to oppose authority [v]"
+            ]
+        },
+        {
+            "words": [
+                "RELYING"
+            ],
+            "definitions": [
+                "RELY, to depend on confidently [v]"
+            ]
+        },
+        {
+            "words": [
+                "REMEMBER"
+            ],
+            "definitions": [
+                "to bring to mind again [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "RESIDUAL"
+            ],
+            "definitions": [
+                "remaining, also RESIDUOUS [adj RESIDUALLY] / that which remains as a residue [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "RHUBARB"
+            ],
+            "definitions": [
+                "any species of the genus Rheum; the leafstalks cooked and used as if fruit [n -S] / to simulate conversation e.g. on stage [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "RHYTHM"
+            ],
+            "definitions": [
+                "a pattern of recurrence, also RHYTHMUS [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "RODENT"
+            ],
+            "definitions": [
+                "a gnawing mammal [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "RUBBER"
+            ],
+            "definitions": [
+                "to provide with an eraser [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "SALARY"
+            ],
+            "definitions": [
+                "to pay periodically for nonmanual labour [v SALARIED, SALARYING, SALARIES]"
+            ]
+        },
+        {
+            "words": [
+                "SAVING"
+            ],
+            "definitions": [
+                "money laid aside for future use [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "SCENARIO"
+            ],
+            "definitions": [
+                "(Italian) an outline of a dramatic work [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "SEARCHED"
+            ],
+            "definitions": [
+                "SEARCH, to look carefully for something [v]"
+            ]
+        },
+        {
+            "words": [
+                "SEQUENCE"
+            ],
+            "definitions": [
+                "to arrange in order [v SEQUENCED, SEQUENCING, SEQUENCES]"
+            ]
+        },
+        {
+            "words": [
+                "SERIOUS"
+            ],
+            "definitions": [
+                "thoughtful or subdued in appearance [adj SERIOUSLY]"
+            ]
+        },
+        {
+            "words": [
+                "SHOULDER"
+            ],
+            "definitions": [
+                "to assume the burden of, also SHOUTHER [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "SHREWD"
+            ],
+            "definitions": [
+                "having keen insight [adj SHREWDER, SHREWDEST, SHREWDLY]"
+            ]
+        },
+        {
+            "words": [
+                "SKETCH"
+            ],
+            "definitions": [
+                "to make a rough, hasty drawing [v -ED, -ING, -ES]"
+            ]
+        },
+        {
+            "words": [
+                "SKILFUL"
+            ],
+            "definitions": [
+                "full of skill, also SKILFULL, SKILLFUL [adj SKILFULLY]"
+            ]
+        },
+        {
+            "words": [
+                "SKIPPED"
+            ],
+            "definitions": [
+                "SKIP, to move with light springing steps [v]"
+            ]
+        },
+        {
+            "words": [
+                "SLUDGE"
+            ],
+            "definitions": [
+                "to cover with a muddy deposit [v SLUDGED, SLUDGING, SLUDGES]"
+            ]
+        },
+        {
+            "words": [
+                "SMOKING"
+            ],
+            "definitions": [
+                "to preserve by smoke-drying [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "SOCIETY"
+            ],
+            "definitions": [
+                "an organized group, a fellowship, also SODALITY [n SOCIETIES]"
+            ]
+        },
+        {
+            "words": [
+                "SPARKLY"
+            ],
+            "definitions": [
+                "sparkling [adj SPARKLIER, SPARKLIEST] / something that sparkles [n SPARKLIES]"
+            ]
+        },
+        {
+            "words": [
+                "SPECIMEN"
+            ],
+            "definitions": [
+                "a representative of a group or a whole thing [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "SQUABBLE"
+            ],
+            "definitions": [
+                "to quarrel [v SQUABBLED, SQUABBLING, SQUABBLES]"
+            ]
+        },
+        {
+            "words": [
+                "SQUADRON"
+            ],
+            "definitions": [
+                "to organize in divisions of a regiment [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "STEPPED"
+            ],
+            "definitions": [
+                "STEP, to measure by pacing [v]"
+            ]
+        },
+        {
+            "words": [
+                "STITCH"
+            ],
+            "definitions": [
+                "to sew together [v STITCHED, STITCHING, STITCHES]"
+            ]
+        },
+        {
+            "words": [
+                "STOMACH"
+            ],
+            "definitions": [
+                "to tolerate [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "STRATEGY"
+            ],
+            "definitions": [
+                "a plan for obtaining a specific goal [n STRATEGIES]"
+            ]
+        },
+        {
+            "words": [
+                "STRETCH"
+            ],
+            "definitions": [
+                "to draw out or open to full length [v -ED, -ING, -ES]"
+            ]
+        },
+        {
+            "words": [
+                "STROKING"
+            ],
+            "definitions": [
+                "the act of stroking [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "SUBSIDED"
+            ],
+            "definitions": [
+                "SUBSIDE, to sink to a lower or normal level [v]"
+            ]
+        },
+        {
+            "words": [
+                "SUCTION"
+            ],
+            "definitions": [
+                "to remove by sucking [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "SUITABLY"
+            ],
+            "definitions": [
+                "SUITABLE, appropriate [adv]"
+            ]
+        },
+        {
+            "words": [
+                "SUPPLIED"
+            ],
+            "definitions": [
+                "SUPPLY, to provide with service or goods [v]"
+            ]
+        },
+        {
+            "words": [
+                "SURFACE"
+            ],
+            "definitions": [
+                "to apply an outer layer to [v SURFACED, SURFACING, SURFACES]"
+            ]
+        },
+        {
+            "words": [
+                "SURREAL"
+            ],
+            "definitions": [
+                "of or relating to surrealism; dreamlike, bizarre [adj SURREALLY] / the atmosphere or qualities associated with surrealism [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "SURVIVE"
+            ],
+            "definitions": [
+                "to remain in existence [v SURVIVED, SURVIVING, SURVIVES]"
+            ]
+        },
+        {
+            "words": [
+                "SWIMMING"
+            ],
+            "definitions": [
+                "smooth [adj SWIMMINGLY] / the act of swimming [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "TERRIBLY"
+            ],
+            "definitions": [
+                "TERRIBLE, awful [adv]"
+            ]
+        },
+        {
+            "words": [
+                "THEORY"
+            ],
+            "definitions": [
+                "a group of propositions used to explain a class of phenomena [n THEORIES]"
+            ]
+        },
+        {
+            "words": [
+                "THIEF"
+            ],
+            "definitions": [
+                "one that steals [n THIEVES]"
+            ]
+        },
+        {
+            "words": [
+                "THINNER"
+            ],
+            "definitions": [
+                "a preparation used to thin e.g. paint [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "TRAPEZE"
+            ],
+            "definitions": [
+                "to perform on a gymnastic apparatus [v TRAPEZED, TRAPEZING, TRAPEZES]"
+            ]
+        },
+        {
+            "words": [
+                "TURNIP"
+            ],
+            "definitions": [
+                "to plant with an edible plant root [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "UNHEARD"
+            ],
+            "definitions": [
+                "not heard [adj]"
+            ]
+        },
+        {
+            "words": [
+                "USELESS"
+            ],
+            "definitions": [
+                "serving no purpose [adj USELESSLY]"
+            ]
+        },
+        {
+            "words": [
+                "UTTER"
+            ],
+            "definitions": [
+                "complete [adj UTTERER, UTTEREST, UTTERLY] / to give audible expression to [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "VAPOUR"
+            ],
+            "definitions": [
+                "mist, fume or smoke [n -S] / to turn into vapour, also VAPOR [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "VINYL"
+            ],
+            "definitions": [
+                "a type of plastic [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "VIOLENCE"
+            ],
+            "definitions": [
+                "a violent action [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "WAIVE"
+            ],
+            "definitions": [
+                "to refrain from claiming [v WAIVED, WAIVING, WAIVES]"
+            ]
+        },
+        {
+            "words": [
+                "WALLET"
+            ],
+            "definitions": [
+                "a small, flat folding case for the pocket [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "WARFARE"
+            ],
+            "definitions": [
+                "to wage war [v WARFARED, WARFARING, WARFARES]"
+            ]
+        },
+        {
+            "words": [
+                "WASTAGE"
+            ],
+            "definitions": [
+                "something that is wasted [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "WEALTH"
+            ],
+            "definitions": [
+                "valuable possessions [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "WEAPON"
+            ],
+            "definitions": [
+                "to supply with an instrument of offence or defence [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "WHILST"
+            ],
+            "definitions": [
+                "as long as [conj]"
+            ]
+        },
+        {
+            "words": [
+                "WHINE"
+            ],
+            "definitions": [
+                "to utter a plaintive, high-pitched sound [v WHINED, WHINING, WHINES]"
+            ]
+        },
+        {
+            "words": [
+                "WHISKER"
+            ],
+            "definitions": [
+                "coarse hair on the face [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "WHISPER"
+            ],
+            "definitions": [
+                "to speak softly [v -ED, -ING, -S]"
+            ]
+        },
+        {
+            "words": [
+                "WHOLE"
+            ],
+            "definitions": [
+                "entire [adj WHOLLY] / all the parts or elements entering into and making up a thing [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "WILFUL"
+            ],
+            "definitions": [
+                "bent on having one's own way, also WILLFUL, WILLYARD, WILLYART [adj]"
+            ]
+        },
+        {
+            "words": [
+                "WINNING"
+            ],
+            "definitions": [
+                "captivating, charming [adj WINNINGEST, WINNINGLY] / something won [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "WITCH"
+            ],
+            "definitions": [
+                "to bewitch [v -ED, -ING, -ES]"
+            ]
+        },
+        {
+            "words": [
+                "WITCHERY"
+            ],
+            "definitions": [
+                "enchantment; witchcraft [n WITCHERIES]"
+            ]
+        },
+        {
+            "words": [
+                "WOEFUL"
+            ],
+            "definitions": [
+                "full of woe, also WAEFUL, WAESOME, WOESOME, WOFUL [adj WOEFULLER, WOEFULLEST, WOEFULLY]"
+            ]
+        },
+        {
+            "words": [
+                "WRAITH"
+            ],
+            "definitions": [
+                "a visible disembodied spirit [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "WRIGGLED"
+            ],
+            "definitions": [
+                "WRIGGLE, to twist and turn [v]"
+            ]
+        },
+        {
+            "words": [
+                "WROUGHT"
+            ],
+            "definitions": [
+                "WORK, to toil in mind or body [v]"
+            ]
+        },
+        {
+            "words": [
+                "YIELDING"
+            ],
+            "definitions": [
+                "giving way, compliant [adj YIELDINGLY] / a giving way [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "ZANY"
+            ],
+            "definitions": [
+                "comical, clownish [adj ZANIER, ZANIEST, ZANILY] / (obsolete) to play the zany to [v ZANIED, ZANYING, ZANIES]"
+            ]
+        },
+        {
+            "words": [
+                "ZENITH"
+            ],
+            "definitions": [
+                "the highest point [n -S]"
+            ]
+        },
+        {
+            "words": [
+                "ZINC"
+            ],
+            "definitions": [
+                "to coat with a metallic element [v ZINCKED or ZINCED or ZINKED, ZINCKING or ZINCING or ZINKING, ZINCS]"
+            ]
+        },
+        {
+            "words": [
+                "ZODIAC"
+            ],
+            "definitions": [
+                "an imaginary belt in the heavens [n -S]"
+            ]
+        }
+    ]
+}
