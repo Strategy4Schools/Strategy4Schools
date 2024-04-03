@@ -24,10 +24,10 @@ function determineWordListURL(difficulty) {
             return 'https://raw.githubusercontent.com/Strategy4Schools/Strategy4Schools/main/easy_word_list_anagrammable.json';
         case 'medium': 
             // Use the correct path for your medium word list
-            return 'path/to/medium_word_list.json';
+            return 'https://raw.githubusercontent.com/Strategy4Schools/Strategy4Schools/main/medium_word_list_anagrammable.json';
         case 'hard': 
             // Use the correct path for your hard word list
-            return 'path/to/hard_word_list.json';
+            return 'https://raw.githubusercontent.com/Strategy4Schools/Strategy4Schools/main/hards_word_list_anagrammable.json';
         default:
             console.error('Invalid difficulty level');
             return null;
