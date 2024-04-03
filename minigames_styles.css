@@ -5,7 +5,12 @@ body {
     padding: 0;
     background-color: #243A4E;
     color: white;
+    transform: scale(0.9);
+    transform-origin: top left;
+    width: 111.11%;
+    height: 111.11%;
 }
+
 
 header {
     background-color: #1C2D3D;
@@ -647,4 +652,24 @@ footer {
     padding: 0 60px; /* Add padding to create space for the arrows */
     margin: 0 auto;
     position: relative;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Customizes the scrollbar track (background) */
+::-webkit-scrollbar {
+  width: 12px; /* Adjust the width of the scrollbar */
+}
+
+/* Customizes the scrollbar handle */
+::-webkit-scrollbar-thumb {
+  background: #888; /* Handle color */
+  border-radius: 6px; /* Handle border radius */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Handle color on hover */
 }

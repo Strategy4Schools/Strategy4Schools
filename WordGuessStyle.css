@@ -128,12 +128,13 @@
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                background-color: white;
+                background-color: #243A4E;
                 padding: 25px;
-                border-radius: 10px;
+                border-radius: 25px;
+                border-color: black;
                 box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
                 text-align: center;
-                z-index: 1000;
+                z-index: 5000;
                 width: 80%;
                 max-width: 400px;
                 display: flex;
@@ -155,7 +156,7 @@
             color: #ff0000;
         }
 
-        #backButtonContainer {
+#backButtonContainer {
     position: absolute;
     top: 10px;
     left: 10px;
@@ -188,13 +189,13 @@
                 font-family: "Electrolize", sans-serif;
                 font-size: 1em;
                 margin-bottom: 20px;
-                color: #333;
+                color: white;
                 font-weight: 650;
             }
 
             .popup-content button {
                 font-family: "Electrolize", sans-serif;
-                background-color: #4CAF50;
+                background-color: #1C2D3D;
                 color: white;
                 border: none;
                 padding: 10px 20px;
@@ -209,8 +210,10 @@
             }
 
             .popup-content button:hover {
-                background-color: #45a049;
+                background-color: #fdb740;
             }
+
+
 
         #play-again-bottom {
          font-family: "Electrolize", sans-serif;
@@ -226,6 +229,7 @@
                 cursor: pointer;
                 border-radius: 5px;
                 font-weight: 700;
+                z-index: 3000;
         }
 
         #play-again-bottom:hover {
@@ -434,3 +438,4 @@
     animation: fadeOut 0.5s forwards;
     visibility: hidden; /* Ensures the message becomes hidden after fade-out */
 }
+
