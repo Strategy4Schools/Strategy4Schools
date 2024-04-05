@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Word Matching Game</title>
+    <meta charset="UTF-8"> <!-- Specify UTF-8 Encoding -->
+    <link rel="stylesheet" type="text/css" href="definition_matchup_styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Back to minigames button -->
+    <div id="backButtonContainer">
+        <button id="backToMinigames" onclick="window.location.href='minigames_home.html'">← Back to Minigames</button>
+    </div>
+    <h2>Word Match</h2>
+    <div id="game">
+        <div id="words">
+            <!-- Words will be dynamically loaded here -->
+        </div>
+        <div id="definitions">
+            <!-- Definitions will be dynamically loaded here -->
+        </div>
+    </div>
+    <svg id="lineSvg" style="position:absolute; top:0; left:0">
+        <line id="line" x1="0" y1="0" x2="0" y2="0" style="stroke:rgb(255,0,0);stroke-width:2"></line>
+        <defs>
+            <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+                <polygon points="0 0, 10 3.5, 0 7" fill="#43af51"></polygon>
+            </marker>
+        </defs>
+    </svg>
+    <div id="completion-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Congratulations! You've matched all the words to their definitions!</p>
+            <button id="play-again">Play Again</button>
+        </div>
+    </div>
+    <button id="play-again-bottom" style="display: none;">Play Again</button>
+    <script src="definition_matchup.js"></script>
+</body>
+</html>

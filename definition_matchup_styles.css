@@ -1,0 +1,286 @@
+body {
+    font-family: "Electrolize", sans-serif;
+    background-color: #243A4E;
+    background: linear-gradient(to bottom, #243A4E 0%, #2D4A61 50%, #364E70 100%);
+    color: #333;
+    text-align: center;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+h2 {
+    font-family: "Electrolize", sans-serif;
+    color: white;
+    margin-bottom: 60px;
+    margin-top: -60px;
+    font-size: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+#game {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 400px;
+}
+
+#words, #definitions {
+    display: flex;
+    flex-direction: column;
+    gap: 65px;
+    width: 350px;
+    font-size: 20px;
+}
+
+#words {
+    gap: 15px;
+}
+
+#words p {
+    color: white;
+}
+
+#definitions div {
+    color: black;
+}
+
+#words p, #definitions div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    background-color: #14202b; /* Uniform color for words */
+    height: 80px; /* Slightly larger boxes */
+    text-align: center;
+}
+
+#words p:hover, #definitions div:hover {
+    transform: translateY(-2px);
+}
+
+
+#definitions div {
+    background-color: #fdb740; /* Separate color for definitions */
+}
+
+
+#lineSvg {
+    width: 300vw;
+    height: 300vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+.permanent-line {
+    stroke: white;
+    stroke-linecap: round;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: drawLine 0.5s forwards;
+}
+
+@keyframes drawLine {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4); /* Dimmed background */
+    padding-top: 250px;
+}
+
+.modal-content {
+    position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: #243A4E;
+                padding: 25px;
+                border-radius: 25px;
+                border-color: black;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+                text-align: center;
+                z-index: 5000;
+                width: 80%;
+                max-width: 400px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+}
+
+
+.modal-content p {
+    font-family: "Electrolize", sans-serif;
+                font-size: 1em;
+                margin-bottom: 20px;
+                color: white;
+                font-weight: 650;
+}
+
+
+.modal-content button {
+    font-family: "Electrolize", sans-serif;
+                background-color: #1C2D3D;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+                border-radius: 5px;
+                font-weight: 700;
+}
+
+.modal-content button:hover {
+    background-color: #fdb740;
+}
+
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Optional: Style for hover effect */
+.close:hover {
+    color: #ff0000;
+}
+
+#play-again {
+    font-family: "Electrolize", sans-serif;
+                background-color: #1C2D3D;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+                border-radius: 5px;
+                font-weight: 700;
+}
+
+#play-again:hover {
+    background-color: #fdb740;
+}
+
+@keyframes fadeInModal {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+#backButtonContainer {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2000;
+}
+
+#backToMinigames {
+    font-family: "Electrolize", sans-serif;
+    background-color: #1C2D3D; /* A deep green for better visibility and aesthetics */
+    color: white; /* White text for high contrast and readability */
+    border: 2px solid black; /* Solid border to match the background */
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: all 0.3s ease; /* Smooth transition for a more interactive feel */
+}
+
+#backToMinigames:hover {
+    background-color: #fdb740; /* A slightly darker green for the hover state */
+    border-color: black; /* Darker border to emphasize the hover effect */
+    color: black;
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-10px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(10px);
+    }
+}
+
+.shake {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+#play-again-bottom {
+    font-family: "Electrolize", sans-serif;
+    background-color: #1C2D3D;
+    color: white;
+    border: 2px solid black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: block; /* Change from inline-block to block */
+    font-size: 16px;
+    font-weight: 700;
+    margin: 20px 0 20px auto;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    position: absolute; /* Position it absolutely */
+    left: 50%; /* Move it 50% from the left */
+    transform: translateX(-50%); /* Shift it back to center it */
+    top: 120px; /* Adjust this value to position it right under the header */
+
+}
+
+#play-again-bottom:hover {
+    background-color: #fdb740;
+}
+
