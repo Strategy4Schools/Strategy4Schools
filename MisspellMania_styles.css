@@ -32,6 +32,26 @@ body, html {
     margin: 0; /* Adjust margin to 0 to allow flexbox to center it properly */
 }
 
+#definitionContainer {
+    background-color: #14202b;
+    border: 2px solid black; /* Darker border for a more pronounced effect */
+    border-radius: 45px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+#definition {
+    color: #FFF; /* Keeping the text color white for contrast */
+    font-size: 1.2em;
+}
+
+#definition::before,
+#definition::after {
+    content: '"';
+    color: #FFF; /* Adjust the color if needed */
+    font-size: 1.2em; /* Adjust the size to match the text */
+}
+
 #backButtonContainer {
     position: absolute;
     top: 10px;
