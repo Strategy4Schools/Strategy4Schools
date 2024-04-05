@@ -8,6 +8,7 @@
         background-color: #243A4E;
         margin: 0;
         color: white;
+        background: linear-gradient(to bottom, #243A4E 0%, #2D4A61 50%, #364E70 100%);
     }
 
     h1 {

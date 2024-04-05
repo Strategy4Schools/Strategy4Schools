@@ -9,11 +9,11 @@ body {
     transform-origin: top left;
     width: 111.11%;
     height: 111.11%;
+    background: linear-gradient(to bottom, #243A4E 0%, #2D4A61 50%, #364E70 100%);
 }
 
-
 header {
-    background-color: #1C2D3D;
+    background: linear-gradient(to bottom, #1C2D3D 0%, #243A4E 100%);
     color: #fff;
     padding-bottom: 20px;
     padding-top: 20px;
@@ -21,12 +21,12 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed; /* Lock the header in place at the top of the screen */
-    top: 0; /* Align the top edge of the header with the top of the viewport */
-    left: 0; /* Align the left edge of the header with the left of the viewport */
-    width: 100%; /* Ensure the header spans the full width of the viewport */
-    z-index: 10; /* Ensure the header layer is above other content */
-    border-bottom: 1px solid #14202b;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    border-bottom: 2px solid #14202b;
 }
 
 .logo-container {
@@ -658,18 +658,27 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Customizes the scrollbar track (background) */
-::-webkit-scrollbar {
-  width: 12px; /* Adjust the width of the scrollbar */
+/* Styles the scrollbar track */
+::-webkit-scrollbar-track {
+    background: #1C2D3D; /* Darker shade for the track background */
 }
 
-/* Customizes the scrollbar handle */
+/* Styles the scrollbar handle */
 ::-webkit-scrollbar-thumb {
-  background: #888; /* Handle color */
-  border-radius: 6px; /* Handle border radius */
+    background: #243A4E; /* Slightly lighter shade for contrast but still dark */
+    border-radius: 6px; /* Handle border radius */
 }
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #555; /* Handle color on hover */
+/* Optionally, adjust the scrollbar width */
+::-webkit-scrollbar {
+    width: 10px; /* Adjust the width of the scrollbar here */
+}
+
+.section-divider {
+    margin: 75px auto; /* Adjusts space above and below the divider */
+    width: 100%; /* Adjusts the width of the divider to fit within your layout */
+    height: 0; /* No height since the visible part is the border */
+    border-top: 0.5px solid #bbb; /* Visible border acting as the divider */
+    border-radius: 5px; /* Rounds the corners of the border */
+    background-color: white; /* Sets the background color */
 }

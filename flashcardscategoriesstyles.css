@@ -9,6 +9,7 @@ body {
     align-items: center;
     justify-content: center; /* This centers the #centering-container */
     min-height: 100vh;
+    background: linear-gradient(to bottom, #243A4E 0%, #2D4A61 50%, #364E70 100%);
 }
 
 #title-container, #backButtonContainer {

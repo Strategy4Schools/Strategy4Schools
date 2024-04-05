@@ -1,0 +1,89 @@
+body, html {
+    font-family: "Electrolize", sans-serif;
+    text-align: center;
+    padding: 20px;
+    height: 100%; /* Full height */
+    margin: 0; /* Remove default margin */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Adjust flex items to stack vertically */
+    background: linear-gradient(to bottom, #243A4E 0%, #2D4A61 50%, #364E70 100%);
+    color: white;
+}
+
+    h1 {
+        font-size: 3em;
+        margin: 0;
+        font-weight: 600;
+        color: white;
+        position: absolute;
+        top: 60px; /* Increased space above the title */
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+#gameContainer {
+    font-family: "Electrolize", sans-serif;
+    max-width: 600px;
+    width: 100%; /* Ensure it doesn't exceed the parent's width */
+    box-sizing: border-box; /* Include padding and border in the element's total width */
+    padding: 20px; 
+    margin: 0; /* Adjust margin to 0 to allow flexbox to center it properly */
+}
+
+#backButtonContainer {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2000;
+}
+
+#backToMinigames {
+    font-family: "Electrolize", sans-serif;
+    background-color: #1C2D3D; /* A deep green for better visibility and aesthetics */
+    color: white; /* White text for high contrast and readability */
+    border: 2px solid black; /* Solid border to match the background */
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: all 0.3s ease; /* Smooth transition for a more interactive feel */
+}
+
+#backToMinigames:hover {
+    background-color: #fdb740; /* A slightly darker green for the hover state */
+    border-color: black; /* Darker border to emphasize the hover effect */
+    color: black;
+}
+
+button {
+        font-family: "Electrolize", sans-serif;
+        padding: 12px 20px;
+        font-size: 1em;
+        background-color: #d9d9d9; /* Grayscale color for buttons */
+        color: #333; /* Dark text for contrast */
+        border: 2px solid black; /* Darker border for a bolder effect */
+        border-radius: 25px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+}
+
+#nextButton {
+    font-family: "Electrolize", sans-serif;
+    display: block;
+    width: 200px; /* Set a fixed width or percentage as preferred */
+    padding: 10px;
+    margin: 20px auto; /* Center the button horizontally */
+    font-size: 16px;
+    color: #FFFFFF; /* Text color */
+    background-color: #243A4E; /* Button background color */
+    border: 1px solid #ddd; /* Button border */
+    border-radius: 5px; /* Rounded corners for the button */
+}
+
+

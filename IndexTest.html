@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .login-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .form-input, .password-reset {
+            margin-bottom: 20px;
+        }
+        .form-input label, .password-reset label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-input input, .password-reset input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .login-button, .reset-button {
+            width: 100%;
+            padding: 10px;
+            background-color: #005A9C;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .login-button:hover, .reset-button:hover {
+            background-color: #004080;
+        }
+        .feedback-message {
+            margin-top: 10px;
+            color: #d9534f;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-container">
+    <h2>Login</h2>
+    <form id="loginForm">
+        <div class="form-input">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-input">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <button type="submit" class="login-button">Login</button>
+        <div id="feedback" class="feedback-message"></div>
+    </form>
+    <div class="password-reset">
+        <label for="resetEmail">Forgot Password?</label>
+        <input type="email" id="resetEmail" name="resetEmail" placeholder="Enter your email" required>
+        <button class="reset-button" onclick="resetPassword()">Send Reset Email</button>
+    </div>
+</div>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js";
+  import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, sendPasswordResetEmail } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyBIdvoYCGYNV1_rG9JdNtz_Q1iA66k9I6o",
+    authDomain: "strategy4schoolsdb.firebaseapp.com",
+    projectId: "strategy4schoolsdb",
+    storageBucket: "strategy4schoolsdb.appspot.com",
+    messagingSenderId: "125952142437",
+    appId: "1:125952142437:web:11d221ac797be1c3e0ea8c"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+
+  document.getElementById('loginForm').addEventListener('submit', async function(event) {
+    event.preventDefault();
+    const email = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+    const feedbackElement = document.getElementById('feedback');
+    
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
+      window.location.href = 'http://localhost:8000/minigames_home.html'; // Adjust as needed
+    } catch (error) {
+      feedbackElement.textContent = 'Login failed: ' + error.message;
+    }
+  });
+
+  function resetPassword() {
+    const email = document.getElementById('resetEmail').value;
+    sendPasswordResetEmail(auth, email)
+      .then(() => {
+        alert('Password reset email sent!');
+      })
+      .catch((error) => {
+        alert('Error sending password reset email: ', error.message);
+      });
+  }
+
+  // Redirect if user is already logged in
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      window.location.href = 'http://localhost:8000/minigames_home.html'; // or your dashboard path
+    }
+  });
+</script>
+
+</body>
+</html>

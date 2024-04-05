@@ -1,3 +1,22 @@
+// Firebase Initialization (ensure these scripts are correctly imported in your HTML or JS module)
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js";
+import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js";
+import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBIdvoYCGYNV1_rG9JdNtz_Q1iA66k9I6o",
+  authDomain: "strategy4schoolsdb.firebaseapp.com",
+  projectId: "strategy4schoolsdb",
+  storageBucket: "strategy4schoolsdb.appspot.com",
+  messagingSenderId: "125952142437",
+  appId: "1:125952142437:web:11d221ac797be1c3e0ea8c"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+const auth = getAuth(app);
+
+
 document.addEventListener('DOMContentLoaded', function() {
     setupBackButton();
     loadIncorrectWordsForReview();
@@ -18,15 +37,32 @@ function setupBackButton() {
 }
 
 function loadIncorrectWordsForReview() {
-    let incorrectWords = JSON.parse(localStorage.getItem('incorrectWords')) || [];
-    if (incorrectWords.length === 0) {
-        alert("No incorrect words to review.");
-        window.location.href = 'minigames_home.html';
-        return;
-    }
-    words = incorrectWords.map(word => ({...word, guessedCorrectly: false}));
-    setNewWord();
-    document.querySelector('.main-content').style.display = 'flex';
+    onAuthStateChanged(auth, (user) => {
+        if (user) {
+            // User is signed in
+            const userRef = doc(db, "users", user.uid);
+            getDoc(userRef).then(docSnap => {
+                if (docSnap.exists()) {
+                    const userData = docSnap.data();
+                    words = userData.incorrectWords || [];
+                    if (words.length > 0) {
+                        setNewWord(); // Initialize the review with the first word
+                        document.querySelector('.main-content').style.display = 'flex';
+                    } else {
+                        console.log("No incorrect words found for review.");
+                        // Optionally, display a message or handle the empty state
+                    }
+                } else {
+                    console.log("No user document found.");
+                }
+            }).catch(error => {
+                console.error("Error loading incorrect words:", error);
+            });
+        } else {
+            console.log("No user is signed in.");
+            // Handle the case where no user is signed in, perhaps redirect to a login page
+        }
+    });
 }
 
 let words = [];

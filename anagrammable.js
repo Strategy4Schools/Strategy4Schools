@@ -1,3 +1,48 @@
+// Import Firebase modules
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js";
+import { getFirestore, doc, updateDoc, arrayUnion } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js";
+import { getAuth } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js";
+
+// Your Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyBIdvoYCGYNV1_rG9JdNtz_Q1iA66k9I6o",
+  authDomain: "strategy4schoolsdb.firebaseapp.com",
+  projectId: "strategy4schoolsdb",
+  storageBucket: "strategy4schoolsdb.appspot.com",
+  messagingSenderId: "125952142437",
+  appId: "1:125952142437:web:11d221ac797be1c3e0ea8c"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+const auth = getAuth(app);
+
+async function checkOrCreateUserDocument(user) {
+    const userDocRef = doc(db, "users", user.uid);
+    const userDocSnapshot = await getDoc(userDocRef);
+
+    if (!userDocSnapshot.exists()) {
+        // The document does not exist, let's create it
+        await setDoc(userDocRef, {
+            // Initialize with any necessary data structure. For example:
+            incorrectWords: [],
+            // You can add more fields here as needed
+        });
+        console.log("New user document created.");
+    } else {
+        console.log("User document already exists.");
+    }
+}
+
+// This function could be called after a user logs in successfully
+auth.onAuthStateChanged(user => {
+    if (user) {
+        // User is signed in, let's check or create their document
+        checkOrCreateUserDocument(user);
+    }
+});
+
 document.addEventListener('DOMContentLoaded', function() {
     setupBackButton();
     setupDifficultySelection();
@@ -58,11 +103,20 @@ function loadWords(url) {
 }
 
 function saveIncorrectTargetWord(word, definition) {
-    let incorrectWords = JSON.parse(localStorage.getItem('incorrectWords')) || [];
-    if (!incorrectWords.some(entry => entry.word === word)) {
-        incorrectWords.push({ word, definition });
-        localStorage.setItem('incorrectWords', JSON.stringify(incorrectWords));
+    const user = auth.currentUser;
+    if (!user) {
+        console.error("User not logged in");
+        return;
     }
+
+    const incorrectWordsRef = doc(db, "users", user.uid);
+    updateDoc(incorrectWordsRef, {
+        incorrectWords: arrayUnion({ word, definition })
+    }).then(() => {
+        console.log("Incorrect word saved to Firestore");
+    }).catch((error) => {
+        console.error("Error saving incorrect word: ", error);
+    });
 }
 
 function setupBackButton() {
@@ -297,26 +351,6 @@ function showAnagramsContainer() {
 
 function hideAnagramsContainer() {
     document.getElementById('anagrams-container').style.display = 'none'; // Hide the container
-}
-
-function updateGuessedWordsDisplay(guessedWord) {
-    let guessedWordsDiv = document.getElementById('guessed-words');
-    let definitionIndex = currentAnagrams.indexOf(guessedWord);
-        
-    let wordElement = document.createElement('p');
-    let definition = randomEntry.definitions[definitionIndex];
-    definition = definition.replace(guessedWord + ': ', '');
-
-    let wordLink = document.createElement('a');
-    wordLink.href = `https://www.collinsdictionary.com/dictionary/english/${guessedWord.toLowerCase()}`;
-    wordLink.textContent = guessedWord;
-    wordLink.target = '_blank';
-
-    wordElement.appendChild(wordLink);
-    wordElement.innerHTML += ": " + definition;
-    wordElement.style.color = '#90EE90';
-
-    guessedWordsDiv.appendChild(wordElement);
 }
 
 function updateAnagramCounter() {
