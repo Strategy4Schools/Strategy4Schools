@@ -1,19 +1,14 @@
 body {
     padding-top: 70px;
-    font-family: "Electrolize", sans-serif;
+    font-family: 'Source Code Pro', monospace;
     margin: 0;
     padding: 0;
     background-color: #243A4E;
     color: white;
-    transform: scale(0.9);
-    transform-origin: top left;
-    width: 111.11%;
-    height: 111.11%;
-    background: linear-gradient(to bottom, #243A4E 0%, #2D4A61 50%, #364E70 100%);
 }
 
 header {
-    background: linear-gradient(to bottom, #1C2D3D 0%, #243A4E 100%);
+    background-color: #1C2D3D;
     color: #fff;
     padding-bottom: 20px;
     padding-top: 20px;
@@ -21,12 +16,12 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 10;
-    border-bottom: 2px solid #14202b;
+    position: fixed; /* Lock the header in place at the top of the screen */
+    top: 0; /* Align the top edge of the header with the top of the viewport */
+    left: 0; /* Align the left edge of the header with the left of the viewport */
+    width: 100%; /* Ensure the header spans the full width of the viewport */
+    z-index: 10; /* Ensure the header layer is above other content */
+    border-bottom: 1px solid #14202b;
 }
 
 .logo-container {
@@ -389,6 +384,7 @@ footer {
 
 .dropdown-menu a:hover {
     background-color: #fdb740;
+    color: black;
 }
 
 
@@ -409,7 +405,7 @@ footer {
 
 .search-container {
     position: absolute;
-    left: calc(70% - 40px); /* Move slightly to the left to make room for the button */
+    left: 44%; /* Move slightly to the left to make room for the button */
     transform: translateX(-30%);
 }
 
@@ -420,16 +416,29 @@ footer {
 }
 
 #gameSearch {
-    padding: 15px 5px;
-    border: 1px solid #14202b;
-    border-radius: 4px 4px 4px 4px; /* Rounded corners on the left side only */
-    width: 100%; /* Take the full width of the parent container */
+    border: none;
+    flex-grow: 1;
+    margin-right: -60px;
+    padding: 15px 60px 15px 5px; /* Adjust padding-right to limit text area */
+    border-radius: 50px;
+    width: 100%;
     font-size: 15px;
     box-sizing: border-box;
-    font-family: "Electrolize", sans-serif;
+    font-family: 'Source Code Pro', monospace;
     background-color: #fff;
     font-weight: bold;
+    position: relative; /* Set the position to relative for pseudo-element positioning */
 
+}
+
+#gameSearch::after {
+    content: ''; /* Empty content */
+    position: absolute;
+    right: 60px; /* Same as the padding-right */
+    top: 0;
+    bottom: 0;
+    width: 1px; /* Thin line, almost invisible */
+    background: transparent; /* Keep it transparent */
 }
 
 #searchButton {
@@ -438,9 +447,12 @@ footer {
     border: none;
     color: white;
     font-size: 1.2em;
-    padding: 12.5px;
-    border: 1px solid #14202b;
-    border-radius: 0 50px 50px 0; /* Rounded corners on the right side */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 12px;
+    padding-left: 12px;
+    border-radius: 100%; /* Rounded corners on the right side */
+    z-index: 10;
 }
 
 #searchButton:hover {
@@ -488,8 +500,8 @@ footer {
     z-index: 5;
 }
 
-.btn-navigation-nav-menu-md:hover {
-    background-color: #fdb740;
+.btn-navigation-nav-menu-md:hover .icon-nav-menu::before {
+    color: #fdb740; /* Change to your desired hover color */
 }
 
 .icon-nav-menu::before {
@@ -507,7 +519,9 @@ footer {
     width: 250px; /* Adjust width as needed */
     z-index: 1000;
     height: 100%;
+    animation: fadeIn 0.5s ease-out forwards;
 }
+
 
 /* Style for the links within the dropdown */
 .nav-menu-dropdown a {
@@ -524,6 +538,7 @@ footer {
 
 .nav-menu-dropdown a:hover {
     background-color: #fdb740; /* Change background color on hover */
+    color: black;
 }
 
 
@@ -652,33 +667,4 @@ footer {
     padding: 0 60px; /* Add padding to create space for the arrows */
     margin: 0 auto;
     position: relative;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-/* Styles the scrollbar track */
-::-webkit-scrollbar-track {
-    background: #1C2D3D; /* Darker shade for the track background */
-}
-
-/* Styles the scrollbar handle */
-::-webkit-scrollbar-thumb {
-    background: #243A4E; /* Slightly lighter shade for contrast but still dark */
-    border-radius: 6px; /* Handle border radius */
-}
-
-/* Optionally, adjust the scrollbar width */
-::-webkit-scrollbar {
-    width: 10px; /* Adjust the width of the scrollbar here */
-}
-
-.section-divider {
-    margin: 75px auto; /* Adjusts space above and below the divider */
-    width: 100%; /* Adjusts the width of the divider to fit within your layout */
-    height: 0; /* No height since the visible part is the border */
-    border-top: 0.5px solid #bbb; /* Visible border acting as the divider */
-    border-radius: 5px; /* Rounds the corners of the border */
-    background-color: white; /* Sets the background color */
 }

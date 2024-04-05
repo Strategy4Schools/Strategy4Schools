@@ -51,18 +51,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Function to slide featured games to the left or right
     function slideFeaturedGames(direction) {
-        if (direction === 'left' && currentSetIndex > 0) {
-            currentSetIndex--;
-        } else if (direction === 'right' && currentSetIndex < allFeaturedGames.length - 1) {
-            currentSetIndex++;
-        }
+    const maskWidth = document.querySelector('.featured-games-mask').offsetWidth;
 
-        const newTransformValue = -(currentSetIndex * maskWidth);
-        featuredGamesContainer.style.transform = `translateX(${newTransformValue}px)`;
-
-        // Reattach event listeners to info-icons after sliding
-        featuredGamesContainer.addEventListener('transitionend', updateInfoIcons, { once: true });
+    if (direction === 'left' && currentSetIndex > 0) {
+        currentSetIndex--;
+    } else if (direction === 'right' && currentSetIndex < allFeaturedGames.length - 1) {
+        currentSetIndex++;
     }
+
+    const newTransformValue = -(currentSetIndex * maskWidth);
+    featuredGamesContainer.style.transform = `translateX(${newTransformValue}px)`;
+
+    featuredGamesContainer.addEventListener('transitionend', updateInfoIcons, { once: true });
+}
+
 
     // Attach event listeners to arrow buttons
     document.getElementById('left-arrow').addEventListener('click', function() {
