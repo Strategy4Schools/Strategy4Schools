@@ -9,6 +9,7 @@
             margin: 0;
             color: white;
             padding-top: 10px;
+            background: linear-gradient(to bottom, #243A4E 0%, #2D4A61 50%, #364E70 100%);
         }
 
         #gameTitle {
