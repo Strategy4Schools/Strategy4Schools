@@ -361,35 +361,45 @@ function updateAnagramCounter() {
     document.getElementById('anagram-counter').innerText = counterText;
 }
 
-document.getElementById('favoriteContainer').addEventListener('click', function() {
-    let favorites = JSON.parse(localStorage.getItem('gameFavorites')) || [];
-    const word = currentWord; // Ensure this is the currently displayed word.
-    const definition = currentDefinition; // Ensure this holds the current definition.
+document.getElementById('favoriteContainer').addEventListener('click', async function() {
+    const user = auth.currentUser;
+    if (!user) {
+        console.error("User not logged in");
+        return;
+    }
+    
+    // Reference to a subcollection named 'favorites' for storing each favorite word as a separate document
+    const favoriteWordRef = doc(db, "users", user.uid, "favorites", currentWord); // 'currentWord' should be a variable holding the word to be favorited/unfavorited
+    const docSnap = await getDoc(favoriteWordRef);
 
-    // Toggle favorite status
-    const index = favorites.findIndex(fav => fav.word === word);
-    if (index === -1) {
-        favorites.push({ word, definition });
+    if (!docSnap.exists()) {
+        // If the word is not already favorited, add it to Firestore
+        await setDoc(favoriteWordRef, { word: currentWord, definition: currentDefinition });
+        console.log(`${currentWord} added to favorites.`);
     } else {
-        favorites.splice(index, 1);
+        // If the word is already favorited, remove it from Firestore
+        await deleteDoc(favoriteWordRef);
+        console.log(`${currentWord} removed from favorites.`);
     }
 
-    localStorage.setItem('gameFavorites', JSON.stringify(favorites));
-
-    // Update icon and label text
+    // Update the UI to reflect the current state of the favorite word
     updateFavoriteIcon();
 });
 
-function updateFavoriteIcon() {
-    let favorites = JSON.parse(localStorage.getItem('gameFavorites')) || [];
-    const isFavorite = favorites.some(favorite => favorite.word === currentWord);
+async function updateFavoriteIcon() {
+    const user = auth.currentUser;
+    if (!user) {
+        console.error("User not logged in");
+        return;
+    }
+    
+    const favoriteWordRef = doc(db, "users", user.uid, "favorites", currentWord);
+    const docSnap = await getDoc(favoriteWordRef);
+    const isFavorite = docSnap.exists();
 
     document.getElementById('favoriteButton').className = isFavorite ? 'fas fa-star' : 'far fa-star';
-
     document.getElementById('favoriteLabel').textContent = isFavorite ? 'Remove from Collection' : 'Add Word to Collection';
-
-    document.getElementById('favoriteButton').className = isFavorite ? 'fas fa-star star' : 'far fa-star star';
-};
+}
 
 function roundEnd() {
     // Hide 'Submit' and 'Skip' buttons

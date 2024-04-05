@@ -1,6 +1,6 @@
 // Firebase Initialization (ensure these scripts are correctly imported in your HTML or JS module)
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js";
-import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js";
+import { getFirestore, doc, getDoc, setDoc, deleteDoc } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js";
 import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js";
 
 const firebaseConfig = {
@@ -15,7 +15,6 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const auth = getAuth(app);
-
 
 document.addEventListener('DOMContentLoaded', function() {
     setupBackButton();
@@ -74,6 +73,8 @@ function setNewWord() {
         alert("Congratulations, you've reviewed all the incorrect words!");
         window.location.href = 'minigames_home.html';
         return;
+
+        updateFavoriteIcon(); 
     }
 
     document.getElementById('next-word').style.display = 'none';
@@ -211,31 +212,57 @@ function setFeedback(message, color) {
 }
 
 function toggleFavorite() {
-    let favorites = JSON.parse(localStorage.getItem('gameFavorites')) || [];
-    const index = favorites.findIndex(fav => fav.word === currentWord);
-
-    if (index === -1) {
-        favorites.push({ word: currentWord, definition: currentDefinition });
+    const user = auth.currentUser;
+    if (user) {
+        const favoriteRef = doc(db, "users", user.uid, "favorites", currentWord);
+        getDoc(favoriteRef).then((docSnap) => {
+            if (docSnap.exists()) {
+                // If the word is already a favorite, remove it from Firestore
+                deleteDoc(favoriteRef).then(() => {
+                    console.log("Word removed from favorites");
+                    updateFavoriteIcon(false); // Update UI after removal
+                }).catch(error => {
+                    console.error("Error removing word from favorites:", error);
+                });
+            } else {
+                // If the word is not a favorite, add it to Firestore
+                setDoc(favoriteRef, {
+                    word: currentWord,
+                    definition: currentDefinition
+                }).then(() => {
+                    console.log("Word added to favorites");
+                    updateFavoriteIcon(true); // Update UI after adding
+                }).catch(error => {
+                    console.error("Error adding word to favorites:", error);
+                });
+            }
+        }).catch(error => {
+            console.error("Error checking favorite status:", error);
+        });
     } else {
-        favorites.splice(index, 1);
+        console.error("User not logged in");
     }
-
-    localStorage.setItem('gameFavorites', JSON.stringify(favorites));
-    updateFavoriteIcon();
 }
 
+// Function to update the favorite icon based on Firestore data
 function updateFavoriteIcon(shouldDisplay = false) {
-    let favorites = JSON.parse(localStorage.getItem('gameFavorites')) || [];
-    const isFavorite = favorites.some(favorite => favorite.word === currentWord);
-    
-    const favoriteButton = document.getElementById('favoriteButton');
-    favoriteButton.className = isFavorite ? 'fas fa-star' : 'far fa-star';
-    document.getElementById('favoriteLabel').textContent = isFavorite ? 'Remove from Collection' : 'Add Word to Collection';
+    const user = auth.currentUser;
+    if (user) {
+        const favoriteRef = doc(db, "users", user.uid, "favorites", currentWord);
+        getDoc(favoriteRef).then((docSnap) => {
+            const isFavorite = docSnap.exists();
+            const favoriteButton = document.getElementById('favoriteButton');
+            favoriteButton.className = isFavorite ? 'fas fa-star' : 'far fa-star';
+            document.getElementById('favoriteLabel').textContent = isFavorite ? 'Remove from Collection' : 'Add Word to Collection';
 
-    // Conditionally make the button visible based on the argument
-    if (shouldDisplay) {
-        favoriteButton.style.display = 'inline-block'; // Make the button itself visible
-        document.getElementById('favoriteContainer').style.display = 'inline-block'; // Also ensure the container is visible
+            // Conditionally make the button visible based on the argument
+            if (shouldDisplay) {
+                favoriteButton.style.display = 'inline-block';
+                document.getElementById('favoriteContainer').style.display = 'inline-block';
+            }
+        });
+    } else {
+        console.error("User not logged in");
     }
 }
 
@@ -247,4 +274,3 @@ document.getElementById('user-input').addEventListener('keydown', function(event
         }
     }
 });
-
