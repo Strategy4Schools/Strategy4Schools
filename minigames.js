@@ -17,54 +17,46 @@ document.addEventListener('DOMContentLoaded', function() {
     const featuredGamesContainer = document.querySelector('.featuredgames-container');
     const maskWidth = document.querySelector('.featured-games-mask').offsetWidth;
 
-    function updateInfoIcons() {
-    // Remove existing event listeners for all info icons
-    const allInfoIcons = document.querySelectorAll('.info-icon');
-    allInfoIcons.forEach(icon => {
-        icon.removeEventListener('mouseover', infoIconMouseover);
-        icon.removeEventListener('mouseout', infoIconMouseout);
-    });
 
-    // Attach event listeners only to info icons in the current set of featured games
-    const currentSetInfoIcons = document.querySelectorAll('.featuredgames-container .info-icon');
-    currentSetInfoIcons.forEach(icon => {
-        icon.addEventListener('mouseover', infoIconMouseover);
-        icon.addEventListener('mouseout', infoIconMouseout);
-    });
+ function updateArrowVisibility() {
+        const leftArrow = document.getElementById('left-arrow');
+        const rightArrow = document.getElementById('right-arrow');
 
-}
-    // Mouseover event handler for info icon
-    function infoIconMouseover(event) {
-        const infoText = event.target.nextElementSibling;
-        if (infoText && infoText.classList.contains('info-text')) {
-            infoText.style.display = 'block';
+        // Hide left arrow if the first set is displayed
+        if (currentSetIndex === 0) {
+            leftArrow.style.display = 'none';
+        } else {
+            leftArrow.style.display = 'block';
         }
-    }
 
-    // Mouseout event handler for info icon
-    function infoIconMouseout(event) {
-        const infoText = event.target.nextElementSibling;
-        if (infoText && infoText.classList.contains('info-text')) {
-            infoText.style.display = 'none';
+        // Hide right arrow if the last set is displayed
+        if (currentSetIndex === allFeaturedGames.length - 1) {
+            rightArrow.style.display = 'none';
+        } else {
+            rightArrow.style.display = 'block';
         }
     }
 
     // Function to slide featured games to the left or right
     function slideFeaturedGames(direction) {
-    const maskWidth = document.querySelector('.featured-games-mask').offsetWidth;
+        const maskWidth = document.querySelector('.featured-games-mask').offsetWidth;
 
-    if (direction === 'left' && currentSetIndex > 0) {
-        currentSetIndex--;
-    } else if (direction === 'right' && currentSetIndex < allFeaturedGames.length - 1) {
-        currentSetIndex++;
+        if (direction === 'left' && currentSetIndex > 0) {
+            currentSetIndex--;
+        } else if (direction === 'right' && currentSetIndex < allFeaturedGames.length - 1) {
+            currentSetIndex++;
+        }
+
+        const newTransformValue = -(currentSetIndex * maskWidth);
+        featuredGamesContainer.style.transform = `translateX(${newTransformValue}px)`;
+
+        featuredGamesContainer.addEventListener('transitionend', function() {
+            updateArrowVisibility();
+        }, { once: true });
     }
 
-    const newTransformValue = -(currentSetIndex * maskWidth);
-    featuredGamesContainer.style.transform = `translateX(${newTransformValue}px)`;
-
-    featuredGamesContainer.addEventListener('transitionend', updateInfoIcons, { once: true });
-}
-
+    // Initial setup
+    updateArrowVisibility();
 
     // Attach event listeners to arrow buttons
     document.getElementById('left-arrow').addEventListener('click', function() {
@@ -74,11 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('right-arrow').addEventListener('click', function() {
         slideFeaturedGames('right');
     });
-
-    // Initial setup for info icons
-    updateInfoIcons();
 });
-
 
 
 
