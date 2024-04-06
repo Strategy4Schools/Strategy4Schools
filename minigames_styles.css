@@ -1,14 +1,18 @@
 body {
     padding-top: 70px;
-    font-family: 'Source Code Pro', monospace;
+    font-family: "Electrolize", sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #243A4E;
     color: white;
+    background: linear-gradient(to bottom, #243A4E 0%, #2D4A61 50%, #364E70 100%);
+    transform: scale(0.9);
+    transform-origin: top left;
+    width: 111.11%;
+    height: 111.11%;
 }
 
 header {
-    background-color: #1C2D3D;
+    background: linear-gradient(to bottom, #1C2D3D 0%, #243A4E 100%);
     color: #fff;
     padding-bottom: 20px;
     padding-top: 20px;
@@ -424,7 +428,7 @@ footer {
     width: 100%;
     font-size: 15px;
     box-sizing: border-box;
-    font-family: 'Source Code Pro', monospace;
+    font-family: "Electrolize", sans-serif;
     background-color: #fff;
     font-weight: bold;
     position: relative; /* Set the position to relative for pseudo-element positioning */
@@ -667,4 +671,11 @@ footer {
     padding: 0 60px; /* Add padding to create space for the arrows */
     margin: 0 auto;
     position: relative;
+}
+
+.simple-divider {
+    border: 0;
+    height: 1px; /* Thickness of the line */
+    background-color: white; /* Color of the line */
+    margin: 50px 0; /* Increase vertical space around the divider */
 }
