@@ -5,10 +5,6 @@ body {
     padding: 0;
     color: white;
     background: linear-gradient(to bottom, #243A4E 0%, #2D4A61 50%, #364E70 100%);
-    transform: scale(0.9);
-    transform-origin: top left;
-    width: 111.11%;
-    height: 111.11%;
 }
 
 header {
@@ -49,6 +45,14 @@ main {
     margin-top: 0px;
 
 }
+
+.main-content {
+    transform: scale(0.9);
+    transform-origin: top left;
+    width: 111.11%;
+    height: 111.11%;
+}
+
 
 footer {
     background-color: #14202b;
