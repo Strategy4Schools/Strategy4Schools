@@ -1,0 +1,288 @@
+body {
+    font-family: "Electrolize", sans-serif;
+    background-color: #243A4E;
+    background: linear-gradient(to bottom, #243A4E 0%, #2D4A61 50%, #364E70 100%);
+    color: #333; /* Dark text for contrast */
+    padding: 20px;
+    text-align: center;
+    line-height: 1.6;
+    min-height: 100vh; /* Ensure the body takes at least the full height of the viewport */
+}
+h1 {
+    font-size: 2.5em;
+    color: white;
+    margin: 20px 0;
+}
+
+.game-container {
+    background-color: transparent; /* White background for the main container */
+    max-width: 600px;
+    margin: 30px auto;
+    margin-top: 10%;
+    position: relative;
+    padding: 20px;
+}
+
+#wordToGuess, #alphabet, #wrongLetters {
+    font-family: "Electrolize", sans-serif;
+    margin: 50px 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+#wrongLetters {
+    color: white; /* Change text color to white */
+    margin: 50px 0;
+    font-size: 1.2em;
+}
+
+.alphabet-row {
+    display: flex;
+    justify-content: center;
+    margin: 5px 0;
+}
+
+#wordToGuess {
+    letter-spacing: 3px;
+    font-size: 2.8em;
+    text-transform: uppercase;
+    color: white;
+}
+
+
+.alphabet-tile {
+    background-color: #e0e0e0; /* Light grey tiles */
+    color: black; /* Dark text for tiles */
+    width: 15px; /* Fixed width for each tile */
+    height: 20px; /* Fixed height for each tile */
+    line-height: 20px; /* Align text vertically in the center */
+    text-align: center; /* Align text horizontally in the center */
+    margin: 2px;
+    padding: 10px 15px;
+    border: 1px solid black;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.5s, transform 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.alphabet-tile:hover {
+    background-color: #d5d5d5;
+}
+
+.alphabet-tile, button {
+    background-color: #e0e0e0; /* Light grey */
+    color: black;
+    padding: 10px 15px;
+    margin: 2px;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.alphabet-tile.disabled {
+    background-color: #bbbbbb; /* Disabled state */
+    color: #777;
+    cursor: not-allowed;
+}
+
+.alphabet-tile.disabled {
+    background-color: #bbbbbb; /* Disabled tiles */
+    color: black;
+    cursor: not-allowed;
+}
+
+
+button {
+    background-color: #333; /* Simple button */
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #555; /* Darker on hover */
+}
+
+#playAgain {
+    margin-top: 30px;
+}
+
+#lives img {
+    width: 70px; 
+    height: auto;
+    margin: 0 5px;
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4); /* Dimmed background */
+    padding-top: 250px;
+}
+
+.modal-content {
+    position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: #243A4E;
+                padding: 25px;
+                border-radius: 25px;
+                border-color: black;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+                text-align: center;
+                z-index: 5000;
+                width: 80%;
+                max-width: 400px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+}
+
+
+.modal-content p {
+    font-family: "Electrolize", sans-serif;
+                font-size: 1em;
+                margin-bottom: 20px;
+                color: white;
+                font-weight: 650;
+}
+
+
+.modal-content button {
+    font-family: "Electrolize", sans-serif;
+                background-color: #1C2D3D;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+                border-radius: 5px;
+                font-weight: 700;
+}
+
+.modal-content button:hover {
+    background-color: #fdb740;
+}
+
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#resultMessage {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+#wordDefinition {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+#backButtonContainer {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2000;
+}
+
+#backToMinigames {
+    font-family: "Electrolize", sans-serif;
+    background-color: #1C2D3D; /* A deep green for better visibility and aesthetics */
+    color: white; /* White text for high contrast and readability */
+    border: 2px solid black; /* Solid border to match the background */
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: all 0.3s ease; /* Smooth transition for a more interactive feel */
+}
+
+#backToMinigames:hover {
+    background-color: #fdb740; /* A slightly darker green for the hover state */
+    border-color: black; /* Darker border to emphasize the hover effect */
+    color: black;
+}
+
+
+@keyframes flip {
+    0% { transform: rotateY(0); }
+    100% { transform: rotateY(180deg); }
+}
+
+.flip {
+    animation: flip 0.5s ease;
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0px) scale(1);
+    }
+    25% {
+        transform: translateX(-5px) scale(1.1);
+    }
+    50% {
+        transform: translateX(5px) scale(1.1);
+    }
+    75% {
+        transform: translateX(-5px) scale(1.1);
+    }
+}
+
+.shake {
+    animation: shake 0.5s;
+}
+
+
+.alphabet-tile.incorrect {
+    background-color: red !important;
+    transition: background-color 0.5s;
+}
+
+.temp-enlarge {
+    transform: scale(1.1);
+    transition: transform 0.5s; /* Ensure this duration matches the JavaScript setTimeout */
+}
+
+
+
+.alphabet-tile.correct {
+    background-color: green !important;
+    transform: scale(1.1);
+    transition: background-color 0.5s;
+}
+

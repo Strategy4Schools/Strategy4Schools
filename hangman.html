@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Word Survival</title>
+    <link rel="stylesheet" type="text/css" href="hangmanStyle.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="backButtonContainer">
+        <button id="backToMinigames" onclick="window.location.href='minigames_home.html'">← Back to Minigames</button>
+    </div>
+    <h1>Word Survival</h1>
+    <div class="game-container">
+        <div id="lives"></div>
+        <div id="wordToGuess"></div>
+    </div>
+    <div id="alphabet"></div>
+    <div id="wrongLetters"></div>
+    <!-- Pop-up modal for game result -->
+<div id="gameResultModal" class="modal">
+    <div class="modal-content">
+        <p id="resultMessage"></p>
+        <p id="wordDefinition"></p>
+        <button id="playAgainButton">Play Again</button> <!-- Play Again button -->
+    </div>
+</div>
+    <div id="playAgain" style="display:none">
+        <button onclick="startGame()">Play Again</button>
+    </div>
+    <script src="hangmanScript.js"></script>
+</body>
+</html>
