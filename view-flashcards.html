@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Flashcards</title>
+    <link rel="stylesheet" href="view-flashcards_styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div id="backButtonContainer">
+    <button id="backToMinigames" onclick="window.location.href='minigames_home.html'">← Back to Minigames</button>
+</div>
+    <main id="content">
+        <h2>My Flashcards</h2>
+        <div id="flashcards-container"> 
+            <section id="folders-section">
+    <div class="header-with-button">
+        <h3>Folders</h3>
+        <button id="create-folder" aria-label="Create new folder">✚</button>
+    </div>
+        <ul id="folders-list"></ul>
+            </section>
+            <section id="flashcards-view">
+                <h3>Flashcards</h3>
+                <!-- Flashcards will be displayed here -->
+            </section>
+        </div>
+    </main>
+    <script src="view-flashcards_script.js"></script>
+</body>
+</html>
