@@ -122,49 +122,53 @@ function setupGame(definitions) {
     }
 
     function showDefinitionPopup(definition, correctWord, definitions) {
-        const popupContainer = document.createElement('div');
-        popupContainer.id = 'wordPopup';
-        popupContainer.style.position = 'fixed';
-        popupContainer.style.top = '50%';
-        popupContainer.style.left = '50%';
-        popupContainer.style.transform = 'translate(-50%, -50%)';
-        popupContainer.style.backgroundColor = '#FFF';
-        popupContainer.style.padding = '20px';
-        popupContainer.style.borderRadius = '10px';
-        popupContainer.style.zIndex = '1000';
-        popupContainer.style.color = '#000'; // Ensure text color is readable
-        popupContainer.innerHTML = `
-            <h3>Please type the correct word:</h3>
-            <p><strong>Definition:</strong> ${definition}</p>
-            <input type="text" id="userInput" placeholder="Type here" />
-            <button id="submitWord">Submit</button>
-            <div id="clickReveal" style="margin-top: 10px; cursor: pointer;">
-                <p>Click here to reveal the correct answer</p>
-                <div id="revealAnswer" style="display:none;">${correctWord}</div>
-            </div>
-        `;
-    
-        document.body.appendChild(popupContainer);
-    
-        // Add event listeners
-        document.getElementById('submitWord').addEventListener('click', function() {
-            const userInput = document.getElementById('userInput').value;
-            if (userInput.trim().toLowerCase() === correctWord.toLowerCase()) {
-                document.body.removeChild(popupContainer); // Remove popup
-                showNextButton(definitions); // Move to next question
-            } else {
-                alert('Incorrect. Please try again or click to reveal the answer.');
-                document.getElementById('clickReveal').style.display = 'block'; // Show the click to reveal section
-            }
-        });
-    
-        // Setup click to reveal
-        document.getElementById('clickReveal').addEventListener('click', function() {
-            document.getElementById('revealAnswer').style.display = 'block';
-            // Optional: disable further clicks to prevent hiding the answer
-            this.style.pointerEvents = 'none'; 
-        });
-    }
+    const gameContainer = document.getElementById('gameContainer');
+    gameContainer.style.display = 'none'; // Hide game elements
+
+    const popupContainer = document.createElement('div');
+    popupContainer.id = 'wordPopup';
+    popupContainer.style.position = 'fixed';
+    popupContainer.style.top = '50%';
+    popupContainer.style.left = '50%';
+    popupContainer.style.transform = 'translate(-50%, -50%)';
+    popupContainer.style.backgroundColor = '#243A4E';
+    popupContainer.style.padding = '20px';
+    popupContainer.style.borderRadius = '10px';
+    popupContainer.style.zIndex = '1000';
+    popupContainer.style.color = 'white';
+    popupContainer.innerHTML = `
+        <h3>Please type the previous word</h3>
+        <p><strong>Definition:</strong> ${definition}</p>
+        <input type="text" id="userInput" placeholder="Type here" />
+        <button id="submitWord">Submit</button>
+        <div id="clickReveal" style="margin-top: 10px; cursor: pointer;">
+            <p>Click here to reveal the correct answer</p>
+            <div id="revealAnswer" style="display:none;">${correctWord}</div>
+        </div>
+    `;
+
+    document.body.appendChild(popupContainer);
+
+    // Hide the popup and show the game elements again when the correct word is submitted
+    document.getElementById('submitWord').addEventListener('click', function() {
+        const userInput = document.getElementById('userInput').value;
+        if (userInput.trim().toLowerCase() === correctWord.toLowerCase()) {
+            document.body.removeChild(popupContainer); // Remove popup
+            gameContainer.style.display = 'block'; // Show game elements again
+            showNextButton(definitions); // Move to next question
+        } else {
+            alert('Incorrect. Please try again or click to reveal the answer.');
+            document.getElementById('clickReveal').style.display = 'block'; // Show the click to reveal section
+        }
+    });
+
+    // Setup click to reveal
+    document.getElementById('clickReveal').addEventListener('click', function() {
+        document.getElementById('revealAnswer').style.display = 'block';
+        // Optional: disable further clicks to prevent hiding the answer
+        this.style.pointerEvents = 'none'; 
+    });
+}
     
     fetchWords(); // Start the game by fetching the words
 });
