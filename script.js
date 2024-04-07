@@ -1,28 +1,80 @@
-// Get the modal
-var modal = document.getElementById("loginModal");
+window.onscroll = function() {
+  scrollFunction();
+};
 
-// Get the button that opens the modal
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function scrollFunction() {
+  var backToTopBtn = document.getElementById("back-to-top-btn");
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    backToTopBtn.style.display = "block";
+  } else {
+    backToTopBtn.style.display = "none";
+  }
+}
+
+
+var mainModal = document.getElementById("loginModal");
+var teacherModal = document.getElementById("teacherLoginForm");
+var studentModal = document.getElementById("studentLoginForm");
+
 var btn = document.getElementById("login-btn");
+var teacherBtn = document.getElementById("teacher-login");
+var studentBtn = document.getElementById("student-login");
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+var spans = document.getElementsByClassName("close");
 
-// When the user clicks the button, open the modal 
+// Main login button opens the first modal
 btn.onclick = function() {
-    modal.style.display = "block";
+    mainModal.style.display = "block";
 }
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    modal.style.display = "none";
+// Each button in the main modal opens the corresponding login modal
+teacherBtn.onclick = function() {
+    mainModal.style.display = "none";
+    teacherModal.style.display = "block";
+}
+studentBtn.onclick = function() {
+    mainModal.style.display = "none";
+    studentModal.style.display = "block";
 }
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
+
+document.getElementById('hero-student-login').addEventListener('click', function() {
+    mainModal.style.display = "none";
+    studentModal.style.display = "block";
+});
+
+document.getElementById('hero-teacher-login').addEventListener('click', function() {
+    mainModal.style.display = "none";
+    teacherModal.style.display = "block";
+});
+
+
+
+// Close modals
+for (var i = 0; i < spans.length; i++) {
+    spans[i].onclick = function() {
+        this.parentElement.parentElement.style.display = "none";
     }
 }
+
+// Close modals when clicking outside of them
+window.onclick = function(event) {
+    if (event.target == mainModal) {
+        mainModal.style.display = "none";
+    } else if (event.target == teacherModal) {
+        teacherModal.style.display = "none";
+    } else if (event.target == studentModal) {
+        studentModal.style.display = "none";
+    }
+}
+
+
+
+
 
 // Login validation and redirection
 document.getElementById('loginForm').addEventListener('submit', function(e) {
@@ -60,4 +112,36 @@ document.addEventListener('DOMContentLoaded', function() {
             window.location.href = 'http://www.example.com/subscribe';
         });
     }
+});
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  AOS.init();
+});
+
+
+function toggleFaq(id) {
+    var answer = document.getElementById(id);
+    var question = answer.previousElementSibling;
+
+    // Toggle answer display
+    answer.style.display = (answer.style.display === "block" ? "none" : "block");
+
+    // Toggle question styles
+    if (answer.style.display === "block") {
+        question.classList.add("active");
+    } else {
+        question.classList.remove("active");
+    }
+}
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Hide all FAQ answers on page load
+  var faqAnswers = document.querySelectorAll('.faq-answer');
+  faqAnswers.forEach(function(answer) {
+    answer.style.display = 'none';
+  });
+  // ... other initialization code
 });

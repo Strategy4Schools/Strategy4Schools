@@ -1,31 +1,30 @@
-/* Reset some default styles */
+body, h1, h2, h3, p {
+    font-family: "Comfortaa", sans-serif;
+}
+
 body, h1, h2, p, ul {
     margin: 0;
     padding: 0;
 }
 
 body {
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: "Comfortaa", sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #D3D3D3;
+    color: #333333; /* Dark grey for better readability */
+    background-color: white; /* Lighter background for the whole page */
 }
-
 header {
-    background-color: #FFD700;
-    color: #fff;
-    padding-bottom: 30px;
-    padding-top: 30px;
-    text-align: center;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 5px 20px; /* Adjust padding as needed */
+    background-color: #fff;
+    color: #fff;
 }
 
 .auth-buttons {
     display: flex;
-    justify-content: flex-start;
-    margin-left: 70px;
+    justify-content: flex-end;
 }
 
 #subscribe-btn {
@@ -33,11 +32,11 @@ header {
     padding: 20px 50px;
     margin: 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: 50px 50px 50px 50px;
     cursor: pointer;
-    background-color: #178090;
+    background-color: #32a3f3;
     font-size: 20px;
-    font: 'Roboto Condensed', sans-serif;
+    font-family: "Comfortaa", sans-serif;
     font-weight: bold;
 
 }
@@ -47,36 +46,55 @@ header {
     padding: 20px 50px;
     margin: 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: 50px 50px 50px 50px;
     cursor: pointer;
-    background-color: #178090;
+    background-color: #32a3f3;
     font-size: 20px;
-    font: 'Roboto Condensed', sans-serif;
+    font-family: "Comfortaa", sans-serif;
     font-weight: bold;
 }
 
 #login-btn:hover, #subscribe-btn:hover {
-    background-color: white;
-    color: black;
+    background-color: #227cc3;
+    color: white;
+}
+
+
+.logo-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    flex-shrink: 0; /* Prevents flex item from shrinking */
+}
+
+.logo-container a {
+    display: block; /* Revert back to block if flex didn't work as expected */
+    text-align: center; /* Ensures content inside anchor tag is centered */
+    width: 100%; /* Full width */
+    margin-left: 100px;
 }
 
 .logo-container img {
-    height: 150px;
-    width: 200px;
+    height: 80px;
+    width: auto;
 }
 
-.logo-container {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 20px;
+nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    transform: translateX(-20px); /* Adjust the value as needed to shift left */
 }
+
 
 nav ul {
-    background-color: #178090;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 15px 0;
-    margin-right: 50px;
+    margin: 0;
+    list-style: none;
+    
 }
 
 nav ul li {
@@ -87,37 +105,9 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
-
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
     color: black;
-    text-align: centre;
-    padding-top: 20px;
     font-weight: bold;
     font-size: 20px;
-    border: none;
-    border-radius: 4px;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
 
 }
 
@@ -126,8 +116,7 @@ nav ul li:hover .dropdown-content {
 }
 
 main {
-    padding: 20px;
-    margin-bottom: 1000px;
+    margin-bottom: 0px;
 }
 
 section#home {
@@ -141,11 +130,115 @@ section#home {
 }
 
 footer {
-    text-align: center;
-    padding: 20px 0;
-    background-color: #333;
-    color: #fff;
+    background-color: #178090;
+    color: white;
+    padding: 40px 0;
+    font-family: "Comfortaa", sans-serif;}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
 }
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-column h3 {
+    margin-bottom: 15px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li a {
+    color: white;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.footer-column.newsletter {
+    width: 30%;
+}
+
+.footer-column.newsletter p {
+    margin-bottom: 15px;
+}
+
+.footer-column.newsletter form {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.footer-column.newsletter input[type="email"] {
+    font-family: "Comfortaa", sans-serif;
+    flex: 1;
+    padding: 10px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.footer-column.newsletter button {
+    font-family: "Comfortaa", sans-serif;
+    border: none;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.social-icons {
+    display: flex;
+}
+
+.social-icons a img {
+    width: 35px; /* Adjust size as needed */
+    height: auto;
+    margin-right: 30px;
+}
+
+@media screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-column {
+        margin-bottom: 20px;
+    }
+    .footer-column.newsletter form {
+        flex-direction: column;
+    }
+    .footer-column.newsletter input[type="email"] {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+.footer-copy {
+    text-align: center;
+    padding-top: 20px; /* Add space above the copyright text */
+    color: white; /* Assuming you want it white as the rest of the footer content */
+    border-top: 1px solid white; /* A subtle line to separate the copyright */
+    margin-top: 40px; /* Space between the columns and this new line */
+}
+
+@media screen and (max-width: 768px) {
+    /* Handles responsive layout changes if needed */
+    .footer-copy {
+        padding-top: 10px;
+        margin-top: 20px;
+    }
+}
+
 
 @media screen and (max-width: 768px) {
     nav ul li {
@@ -169,7 +262,7 @@ main {
 }
 
 footer {
-    background-color: #333;
+    background-color: #32a3f3;
     color: white;
     text-align: center;
     padding: 1em 0;
@@ -185,28 +278,91 @@ p {
 
 
 
-/* Modal (background) */
 .modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 10; /* Sit on top */
   left: 0;
   top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0,0,0,0.4);
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
-/* Modal Content */
+/* Modal Content Box */
 .modal-content {
   background-color: #fefefe;
-  margin: 10% auto;
+  margin: 10% auto; /* from the top and centered */
   padding: 20px;
   border: 1px solid #888;
-  width: 40%;
-  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+  width: 80%; /* Adjust the width as needed */
+  height: 40%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 8px;
+  position: relative; /* Needed for absolute positioning of children */
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* Close Button */
+.close {
+  color: #aaa;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Style for the login option buttons */
+#teacher-login, #student-login {
+    display: inline-block;
+    margin: 70px;
+    padding: 70px 50px;
+    left: 4%;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 20px;
+    position: relative; /* Enable absolute positioning for children */
+}
+
+#teacher-login:hover, #student-login:hover {
+    background-color: #45a049;
+}
+
+/* Text inside the buttons */
+#teacher-login span, #student-login span {
+    position: absolute;
+    bottom: 10px; /* Position at the bottom of the button */
+    width: 100%;
+    right: 2px;
+
+}
+
+#teacher-login img, #student-login img {
+    display: block;
+    margin: 0 auto;
+    height: 50px; /* Adjust the height as needed */
+    width: auto;
+}
+
+/* Additional styling for buttons to ensure centering and aesthetics */
+#teacher-login, #student-login {
+    margin-top: 50px; /* Space from the top of the modal */
 }
 
 /* Input Fields */
@@ -218,13 +374,14 @@ input[type=text], input[type=password] {
   border: 1px solid #ccc;
   box-sizing: border-box;
   border-radius: 4px;
+  font-size: 20px;
 }
 
 /* Button */
 input[type=submit] {
   background-color: #4CAF50;
   color: white;
-  padding: 14px 20px;
+  padding: 20px 20px;
   margin: 8px 0;
   border: none;
   cursor: pointer;
@@ -236,17 +393,777 @@ input[type=submit]:hover {
   background-color: #45a049;
 }
 
-/* Close Button */
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+
+/* Hero Section Styles */
+#hero {
+    position: relative;
+    background: url('https://github.com/Strategy4Schools/Strategy4Schools/blob/main/homepage%20image.jpg?raw=true') no-repeat center center/cover;
+    background-attachment: fixed;
+    color: #fff;
+    text-align: center;
+    padding: 450px 0;
+    z-index: 1;
 }
 
-.close:hover,
-.close:focus {
-  color: black;
+#hero h1 {
+    font-family: "Comfortaa", sans-serif;
+    font-size: 4em; /* Larger size */
+    font-weight: 700; /* Bolder */
+    color: #fff; /* Assuming white text */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* Subtle shadow */
+    position: relative;
+    z-index: 2;
+}
+
+#hero p {
+    position: relative;
+  font-size: 2.5em; /* Larger than before */
+  margin-bottom: 1em;
+  color: #eaeaea; /* Lighter color for contrast */
+  z-index: 2;
+}
+
+#hero h1, #hero p {
+    position: relative;
+    left: 0px; /* Moves text and button 10px to the left */
+    top: -100px; /* Moves text and button 10px up */
+}
+
+@media screen and (max-width: 768px) {
+    #hero h1 {
+        font-size: 2.5em;
+    }
+}
+
+
+.hero-login-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+    top: -100px; /* Move upwards within the hero section */
+}
+
+.hero-login-button {
+    padding: 12px 18px;
+    border-radius: 5px;
+    border: 2px solid white;
+    color: #fff;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold; /* Make text bolder */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25); /* Add shadow for depth */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.hero-login-button:hover {
+    background-color: #227cc3;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.35); /* Slightly larger shadow on hover */
+    transform: translateY(-2px); /* Slight lift when hovered */
+}
+
+
+.hero-cta {
+  padding: 10px 20px;
+  background-color: #178090;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none; /* Remove underline */
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.hero-cta:hover {
+  background-color: #156372; /* Darker shade on hover */
+}
+
+
+.section-card {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.section-icon {
+  width: 50px; /* Adjust as needed */
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.section-title {
+  font-size: 1.8em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.section-content {
+  font-size: 1.1em;
+  color: #666;
+}
+
+/* Animation Styles */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.animate-title {
+    animation: fadeIn 2s;
+}
+
+.animate-text {
+    animation: fadeIn 3s;
+}
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    /* Your existing responsive styles */
+}
+
+
+
+/* About Section Styles */
+#about {
+    text-align: center;
+    padding: 300px 20px;
+    background-color: #eef6ff;
+}
+
+.about-mission, .about-profiles {
+    margin-bottom: 30px;
+}
+
+.about-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.about-text {
+    padding: 20px;
+}
+
+#about-mission {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px; /* Spacing below the section */
+}
+
+#about-mission .about-image {
+    flex-shrink: 0;
+    width: 30%; /* Image takes up half the width of the container */
+    height: auto;
+    border-radius: 10px;
+    margin-right: -50px; /* Overlap effect */
+    z-index: 1;
+}
+
+#about-mission .about-content {
+    background: #fff;
+    padding: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    width: 60%; /* Content takes up slightly more than half the width */
+    
+}
+
+#about-mission .about-heading {
+    margin-bottom: 20px;
+}
+
+#about-mission .about-subtitle {
+    display: block;
+    color: #888;
+    margin-bottom: 5px;
+}
+
+#about-mission .about-title {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    #about-mission {
+        flex-direction: column;
+    }
+
+    #about-mission .about-image {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    #about-mission .about-content {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+
+.about-profiles {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.about-founder, .about-programmer {
+    flex-basis: 45%; /* Adjust the width for responsiveness */
+    margin: 5px;
+    padding: 30px;
+    padding-bottom: 500px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.about-founder h3, .about-programmer h3 {
+    color: #33a4f5;
+}
+
+@media screen and (max-width: 768px) {
+    .about-profiles {
+        flex-direction: column;
+    }
+    .about-founder, .about-programmer {
+        flex-basis: 90%;
+    }
+}
+
+
+/* Services Section Styles */
+.services-section {
+    padding: 100px 20px;
+    text-align: center;
+    background-color: #32a3f3; /* A light background color */
+}
+
+
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px; /* Adds space between cards */
+}
+
+.service-card {
+    flex-basis: calc(33.333% - 30px); /* Three cards per row, minus the gap */
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.service-icon {
+    width: 50px; /* Adjust as needed */
+    height: 50px; /* Adjust as needed */
+    object-fit: cover; /* This will ensure the images cover the area without stretching */
+    margin-bottom: 5px;
+}
+
+.service-card h3 {
+    margin-bottom: 10px;
+    color: #32a3f3; /* Theme color for titles */
+}
+
+.service-card p {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.5;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .service-card {
+        flex-basis: calc(50% - 30px); /* Two cards per row on smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .service-card {
+        flex-basis: 100%; /* One card per row on very small screens */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .service-icon {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+
+/* Testimonials Section Styles */
+#testimonials {
+    position: absolute;
+    top: 95%; /* Adjust this value to place it halfway over the hero section */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; /* Above the hero section */
+    width: 80%; /* Adjust width as needed */
+    margin: 0 auto;
+    padding: 50px;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    
+}
+
+
+/* Adjust z-index for other sections if needed */
+#about, #services, #contact, #featured-programs, #news-updates {
+    position: relative;
+    z-index: 0; /* Below the overlapping hero section */
+    /* Other styles remain the same... */
+}
+
+#testimonials blockquote {
+    font-style: italic;
+    color: #333;
+    font-size: 20px;
+}
+
+
+marquee {
+    font-size: 1.2em;
+    color: #333;
+}
+
+
+.button {
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+.button:hover {
+  background-color: [Darker Shade of Button Color];
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+}
+
+
+.testimonial-card {
+  background: #f4f4f4;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-quote {
+  font-style: italic;
+  color: #555;
+}
+
+.testimonial-author {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #333;
+}
+
+
+
+/* Impact study Section*/
+#impact-study {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  background-color: #eef6ff;
+}
+
+.impact-study-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.text-content {
+  flex-basis: 60%;
+  text-align: left;
+}
+
+.section-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  height: 4px;
+  width: 50px;
+  background-color: #3498db;
+}
+
+.impact-study-content h3 {
+  font-size: 26px;
+  color: #3498db;
+  margin-top: 5px;
+}
+
+.impact-study-content p {
+  font-size: 18px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.impact-study-link {
   text-decoration: none;
-  cursor: pointer;
+  background-color: #3498db;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.impact-study-link:hover {
+  background-color: #2980b9;
+}
+
+.image-content {
+  flex-basis: 40%;
+  /* Use the image as a background or insert an img tag */
+  background: url('path-to-your-image.jpg') no-repeat center center/cover;
+  height: 300px; /* or the height you prefer */
+}
+
+
+
+
+
+/* Subscription Options Section */
+#subscription-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+  background: #eef6ff; /* Or any color that matches your design */
+}
+
+.subscription-title h2 {
+  font-size: 3.5em;
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.subscription-cards {
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+}
+
+/* Hover Effect */
+.subscription-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.subscription-card {
+  background: #FFFFFF;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  width: 400px; /* Keep the width the same for both cards */
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centering the content */
+}
+
+.subscription-card img.card-icon {
+  width: 50px; /* Adjust the size as needed */
+  margin-top: -20px; /* Pull the icon up to sit above the card */
+}
+
+.subscription-card h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #4A4A4A;
+  text-align: center;
+  padding: 20px;
+  width: 100%; /* Full width of the card */
+  box-sizing: border-box; /* Padding included in width */
+  margin: 0; /* No margin for the title */
+  margin-bottom: 10px;
+}
+
+.subscription-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%; /* List takes full width of the card */
+  box-sizing: border-box; /* Padding included in width */
+}
+
+.subscription-card ul li {
+  padding: 10px 20px; /* Padding inside each list item */
+  border-bottom: 1px solid #EAEAEA;
+  width: 100%; /* Full width of the card */
+  box-sizing: border-box; /* Padding included in width */
+}
+
+/* Additional styles for the plus section in Advanced card */
+.advanced .plus-content {
+  background: #b2e2ff; /* Background color for the plus content */
+  padding: 20px;
+  width: 100%; /* Full width of the card */
+  box-sizing: border-box; /* Padding included in width */
+}
+
+.advanced .plus-content strong {
+  font-weight: bold;
+  color: #00a0ff; /* Color for the "Plus..." title */
+  margin-bottom: 10px; /* Space below the "Plus..." title */
+}
+
+/* Specific height for the Basic card to make it shorter */
+.basic {
+  height: 350px; /* Fixed height to make the Basic card shorter */
+  justify-content: space-between; /* Distribute space between items */
+  background-color: #ccffcc;
+}
+
+/* Allow the Advanced card to grow with its content */
+.advanced {
+  height: auto; /* Height based on content */
+  background-color: #b2e2ff;
+}
+
+.advanced h3 {
+    margin-top: 30px;
+    color: #00a0ff;
+}
+
+.basic h3 {
+    color: #32CD32;
+}
+
+.basic ul {
+    padding-bottom: 30px;
+}
+
+/* Remove the bottom border of the last list item to tighten up space */
+.basic ul li:last-child, .advanced ul li:last-child {
+  border-bottom: none;
+}
+
+@media (max-width: 768px) {
+  .subscription-cards {
+    flex-direction: column;
+  }
+
+  .subscription-card {
+    width: 90%; /* Full width on smaller screens */
+    height: auto; /* Height based on content for responsiveness */
+  }
+
+  .basic, .advanced {
+    height: auto; /* Height based on content for responsiveness */
+  }
+}
+
+
+
+
+
+
+
+
+
+/* FAQ Section Styles */
+.faq-section {
+    padding: 200px 20px;
+    background-color: white;
+    text-align: left;
+    margin-top: 70px;
+    margin-left: 50px;
+
+}
+
+/* Frequently Asked Questions Header Style */
+.faq-section h2 {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 90px; /* Spacing below the header */
+    color: black; /* Header text color */
+    font-size: 70px; /* Header font size */
+}
+
+/* Decorative Line under FAQ Header */
+.faq-section h2::after {
+    content: '';
+    display: block;
+    width: 200%; /* Length of the line */
+    height: 4px; /* Thickness of the line */
+    background: linear-gradient(to right, #34a4f5, #34a4f5, #296796); /* Gradient color */
+    position: absolute;
+    bottom: -10px; /* Position below the header */
+    left: 20%;
+    transform: translateX(-50%);
+    border-radius: 2px; /* Rounded corners for the line */
+}
+
+
+.faq-container {
+    margin: 0 auto;
+    max-width: 800px; /* Adjust as necessary */
+
+}
+
+.faq-item {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    overflow: hidden; /* For border-radius to work on child elements */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    margin-left: -350px;
+    margin-right: 200px;
+}
+
+.faq-item:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.faq-question {
+    font-size: 20px;
+    font-weight: 700;
+    padding: 20px 30px;
+    margin: 0; /* Remove any default margins */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    color: black;
+    background-color: #e9ecef;
+
+}
+
+.faq-question::after {
+    content: '➕';
+    font-size: 24px;
+}
+
+.faq-answer {
+    display: none;
+    padding: 0 30px 30px;
+    color: black;
+    background-color: #f7f7f7;
+}
+
+.faq-answer p {
+    font-size: 20px;
+    margin-top: 0;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+
+.faq-question.active::after {
+    content: '➖'; /* Change the plus to minus */
+}
+
+/* Initial state of the question with a plus */
+.faq-question::after {
+    content: '➕';
+    font-size: 24px;
+    color: black; /* Theme color for icons */
+    margin-left: 15px;
+}
+
+
+
+#free-preview {
+    text-align: center;
+    padding: 150px 20px;
+    background-color: #f7f7f7;
+    margin-top: 20px;
+}
+
+#free-preview h2 {
+    color: #333;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.free-preview-btn {
+    display: inline-block;
+    padding: 15px 35px;
+    color: white;
+    background-color: #34a4f5;
+    border-radius: 30px;
+    border: 3px solid white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.free-preview-btn:hover {
+    color: white;
+    background-color: #227cc3;
+}
+
+
+
+header.scrolled {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+header.scrolled a { color: #333; }
+
+
+a:hover, .button:hover {
+    color: #32a3f3;
+    text-decoration: underline;
+}
+
+
+input[type="text"]:focus, input[type="password"]:focus {
+    border-color: #32a3f3;
+    box-shadow: 0 0 8px rgba(23, 128, 144, 0.4);
+}
+
+
+
+#back-to-top-btn {
+  display: none; /* Hidden by default, will be displayed when page is scrolled down */
+  position: fixed; /* Fixed position */
+  bottom: 70px; /* Place the button 20px from the bottom */
+  right: 40px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it sits on top of other elements */
+  border: none; /* No border */
+  outline: none; /* Remove outline */
+  background-color: black; /* Theme color */
+  color: white;
+  cursor: pointer; /* Pointer cursor on hover */
+  padding: 15px; /* Padding to make the button bigger */
+  border-radius: 150px 150px 150px 150px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#back-to-top-btn:hover {
+  background-color: #555; /* Slightly darker shade on hover */
+}
+
+html {
+    scroll-behavior: smooth;
 }

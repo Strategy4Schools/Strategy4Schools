@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Strategy4Schools | HomePage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-     <!-- Login Modal styles -->
     <style>
         .modal { /* Modal styles */ }
         .modal-content { /* Modal content styles */ }
@@ -14,46 +16,70 @@
     </style>
 </head>
 <body>
-    <header>
-        <div class="auth-buttons">
-            <button id="login-btn">Login</button>
-            <a href="quote_details.html">
-    <button id="subscribe-btn">Subscribe</button>
-</a>
-        </div>
+        <header>
         <div class="logo-container">
-            <a href="index.html">
-                <img src="https://mail.google.com/mail/u/1?ui=2&ik=de49c6e04d&attid=0.1&permmsgid=msg-f:1793163480349249653&th=18e298af4e6b9075&view=fimg&fur=ip&sz=s0-l75-ft&attbid=ANGjdJ_RmYTSzhXGWsdCDdVc8rpAKoxg8kBW-Vmq4uwM2ooGFjCeF-RT3OOq-yLl4hZqtL6m0qr1xUXHwG9GQxsSCXMgrwtAjiQwaswyJOBOsEHMY6loU1IfMp712wY&disp=emb&realattid=ii_ltltrcmp0" alt="logo">
-            </a>
-        </div>
+    <a href="index.html">
+        <img src="https://github.com/Strategy4Schools/Strategy4Schools/blob/main/S4S%20(1).png?raw=true" alt="logo">
+    </a>
+</div>
+
         <nav>
             <ul>
-                <li><a href="javascript:void(0);" onclick="scrollToTop()">Home</a></li>
-                <li class="dropdown">
-                    <a href="#about">About</a>
-                    <div class="dropdown-content">
-                        <p>Our Team </p>
-                        <p>Our Mission </p>
-                        <p>FAQs </p>
-                    </div>
-                </li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#investors">Investors</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#FAQs">FAQs</a></li>
+                <li><a href="link-to-your-preview-page.html">Free Preview</a></li>
+
             </ul>
         </nav>
+        <div class="auth-buttons">
+    <a href="quote_details.html">
+        <button id="subscribe-btn">Subscribe</button>
+    </a>
+    <button id="login-btn">Login</button>
+</div>
+
     </header>
 
-    <!-- Login Modal -->
-     <div id="loginModal" class="modal">
+    <!-- Combined Login Modal -->
+    <div id="loginModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <form id="loginForm">
-                <label for="username">Username:</label><br>
-                <input type="text" id="username" name="username"><br>
+<button id="teacher-login">
+    <img src="teacher image" alt="Teacher">
+    <span>Login as Teacher</span>
+</button>
+<button id="student-login">
+    <img src="path_to_student_image.png" alt="Student">
+    <span>Login as Student</span>
+</button>
+        </div>
+    </div>
+
+    <!-- Teacher Login Form -->
+    <div id="teacherLoginForm" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Login as Teacher</h2>
+            <label for="username">Username:</label><br>
+                <input type="text" id="usernameSchool" name="username"><br>
                 <label for="password">Password:</label><br>
-                <input type="password" id="password" name="password"><br><br>
+                <input type="password" id="passwordSchool" name="password"><br><br>
                 <input type="submit" value="Login">
-                <p id="loginError" style="color:red;"></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Student Login Form -->
+    <div id="studentLoginForm" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Login as Student</h2>
+            <label for="username">Username:</label><br>
+                <input type="text" id="usernameSchool" name="username"><br>
+                <label for="password">Password:</label><br>
+                <input type="password" id="passwordSchool" name="password"><br><br>
+                <input type="submit" value="Login">
             </form>
         </div>
     </div>
@@ -87,11 +113,225 @@
             }
         }
     </script>
-    <main>
-        <!-- Your existing main content -->
-    </main>
+         <main>
+        <!-- Hero Section -->
+        <section id="hero">
+    <div class="hero-background"></div> <!-- Background container -->
+    <h1 class="animate-title">Strategy4Schools</h1>
+    <p class="animate-text">Empowering Educational Excellence</p>
+
+    <div class="hero-login-buttons">
+    <button id="hero-student-login" class="hero-login-button">Student Login</button>
+    <button id="hero-teacher-login" class="hero-login-button">Teacher Login</button>
+    </div>
+
+
+    <section id="testimonials" class="fade-in-section">
+        <div class="testimonial-slider">
+            <h2>What Our Clients Say</h2>
+            <blockquote>
+                "Strategy4Schools has transformed our teaching approach, leading to improved student outcomes." - Principal Smith
+            </blockquote>
+        </div>
+    </section>
+</section>
+
+
+
+        <!-- About Section -->
+        <section id="about">
+    <div id="about-mission" class="about-section">
+        <img src="https://wearetechwomen.com/wp-content/uploads/2023/11/Teach-AI-to-children.jpg" alt="Our Mission" class="about-image">
+        <div class="about-content">
+            <div class="about-heading">
+                <span class="about-subtitle">Our Mission</span>
+            </div>
+            <p>At Strategy4Schools, we're strong believers in making word learning fun for all students.  We are breaking away from traditional methods such as tedious drills and uninspiring memorisation tasks. With our modern, cutting-edge web programs, children embark on a revolutionary learning journey.</p> 
+
+            <p>Our mission is clear: inspire students to love learning words. We are not just changing the way they learn, we are transforming the entire experience.</p>
+        </div>
+    </div>
+     <div class="about-profiles">
+        <div class="about-founder">
+            <img src="path_to_founder_image.jpg" alt="Founder" class="about-image">
+            <div class="about-text">
+                <h3>The Founder</h3>
+                <p>At just 17, Jeong Jin is the visionary founder of Strategy4Schools. Leading the way, he aims to reshape English education in schools, challenging outdated methods and replacing them with innovation and true engagement.</p>
+            </div>
+        </div>
+        <div class="about-programmer">
+            <img src="path_to_programmer_image.jpg" alt="Lead Programmer" class="about-image">
+            <div class="about-text">
+                <h3>The Lead Programmer</h3>
+                <p>At 18 years of age, Darius Suliauskas takes on the role of lead programmer. Leveraging his natural problem solving abilities, he ensures that activities are not just effective to learn with but also fun to use.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+        <!-- Services Section -->
+        <section id="services" class="services-section">
+    <div class="services-grid">
+        <!-- Service Items -->
+        <div class="service-card">
+            <img src="https://media.istockphoto.com/id/514837302/vector/growing-blue-graph.jpg?s=612x612&w=0&k=20&c=pF7vW_3qlL37Z3NF6jApudz_187Xw4OGO08I7xHwYqA=" alt="Curriculum Development" class="service-icon">
+            <h3>Curriculum Development</h3>
+            <p>Revolutionizing learning experiences with tailored curriculums.</p>
+        </div>
+        <div class="service-card">
+            <img src="https://www.eliteeducationmagazine.com/wp-content/uploads/2023/08/Edutainment.webp" alt="Engaging Learning/Revision" class="service-icon">
+            <h3>Engaging Learning/Revision</h3>
+            <p>Revolutionizing learning experiences with Engaging methods.</p>
+        </div>
+
+        <!-- Repeat for other services -->
+    </div>
+</section>
+
+<!-- Impact Study Section -->
+<section id="impact-study">
+  <div class="impact-study-content">
+    <div class="text-content">
+      <h2 class="section-title">Impact Study</h2>
+      <h3>How significantly does our program streamline teacher workload?</h3>
+      <p>Our comprehensive analysis sought to quantify the efficiency gains teachers experience using our program. By conversing with numerous educators from various primary and secondary institutions, we discovered time savings ranging from a quarter-hour to a full class period per week, with most educators averaging a two-hour reduction in their weekly schedules.</p>
+      <p>This analysis delves into the substantive impacts our solutions deliver, targeting improved outcomes for educators and students alike.</p>
+      <a href="link-to-detailed-study.html" class="impact-study-link">Discover the full scope of our study</a>
+    </div>
+    <div class="image-content">
+      <!-- Placeholder for image. Use an img tag or set the background in CSS -->
+    </div>
+  </div>
+</section>
+
+
+<!-- Subscription Options Section -->
+<section id="subscription-section">
+  <div class="subscription-title">
+    <h2>Subscription Options</h2>
+  </div>
+  <div class="subscription-cards">
+    <!-- Basic Card -->
+<div class="subscription-card basic">
+  <img src="path_to_basic_icon.png" alt="Basic Icon" class="card-icon">
+  <h3>Basic</h3>
+  <ul>
+    <li>Tier 2 vocabulary curriculum</li>
+    <li>Grammar curriculum</li>
+    <li>Bedrock Library</li>
+    <li>Remote support</li>
+  </ul>
+</div>
+
+
+    <!-- Advanced Card -->
+    <div class="subscription-card advanced">
+      <img src="path_to_advanced_icon.png" alt="Advanced Icon" class="card-icon">
+      <h3>Advanced</h3>
+      <ul>
+        <li>Tier 2 vocabulary curriculum</li>
+        <li>Grammar curriculum</li>
+        <li>Bedrock Library</li>
+        <li>Remote support</li>
+      </ul>
+      <div class="plus-content">
+        <strong>Plus...</strong>
+        <p>Subject-specific Tier 3 vocabulary content for 3 subjects of your choice, PLUS create unlimited custom content for your school</p>
+        <p>37 Common Greek and Latin Roots</p>
+        <p>Bedrock for GCSE English: 102 terms and example analysis</p>
+        <p>1 dedicated CPD workshop for your team (remote/virtual or held on-site)</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+    <!-- Faqs -->
+    <section id="FAQs" class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-container">
+        <!-- FAQ Item -->
+        <div class="faq-item" onclick="toggleFaq('faq1')">
+    <h3 class="faq-question">How do I subscribe?</h3>
+    <div class="faq-answer" id="faq1">
+                <p>By clicking the subscribe button at the top of the page</p>
+            </div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFaq('faq2')">
+    <h3 class="faq-question">How do i login</h3>
+    <div class="faq-answer" id="faq2">
+                <p></p>
+            </div>
+        </div>
+        <!-- More FAQ items... -->
+    </div>
+</section>
+
+
+
+           <section id="free-preview">
+    <h2>Want to try it out?</h2>
+    <a href="link-to-your-preview-page.html" class="free-preview-btn">Free Preview</a>
+</section>
+</main>
+
+      
     <footer>
-        <p>&copy; Strategy4Schools</p>
-    </footer>
+    <div class="footer-container">
+        <div class="footer-column">
+            <h3>OUR PROGRAM</h3>
+            <ul>
+                <li><a href="#login-btn">Log In</a></li>
+                <li><a href="#subscribe-btn">Subscribe</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Our services</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>SUPPORT</h3>
+            <ul>
+                <li><a href="#FAQs">FAQs</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+               
+            </ul>
+        </div>
+        <div class="footer-column newsletter">
+            <h3>WANT TO STAY UPDATED?</h3>
+            <p>Join our community and be the first to know about updates, events, and news.</p>
+            <form action="#" method="post">
+                <input type="email" name="email" placeholder="Enter your email address...">
+                <button type="submit">Subscribe</button>
+            </form>
+            <div class="social-icons">
+                <!-- Include icons from a library or use images -->
+                <a href="https://www.LinkedIn.com/yourpage" target="_blank">
+        <img src="https://www.pagetraffic.com/blog/wp-content/uploads/2022/09/white-linkedin-logo.png">
+    </a>
+                <a href="https://www.twitter.com/yourpage" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/X_logo_2023_%28white%29.png">
+    </a>
+                <!-- Other social icons... -->
+            </div>
+        </div>
+    </div>
+    <div class="footer-copy">
+        <p>Copyright © Strategy4Schools 2024</p>
+    </div>
+</footer>
+
+<button onclick="scrollToTop()" id="back-to-top-btn" title="Go to top">↑</button>
+
+
+    <script src="script.js"></script>
 </body>
 </html>
