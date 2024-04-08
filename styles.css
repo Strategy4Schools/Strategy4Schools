@@ -277,123 +277,6 @@ p {
 }
 
 
-
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 10; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-/* Modal Content Box */
-.modal-content {
-  background-color: #fefefe;
-  margin: 10% auto; /* from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Adjust the width as needed */
-  height: 40%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border-radius: 8px;
-  position: relative; /* Needed for absolute positioning of children */
-  font-weight: bold;
-  font-size: 20px;
-}
-
-/* Close Button */
-.close {
-  color: #aaa;
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-/* Style for the login option buttons */
-#teacher-login, #student-login {
-    display: inline-block;
-    margin: 70px;
-    padding: 70px 50px;
-    left: 4%;
-    border: none;
-    background-color: #4CAF50;
-    color: white;
-    text-transform: uppercase;
-    cursor: pointer;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 20px;
-    position: relative; /* Enable absolute positioning for children */
-}
-
-#teacher-login:hover, #student-login:hover {
-    background-color: #45a049;
-}
-
-/* Text inside the buttons */
-#teacher-login span, #student-login span {
-    position: absolute;
-    bottom: 10px; /* Position at the bottom of the button */
-    width: 100%;
-    right: 2px;
-
-}
-
-#teacher-login img, #student-login img {
-    display: block;
-    margin: 0 auto;
-    height: 50px; /* Adjust the height as needed */
-    width: auto;
-}
-
-/* Additional styling for buttons to ensure centering and aesthetics */
-#teacher-login, #student-login {
-    margin-top: 50px; /* Space from the top of the modal */
-}
-
-/* Input Fields */
-input[type=text], input[type=password] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-  border-radius: 4px;
-  font-size: 20px;
-}
-
-/* Button */
-input[type=submit] {
-  background-color: #4CAF50;
-  color: white;
-  padding: 20px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  border-radius: 4px;
-}
-
-input[type=submit]:hover {
-  background-color: #45a049;
-}
-
-
 /* Hero Section Styles */
 #hero {
     position: relative;
@@ -1134,12 +1017,6 @@ header.scrolled a { color: #333; }
 a:hover, .button:hover {
     color: #32a3f3;
     text-decoration: underline;
-}
-
-
-input[type="text"]:focus, input[type="password"]:focus {
-    border-color: #32a3f3;
-    box-shadow: 0 0 8px rgba(23, 128, 144, 0.4);
 }
 
 
