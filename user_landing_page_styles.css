@@ -1,0 +1,111 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: linear-gradient(to bottom, #243A4E 0%, #2D4A61 50%, #364E70 100%);
+    display: flex; /* Added */
+    justify-content: center; /* Added - centers horizontally */
+    align-items: center; /* Added - centers vertically */
+    flex-direction: column; /* Added - ensures content is aligned in a column */
+}
+
+.header {
+    background: linear-gradient(to bottom, #1C2D3D 0%, #243A4E 100%);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    border-bottom: 1px solid #14202b;
+    position: fixed; /* Changed to fixed to keep the header at the top */
+    box-sizing: border-box; /* Ensures padding is included in the width and height calculation */
+}
+
+.logo {
+    max-width: 420px;
+    max-height: 70px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-top: 0; /* Adjusted */
+    box-sizing: border-box;
+    margin-top: 100px; /* Adjust this value based on your header's actual height to ensure content starts below the header */
+}
+
+/* Add this to your existing CSS */
+.title-container {
+    text-align: center;
+    color: white;
+    margin: 0; /* Removes any default margin */
+}
+
+.welcome {
+    font-family: "Electrolize", sans-serif;
+    font-size: 5em;
+    font-weight: bold;
+    /* If you want the "Welcome," to be slightly smaller or larger, adjust the font-size individually */
+}
+
+.name {
+    font-family: "Electrolize", sans-serif;
+
+}
+
+.button-container {
+    display: flex; /* Keeps buttons in a row */
+    gap: 50px; /* Space between buttons */
+    justify-content: center; /* Center buttons horizontally */
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
+    position: relative; /* Needed for absolute positioning of the pseudo-element */
+}
+
+.button-container::after {
+    content: ""; /* Needed for pseudo-elements */
+    position: absolute;
+    left: 50%; /* Center the line horizontally */
+    top: -25px; /* Start 10px above the container */
+    bottom: -25px; /* End 10px below the container */
+    width: 1px; /* Thickness of the line */
+    background-color: white; /* Color of the line */
+    transform: translateX(-50%); /* Center the line with respect to its width */
+}
+
+.button {
+    width: 20vw;
+    height: 20vw;
+    border-radius: px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #4478a0 0%, #2c507b 100%);
+}
+
+.button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.button img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+#engage:hover, #play:hover {
+    background-color: #3A6EA5;
+}

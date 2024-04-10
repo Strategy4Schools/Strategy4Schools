@@ -1,0 +1,685 @@
+body {
+    padding-top: 70px;
+    font-family: "Electrolize", sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+    background: linear-gradient(to bottom, #243A4E 0%, #2D4A61 50%, #364E70 100%);
+}
+
+header {
+    background: linear-gradient(to bottom, #1C2D3D 0%, #243A4E 100%);
+    color: #fff;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* Lock the header in place at the top of the screen */
+    top: 0; /* Align the top edge of the header with the top of the viewport */
+    left: 0; /* Align the left edge of the header with the left of the viewport */
+    width: 100%; /* Ensure the header spans the full width of the viewport */
+    z-index: 10; /* Ensure the header layer is above other content */
+    border-bottom: 1px solid #14202b;
+}
+
+.logo-container {
+    position: absolute;
+    left: 7.5%; /* Position the left edge of the container at the center of the header */
+    top: 15px;
+    transform: translateX(-50%); /* Move the container back by half of its own width */
+    /* ... other styles ... */
+}
+
+.logo-container img {
+    max-width: 420px; /* Maximum width, the image won't stretch beyond this */
+    max-height: 70px; /* Adjust this value based on your header's height */
+    height: auto; /* Height adjusts automatically to maintain aspect ratio */
+    object-fit: contain; /* Ensures the image is scaled correctly within the set dimensions */
+}
+    
+main {
+    padding: 100px;
+    margin-bottom: 1000px;
+    margin-top: 0px;
+
+}
+
+.main-content {
+    transform: scale(0.9);
+    transform-origin: top left;
+    width: 111.11%;
+    height: 111.11%;
+}
+
+
+footer {
+    background-color: #14202b;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+/* Common Styles for Both Game Sections */
+.games-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.game-thumbnail {
+    width: 300px;
+    height: 200px;
+    border: 1px solid white;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.game-thumbnail:hover {
+    transform: scale(1.05);
+}
+
+.game-thumbnail img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .game-thumbnail {
+        width: calc(50% - 20px); /* Adjust accordingly for smaller screens */
+        margin: 10px; /* Smaller margins on smaller screens */
+    }
+}
+
+#brain-engage-title {
+    margin-top: 150px;
+}
+
+#brain-play-title {
+    margin-top: 100px;
+}
+
+
+#brain-engage-title, #brain-play-title {
+    text-align: center;
+    font-size: 2em; /* Adjust the font size as needed */
+    font-weight: bold;
+    color: white;
+    /* You can add other styling properties as needed */
+}
+
+/* Responsive adjustments for titles */
+@media screen and (max-width: 768px) {
+    #brain-engage-title, #brain-play-title {
+        font-size: 1.5em; /* Smaller font size for smaller screens */
+    }
+}
+
+/* Individual featured games */
+.featuredgame-thumbnail {
+    position: relative;
+    border: 1px solid white;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.featuredgame-thumbnail:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive design elements */
+@media screen and (max-width: 768px) {
+    /* Adjust styles for mobile view */
+}
+
+#featured-games {
+    text-align: center;
+    margin-top: 50px; /* Reduce this value to move the title upwards */
+    /* Add any other styles you need here */
+}
+
+#featured-games h2 {
+    font-size: 2em; /* Larger font size */
+    font-weight: bold; /* Bold font */
+    color: white; /* Adjust the color as needed */
+    padding: 0px; /* Padding around the text */
+    margin-bottom: 20px; /* Space below the title */
+    text-align: center; /* Center alignment */
+    animation: fadeInScaleUp 1s ease-out forwards;
+}
+
+@keyframes fadeInScaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#featured-games h2, .featured-games-mask {
+  opacity: 0; /* Start with the elements being transparent */
+  animation: fadeIn 1s ease-out forwards;
+}
+
+
+
+
+#games {
+    text-align: center;
+    margin-top: 100px;
+}
+
+/* Container for the featured games */
+.featured-games {
+    position: relative; /* Needed for absolute positioning of arrows */
+    max-width: 100%; /* Adjust as needed */
+    margin: 0 auto; /* Center the container */
+
+}
+
+.featuredgames-container {
+    display: flex;
+    justify-content: center; /* Center the items horizontally */
+    align-items: center; /* Center the items vertically (if needed) */
+    flex-wrap: wrap; /* Allow items to wrap */
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Styling for individual game thumbnails */
+.featuredgame-thumbnail {
+    flex: 0 0 30%; /* Each game will take up 30% of the container width */
+    margin: 20px; /* Add space around thumbnails */
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease; /* For the hover effect to scale the thumbnail */
+}
+
+.featuredgame-thumbnail:hover {
+    transform: scale(1.05);
+}
+
+
+.featuredgame-thumbnail img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Maintain original border radius */
+}
+
+/* Since you're using arrows to navigate, you need to ensure that the container does not wrap */
+@media screen and (max-width: 768px) {
+    .featuredgames-container {
+        flex-wrap: nowrap; /* Prevent wrapping on smaller screens */
+        overflow-x: auto; /* Allow horizontal scrolling if needed */
+        justify-content: flex-start; /* Align items to the start to avoid spacing issues */
+        margin: 0; /* Reset margin for consistent alignment */
+        padding: 0 10px; /* Add padding to prevent content from touching the edges */
+    }
+    
+    .featuredgame-thumbnail {
+        flex: 0 0 auto; /* Allow each item to shrink to fit its content */
+        width: 80%; /* Adjust this to fit the size of the screen better */
+        margin: 20px 10px; /* Adjust margins for spacing */
+    }
+}
+
+/* Responsive design for featured games container */
+@media screen and (max-width: 768px) {
+    .featuredgame-thumbnail {
+        flex-basis: 48%; /* Adjust for fewer items per row on smaller screens */
+        width: calc(50% - 20px); /* Adjust accordingly */
+    }
+}
+
+.games-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.game-thumbnail {
+    width: 300px;
+    height: 200px;
+}
+
+.game-thumbnail img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.game-thumbnail {
+    position: relative;
+    border: 1px solid white;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.game-thumbnail:hover {
+    transform: scale(1.05);
+}
+
+
+.featured-games-text {
+    position: absolute; /* Position the text over the thumbnail */
+    bottom: 0px; /* Position it at the bottom of the thumbnail */
+    left: 0;
+    width: 100%; /* Ensure it spans the width of the thumbnail */
+    text-align: center; /* Center the text */
+    color: white; /* Choose a color that stands out */
+    font-size: 1.5em; /* Adjust font size as needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 5px 0; /* Add padding for better readability */
+    box-sizing: border-box; /* Include padding in the width */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+
+.BrainEngage-games-text {
+    position: absolute; /* Position the text over the thumbnail */
+    bottom: 0px; /* Position it at the bottom of the thumbnail */
+    left: 0;
+    width: 100%; /* Ensure it spans the width of the thumbnail */
+    text-align: center; /* Center the text */
+    color: white; /* Choose a color that stands out */
+    font-size: 1.2em; /* Adjust font size as needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 5px 0; /* Add padding for better readability */
+    box-sizing: border-box; /* Include padding in the width */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+
+.BrainPlay-games-text {
+    position: absolute; /* Position the text over the thumbnail */
+    bottom: 0px; /* Position it at the bottom of the thumbnail */
+    left: 0;
+    width: 100%; /* Ensure it spans the width of the thumbnail */
+    text-align: center; /* Center the text */
+    color: white; /* Choose a color that stands out */
+    font-size: 1.2em; /* Adjust font size as needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 5px 0; /* Add padding for better readability */
+    box-sizing: border-box; /* Include padding in the width */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+
+.game-thumbnail:hover .featured-games-text {
+    background-color: rgba(0, 0, 0, 0.7); /* Slightly darker on hover */
+}
+
+.profile-container {
+    position: absolute;
+    right: 27px; /* Adjust this value as needed to position it from the right edge of the viewport */
+    top: 20px; /* You can also adjust the vertical position if needed */
+}
+
+
+
+
+.profile-pic:hover {
+    transform: scale(1.05); /* Slightly larger on hover */
+    border-color: #fdb740; /* Change border color */
+}
+
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 70%;
+    border: 3px solid #243A4E;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #14202B;
+    min-width: 160px;
+    z-index: 1;
+    right: 100%;
+    top: 100%;
+    transform: translateX(50%);
+    border: none;
+    border-radius: 6px;
+    margin-top: 33px;
+}
+
+.dropdown-menu .arrow {
+    position: absolute;
+    top: -10px; /* Position it above the dropdown */
+    left: 66.5%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #14202B; /* Same color as your dropdown background */
+}
+
+
+.dropdown-menu a {
+    color: white;
+    padding: 13px 16px;
+    text-decoration: none;
+    display: block;
+    font-weight: bold;
+}
+
+.dropdown-menu a:hover {
+    background-color: #fdb740;
+    color: black;
+}
+
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+    .featuredgame-thumbnail {
+        flex-basis: 48%; /* Adjust for fewer items per row on smaller screens */
+        width: calc(50% - 20px); /* Adjust accordingly */
+    }
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* other styles */
+}
+
+.search-container {
+    position: absolute;
+    left: 44%; /* Move slightly to the left to make room for the button */
+    transform: translateX(-30%);
+}
+
+.search-input-container {
+    display: flex; /* Use flexbox to align the input and button */
+    align-items: center; /* Align items vertically */
+    width: 600px; /* Set a width that includes both the input and button */
+}
+
+#gameSearch {
+    border: none;
+    flex-grow: 1;
+    margin-right: -60px;
+    padding: 15px 60px 15px 5px; /* Adjust padding-right to limit text area */
+    border-radius: 50px;
+    width: 100%;
+    font-size: 15px;
+    box-sizing: border-box;
+    font-family: "Electrolize", sans-serif;
+    background-color: #fff;
+    font-weight: bold;
+    position: relative; /* Set the position to relative for pseudo-element positioning */
+
+}
+
+#gameSearch::after {
+    content: ''; /* Empty content */
+    position: absolute;
+    right: 60px; /* Same as the padding-right */
+    top: 0;
+    bottom: 0;
+    width: 1px; /* Thin line, almost invisible */
+    background: transparent; /* Keep it transparent */
+}
+
+#searchButton {
+    cursor: pointer;
+    background-color: #fff; /* Matching the header color */
+    border: none;
+    color: white;
+    font-size: 1.2em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 12px;
+    padding-left: 12px;
+    border-radius: 100%; /* Rounded corners on the right side */
+    z-index: 10;
+}
+
+#searchButton:hover {
+    background-color: #fdb740; /* New background color on hover */
+}
+
+/* Adjustments for the responsive design */
+@media (max-width: 600px) {
+    .search-container {
+        left: 50%;
+        width: 90%; /* Adjust the width on smaller screens */
+    }
+
+    .search-input-container {
+        width: 100%; /* Take the full width of the parent container */
+    }
+
+    #gameSearch {
+        /* Adjust the width to leave space for the button */
+        width: calc(100% - 60px); /* Adjust the width of the search bar */
+    }
+
+
+    #searchButton {
+        padding: 10px; /* Slightly less padding on smaller screens */
+    }
+}
+
+#gameSearch:focus {
+    outline: 3px solid #fdb740;
+}
+
+.btn-navigation-nav-menu-md {
+    position: relative;
+    background-color: transparent; /* Light grey background */
+    border: none;
+    border-radius: 20%; /* Circular shape */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    display: flex; /* To center the icon horizontally and vertically */
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px; /* Added margin to move the button to the right */
+    padding: 10px; /* Padding to keep the button size consistent */
+    z-index: 5;
+}
+
+.btn-navigation-nav-menu-md:hover .icon-nav-menu::before {
+    color: #fdb740; /* Change to your desired hover color */
+}
+
+.icon-nav-menu::before {
+    content: '\2630'; /* Unicode for the hamburger icon */
+    font-size: 30px; /* Increased icon size for a larger appearance */
+    color: white; 
+}
+
+.nav-menu-dropdown {
+    display: none; /* Hidden initially */
+    position: fixed; /* Positions the dropdown absolutely within the relative parent */
+    left: 0; /* Aligns to the left of the button */
+    top: 99px; /* Positions the dropdown right below the button */
+    background-color: #1C2D3D; /* Change background color as needed */
+    width: 250px; /* Adjust width as needed */
+    z-index: 1000;
+    height: 100%;
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+
+/* Style for the links within the dropdown */
+.nav-menu-dropdown a {
+    color: white; /* Text color */
+    padding: 10px 15px; /* Padding for each link */
+    text-decoration: none; /* Removes underline from links */
+    display: block; /* Makes each link take up its own line */
+    border-bottom: 3px solid #14202b; /* Optional: adds a separator between links */
+}
+
+.nav-menu-dropdown a:last-child {
+    border-bottom: none; /* Removes border from the last link */
+}
+
+.nav-menu-dropdown a:hover {
+    background-color: #fdb740; /* Change background color on hover */
+    color: black;
+}
+
+
+.dropdown-profile-section {
+    padding: 10px;
+    border-bottom: 3px solid #fff;
+    border-top: 1px solid #14202b;
+    text-align: center;
+    background-color: #14202b; /* Light grey background for the profile section */
+}
+
+.dropdown-avatar {
+    width: 50px; /* Adjust as necessary */
+    height: 50px; /* Adjust as necessary */
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.dropdown-username {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.dropdown-link {
+    padding: 15px;
+    display: block;
+    color: #333;
+    text-decoration: none;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.dropdown-icon {
+    margin-right: 10px;
+}
+
+/* Add your icon font styles or classes here */
+.icon-home::before { content: "🏠"; } /* Replace with actual icons */
+.icon-dictionary::before { content: "📚"; } /* Replace with actual icons */
+.icon-collection::before { content: "🔖" }
+.icon-achievements::before { content: "🏆" }
+/* ... more icons ... */
+
+.arrow-button {
+    background-color: transparent; /* Dark grey background for visibility */
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    border-radius: 0%; /* Circular shape */
+    width: 30px; /* Width of the button */
+    height: 30px; /* Height of the button */
+    border-width: 0 5px 5px 0;
+    border-color: white;
+}
+
+.arrow-button:hover {
+    border-color: #fdb740; 
+}
+
+/* Arrow shape */
+.arrow-button::before {
+    content: '';
+    display: block;
+    border-style: solid;
+    border-color: transparent;
+    border-width: 0 5px 5px 0; /* Right-angle triangle shape */
+    width: 20px; /* Arrow width */
+    height: 20px; /* Arrow height */
+}
+
+
+
+/* Left arrow facing left */
+#left-arrow {
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%) rotate(135deg); /* Rotate to point left */
+}
+
+/* Right arrow facing right */
+#right-arrow {
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg); /* Rotate to point right */
+}
+
+
+/* Continuous pulse effect for visibility */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+    }
+    70% {
+        box-shadow: 20px 20px 0 0 rgba(0, 0, 0, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0px rgba(0, 0, 0, 0);
+    }
+}
+
+.arrow-button {
+    animation: pulse 3.5s infinite;
+}
+
+@media screen and (max-width: 768px) {
+    .arrow-button {
+        /* Adjust size, position, or visibility for smaller screens */
+        left: 5px; /* Example for smaller left-arrow */
+        right: 5px; /* Example for smaller right-arrow */
+    }
+}
+
+.featured-games-slider {
+    position: relative; /* Position context for the arrows */
+}
+
+.featured-games-mask {
+    overflow: visible; /* Allow the arrows to be outside the mask area */
+    width: calc(100% - 120px); /* You can adjust or remove this if not needed */
+    padding: 0 60px; /* Add padding to create space for the arrows */
+    margin: 0 auto;
+    position: relative;
+}
+
+.simple-divider {
+    border: 0;
+    height: 1px; /* Thickness of the line */
+    background-color: white; /* Color of the line */
+    margin: 50px 0; /* Increase vertical space around the divider */
+}
