@@ -60,6 +60,184 @@ header {
 }
 
 
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 100; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.6); /* Darker light blue with opacity */
+    animation: fadeInModal 0.5s ease; /* Fade-in effect */
+}
+
+@keyframes fadeInModal {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-content {
+    background-color: #eef6ff;
+    margin: 10% auto;
+    padding: 80px;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    width: 30%;
+    text-align: center;
+}
+.modal-title {
+    color: black;
+    font-size: 26px;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+
+
+@keyframes slideDown {
+    from { margin-top: 0; }
+    to { margin-top: 5%; }
+}
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.modal-content input[type="email"], .modal-content input[type="password"] {
+    font-family: "Comfortaa", sans-serif;
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 17px;
+    font-weight: 400;
+    transition: border 0.3s ease;
+    background-color: #fff;
+}
+
+#student-login-modal .modal-content input[type="email"]:focus,
+#student-login-modal .modal-content input[type="password"]:focus {
+    border: 2px solid #32a3f3; /* Highlight focus */
+    outline: none;
+}
+
+#teacher-login-modal .modal-content input[type="email"]:focus,
+#teacher-login-modal .modal-content input[type="password"]:focus {
+    border: 2px solid #32a3f3; /* Highlight focus */
+    outline: none;
+}
+
+
+.modal-content button {
+    font-family: "Comfortaa", sans-serif;
+    padding: 12px 200px;
+    margin-top: 30px;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.modal-content button:hover {
+    transform: translateY(-3px);
+}
+
+
+.forgot-password-link {
+    background: none;
+    border: none;
+    color: #32a3f3; /* Assuming a white color to match your modal's dark background */
+    cursor: pointer;
+    padding: 10px;
+    text-decoration: none;
+    font-family: "Comfortaa", sans-serif;
+    font-size: 16px;
+    display: block; /* Take up the full width, adjust as needed */
+    text-align: center;
+    margin-top: 5px; /* Space from the login button */
+    outline: none; /* Remove focus outline */
+}
+
+.forgot-password-link:hover, .forgot-password-link:focus {
+    color: #3091ff; /* A light blue color for the hover state */
+    text-decoration: underline; /* Underline to emphasize interactivity */
+    text-shadow: none; /* Remove text shadow on hover for a 'raised' effect */
+}
+
+.modal-p {
+    color: black;
+    font-size: 10px;
+}
+
+
+/* Student Modal Specific Styles */
+#student-login-modal .modal-content {
+    border-top: 10px solid #32a3f3; /* Green top border for students */
+}
+
+#student-login-modal .modal-title {
+    color: black; /* Green title for student modal */
+}
+
+#student-login-modal .modal-content button {
+    background-color: #3091ff;
+}
+
+#student-login-modal .modal-content button:hover {
+    background-color: #227cc3;
+}
+
+/* Teacher Modal Specific Styles */
+#teacher-login-modal .modal-content {
+    border-top: 10px solid #32a3f3; /* Red top border for teachers */
+}
+
+#teacher-login-modal .modal-title {
+    color: black; /* Red title for teacher modal */
+}
+
+#teacher-login-modal .modal-content button {
+    background-color: #3091ff;
+}
+
+#teacher-login-modal .modal-content button:hover {
+    background-color: #227cc3;
+}
+
+@media screen and (max-width: 768px) {
+    .modal-content {
+        width: 90%;
+        margin-top: 20%;
+    }
+
+    .modal-content input[type="email"], .modal-content input[type="password"] {
+        width: 90%;
+    }
+}
+
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+
+
 .logo-container {
     display: flex;
     justify-content: center; /* Center horizontally */

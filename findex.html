@@ -14,11 +14,34 @@
         .close { /* Close button styles */ }
         /* Add other styles here */
     </style>
+
+<!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+<!-- Firebase Authentication SDK -->
+<script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
+
+<script>
+const firebaseConfig = {
+  apiKey: "AIzaSyBIdvoYCGYNV1_rG9JdNtz_Q1iA66k9I6o",
+  authDomain: "strategy4schoolsdb.firebaseapp.com",
+  projectId: "strategy4schoolsdb",
+  storageBucket: "strategy4schoolsdb.appspot.com",
+  messagingSenderId: "125952142437",
+  appId: "1:125952142437:web:11d221ac797be1c3e0ea8c"
+};
+
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+
+<script type="module" src="script.js"></script>
+
+
 </head>
 <body>
         <header>
         <div class="logo-container">
-    <a href="index.html">
+    <a href="findex.html">
         <img src="https://github.com/Strategy4Schools/Strategy4Schools/blob/main/S4S%20(1).png?raw=true" alt="logo">
     </a>
 </div>
@@ -36,7 +59,6 @@
     <a href="quote_details.html">
         <button id="subscribe-btn">Subscribe</button>
     </a>
-    <button id="login-btn">Login</button>
 </div>
 
     </header>
@@ -47,10 +69,50 @@
     <h1 class="animate-title">Strategy4Schools</h1>
     <p class="animate-text">Empowering Educational Excellence</p>
 
-    <div class="hero-login-buttons">
-    <button id="hero-student-login" class="hero-login-button">Student Login</button>
-    <button id="hero-teacher-login" class="hero-login-button">Teacher Login</button>
+
+     <!-- Login Buttons -->
+    <button id="student-login-btn" class="login-btn">Student Login</button>
+    <button id="teacher-login-btn" class="login-btn">Teacher Login</button>
+
+<!-- Student Login Modal -->
+<div id="student-login-modal" class="modal">
+    <div class="modal-content">
+        <h2 class="modal-title">Login as Student</h2>
+        <form id="student-login-form">
+            <input type="email" id="student-login-email" placeholder="Email">
+            <input type="password" id="student-login-password" placeholder="Password">
+            <button type="submit">Login</button>
+            <a href="#" class="forgot-password-link">Forgot your password?</a>
+        </form>
     </div>
+</div>
+<!-- Teacher Login Modal -->
+<div id="teacher-login-modal" class="modal">
+    <div class="modal-content">
+        <h2 class="modal-title">Login as Teacher</h2>
+        <form id="teacher-login-form">
+            <input type="email" id="teacher-login-email" placeholder="Email">
+            <input type="password" id="teacher-login-password" placeholder="Password">
+            <button type="submit">Login</button>
+            <a href="#" class="forgot-password-link">Forgot your password?</a>
+        </form>
+    </div>
+</div>
+
+
+
+<!-- Reset Password Modal -->
+<div id="reset-password-modal" class="modal">
+    <div class="modal-content">
+        <h2 class="modal-title">Reset your password</h2>
+        <p>Input the email you use to login and we will send you a reset link</p>
+        <form id="reset-password-form">
+            <input type="email" id="reset-password-email" placeholder="Enter your email">
+            <button type="submit">Send Reset Link</button>
+        </form>
+    </div>
+</div>
+
 
 
     <section id="testimonials" class="fade-in-section">
@@ -256,9 +318,6 @@
     </div>
 </footer>
 
-<button onclick="scrollToTop()" id="back-to-top-btn" title="Go to top">↑</button>
 
-
-    <script src="script.js"></script>
 </body>
 </html>
