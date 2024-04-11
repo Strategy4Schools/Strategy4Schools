@@ -20,24 +20,27 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
 function login(userType) {
-    let email, password;
+    let email, password, redirectUrl;
     if (userType === 'student') {
         email = document.getElementById('student-login-email').value;
         password = document.getElementById('student-login-password').value;
+        redirectUrl = 'user_landing_page.html'; // URL for student dashboard
     } else if (userType === 'teacher') {
         email = document.getElementById('teacher-login-email').value;
         password = document.getElementById('teacher-login-password').value;
+        redirectUrl = 'teacher-dashboard.html'; // URL for teacher dashboard
     }
 
     signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
             console.log('Login successful:', userCredential.user);
-            window.location.href = 'dashboard.html';
+            window.location.href = redirectUrl; // Redirect based on user type
         })
         .catch((error) => {
             console.error('Error logging in:', error.message);
         });
 }
+
 
 document.getElementById('student-login-form').addEventListener('submit', function(e) {
     e.preventDefault();
