@@ -3,7 +3,8 @@ import {
   getAuth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
-  onAuthStateChanged
+  onAuthStateChanged,
+  sendPasswordResetEmail // Added to the list of imports from firebase-auth
 } from 'https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js';
 
 const firebaseConfig = {
@@ -40,6 +41,23 @@ function login(userType) {
             console.error('Error logging in:', error.message);
         });
 }
+
+document.getElementById('reset-password-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const email = document.getElementById('reset-password-email').value;
+    sendPasswordResetEmail(auth, email)
+        .then(() => {
+            console.log('Reset link sent to your email address');
+            alert('Reset link sent to your email address');
+            // Close the modal and clear the form
+            document.getElementById('reset-password-modal').style.display = 'none';
+            document.getElementById('reset-password-email').value = '';
+        })
+        .catch((error) => {
+            console.error('Error sending reset email:', error);
+            alert('Error sending reset email, please check the email address and try again');
+        });
+});
 
 
 document.getElementById('student-login-form').addEventListener('submit', function(e) {
