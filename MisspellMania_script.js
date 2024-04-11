@@ -81,10 +81,15 @@ function setupGame(definitions) {
         button.style.margin = '5px'; // Add some space between buttons
         button.style.fontSize = '1rem'; // Adjust font size as necessary
         button.addEventListener('click', function() {
-            if(option === currentQuestion.word) {
-                button.style.backgroundColor = 'green';
-                feedbackElement.textContent = "Correct!";
-                feedbackElement.style.color = "green";
+        if(option === currentQuestion.word) {
+            button.style.backgroundColor = 'green';
+            feedbackElement.textContent = "Correct!";
+            feedbackElement.style.color = "green";
+
+                const allOptionButtons = document.querySelectorAll('.option-button');
+            allOptionButtons.forEach(function(button) {
+                button.disabled = true;
+            });
                 if (hasIncorrectAttempt) {
                     showDefinitionPopup(currentQuestion.definition, currentQuestion.word, definitions);
                 } else {
@@ -121,7 +126,7 @@ function setupGame(definitions) {
         };
     }
 
-    function showDefinitionPopup(definition, correctWord, definitions) {
+function showDefinitionPopup(definition, correctWord, definitions) {
     const gameContainer = document.getElementById('gameContainer');
     gameContainer.style.display = 'none'; // Hide game elements
 
@@ -139,12 +144,12 @@ function setupGame(definitions) {
     popupContainer.innerHTML = `
         <h3>Please type the previous word</h3>
         <p><strong>Definition:</strong> ${definition}</p>
-        <input type="text" id="userInput" placeholder="Type here" />
-        <button id="submitWord">Submit</button>
-        <div id="clickReveal" style="margin-top: 10px; cursor: pointer;">
-            <p>Click here to reveal the correct answer</p>
-            <div id="revealAnswer" style="display:none;">${correctWord}</div>
+        <input type="text" id="userInput" placeholder="Type here" autocomplete="off" spellcheck="false" />
+        <div><button id="submitWord">Submit</button></div>
+        <div id="revealButtonContainer" style="margin-top: 10px;">
+            <button id="revealButton">Hold to reveal answer</button>
         </div>
+        <div id="revealAnswer" style="display:none; margin-top: 10px;">${correctWord}</div>
     `;
 
     document.body.appendChild(popupContainer);
@@ -157,18 +162,34 @@ function setupGame(definitions) {
             gameContainer.style.display = 'block'; // Show game elements again
             showNextButton(definitions); // Move to next question
         } else {
-            alert('Incorrect. Please try again or click to reveal the answer.');
-            document.getElementById('clickReveal').style.display = 'block'; // Show the click to reveal section
+            alert('Incorrect. Please try again or hold the button to reveal the answer.');
         }
     });
 
-    // Setup click to reveal
-    document.getElementById('clickReveal').addEventListener('click', function() {
-        document.getElementById('revealAnswer').style.display = 'block';
-        // Optional: disable further clicks to prevent hiding the answer
-        this.style.pointerEvents = 'none'; 
+    // Setup hold to reveal
+    const revealButton = document.getElementById('revealButton');
+    const revealAnswer = document.getElementById('revealAnswer');
+    const revealButtonContainer = document.getElementById('revealButtonContainer');
+
+    revealButton.addEventListener('mousedown', function() {
+        revealButtonContainer.style.display = 'none';
+        revealAnswer.style.display = 'block';
+    });
+    revealButton.addEventListener('touchstart', function(e) {
+        e.preventDefault(); // Prevents mobile browsers from triggering click after touchend
+        revealButtonContainer.style.display = 'none';
+        revealAnswer.style.display = 'block';
+    });
+    document.addEventListener('mouseup', function() {
+        revealButtonContainer.style.display = 'block';
+        revealAnswer.style.display = 'none';
+    });
+    document.addEventListener('touchend', function() {
+        revealButtonContainer.style.display = 'block';
+        revealAnswer.style.display = 'none';
     });
 }
     
     fetchWords(); // Start the game by fetching the words
 });
+    

@@ -91,6 +91,9 @@ button {
         border-radius: 25px;
         cursor: pointer;
         transition: background-color 0.3s;
+        display: block; /* Ensure buttons are block-level elements */
+        width: auto; /* Adjust width as necessary */
+        margin: 10px auto; /* Centers the button and adds vertical spacing */
 }
 
 #nextButton {
@@ -106,4 +109,43 @@ button {
     border-radius: 5px; /* Rounded corners for the button */
 }
 
+#submitWord {
+    background-color: #2196F3; /* Bright blue for action buttons */
+    color: white;
+    margin-top: 10px;
+}
 
+#submitWord:hover {
+    background-color: #1E88E5; /* Slightly darker blue on hover */
+}
+
+#revealButton {
+    margin-top: 20px; /* Increase spacing between submit and reveal buttons */
+}
+
+#userInput {
+    font-family: "Electrolize", sans-serif;
+    font-size: 1em;
+    padding: 10px;
+    margin-top: 20px; /* Ensures spacing between the text and the input box */
+    width: 100%; /* Full width to accommodate different screen sizes, adjust if necessary */
+    box-sizing: border-box; /* Ensures padding doesn't affect the width */
+    border: 2px solid #ddd; /* Subtle border */
+    border-radius: 4px; /* Matching the rounded corners of the buttons */
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1); /* Inner shadow for a "deep" effect */
+    text-align: center;
+}
+
+#userInput:focus {
+    border-color: #4CAF50; /* Green border on focus for visibility */
+    outline: none; /* Removes the default focus outline */
+}
+
+.option-button:disabled {
+    cursor: not-allowed; /* Cursor indicates the button cannot be clicked */
+    pointer-events: none; /* Prevents all mouse events on the button */
+}
+
+#revealButton {
+    border-radius: 4px;
+}
