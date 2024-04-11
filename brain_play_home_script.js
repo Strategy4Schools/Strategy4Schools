@@ -1,3 +1,44 @@
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js';
+import { getAuth, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js';
+import { getFirestore, doc, getDoc } from 'https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js';
+
+// Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyBIdvoYCGYNV1_rG9JdNtz_Q1iA66k9I6o",
+  authDomain: "strategy4schoolsdb.firebaseapp.com",
+  projectId: "strategy4schoolsdb",
+  storageBucket: "strategy4schoolsdb.appspot.com",
+  messagingSenderId: "125952142437",
+  appId: "1:125952142437:web:11d221ac797be1c3e0ea8c"
+};
+
+// Initialize Firebase and Firestore
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
+
+// Guard the page by listening for changes in the user's authentication state
+onAuthStateChanged(auth, (user) => {
+  if (!user) {
+    // No user is signed in. Redirect them to the login page
+    window.location.href = 'login.html'; // Change 'login.html' to the path of your login page
+  } else {
+    // User is signed in, proceed with additional functionality
+    const userRef = doc(db, "users", user.uid); // Path to the user document
+    getDoc(userRef).then((docSnap) => {
+      if (docSnap.exists()) {
+        const username = docSnap.data().username; // Adjust 'username' based on your actual data structure
+        // Update the username in the dropdown
+        document.querySelector('.dropdown-username').textContent = username;
+      } else {
+        console.log("No such document!");
+      }
+    }).catch((error) => {
+      console.log("Error getting document:", error);
+    });
+  }
+});
+
 document.addEventListener('DOMContentLoaded', function() {
     const allFeaturedGames = [
         [

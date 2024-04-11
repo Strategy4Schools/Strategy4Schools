@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function setupBackButton() {
     const backButton = document.getElementById('backToMinigames');
     backButton.addEventListener('click', function() {
-        window.location.href = 'minigames_home.html';
+        window.location.href = 'brain_play_home.html';
     });
 }
 

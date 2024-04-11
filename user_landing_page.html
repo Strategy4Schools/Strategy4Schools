@@ -8,16 +8,47 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap" rel="stylesheet">
-</head>
-<body>
 
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
+    
+    <!-- Firebase Configuration (Ensure this is correctly set up for your project) -->
+    <script>
+    const firebaseConfig = {
+     apiKey: "AIzaSyBIdvoYCGYNV1_rG9JdNtz_Q1iA66k9I6o",
+     authDomain: "strategy4schoolsdb.firebaseapp.com",
+     projectId: "strategy4schoolsdb",
+     storageBucket: "strategy4schoolsdb.appspot.com",
+    messagingSenderId: "125952142437",
+    appId: "1:125952142437:web:11d221ac797be1c3e0ea8c"
+    };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <!-- Your custom script -->
+    <script type="module" src="user_landing_page_script.js"></script>
+</head>
+
+<body>
     <header class="header">
         <img src="S4S.png" alt="Your Logo" class="logo">
+
+                    <div class="profile-container">
+                <img src="https://www.meophamschool.org.uk/_site/images/design/logo.png" alt="Profile" class="profile-pic" onclick="toggleDropdown()"/>
+                <div class="dropdown-menu" id="dropdownMenu">
+            <div class="arrow"></div>
+                    <a href="edit_profile.html">Edit Profile</a>
+                    <a href="index.html">Log Out</a>
+                </div>
+            </div>
+
     </header>
 
     <div class="title-container">
-        <div class="welcome">Welcome!</div>
-        <div class="name">Darius Suliauskas!</div>
+        <div class="welcome">Welcome</div>
+        <div class="name"></div>
     </div>
         
     <div class="container">
@@ -30,5 +61,19 @@
             </a>
         </div>
     </div>
+
+        <script>
+        function toggleDropdown() {
+            var dropdown = document.getElementById("dropdownMenu");
+            dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+        }
+
+        function toggleInfo(infoId) {
+            var info = document.getElementById(infoId);
+            info.style.display = info.style.display === "block" ? "none" : "block";
+        }
+    </script>
+    
 </body>
 </html>
+

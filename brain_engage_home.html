@@ -8,6 +8,28 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="brain_engage_home_styles.css">
+
+        <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
+    
+    <!-- Firebase Configuration (Ensure this is correctly set up for your project) -->
+    <script>
+    const firebaseConfig = {
+     apiKey: "AIzaSyBIdvoYCGYNV1_rG9JdNtz_Q1iA66k9I6o",
+     authDomain: "strategy4schoolsdb.firebaseapp.com",
+     projectId: "strategy4schoolsdb",
+     storageBucket: "strategy4schoolsdb.appspot.com",
+    messagingSenderId: "125952142437",
+    appId: "1:125952142437:web:11d221ac797be1c3e0ea8c"
+    };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <!-- Your custom script -->
+    <script type="module" src="brain_engage_home_script.js"></script>
+
 </head>
 <body>
     <!-- Header Section -->
@@ -22,7 +44,7 @@
 <div id="navMenuDropdown" class="nav-menu-dropdown"> 
     <div class="dropdown-profile-section">
         <img class="dropdown-avatar" src="https://www.meophamschool.org.uk/_site/images/design/logo.png" alt="Meopham School">
-        <div class="dropdown-username">Meopham School</div>
+        <div class="dropdown-username"></div>
     </div>
     <a href="minigames_home.html" class="dropdown-link"><span class="dropdown-icon icon-home"></span>Home</a>
     <a href="#" class="dropdown-link"><span class="dropdown-icon icon-dictionary"></span>Dictionary</a>
@@ -65,15 +87,15 @@
 
         <div class="featuredgames-container">
             <div class="featuredgame-thumbnail">
-                <a href="misspell_mania.html">
+                <a href="MisspellMania.html">
                     <img src="Misspell Mania Thumbnail.png" alt="MisspellMania">
                     <div class="featured-games-text">Commonly Misspelled Words</div>
                 </a>
             </div>
             <div class="featuredgame-thumbnail">
-                <a href="TODO">
-                    <img src="TODO" alt="TODO">
-                    <div class="featured-games-text">TODO</div>
+                <a href="definition_matchup.html">
+                    <img src="WordMatch Thumbnail.png" alt="TODO">
+                    <div class="featured-games-text">Match words to definitions</div>
                 </a>
             </div>
             <div class="featuredgame-thumbnail">
@@ -97,22 +119,20 @@
             <div class="games-container">
                 <div class="game-thumbnail">
                     <a href="flashcardscategories.html">
-                    <img src="https://raw.githubusercontent.com/Strategy4Schools/Strategy4Schools/main/Flashcards%20Thumbnail.png" alt="Flashcards">
+                    <img src="Flashcards Thumbnail.png" alt="Flashcards">
                     <div class="BrainEngage-games-text">FlashCards</div>
                 </a>
                 </div>
                 <div class="game-thumbnail">
-                    <a href="game link">
-                    <img src="brain_engage_game2.jpg" alt="Brain Engage Game 2">
-                    <p>Brain Engage Game 2</p>
-                    <div class="BrainEngage-games-text">Game 1</div>
+                    <a href="MisspellMania.html">
+                    <img src="Misspell Mania Thumbnail.png" alt="Brain Engage Game 2">
+                    <div class="BrainEngage-games-text">Commonly Misspelled Words</div>
                 </a>
                 </div>
                 <div class="game-thumbnail">
                     <a href="game link">
-                    <img src="brain_engage_game3.jpg" alt="Brain Engage Game 3">
-                    <p>Brain Engage Game 3</p>
-                    <div class="BrainEngage-games-text">Game 1</div>
+                    <img src="WordMatch Thumbnail.png" alt="WordMatch">
+                    <div class="BrainEngage-games-text">Match words to definitions</div>
                 </a>
                 </div>
                 <div class="game-thumbnail">
@@ -150,7 +170,7 @@
             info.style.display = info.style.display === "block" ? "none" : "block";
         }
     </script>
-    <script src="brain_engage_home_script.js"></script>
+    <script type="module" src="brain_engage_home_script.js"></script>
     <script>
     function toggleNavMenu() {
         var navMenu = document.getElementById("navMenuDropdown");
@@ -162,9 +182,6 @@
     }
 </script>
 
-<script>
-        document.addEventListener('contextmenu', event => event.preventDefault());
-    </script>
 </div>
 </body>
 </html>

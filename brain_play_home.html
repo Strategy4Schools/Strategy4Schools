@@ -8,6 +8,27 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="minigames_styles.css">
+
+            <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
+    
+    <!-- Firebase Configuration (Ensure this is correctly set up for your project) -->
+    <script>
+    const firebaseConfig = {
+     apiKey: "AIzaSyBIdvoYCGYNV1_rG9JdNtz_Q1iA66k9I6o",
+     authDomain: "strategy4schoolsdb.firebaseapp.com",
+     projectId: "strategy4schoolsdb",
+     storageBucket: "strategy4schoolsdb.appspot.com",
+    messagingSenderId: "125952142437",
+    appId: "1:125952142437:web:11d221ac797be1c3e0ea8c"
+    };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <!-- Your custom script -->
+    <script type="module" src="brain_play_home_script.js"></script>
 </head>
 <body>
     <!-- Header Section -->
@@ -22,7 +43,7 @@
 <div id="navMenuDropdown" class="nav-menu-dropdown"> 
     <div class="dropdown-profile-section">
         <img class="dropdown-avatar" src="https://www.meophamschool.org.uk/_site/images/design/logo.png" alt="Meopham School">
-        <div class="dropdown-username">Meopham School</div>
+        <div class="dropdown-username"></div>
     </div>
     <a href="minigames_home.html" class="dropdown-link"><span class="dropdown-icon icon-home"></span>Home</a>
     <a href="#" class="dropdown-link"><span class="dropdown-icon icon-dictionary"></span>Dictionary</a>
@@ -77,9 +98,9 @@
                 </a>
             </div>
             <div class="featuredgame-thumbnail">
-                <a href="TODO">
-                    <img src="TODO" alt="TODO">
-                    <div class="featured-games-text">TODO</div>
+                <a href="hangman.html">
+                    <img src="hangman thumbnail.png" alt="Hangman">
+                    <div class="featured-games-text">Hangman</div>
                 </a>
             </div>
             <!-- Additional games can be added here -->
@@ -109,8 +130,7 @@
                 </div>
                 <div class="game-thumbnail">
                     <a href="game link">
-                    <img src="brain_play_game3.jpg" alt="Brain Play Game 3">
-                    <p>Brain Play Game 3</p>
+                    <img src="Hangman Thumbnail.png" alt="Brain Play Game 3">
                     <div class="BrainPlay-games-text">Game 1</div>
                 </a>
                 </div>
@@ -151,7 +171,7 @@
             info.style.display = info.style.display === "block" ? "none" : "block";
         }
     </script>
-    <script src="minigames.js"></script>
+    <script type="module" src="brain_play_home_script.js"></script>
     <script>
     function toggleNavMenu() {
         var navMenu = document.getElementById("navMenuDropdown");
@@ -163,9 +183,6 @@
     }
 </script>
 
-<script>
-        document.addEventListener('contextmenu', event => event.preventDefault());
-    </script>
 </div>
 </body>
 </html>
