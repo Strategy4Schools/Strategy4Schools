@@ -78,24 +78,65 @@ teacherLoginBtn.onclick = function() {
 window.onclick = function(event) {
     if (event.target == studentLoginModal) {
         studentLoginModal.style.display = 'none';
+        // Clear student login inputs
+        document.getElementById('student-login-email').value = '';
+        document.getElementById('student-login-password').value = '';
     }
     if (event.target == teacherLoginModal) {
         teacherLoginModal.style.display = 'none';
+        // Clear teacher login inputs
+        document.getElementById('teacher-login-email').value = '';
+        document.getElementById('teacher-login-password').value = '';
     }
     if (event.target == resetPasswordModal) {
-        resetPasswordModal.style.display = 'none'; // Close reset password modal when clicking outside
+        resetPasswordModal.style.display = 'none';
+        // Clear reset password input
+        document.getElementById('reset-password-email').value = '';
     }
 }
 
-// Add event listener to "Forgot your password?" links
+// Event listener for "Forgot your password?" links
 document.querySelectorAll('.forgot-password-link').forEach(link => {
     link.addEventListener('click', function(e) {
         e.preventDefault();
+        resetPasswordModal.style.display = 'block';
         studentLoginModal.style.display = 'none';
         teacherLoginModal.style.display = 'none';
-        resetPasswordModal.style.display = 'block'; // Display the reset password modal
+        // Clear login form inputs
+        document.getElementById('student-login-email').value = '';
+        document.getElementById('student-login-password').value = '';
+        document.getElementById('teacher-login-email').value = '';
+        document.getElementById('teacher-login-password').value = '';
     });
 });
+
+    // Track which login modal was last opened
+let lastLoginModal = null;
+
+// Adjust the existing button onclick handlers to set the last opened modal
+studentLoginBtn.onclick = function() {
+    lastLoginModal = studentLoginModal;
+    studentLoginModal.style.display = 'block';
+}
+
+teacherLoginBtn.onclick = function() {
+    lastLoginModal = teacherLoginModal;
+    teacherLoginModal.style.display = 'block';
+}
+// Event listener for the login link in the reset password modal
+document.getElementById('login-link').addEventListener('click', function(e) {
+    e.preventDefault();
+    resetPasswordModal.style.display = 'none';
+    if (lastLoginModal) {
+        lastLoginModal.style.display = 'block';
+    } else {
+        studentLoginModal.style.display = 'block'; // default to student modal
+    }
+    // Clear reset password input
+    document.getElementById('reset-password-email').value = '';
+});
+
+
 
 function toggleFaq(id) {
     var answer = document.getElementById(id);

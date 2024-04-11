@@ -86,6 +86,7 @@ const firebaseConfig = {
         </form>
     </div>
 </div>
+
 <!-- Teacher Login Modal -->
 <div id="teacher-login-modal" class="modal">
     <div class="modal-content">
@@ -102,13 +103,16 @@ const firebaseConfig = {
 
 
 <!-- Reset Password Modal -->
-<div id="reset-password-modal" class="modal">
+<div id="reset-password-modal" class="modal slide-in">
     <div class="modal-content">
         <h2 class="modal-title">Reset your password</h2>
-        <p>Input the email you use to login and we will send you a reset link</p>
+        <h3>Input the email you use to login and we will send you a reset link</h3>
         <form id="reset-password-form">
             <input type="email" id="reset-password-email" placeholder="Enter your email">
             <button type="submit">Send Reset Link</button>
+            <div class="login-redirect">
+  <h4>Know your password? <a href="#" id="login-link">Login</a></h4>
+</div>
         </form>
     </div>
 </div>

@@ -71,13 +71,8 @@ header {
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgba(0, 0, 0, 0.6); /* Darker light blue with opacity */
-    animation: fadeInModal 0.5s ease; /* Fade-in effect */
 }
 
-@keyframes fadeInModal {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
 
 .modal-content {
     background-color: #eef6ff;
@@ -96,11 +91,6 @@ header {
 }
 
 
-
-@keyframes slideDown {
-    from { margin-top: 0; }
-    to { margin-top: 5%; }
-}
 
 .modal-content form {
     display: flex;
@@ -173,9 +163,63 @@ header {
     text-shadow: none; /* Remove text shadow on hover for a 'raised' effect */
 }
 
-.modal-p {
+/* Keyframes for sliding in from the right */
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Applying the animation to the modal content */
+.modal-content {
+    animation: slideInRight 0.5s ease forwards;
+}
+
+#reset-password-modal {
+
+}
+
+#reset-password-modal h3 {
     color: black;
-    font-size: 10px;
+    font-size: 15px;
+}
+
+#reset-password-modal button {
+   background-color: #3091ff;
+}
+
+#reset-password-modal button:hover {
+    background-color: #227cc3;
+}
+
+#reset-password-modal .modal-content {
+    border-top: 10px solid #32a3f3;
+}
+
+#reset-password-email:focus {
+    border: 2px solid #32a3f3; /* Change to your desired border color */
+    outline: none; /* Optional: Removes the default focus outline */
+}
+
+
+/* Add this in your CSS file to style the login redirect message */
+.login-redirect h4 {
+  font-size: 16px; /* Adjust font size as needed */
+  color: black; /* Adjust the font color as needed */
+  text-align: center; /* Centers the text */
+  margin-top: 20px; /* Adds space above the text */
+}
+
+.login-redirect a {
+  color: #32a3f3; /* This is a blue color, similar to the image provided */
+  text-decoration: none; /* Removes underline from links */
+}
+
+.login-redirect a:hover {
+  text-decoration: underline; /* Underlines the link when hovered for better UX */
 }
 
 
