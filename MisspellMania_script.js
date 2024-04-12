@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     async function fetchWords() {
         try {
-            const response = await fetch('http://localhost:8000/MisspellManiaWordList.json');
+            const response = await fetch('MisspellManiaWordList.json');
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
