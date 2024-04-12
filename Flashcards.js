@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let wordListURL;
     switch (flashcardSet) {
         case 'tricky-spellers':
-            wordListURL = 'Year%207-8%20tricky%20spellers%20flashcards.json';
+            wordListURL = 'https://raw.githubusercontent.com/Strategy4Schools/Strategy4Schools/main/Year%207-8%20tricky%20spellers%20flashcards.json';
             break;
         case 'useful-verbs':
             wordListURL = 'Year%207-8%20useful%20verbs%20flashcards.json';
