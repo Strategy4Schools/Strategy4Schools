@@ -1,6 +1,6 @@
 let selectedWord = null;
 
-fetch(`http://localhost:8000/WordMatch_Test_Word_List.json`)
+fetch(`WordMatch_Test_Word_List.json`)
 
     .then(response => response.json())
     .then(data => {
