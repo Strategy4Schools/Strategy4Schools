@@ -1,5 +1,5 @@
 body {
-    font-family: 'Source Code Pro', monospace;
+    font-family: "Electrolize", sans-serif;
     background: linear-gradient(to bottom, #243A4E 0%, #2D4A61 50%, #364E70 100%);
     color: white;
     margin: 0;
@@ -33,7 +33,7 @@ body {
 }
 
 #backToMinigames {
-    font-family: 'Source Code Pro', monospace;
+    font-family: "Electrolize", sans-serif;
     background-color: #1C2D3D; /* A deep green for better visibility and aesthetics */
     color: white; /* White text for high contrast and readability */
     border: 2px solid black; /* Solid border to match the background */
@@ -80,7 +80,7 @@ body {
 }
 
 .navigation-button, #categories-list li {
-    font-family: 'Source Code Pro', monospace; /* Ensuring font consistency */
+    font-family: "Electrolize", sans-serif;
     background: #d9d9d9;
     color: #222;
     font-weight: 500;

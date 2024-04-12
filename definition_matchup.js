@@ -1,6 +1,6 @@
 let selectedWord = null;
 
-fetch(`http://localhost:8000/Definition%20Matchup/Year_7_Word_List_Without_Tags.json`)
+fetch(`http://localhost:8000/WordMatch_Test_Word_List.json`)
 
     .then(response => response.json())
     .then(data => {

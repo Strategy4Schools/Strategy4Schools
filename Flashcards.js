@@ -11,13 +11,16 @@ document.addEventListener('DOMContentLoaded', function() {
     let wordListURL;
     switch (flashcardSet) {
         case 'tricky-spellers':
-            wordListURL = 'http://localhost:8000/tricky_spellers.json';
+            wordListURL = 'http://localhost:8000/Year%207-8%20tricky%20spellers%20flashcards.json';
             break;
         case 'useful-verbs':
-            wordListURL = 'http://localhost:8000/useful_verbs.json';
+            wordListURL = 'http://localhost:8000/Year%207-8%20useful%20verbs%20flashcards.json';
             break;
         case 'impressive-adjectives':
-            wordListURL = 'http://localhost:8000/impressive_adjectives.json';
+            wordListURL = 'http://localhost:8000/Year%207-8%20useful%20adjectives%20flashcards.json';
+            break;
+        case 'common-shakespearean-terms':
+            wordListURL = 'http://localhost:8000/Common_Shakespeare_Terms.json';
             break;
         default:
             console.error('Flashcard set not found. Loading default set.');

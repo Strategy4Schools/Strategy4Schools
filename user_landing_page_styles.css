@@ -39,26 +39,62 @@ body, html {
     gap: 20px;
     padding-top: 0; /* Adjusted */
     box-sizing: border-box;
-    margin-top: 100px; /* Adjust this value based on your header's actual height to ensure content starts below the header */
+    margin-top: 0px; /* Adjust this value based on your header's actual height to ensure content starts below the header */
 }
 
 /* Add this to your existing CSS */
 .title-container {
+    font-family: "Electrolize", sans-serif;
+    position: relative; /* Ensures absolute positioning within container */
+    height: 250px; /* Increased height to accommodate larger text */
+    width: 100%; /* Full width of container */
     text-align: center;
     color: white;
-    margin: 0; /* Removes any default margin */
 }
 
 .welcome {
-    font-family: "Electrolize", sans-serif;
-    font-size: 5em;
-    font-weight: bold;
-    /* If you want the "Welcome," to be slightly smaller or larger, adjust the font-size individually */
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 30%; /* Reduced vertical distance */
+    transform: translateY(-50%);
+    font-size: 5em; /* Retaining the larger font size */
+    color: white; /* White color */
+    opacity: 0;
+    animation: fadeInEase 1.5s ease-in-out forwards;
+    text-decoration: underline; /* Adds underline to the text */
+    text-decoration-color: white; /* Optional: changes the color of the underline */
+    text-decoration-style: solid; /* Optional: can be 'solid', 'double', 'dotted', 'dashed', 'wavy' */
+    text-decoration-thickness: 2.5px; /* Adjusts the thickness of the underline */
+    text-underline-offset: 8px; /* Increases the gap between the text and the underline */
 }
 
 .name {
-    font-family: "Electrolize", sans-serif;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 60%; /* Reduced vertical distance to bring it closer to 'Welcome' */
+    transform: translateY(-50%);
+    font-size: 1.5em; /* Retained size for hierarchy */
+    color: white; /* Soft blue for contrast */
+    opacity: 0;
+    animation: fadeInEase 1.5s ease-in-out 0.5s forwards;
+}
 
+@keyframes fadeInEase {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideUpFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .button-container {
@@ -67,36 +103,27 @@ body, html {
     justify-content: center; /* Center buttons horizontally */
     flex-wrap: wrap; /* Allows wrapping for smaller screens */
     position: relative; /* Needed for absolute positioning of the pseudo-element */
-}
-
-.button-container::after {
-    content: ""; /* Needed for pseudo-elements */
-    position: absolute;
-    left: 50%; /* Center the line horizontally */
-    top: -25px; /* Start 10px above the container */
-    bottom: -25px; /* End 10px below the container */
-    width: 1px; /* Thickness of the line */
-    background-color: white; /* Color of the line */
-    transform: translateX(-50%); /* Center the line with respect to its width */
+    animation: slideUpFadeIn 0.7s ease-out forwards; /* Apply the animation to the container */
 }
 
 .button {
-    width: 20vw;
-    height: 20vw;
-    border-radius: px;
+    width: 30vw; /* Set the width */
+    height: 20vw; /* Make the height equal to the width to ensure a square */
+    border-radius: 0; /* This removes the rounded corners to make the shape a square */
     overflow: hidden;
     cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
     display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    background: linear-gradient(135deg, #4478a0 0%, #2c507b 100%);
+    border-radius: 8px;
+    border: 1px solid white;
 }
 
 .button:hover {
-    transform: scale(1.05);
+    transform: scale(1.05); /* Makes the button slightly larger */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -107,7 +134,6 @@ body, html {
 }
 
 #engage:hover, #play:hover {
-    background-color: #3A6EA5;
 }
 
 .profile-container {

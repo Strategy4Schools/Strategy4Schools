@@ -117,7 +117,7 @@ tr:nth-child(even) {
     position: relative; /* Enables absolute positioning within */
 }
 
-#deleteSelected {
+#deleteSelected, #addToFlashcardSelected {
     font-family: "Electrolize", sans-serif;
     padding: 5px 10px;
     background-color: #f44336; /* Ensured visibility */
@@ -126,9 +126,17 @@ tr:nth-child(even) {
     border-radius: 4px;
     cursor: pointer;
     display: none; /* Remains hidden until a selection is made */
-    margin: 0 auto; /* Centers the button horizontally in the flex container */
+    margin: 0 5px; /* Centers the button horizontally in the flex container and adds space between buttons */
 }
 
 #deleteSelected:hover {
     background-color: #d32f2f;
+}
+
+#addToFlashcardSelected {
+    background-color: blue;
+}
+
+#addToFlashcardSelected:hover {
+    background color: blue;
 }
