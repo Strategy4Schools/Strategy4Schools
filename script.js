@@ -80,6 +80,59 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+// Login button event listener
+document.getElementById('login-btn').addEventListener('click', function() {
+    document.getElementById('login-choice-modal').style.display = 'block';
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Get the modal elements
+    var studentLoginModal = document.getElementById('student-login-modal');
+    var teacherLoginModal = document.getElementById('teacher-login-modal');
+    var loginChoiceModal = document.getElementById('login-choice-modal');
+
+    // Function to show student login modal
+    function showStudentLoginModal() {
+        studentLoginModal.style.display = 'block';
+        loginChoiceModal.style.display = 'none'; // Hide the choice modal
+    }
+
+    // Function to show teacher login modal
+    function showTeacherLoginModal() {
+        teacherLoginModal.style.display = 'block';
+        loginChoiceModal.style.display = 'none'; // Hide the choice modal
+    }
+
+    // Get the buttons within the login choice modal
+    var teacherLoginBtnChoice = document.querySelector('#login-choice-modal button[onclick="showTeacherLoginModal()"]');
+    var studentLoginBtnChoice = document.querySelector('#login-choice-modal button[onclick="showStudentLoginModal()"]');
+
+    // Remove inline onclick attributes and add event listeners
+    if (teacherLoginBtnChoice && studentLoginBtnChoice) {
+        teacherLoginBtnChoice.removeAttribute('onclick');
+        studentLoginBtnChoice.removeAttribute('onclick');
+
+        teacherLoginBtnChoice.addEventListener('click', showTeacherLoginModal);
+        studentLoginBtnChoice.addEventListener('click', showStudentLoginModal);
+    }
+
+    // Optional: Hide modals when clicking outside of them
+    window.onclick = function(event) {
+        if (event.target == studentLoginModal) {
+            studentLoginModal.style.display = 'none';
+        }
+        if (event.target == teacherLoginModal) {
+            teacherLoginModal.style.display = 'none';
+        }
+        if (event.target == loginChoiceModal) {
+            loginChoiceModal.style.display = 'none';
+        }
+    }
+});
+
+
+
 // Modals
 var studentLoginModal = document.getElementById('student-login-modal');
 var teacherLoginModal = document.getElementById('teacher-login-modal');

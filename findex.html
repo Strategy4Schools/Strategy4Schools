@@ -55,24 +55,45 @@ const firebaseConfig = {
 
             </ul>
         </nav>
+
         <div class="auth-buttons">
     <a href="quote_details.html">
         <button id="subscribe-btn">Subscribe</button>
     </a>
+    <button id="login-btn">Login</button>
 </div>
+
+<!-- Login Choice Modal -->
+<div id="login-choice-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Choose Login Type</h2>
+        <div class="button-container">
+            <button onclick="showStudentLoginModal()">Student Login</button>
+            <button onclick="showTeacherLoginModal()">Teacher Login</button>
+        </div>
+    </div>
+</div>
+
+
+
 
     </header>
          <main>
+
+
         <!-- Hero Section -->
         <section id="hero">
-    <div class="hero-background"></div> <!-- Background container -->
+    <div class="hero-background"></div>
     <h1 class="animate-title">Strategy4Schools</h1>
+    <div class="hero-divider"></div> <!-- Ensure this is placed right here -->
     <p class="animate-text">Empowering Educational Excellence</p>
+    <div class="hero-login-buttons">
+        <button id="student-login-btn" class="login-btn">Student Login</button>
+        <button id="teacher-login-btn" class="login-btn">Teacher Login</button>
+    </div>
 
 
-     <!-- Login Buttons -->
-    <button id="student-login-btn" class="login-btn">Student Login</button>
-    <button id="teacher-login-btn" class="login-btn">Teacher Login</button>
 
 <!-- Student Login Modal -->
 <div id="student-login-modal" class="modal">
@@ -81,6 +102,10 @@ const firebaseConfig = {
         <form id="student-login-form">
             <input type="email" id="student-login-email" placeholder="Email">
             <input type="password" id="student-login-password" placeholder="Password">
+            <div class="remember-me-container">
+    <input type="checkbox" id="student-remember-me" name="remember-me">
+    <label for="student-remember-me">Remember me</label>
+</div>
             <button type="submit">Login</button>
             <a href="#" class="forgot-password-link">Forgot your password?</a>
         </form>
@@ -94,6 +119,10 @@ const firebaseConfig = {
         <form id="teacher-login-form">
             <input type="email" id="teacher-login-email" placeholder="Email">
             <input type="password" id="teacher-login-password" placeholder="Password">
+            <div class="remember-me-container">
+    <input type="checkbox" id="teacher-remember-me" name="remember-me">
+    <label for="teacher-remember-me">Remember me</label>
+</div>
             <button type="submit">Login</button>
             <a href="#" class="forgot-password-link">Forgot your password?</a>
         </form>

@@ -7,6 +7,16 @@ body, h1, h2, p, ul {
     padding: 0;
 }
 
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+}
+
+
 body {
     font-family: "Comfortaa", sans-serif;
     line-height: 1.6;
@@ -17,7 +27,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 20px; /* Adjust padding as needed */
+    padding: 0px 0px; /* Adjust padding as needed */
     background-color: #fff;
     color: #fff;
 }
@@ -59,6 +69,113 @@ header {
     color: white;
 }
 
+/* General Modal Styles */
+.modal#login-choice-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 100; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal#login-choice-modal .modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #eef6ff;
+    margin: 10% auto;
+    padding: 80px;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    width: 30%;
+    text-align: center;
+}
+
+
+.modal#login-choice-modal h2 {
+    color: black;
+    font-size: 26px;
+    margin-bottom: 25px;
+    font-weight: 600;
+
+}
+
+/* Container specifically for buttons, if not directly in modal-content */
+.modal#login-choice-modal .button-container {
+    display: flex;            /* Enables flexbox */
+    justify-content: space-around; /* Space out buttons evenly */
+    width: 100%;              /* Take the full width of its parent */
+}
+
+.modal#login-choice-modal button {
+    flex-grow: 1;
+    background-color: #3091ff;
+    font-family: "Comfortaa", sans-serif;
+    padding: 100px 100px;
+    margin-top: 60px;
+    margin-right: 20px;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.modal#login-choice-modal button:hover {
+    transform: translateY(-3px);
+    background-color: #227cc3;
+}
+
+#login-choice-modal .modal-content {
+    border-top: 10px solid #32a3f3; /* Red top border for teachers */
+}
+
+
+
+
+.login-btn {
+    padding: 12px 25px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: #32a3f3; /* This matches the modal button colors */
+    font-family: "Comfortaa", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-right: 10px;
+    margin-top: 40px;
+}
+
+.login-btn:hover {
+    background-color: #2e74a7; /* Darker blue on hover for interactivity */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Special styling for different roles */
+#student-login-btn {
+    background-color: #2e6b97; /* Lighter blue specific to students */
+}
+
+#teacher-login-btn {
+    background-color: #2e6b97; /* A warm red for teachers */
+}
+
+#teacher-login-btn:hover {
+    background-color: #2e74a7; /* Darker shade of red on hover */
+}
+
+#student-login-btn:hover {
+    background-color: #2e74a7;
+}
+
 
 
 .modal {
@@ -83,6 +200,7 @@ header {
     width: 30%;
     text-align: center;
 }
+
 .modal-title {
     color: black;
     font-size: 26px;
@@ -124,11 +242,65 @@ header {
     outline: none;
 }
 
+.modal-content {
+    position: relative; /* Ensures that positioning is relative to the modal content */
+}
+
+.remember-me-container {
+    position: absolute; /* Makes positioning absolute within the modal content */
+    bottom: 200px; /* Adjust this value to position the checkbox container from the bottom */
+    left: 0%; /* Positions it in the center of the modal */
+    transform: translateX(50%); /* Corrects the centering by shifting it back by half of its own width */
+    display: flex;
+    align-items: center;
+    width: auto; /* Auto width to fit content */
+    color: black; /* Ensures text color is black */
+}
+/* Hides the default checkbox appearance */
+.remember-me-container input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #fff; /* Background color */
+    margin: 0; /* Reset margin */
+    cursor: pointer; /* Changes the cursor to a pointer when hovering */
+    height: 20px; /* Half the height of your password input box */
+    width: 20px; /* Width to match the height for a square appearance */
+    display: inline-block; /* Allows you to set width and height */
+    border: 1px solid black; /* Example border */
+    border-radius: 0px; /* Match the border-radius of your password input box */
+    position: relative; /* For pseudo-element positioning */
+}
+
+/* Styles for when the checkbox is checked */
+.remember-me-container input[type="checkbox"]:checked::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 10px; /* Width of the checkmark */
+    height: 4px; /* Height of the checkmark */
+    border-left: 2px solid #3091ff; /* Color of the checkmark */
+    border-bottom: 2px solid #3091ff; /* Color of the checkmark */
+    transform: translate(-50%, -70%) rotate(-45deg); /* Adjust the position and angle */
+}
+
+/* Additional styles for the label */
+.remember-me-container label {
+    font-size: 16px; /* Match your design requirements */
+    color: black !important; /* Ensures the label text color is black */
+    margin-left: 7px; /* Space between the checkbox and the label */
+    vertical-align: middle; /* Aligns label with the checkbox */
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+
 
 .modal-content button {
     font-family: "Comfortaa", sans-serif;
     padding: 12px 200px;
-    margin-top: 30px;
+    margin-top: 60px;
     color: white;
     border: none;
     border-radius: 25px;
@@ -189,6 +361,7 @@ header {
 
 #reset-password-modal button {
    background-color: #3091ff;
+   margin-top: 20px;
 }
 
 #reset-password-modal button:hover {
@@ -532,6 +705,13 @@ p {
     position: relative;
     left: 0px; /* Moves text and button 10px to the left */
     top: -100px; /* Moves text and button 10px up */
+}
+
+.hero-divider {
+    height: 2px;
+    width: 60%; /* or 100% depending on your design preference */
+    background-color: white; /* ensuring it’s a visible color against the background */
+    margin: 0px auto; /* center it horizontally and add vertical spacing */
 }
 
 @media screen and (max-width: 768px) {
