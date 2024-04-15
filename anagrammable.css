@@ -12,14 +12,14 @@
     }
 
     h1 {
-        font-size: 3em;
-        margin: 0;
-        font-weight: 600;
-        color: white;
-        position: absolute;
-        top: 60px; /* Increased space above the title */
-        left: 50%;
-        transform: translateX(-50%);
+    font-size: 2.5em;
+    margin: 0; /* Remove default margin of h1 */
+    font-weight: 550;
+    color: white;
+    position: absolute;
+    top: 60px; /* Increased space above the title */
+    left: 50%;
+    transform: translateX(-50%);
     }
 
 #backButtonContainer {

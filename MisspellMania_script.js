@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     let hasIncorrectAttempt = false; // Track if an incorrect attempt has been made
     let currentWord = ''; // To store the correct word for validation in the popup
-    showIntroScreen(); // Show the intro screen first
 
     async function fetchWords() {
         try {
@@ -22,33 +21,6 @@ document.addEventListener("DOMContentLoaded", function() {
             [array[i], array[j]] = [array[j], array[i]];
         }
     }
-
-    function showIntroScreen() {
-    const introScreen = document.createElement('div');
-    introScreen.id = 'introScreen';
-    introScreen.style.position = 'fixed';
-    introScreen.style.top = '0';
-    introScreen.style.left = '0';
-    introScreen.style.width = '100%';
-    introScreen.style.height = '100%';
-    introScreen.style.display = 'flex';
-    introScreen.style.flexDirection = 'column';
-    introScreen.style.justifyContent = 'center';
-    introScreen.style.alignItems = 'center';
-    introScreen.style.background = 'linear-gradient(to bottom, #243A4E 0%, #2D4A61 50%, #364E70 100%)';
-    introScreen.innerHTML = `
-        <h2>Welcome to Misspell Mania!</h2>
-        <p>Test your spelling skills by choosing the correctly spelled word based on its definition.</p>
-        <button id="playNowButton">Play Now</button>
-    `;
-    
-    document.body.appendChild(introScreen);
-    
-    document.getElementById('playNowButton').addEventListener('click', function() {
-        introScreen.style.display = 'none';
-        fetchWords(); // Start the game after hiding the intro screen
-    });
-}
 
 function setupGame(definitions) {
     hasIncorrectAttempt = false; // Reset for new question
@@ -192,4 +164,3 @@ function showDefinitionPopup(definition, correctWord, definitions) {
     
     fetchWords(); // Start the game by fetching the words
 });
-    

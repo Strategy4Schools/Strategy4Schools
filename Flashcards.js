@@ -11,18 +11,20 @@ document.addEventListener('DOMContentLoaded', function() {
     let wordListURL;
     switch (flashcardSet) {
         case 'tricky-spellers':
-            wordListURL = 'https://raw.githubusercontent.com/Strategy4Schools/Strategy4Schools/main/Year%207-8%20tricky%20spellers%20flashcards.json';
+            wordListURL = 'Year_7-8_tricky_spellers_flashcards.json';
             break;
         case 'useful-verbs':
-            wordListURL = 'Year%207-8%20useful%20verbs%20flashcards.json';
+            wordListURL = 'Year_7-8_useful_verbs_flashcards.json';
             break;
         case 'impressive-adjectives':
-            wordListURL = 'Year%207-8%20useful%20adjectives%20flashcards.json';
+            wordListURL = 'Year_7-8_useful_adjectives_flashcards.json';
             break;
         case 'common-shakespearean-terms':
             wordListURL = 'Common_Shakespeare_Terms.json';
             break;
-        default:
+        case 'Year_11_Complex_Verbs':
+            wordListURL = 'Year_11_Complex_Verbs.json';
+            break;
             console.error('Flashcard set not found. Loading default set.');
             wordListURL = 'default_set.json'; // Fallback word list
     }

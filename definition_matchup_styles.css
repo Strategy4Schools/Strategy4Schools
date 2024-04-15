@@ -1,28 +1,86 @@
-body {
-    font-family: "Electrolize", sans-serif;
-    background-color: #243A4E;
-    background: linear-gradient(to bottom, #243A4E 0%, #2D4A61 50%, #364E70 100%);
-    color: #333;
-    text-align: center;
-    padding: 0;
+        body {
+            font-family: "Electrolize", sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start; /* Change from 'center' to 'flex-start' */
+            height: 100vh;
+            background-color: #243A4E;
+            margin: 0;
+            color: white;
+            padding-top: 10px;
+            background: linear-gradient(to bottom, #243A4E 0%, #2D4A61 50%, #364E70 100%);
+            overflow: hidden;
+        }
+
+        #gameTitle {
+            font-family: "Electrolize", sans-serif;
+            text-align: center;
+            margin-top: 40px; /* Adjust this value to position the title appropriately */
+            margin-bottom: 20px;
+            color: white;
+        }
+
+
+        h1 {
+            font-size: 2.5em;
+            margin: 0; /* Remove default margin of h1 */
+            font-weight: 550;
+            color: white;
+        }
+
+#difficultySelectionContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    margin: 0;
-    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100vh; /* Adjust if necessary to fill the screen */
+    top: 0;
+    left: 0;
+    z-index: 2; /* Ensure it's above other content */
 }
 
-h2 {
+#difficultySelection {
+    text-align: center; /* Center-align the text and buttons within the div */
+    margin: 20px 0; /* Add some margin for spacing */
+}
+
+#difficultySelection h2 {
     font-family: "Electrolize", sans-serif;
-    color: white;
-    margin-bottom: 60px;
-    margin-top: -60px;
-    font-size: 50px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    color: white; /* Adjust color as needed */
+    margin-bottom: 15px; /* Space between the heading and buttons */
+}
+
+#difficultySelection button {
+    font-family: "Electrolize", sans-serif;
+    font-size: 1em;
+    color: black; /* Text color */
+    background-color: #d9d9d9; /* Button background color */
+    border: 2px solid black;
+    padding: 10px 20px; /* Adjust padding as needed */
+    margin: 0 10px; /* Spacing between buttons */
+    cursor: pointer;
+    border-radius: 25px; /* Rounded corners */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition for hover effect */
+}
+
+#easy:hover {
+    background-color: #FF4136; /* Red */
+}
+
+#medium:hover {
+    background-color: #FFDC00; /* Yellow */
+}
+
+#hard:hover {
+    background-color: #2ECC40; /* Green */
+}
+
+#difficultySelection button:focus {
+    outline: none; /* Removes the outline to keep the design clean */
+    border: 2px solid #333; /* Optional: add a border to indicate focus */
 }
 
 
@@ -32,6 +90,7 @@ h2 {
     align-items: flex-start;
     flex-wrap: wrap;
     gap: 400px;
+    z-index: 900;
 }
 
 #words, #definitions {

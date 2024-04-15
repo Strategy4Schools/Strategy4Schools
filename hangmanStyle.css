@@ -7,6 +7,7 @@ body {
     text-align: center;
     line-height: 1.6;
     min-height: 100vh; /* Ensure the body takes at least the full height of the viewport */
+    overflow: hidden;
 }
 h1 {
     font-size: 2.5em;
@@ -286,3 +287,43 @@ button:hover {
     transition: background-color 0.5s;
 }
 
+#difficultySelectionContainer {
+    position: absolute; /* Or fixed, depending on how you want it to behave */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%; /* Full width to center content easily */
+    text-align: center; /* Center-align the text and therefore the buttons */
+    z-index: 1000; /* Make sure it's above other content */
+}
+
+#difficultySelection {
+    display: inline-block; /* Aligns the div to the center of its parent when used with text-align */
+    background-color: #2D4A61; /* A fitting background color that matches the theme */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+
+#difficultySelection h2 {
+    color: white;
+    margin-bottom: 15px; /* Space between title and buttons */
+}
+
+#difficultySelection button {
+    font-family: "Electrolize", sans-serif;
+    background-color: #364E70; /* Stylish blue background */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#difficultySelection button:hover {
+    background-color: #243A4E; /* Darken button on hover */
+    transform: scale(1.05); /* Slightly enlarge buttons on hover */
+}

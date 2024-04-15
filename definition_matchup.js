@@ -1,18 +1,40 @@
 let selectedWord = null;
 
-fetch(`WordMatch_Test_Word_List.json`)
+document.getElementById('easy').addEventListener('click', () => startGameWithDifficulty('easy'));
+document.getElementById('medium').addEventListener('click', () => startGameWithDifficulty('medium'));
+document.getElementById('hard').addEventListener('click', () => startGameWithDifficulty('hard'));
 
-    .then(response => response.json())
-    .then(data => {
-        initializeGame(data);
-    })
-    .catch(error => console.error('Error fetching JSON data:', error));
+function startGameWithDifficulty(difficulty) {
+    let wordsListURL;
+    switch (difficulty) {
+        case 'easy':
+            wordsListURL = 'WordMatch_Test_Word_List.json';
+            break;
+        case 'medium':
+            wordsListURL = 'WordMatch_Test_Word_List.json';
+            break;
+        case 'hard':
+            wordsListURL = 'WordMatch_Test_Word_List.json';
+            break;
+        default:
+            console.error('Invalid difficulty level');
+            return;
+    }
+
+    fetch(wordsListURL)
+        .then(response => response.json())
+        .then(data => {
+            initializeGame(data);
+            document.getElementById('difficultySelection').style.display = 'none'; // Hide difficulty buttons
+        })
+        .catch(error => console.error('Error fetching JSON data:', error));
+}
 
 function initializeGame(wordsList) {
-    const selectedWords = selectRandomWords(wordsList, 5); // Adjust the number of words as needed
+    const selectedWords = selectRandomWords(wordsList, 5); // Adjust number of words based on difficulty if needed
     updateGameBoard(selectedWords);
 
-    // Reattach event listeners to the new elements
+    // Attach event listeners directly without calling a separate function
     document.querySelectorAll('#words p').forEach(word => {
         word.addEventListener('click', wordClickHandler);
     });
@@ -247,15 +269,6 @@ function resetGame() {
         .catch(error => console.error('Error fetching JSON data:', error));
 }
 
-
-function fetchNewWords() {
-    fetch(`http://localhost:8000/Definition%20Matchup/Year_7_Word_List_Without_Tags.json`)
-        .then(response => response.json())
-        .then(data => {
-            initializeGame(data);
-        })
-        .catch(error => console.error('Error fetching new words:', error));
-}
 
 // Ensure 'Play Again' button calls resetGame
 document.getElementById("play-again").addEventListener("click", resetGame);

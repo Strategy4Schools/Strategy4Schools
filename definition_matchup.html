@@ -9,11 +9,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Back to minigames button -->
+
+    <div id="gameTitle">
+    <h1>Word Match</h1>
+    </div>
+
+        <!-- Back to minigames button -->
     <div id="backButtonContainer">
         <button id="backToMinigames" onclick="window.location.href='minigames_home.html'">← Back to Minigames</button>
     </div>
-    <h2>Word Match</h2>
+    
+    <div id="difficultySelectionContainer">
+    <div id="difficultySelection">
+        <h2>Select Difficulty:</h2>
+        <button id="easy">Easy</Abutton>
+        <button id="medium">Medium</button>
+        <button id="hard">Hard</button>
+    </div>
+    </div>
+
     <div id="game">
         <div id="words">
             <!-- Words will be dynamically loaded here -->
