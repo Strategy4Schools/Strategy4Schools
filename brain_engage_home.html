@@ -36,23 +36,34 @@
     <header>
         <div class="header-container">
 <!-- New Menu Button -->
-<button type="button" class="menu-button btn-navigation-nav-menu-md" onclick="toggleNavMenu()" title="nav menu">
-    <span class="icon-nav-menu"></span>
+<button type="button" class="menu-button btn-navigation-nav-menu-md" onclick="toggleNavMenu()" title="Toggle Menu">
+    <img id="navMenuIcon" class="nav-menu-icon" src="https://github.com/Strategy4Schools/Strategy4Schools/blob/main/hamburger%20open%20menu%20icon.png?raw=true" alt="Menu">
 </button>
 
-<!-- Dropdown Menu -->
-<div id="navMenuDropdown" class="nav-menu-dropdown"> 
-    <div class="dropdown-profile-section">
-        <img class="dropdown-avatar" src="https://www.meophamschool.org.uk/_site/images/design/logo.png" alt="Meopham School">
-        <div class="dropdown-username"></div>
-    </div>
-    <a href="minigames_home.html" class="dropdown-link"><span class="dropdown-icon icon-home"></span>Home</a>
-    <a href="#" class="dropdown-link"><span class="dropdown-icon icon-dictionary"></span>Dictionary</a>
-    <a href="Collections_Page.html" class="dropdown-link"><span class="dropdown-icon icon-collection"></span>My Collection</a>
-    <a href="#" class="dropdown-link"><span class="dropdown-icon icon-achievements"></span>My Achievements</a>
 
-    <!-- more links -->
+
+<!-- Sidebar Navigation -->
+<div id="navMenuDropdown" class="nav-menu-dropdown">
+    <!-- Navigation links with icons and text -->
+    <a href="minigames_home.html" class="dropdown-link">
+        <span class="dropdown-icon icon-home"></span>
+        <span class="nav-text">Home</span>
+    </a>
+    <a href="#" class="dropdown-link">
+        <span class="dropdown-icon icon-dictionary"></span>
+        <span class="nav-text">Dictionary</span>
+    </a>
+    <a href="Collections_Page.html" class="dropdown-link">
+        <span class="dropdown-icon icon-collection"></span>
+        <span class="nav-text">My Collection</span>
+    </a>
+    <a href="#" class="dropdown-link">
+        <span class="dropdown-icon icon-achievements"></span>
+        <span class="nav-text">My Achievements</span>
+    </a>
+    <!-- Add additional nav items as needed -->
 </div>
+
    <div class="logo-container">
                 <img src="https://github.com/Strategy4Schools/Strategy4Schools/blob/main/S4S.png?raw=true" alt="logo">
             </div>
@@ -64,16 +75,30 @@
     <div id="searchResults" class="search-dropdown"></div>
 </div>
 
-            <div class="profile-container">
-                <img src="https://www.meophamschool.org.uk/_site/images/design/logo.png" alt="Profile" class="profile-pic" onclick="toggleDropdown()"/>
-                <div class="dropdown-menu" id="dropdownMenu">
-            <div class="arrow"></div>
-                    <a href="edit_profile.html">Edit Profile</a>
-                    <a href="index.html">Log Out</a>
-                </div>
+<!-- Profile Container -->
+<div class="profile-container">
+    <img src="https://www.meophamschool.org.uk/_site/images/design/logo.png" alt="Profile" class="profile-pic" onclick="toggleProfilePopup()" />
+
+    <!-- Pop-up Menu -->
+    <div id="profilePopup" class="profile-popup">
+        <div class="popup-header">
+            <img class="profile-icon" src="profile-icon.png" alt="Profile Icon">
+            <div class="user-info">
+                <h3 class="username">MagicPumpkin.8Fbi</h3>
+                <p class="email">mikecock@gmail.com</p>
             </div>
+            <button class="close-btn" onclick="toggleProfilePopup()">X</button>
         </div>
+        <!-- Links -->
+        <a href="my_profile.html">My profile</a>
+        <a href="edit_profile.html">Edit profile</a>
+        <a href="account_settings.html">Account settings</a>
+        <a href="logout.html">Log out</a>
+    </div>
+</div>
+
     </header>
+
     <div class="main-content">
 
     <!-- Main Content Section -->
@@ -132,13 +157,14 @@
                 <div class="game-thumbnail">
                     <a href="definition_matchup.html">
                     <img src="WordMatch Thumbnail.png" alt="WordMatch">
-                    <div class="BrainEngage-games-text">Match words To Definitions</div>
+                    <div class="BrainEngage-games-text">Match words to definitions</div>
                 </a>
                 </div>
                 <div class="game-thumbnail">
                     <a href="game link">
-                    <img src="Adjective Match Thumbnail.png" alt="Brain Engage Game 4">
-                    <div class="BrainEngage-games-text">Match Adjectives To Definitions</div>
+                    <img src="brain_engage_game4.jpg" alt="Brain Engage Game 4">
+                    <p>Brain Engage Game 4</p>
+                    <div class="BrainEngage-games-text">Game 1</div>
                 </a>
                 </div>
                 <div class="game-thumbnail">

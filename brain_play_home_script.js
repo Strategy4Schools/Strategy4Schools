@@ -124,3 +124,38 @@ document.addEventListener('scroll', function() {
     featuredGamesContainer.style.opacity = '1'; // Trigger the animation
   }
 });
+
+
+function toggleNavMenu() {
+    var navMenu = document.getElementById("navMenuDropdown");
+    var menuButtonIcon = document.getElementById("navMenuIcon");
+
+    // Toggle the display of the sidebar
+    if (navMenu.style.display === "block" || navMenu.style.display === "") {
+        // Sidebar is open, so we close it and change the icon to the 'closed' icon
+        navMenu.style.display = "none";
+        menuButtonIcon.src = 'https://github.com/Strategy4Schools/Strategy4Schools/blob/main/hamburger%20closed%20menu%20icon.png?raw=true'; // Closed icon
+    } else {
+        // Sidebar is closed, so we open it and change the icon to the 'open' icon
+        navMenu.style.display = "block";
+        menuButtonIcon.src = 'https://github.com/Strategy4Schools/Strategy4Schools/blob/main/hamburger%20open%20menu%20icon.png?raw=true'; // Open icon
+    }
+}
+
+
+function toggleProfilePopup() {
+    console.log("toggleProfilePopup function called"); // This should appear in the console when you click the profile
+    var popup = document.getElementById("profilePopup");
+    if (popup.classList.contains("show")) {
+        popup.classList.remove("show");
+        popup.style.transform = "translateX(100%)";
+    } else {
+        popup.classList.add("show");
+        popup.style.transform = "translateX(0)";
+    }
+}
+
+
+
+
+

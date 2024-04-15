@@ -10,8 +10,8 @@ body {
 header {
     background: linear-gradient(to bottom, #1C2D3D 0%, #243A4E 100%);
     color: #fff;
-    padding-bottom: 20px;
-    padding-top: 20px;
+    padding-bottom: 15px;
+    padding-top: 15px;
     text-align: center;
     display: flex;
     justify-content: space-between;
@@ -26,15 +26,16 @@ header {
 
 .logo-container {
     position: absolute;
-    left: 7.5%; /* Position the left edge of the container at the center of the header */
-    top: 15px;
+    left: 6.5%; /* Position the left edge of the container at the center of the header */
+    top: 10px;
     transform: translateX(-50%); /* Move the container back by half of its own width */
+
     /* ... other styles ... */
 }
 
 .logo-container img {
-    max-width: 420px; /* Maximum width, the image won't stretch beyond this */
-    max-height: 70px; /* Adjust this value based on your header's height */
+    max-width: 410px; /* Maximum width, the image won't stretch beyond this */
+    max-height: 60px; /* Adjust this value based on your header's height */
     height: auto; /* Height adjusts automatically to maintain aspect ratio */
     object-fit: contain; /* Ensures the image is scaled correctly within the set dimensions */
 }
@@ -335,7 +336,8 @@ footer {
 .profile-container {
     position: absolute;
     right: 27px; /* Adjust this value as needed to position it from the right edge of the viewport */
-    top: 20px; /* You can also adjust the vertical position if needed */
+    top: 10px; /* You can also adjust the vertical position if needed */
+    opacity: 1;
 }
 
 
@@ -354,46 +356,65 @@ footer {
     cursor: pointer;
     object-fit: cover;
 }
+/* Profile Pop-up Styles */
+.profile-popup {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    right: 0; /* Position on the far right */
+    width: 300px; /* Or whatever width you prefer */
+    height: 100%;
+    background-color: #333; /* Or any color you prefer */
+    z-index: 1000; /* High z-index to make sure it's on top */
+    overflow-y: auto; /* Enable scrolling if content is longer than the screen */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for opening and closing */
+    transform: translateX(100%); /* Initially moved off-screen to the right */
+}
 
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    background-color: #14202B;
-    min-width: 160px;
-    z-index: 1;
-    right: 100%;
-    top: 100%;
-    transform: translateX(50%);
+/* Class added by JavaScript to slide in the pop-up */
+.profile-popup.show {
+    display: block; /* Shown */
+    transform: translateX(0); /* Reset to original position to slide in */
+}
+
+
+.profile-popup .popup-content {
+    padding: 20px;
+}
+
+/* Show the popup */
+.profile-popup.show {
+    right: 0; /* Bring onto the screen */
+}
+
+.profile-popup .popup-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.profile-popup .close-btn {
+    background: none;
     border: none;
-    border-radius: 6px;
-    margin-top: 33px;
-}
-
-.dropdown-menu .arrow {
-    position: absolute;
-    top: -10px; /* Position it above the dropdown */
-    left: 66.5%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 10px solid #14202B; /* Same color as your dropdown background */
-}
-
-
-.dropdown-menu a {
     color: white;
-    padding: 13px 16px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.profile-popup a {
+    color: white;
+    padding: 10px;
     text-decoration: none;
     display: block;
-    font-weight: bold;
+    border-bottom: 1px solid #444;
 }
 
-.dropdown-menu a:hover {
-    background-color: #fdb740;
-    color: black;
+.profile-popup a:hover {
+    background-color: #555;
 }
+
+
 
 
 /* Responsive adjustments for smaller screens */
@@ -420,17 +441,17 @@ footer {
 .search-input-container {
     display: flex; /* Use flexbox to align the input and button */
     align-items: center; /* Align items vertically */
-    width: 600px; /* Set a width that includes both the input and button */
+    width: 500px; /* Set a width that includes both the input and button */
 }
 
 #gameSearch {
     border: none;
     flex-grow: 1;
-    margin-right: -60px;
-    padding: 15px 60px 15px 5px; /* Adjust padding-right to limit text area */
+    margin-right: -50px;
+    padding: 12px 55px 12px 15px; /* Adjust padding-right to limit text area */
     border-radius: 50px;
     width: 100%;
-    font-size: 15px;
+    font-size: 16px;
     box-sizing: border-box;
     font-family: "Electrolize", sans-serif;
     background-color: #fff;
@@ -455,10 +476,10 @@ footer {
     border: none;
     color: white;
     font-size: 1.2em;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 12px;
-    padding-left: 12px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 8px;
+    padding-left: 8px;
     border-radius: 100%; /* Rounded corners on the right side */
     z-index: 10;
 }
@@ -506,89 +527,105 @@ footer {
     margin-left: 10px; /* Added margin to move the button to the right */
     padding: 10px; /* Padding to keep the button size consistent */
     z-index: 5;
+    top: 3px;
 }
 
-.btn-navigation-nav-menu-md:hover .icon-nav-menu::before {
+.btn-navigation-nav-menu-md:hover .icon-nav-menu {
     color: #fdb740; /* Change to your desired hover color */
 }
 
-.icon-nav-menu::before {
-    content: '\2630'; /* Unicode for the hamburger icon */
-    font-size: 30px; /* Increased icon size for a larger appearance */
-    color: white; 
+.nav-menu-icon {
+    height: 30px; /* Adjust the height to fit your design */
+    width: 30px; /* Adjust the width to fit your design */
+    transition: transform 0.3s; /* Smooth transition for transformations */
 }
 
+
+
+
+/* Adjust the top position to be below the header. 
+   Assuming your header is 70px high as per your original CSS. */
 .nav-menu-dropdown {
-    display: none; /* Hidden initially */
-    position: fixed; /* Positions the dropdown absolutely within the relative parent */
-    left: 0; /* Aligns to the left of the button */
-    top: 99px; /* Positions the dropdown right below the button */
-    background-color: #1C2D3D; /* Change background color as needed */
-    width: 250px; /* Adjust width as needed */
+    background: linear-gradient(to bottom, #1C2D3D 0%, #243A4E 100%);
+    position: fixed;
+    left: 0;
+    top: 80px;
+    bottom: 0;
+    width: 60px; /* Original width for icons */
+    transition: width 0.5s ease;
+    overflow-x: hidden;
     z-index: 1000;
-    height: 100%;
-    animation: fadeIn 0.5s ease-out forwards;
+    border-right: 1px solid #14202b;
 }
 
-
-/* Style for the links within the dropdown */
-.nav-menu-dropdown a {
-    color: white; /* Text color */
-    padding: 10px 15px; /* Padding for each link */
-    text-decoration: none; /* Removes underline from links */
-    display: block; /* Makes each link take up its own line */
-    border-bottom: 3px solid #14202b; /* Optional: adds a separator between links */
-}
-
-.nav-menu-dropdown a:last-child {
-    border-bottom: none; /* Removes border from the last link */
-}
-
-.nav-menu-dropdown a:hover {
-    background-color: #fdb740; /* Change background color on hover */
-    color: black;
-}
-
-
-.dropdown-profile-section {
-    padding: 10px;
-    border-bottom: 3px solid #fff;
-    border-top: 1px solid #14202b;
-    text-align: center;
-    background-color: #14202b; /* Light grey background for the profile section */
-}
-
-.dropdown-avatar {
-    width: 50px; /* Adjust as necessary */
-    height: 50px; /* Adjust as necessary */
-    border-radius: 50%;
-    margin-bottom: 10px;
-}
-
-.dropdown-username {
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: white;
+/* Expand to full width on hover */
+.nav-menu-dropdown:hover {
+    width: 225px; /* Set the width you prefer for expanded sidebar */
 }
 
 .dropdown-link {
+    display: flex;
+    align-items: center;
     padding: 15px;
-    display: block;
-    color: #333;
+    color: white;
     text-decoration: none;
-    border-bottom: 1px solid #eaeaea;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease;
 }
 
+
+
+/* Icon styles */
 .dropdown-icon {
-    margin-right: 10px;
+    flex-shrink: 0; /* Prevents the icon from resizing */
+    width: 30px; /* Icon size */
+    height: 30px; /* Icon size */
+    text-align: center;
+    font-size: 20px;
+    margin-right: 20px; /* Maintain a fixed spacing to the text */
+    margin-left: 5px;
 }
+
+/* Hide text by default */
+.nav-text {
+    font-size: 18px;
+    font-weight: normal;
+    display: none;
+    white-space: nowrap; /* Ensure the text doesn't wrap */
+}
+
+/* Show text on sidebar hover */
+.nav-menu-dropdown:hover .nav-text {
+    display: block;
+
+}
+
+.dropdown-link:hover .nav-text {
+    transform: translateX(7px);
+    transition: transform 0.3s ease;
+    color: #fdb740; 
+}
+
+.dropdown-link .nav-text {
+    transform: translateX(0px);
+    transition: transform 0.3s ease;
+}
+
 
 /* Add your icon font styles or classes here */
-.icon-home::before { content: "🏠"; } /* Replace with actual icons */
-.icon-dictionary::before { content: "📚"; } /* Replace with actual icons */
-.icon-collection::before { content: "🔖" }
-.icon-achievements::before { content: "🏆" }
+.icon-home::before { content: "🏠"; }
+.icon-dictionary::before { content: "📚"; }
+.icon-collection::before { content: "🔖"; }
+.icon-achievements::before { content: "🏆"; }
 /* ... more icons ... */
+
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+    .nav-menu-dropdown {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
 
 .arrow-button {
     background-color: transparent; /* Dark grey background for visibility */
@@ -683,3 +720,4 @@ footer {
     background-color: white; /* Color of the line */
     margin: 50px 0; /* Increase vertical space around the divider */
 }
+

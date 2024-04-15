@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Strategy4Schools | MinigamePage</title>
+    <title>Strategy4Schools | Brain Engage Home</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="minigames_styles.css">
+    <link rel="stylesheet" href="brain_engage_home_styles.css">
 
-            <!-- Firebase SDKs -->
+        <!-- Firebase SDKs -->
     <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
     
@@ -28,30 +28,42 @@
     </script>
 
     <!-- Your custom script -->
-    <script type="module" src="brain_play_home_script.js"></script>
+    <script type="module" src="brain_engage_home_script.js"></script>
+
 </head>
 <body>
     <!-- Header Section -->
     <header>
         <div class="header-container">
 <!-- New Menu Button -->
-<button type="button" class="menu-button btn-navigation-nav-menu-md" onclick="toggleNavMenu()" title="nav menu">
-    <span class="icon-nav-menu"></span>
+<button type="button" class="menu-button btn-navigation-nav-menu-md" onclick="toggleNavMenu()" title="Toggle Menu">
+    <img id="navMenuIcon" class="nav-menu-icon" src="https://github.com/Strategy4Schools/Strategy4Schools/blob/main/hamburger%20open%20menu%20icon.png?raw=true" alt="Menu">
 </button>
 
-<!-- Dropdown Menu -->
-<div id="navMenuDropdown" class="nav-menu-dropdown"> 
-    <div class="dropdown-profile-section">
-        <img class="dropdown-avatar" src="https://www.meophamschool.org.uk/_site/images/design/logo.png" alt="Meopham School">
-        <div class="dropdown-username"></div>
-    </div>
-    <a href="minigames_home.html" class="dropdown-link"><span class="dropdown-icon icon-home"></span>Home</a>
-    <a href="#" class="dropdown-link"><span class="dropdown-icon icon-dictionary"></span>Dictionary</a>
-    <a href="Collections_Page.html" class="dropdown-link"><span class="dropdown-icon icon-collection"></span>My Collection</a>
-    <a href="#" class="dropdown-link"><span class="dropdown-icon icon-achievements"></span>My Achievements</a>
 
-    <!-- more links -->
+
+<!-- Sidebar Navigation -->
+<div id="navMenuDropdown" class="nav-menu-dropdown">
+    <!-- Navigation links with icons and text -->
+    <a href="minigames_home.html" class="dropdown-link">
+        <span class="dropdown-icon icon-home"></span>
+        <span class="nav-text">Home</span>
+    </a>
+    <a href="#" class="dropdown-link">
+        <span class="dropdown-icon icon-dictionary"></span>
+        <span class="nav-text">Dictionary</span>
+    </a>
+    <a href="Collections_Page.html" class="dropdown-link">
+        <span class="dropdown-icon icon-collection"></span>
+        <span class="nav-text">My Collection</span>
+    </a>
+    <a href="#" class="dropdown-link">
+        <span class="dropdown-icon icon-achievements"></span>
+        <span class="nav-text">My Achievements</span>
+    </a>
+    <!-- Add additional nav items as needed -->
 </div>
+
    <div class="logo-container">
                 <img src="https://github.com/Strategy4Schools/Strategy4Schools/blob/main/S4S.png?raw=true" alt="logo">
             </div>
@@ -63,44 +75,58 @@
     <div id="searchResults" class="search-dropdown"></div>
 </div>
 
-            <div class="profile-container">
-                <img src="https://www.meophamschool.org.uk/_site/images/design/logo.png" alt="Profile" class="profile-pic" onclick="toggleDropdown()"/>
-                <div class="dropdown-menu" id="dropdownMenu">
-            <div class="arrow"></div>
-                    <a href="edit_profile.html">Edit Profile</a>
-                    <a href="index.html">Log Out</a>
-                </div>
+<!-- Profile Container -->
+<div class="profile-container">
+    <img src="https://www.meophamschool.org.uk/_site/images/design/logo.png" alt="Profile" class="profile-pic" onclick="toggleProfilePopup()" />
+
+    <!-- Pop-up Menu -->
+    <div id="profilePopup" class="profile-popup">
+        <div class="popup-header">
+            <img class="profile-icon" src="profile-icon.png" alt="Profile Icon">
+            <div class="user-info">
+                <h3 class="username">MagicPumpkin.8Fbi</h3>
+                <p class="email">mikecock@gmail.com</p>
             </div>
+            <button class="close-btn" onclick="toggleProfilePopup()">X</button>
         </div>
+        <!-- Links -->
+        <a href="my_profile.html">My profile</a>
+        <a href="edit_profile.html">Edit profile</a>
+        <a href="account_settings.html">Account settings</a>
+        <a href="logout.html">Log out</a>
+    </div>
+</div>
+
     </header>
+
     <div class="main-content">
 
     <!-- Main Content Section -->
     <main>
         <!-- Featured Games Section -->
 <section id="featured-games">
-    <h2>Featured Games </h2>
+    <h2>Featured Activities</h2>
     <div class="featured-games-mask">
         <!-- Left arrow -->
         <button id="left-arrow" class="arrow-button"></button>
 
         <div class="featuredgames-container">
             <div class="featuredgame-thumbnail">
-                <a href="anagrammable.html">
-                    <img src="https://raw.githubusercontent.com/Strategy4Schools/Strategy4Schools/main/Anagrammable%20Thumbnail.png" alt="Anagrammable">
-                    <div class="featured-games-text">Rearrange and learn words</div>
+                <a href="MisspellMania.html">
+                    <img src="Misspell Mania Thumbnail.png" alt="MisspellMania">
+                    <div class="featured-games-text">Commonly Misspelled Words</div>
                 </a>
             </div>
             <div class="featuredgame-thumbnail">
-                <a href="WordGuess.html">
-                    <img src="WordGuess Thumbnail.png" alt="Word Guess">
-                    <div class="featured-games-text">5 Guesses, 1 Word</div>
+                <a href="definition_matchup.html">
+                    <img src="WordMatch Thumbnail.png" alt="TODO">
+                    <div class="featured-games-text">Match words to definitions</div>
                 </a>
             </div>
             <div class="featuredgame-thumbnail">
-                <a href="hangman.html">
-                    <img src="Word Survival Thumbnail.png" alt="Hangman">
-                    <div class="featured-games-text">Guess Letters To Stay Alive</div>
+                <a href="flashcardscategories.html">
+                    <img src="https://raw.githubusercontent.com/Strategy4Schools/Strategy4Schools/main/Flashcards%20Thumbnail.png" alt="Flashcards">
+                    <div class="featured-games-text">Flashcards, what else.</div>
                 </a>
             </div>
             <!-- Additional games can be added here -->
@@ -112,44 +138,42 @@
 
 <hr class="simple-divider">
 
-        <!-- Brain Play Games Section -->
-        <section id="brain-play-games">
-            <h2 id="brain-play-title">Brain Play</h2>
+        <!-- Brain Engage Games Section -->
+        <section id="brain-engage-games">
+            <h2 id="brain-engage-title">Brain Play</h2>
             <div class="games-container">
                 <div class="game-thumbnail">
-                    <a href="anagrammable.html">
-                    <img src="Anagrammable Thumbnail.png" alt="Anagrammable">
-                    <div class="BrainPlay-games-text">Rearrange and learn words!</div>
+                    <a href="flashcardscategories.html">
+                    <img src="Flashcards Thumbnail.png" alt="Flashcards">
+                    <div class="BrainEngage-games-text">Flashcards, what else</div>
                 </a>
                 </div>
                 <div class="game-thumbnail">
-                    <a href="WordGuess.html">
-                    <img src="WordGuess Thumbnail.png" alt="WordGuess">
-                    <div class="BrainPlay-games-text">5 Guesses, 1 Word</div>
+                    <a href="MisspellMania.html">
+                    <img src="Misspell Mania Thumbnail.png" alt="Brain Engage Game 2">
+                    <div class="BrainEngage-games-text">Commonly Misspelled Words</div>
                 </a>
                 </div>
                 <div class="game-thumbnail">
-                    <a href="hangman.html">
-                    <img src="Word Survival Thumbnail.png" alt="Brain Play Game 3">
-                    <div class="BrainPlay-games-text">Guess Letters To Stay Alive</div>
-                </a>
-                </div>
-                <div class="game-thumbnail">
-                    <a href="game link">
-                    <img src="brain_play_game4.jpg" alt="Brain Play Game 4">
-                    <p>Brain Play Game 4</p>
-                    <div class="BrainPlay-games-text">Game 1</div>
+                    <a href="definition_matchup.html">
+                    <img src="WordMatch Thumbnail.png" alt="WordMatch">
+                    <div class="BrainEngage-games-text">Match words to definitions</div>
                 </a>
                 </div>
                 <div class="game-thumbnail">
                     <a href="game link">
-                    <img src="brain_play_game5.jpg" alt="Brain Play Game 5">
-                    <p>Brain Play Game 5</p>
-                    <div class="BrainPlay-games-text">Game 1</div>
+                    <img src="brain_engage_game4.jpg" alt="Brain Engage Game 4">
+                    <p>Brain Engage Game 4</p>
+                    <div class="BrainEngage-games-text">Game 1</div>
                 </a>
                 </div>
-                <!-- Additional Brain Play games can be added here -->
-            </div>
+                <div class="game-thumbnail">
+                    <a href="game link">
+                    <img src="brain_engage_game5.jpg" alt="Brain Engage Game 5">
+                    <p>Brain Engage Game 5</p>
+                    <div class="BrainEngage-games-text">Game 1</div>
+                </a>
+                </div>
         </section>
     </main>
 
@@ -171,7 +195,7 @@
             info.style.display = info.style.display === "block" ? "none" : "block";
         }
     </script>
-    <script type="module" src="brain_play_home_script.js"></script>
+    <script type="module" src="brain_engage_home_script.js"></script>
     <script>
     function toggleNavMenu() {
         var navMenu = document.getElementById("navMenuDropdown");
