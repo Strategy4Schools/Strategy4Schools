@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="brain_engage_home_styles.css">
+    <link rel="stylesheet" href="brain_play_home_styles.css">
 
         <!-- Firebase SDKs -->
     <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
@@ -49,6 +49,12 @@
         <span class="dropdown-icon icon-home"></span>
         <span class="nav-text">Home</span>
     </a>
+
+    <a href="#" class="dropdown-link">
+        <span class="dropdown-icon icon-brainengage"></span>
+        <span class="nav-text">Brain Engage</span>
+    </a>
+
     <a href="#" class="dropdown-link">
         <span class="dropdown-icon icon-dictionary"></span>
         <span class="nav-text">Dictionary</span>
@@ -75,27 +81,15 @@
     <div id="searchResults" class="search-dropdown"></div>
 </div>
 
-<!-- Profile Container -->
-<div class="profile-container">
-    <img src="https://www.meophamschool.org.uk/_site/images/design/logo.png" alt="Profile" class="profile-pic" onclick="toggleProfilePopup()" />
-
-    <!-- Pop-up Menu -->
-    <div id="profilePopup" class="profile-popup">
-        <div class="popup-header">
-            <img class="profile-icon" src="profile-icon.png" alt="Profile Icon">
-            <div class="user-info">
-                <h3 class="username">MagicPumpkin.8Fbi</h3>
-                <p class="email">mikecock@gmail.com</p>
+            <div class="profile-container">
+                <img src="https://www.meophamschool.org.uk/_site/images/design/logo.png" alt="Profile" class="profile-pic" onclick="toggleDropdown()"/>
+                <div class="dropdown-menu" id="dropdownMenu">
+            <div class="arrow"></div>
+                    <a href="edit_profile.html">Edit Profile</a>
+                    <a href="index.html">Log Out</a>
+                </div>
             </div>
-            <button class="close-btn" onclick="toggleProfilePopup()">X</button>
         </div>
-        <!-- Links -->
-        <a href="my_profile.html">My profile</a>
-        <a href="edit_profile.html">Edit profile</a>
-        <a href="account_settings.html">Account settings</a>
-        <a href="logout.html">Log out</a>
-    </div>
-</div>
 
     </header>
 
@@ -195,7 +189,7 @@
             info.style.display = info.style.display === "block" ? "none" : "block";
         }
     </script>
-    <script type="module" src="brain_engage_home_script.js"></script>
+    <script type="module" src="brain_play_home_script.js"></script>
     <script>
     function toggleNavMenu() {
         var navMenu = document.getElementById("navMenuDropdown");

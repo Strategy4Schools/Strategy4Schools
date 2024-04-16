@@ -141,21 +141,3 @@ function toggleNavMenu() {
         menuButtonIcon.src = 'https://github.com/Strategy4Schools/Strategy4Schools/blob/main/hamburger%20open%20menu%20icon.png?raw=true'; // Open icon
     }
 }
-
-
-function toggleProfilePopup() {
-    console.log("toggleProfilePopup function called"); // This should appear in the console when you click the profile
-    var popup = document.getElementById("profilePopup");
-    if (popup.classList.contains("show")) {
-        popup.classList.remove("show");
-        popup.style.transform = "translateX(100%)";
-    } else {
-        popup.classList.add("show");
-        popup.style.transform = "translateX(0)";
-    }
-}
-
-
-
-
-

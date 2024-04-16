@@ -356,62 +356,45 @@ footer {
     cursor: pointer;
     object-fit: cover;
 }
-/* Profile Pop-up Styles */
-.profile-popup {
-    display: none; /* Initially hidden */
-    position: fixed;
-    top: 0;
-    right: 0; /* Position on the far right */
-    width: 300px; /* Or whatever width you prefer */
-    height: 100%;
-    background-color: #333; /* Or any color you prefer */
-    z-index: 1000; /* High z-index to make sure it's on top */
-    overflow-y: auto; /* Enable scrolling if content is longer than the screen */
-    transition: transform 0.3s ease-in-out; /* Smooth transition for opening and closing */
-    transform: translateX(100%); /* Initially moved off-screen to the right */
-}
 
-/* Class added by JavaScript to slide in the pop-up */
-.profile-popup.show {
-    display: block; /* Shown */
-    transform: translateX(0); /* Reset to original position to slide in */
-}
-
-
-.profile-popup .popup-content {
-    padding: 20px;
-}
-
-/* Show the popup */
-.profile-popup.show {
-    right: 0; /* Bring onto the screen */
-}
-
-.profile-popup .popup-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 20px;
-}
-
-.profile-popup .close-btn {
-    background: none;
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #14202B;
+    min-width: 160px;
+    z-index: 1;
+    right: 100%;
+    top: 100%;
+    transform: translateX(50%);
     border: none;
-    color: white;
-    font-size: 1.2em;
-    cursor: pointer;
+    border-radius: 6px;
+    margin-top: 33px;
 }
 
-.profile-popup a {
+.dropdown-menu .arrow {
+    position: absolute;
+    top: -10px; /* Position it above the dropdown */
+    left: 66.5%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #14202B; /* Same color as your dropdown background */
+}
+
+
+.dropdown-menu a {
     color: white;
-    padding: 10px;
+    padding: 13px 16px;
     text-decoration: none;
     display: block;
-    border-bottom: 1px solid #444;
+    font-weight: bold;
 }
 
-.profile-popup a:hover {
-    background-color: #555;
+.dropdown-menu a:hover {
+    background-color: #fdb740;
+    color: black;
 }
 
 
@@ -614,6 +597,7 @@ footer {
 
 /* Add your icon font styles or classes here */
 .icon-home::before { content: "🏠"; }
+.icon-brainengage::before { content: "🫡"; }
 .icon-dictionary::before { content: "📚"; }
 .icon-collection::before { content: "🔖"; }
 .icon-achievements::before { content: "🏆"; }
