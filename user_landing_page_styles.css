@@ -1,84 +1,280 @@
 body, html {
+    position: relative;
     margin: 0;
     padding: 0;
     height: 100%;
-    background: linear-gradient(to bottom, #243A4E 0%, #2D4A61 50%, #364E70 100%);
-    display: flex; /* Added */
-    justify-content: center; /* Added - centers horizontally */
-    align-items: center; /* Added - centers vertically */
-    flex-direction: column; /* Added - ensures content is aligned in a column */
-}
-
-.header {
-    background: linear-gradient(to bottom, #1C2D3D 0%, #243A4E 100%);
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 10;
-    border-bottom: 1px solid #14202b;
-    position: fixed; /* Changed to fixed to keep the header at the top */
-    box-sizing: border-box; /* Ensures padding is included in the width and height calculation */
-}
-
-.logo {
-    max-width: 420px;
-    max-height: 70px;
+    overflow: hidden;
+    font-family: 'Electrolize', sans-serif; /* Consistent font family */
+    color: white; /* Softer text color for better readability */
+    background: #e8e8e8; /* Light background for the overall page */
 }
 
 .container {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    padding-top: 0; /* Adjusted */
-    box-sizing: border-box;
-    margin-top: 0px; /* Adjust this value based on your header's actual height to ensure content starts below the header */
+    height: 100%;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.1); /* Subtle inner shadow for depth */
+    background: linear-gradient(to right, #95909f 0%, #777c9a 50%, #566596 100%);
 }
 
-/* Add this to your existing CSS */
-.title-container {
-    font-family: "Electrolize", sans-serif;
-    position: relative; /* Ensures absolute positioning within container */
-    height: 250px; /* Increased height to accommodate larger text */
-    width: 100%; /* Full width of container */
+.simple-divider {
+    width: 2px; /* Width of the vertical divider */
+    height: 200px; /* Height of the vertical divider */
+    background-color: #ccc; /* Color of the divider */
+    margin: 540px auto; /* Centers the divider horizontally */
+}
+
+
+.left, .right {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    overflow-y: auto;
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+.left {
+/* Lighter shade for left */
+    padding: 20px;
+}
+
+.right {
+    padding: 20px;
+}
+
+
+.left h1, .right h1,
+.left p, .right p {
+    transition: transform 0.3s ease, color 0.3s ease; /* Ensuring smooth transitions */
+}
+
+/* Hover effects on the headings within left and right sections */
+.left:hover h1, .right:hover h1 {
+    transform: scale(1.5); /* Subtle lift effect */
+    color: #fdb740; /* Golden color for a touch of elegance */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Soft shadow for depth */
+}
+
+/* Hover effects on the paragraphs within left and right sections */
+.left:hover p, .right:hover p {
+    transform: scale(1.25); /* Slightly less lift for paragraphs */
+    color: #ffffff; /* Brighten the text slightly on hover */
+}
+
+
+h1 {
+    font-size: 3em; /* Larger text for headers */
+    margin-bottom: 5px; /* Spacing between header and paragraph */
+}
+
+p {
+    font-size: 1.2em; /* Larger paragraph text */
+    max-width: 80%; /* Control the text width for better readability */
+    text-align: center; /* Centered text */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left, .right {
+        width: 100%;
+        height: 50%;
+    }
+}
+
+
+.logo-container {
+    position: absolute;
+    left: 5%; /* Position the left edge of the container at the center of the header */
+    top: 30px;
+    transform: translateX(-50%); /* Move the container back by half of its own width */
+
+    /* ... other styles ... */
+}
+
+.logo-container img {
+    max-width: 420px; /* Maximum width, the image won't stretch beyond this */
+    max-height: 100px; /* Adjust this value based on your header's height */
+    height: auto; /* Height adjusts automatically to maintain aspect ratio */
+    object-fit: contain; /* Ensures the image is scaled correctly within the set dimensions */
+
+}
+
+
+.profile-container {
+    position: absolute;
+    right: 30px; /* Adjust this value as needed to position it from the right edge of the viewport */
+    top: 30px; /* You can also adjust the vertical position if needed */
+}
+
+
+
+
+.profile-pic:hover {
+    transform: scale(1.05); /* Slightly larger on hover */
+    border-color: #fdb740; /* Change border color */
+}
+
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 70%;
+    cursor: pointer;
+    object-fit: cover;
+    border: 2px solid black;
+}
+
+.status-badge {
+    position: absolute;
+    bottom: 80px;
+    right: 0;
+    width: 20px; /* Size of the status badge */
+    height: 20px; /* Size of the status badge */
+    background-color: rgb(74, 240, 167);
+    border-radius: 50%; /* Makes the badge round */
+    border: 2px solid black; /* Makes the badge stand out */
+}
+
+/* Profile Pop-up Styles */
+.profile-popup {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 20; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.popup-content {
+    background-color: #14202B;
+    right: 0;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 430px; /* Width of the popup */
+    height: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    position: fixed;
+}
+
+.close-button {
+    color: #fff;
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    font-size: 60px;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.profile-header {
     text-align: center;
     color: white;
 }
 
-.welcome {
+.profile-picture {
+    width: 80px; /* Adjust as needed */
+    height: 80px; /* Adjust as needed */
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.profile-header h2 {
+    margin-top: 10px;
+    font-size: 1.5em; /* Adjust as needed */
+}
+
+.profile-header p {
+    font-size: 1em; /* Adjust as needed */
+    color: #fff;
+    margin-top: -15px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.profile-links a {
+    display: block;
+    color: white;
+    padding: 25px;
+    text-decoration: none;
+    border-top: 1px solid #2b3e50; /* Adjust color as needed */
+    font-weight: bold;
+}
+
+.profile-links a:hover {
+    background-color: #1a2a37; /* Adjust color as needed */
+}
+
+
+/* Keyframes for sliding out to the right */
+@keyframes slideOutRight {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+/* CSS for the popup when it's open */
+.popup-content.open {
+    animation: slideInRight 0.5s ease forwards;
+}
+
+/* CSS for the popup when it's closing */
+.popup-content.close {
+    animation: slideOutRight 0.5s ease forwards;
+}
+
+/* Keyframes for sliding in from the right */
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+
+.title-container {
     position: absolute;
-    width: 100%;
-    left: 0;
-    top: 30%; /* Reduced vertical distance */
-    transform: translateY(-50%);
-    font-size: 5em; /* Retaining the larger font size */
-    color: white; /* White color */
-    opacity: 0;
-    animation: fadeInEase 1.5s ease-in-out forwards;
-    text-decoration: underline; /* Adds underline to the text */
-    text-decoration-color: white; /* Optional: changes the color of the underline */
-    text-decoration-style: solid; /* Optional: can be 'solid', 'double', 'dotted', 'dashed', 'wavy' */
-    text-decoration-thickness: 2.5px; /* Adjusts the thickness of the underline */
-    text-underline-offset: 8px; /* Increases the gap between the text and the underline */
+    top: 2.5%; /* Set the vertical position */
+    left: 50%; /* Center the container horizontally */
+    transform: translateX(-50%); /* Align the center of the container with the center of the page */
+    width: 750px; /* Automatic width based on content size */
+    text-align: center;
+    font-size: 2em; /* Smaller font size */
+    font-weight: bold;
+    color: white;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.1); /* Set your desired background color */
+    padding: 30px 40px; /* Padding to control the size and space inside the container */
+    border-radius: 10px; /* Optional: rounded corners for aesthetic */
+}
+
+.welcome {
+    animation: fadeInEase 1.5s ease-in-out 0.5s forwards;
+    font-size: 3.2em;
 }
 
 .name {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    top: 60%; /* Reduced vertical distance to bring it closer to 'Welcome' */
-    transform: translateY(-50%);
-    font-size: 1.5em; /* Retained size for hierarchy */
-    color: white; /* Soft blue for contrast */
-    opacity: 0;
     animation: fadeInEase 1.5s ease-in-out 0.5s forwards;
+    color: #fdb740;
 }
 
 @keyframes fadeInEase {
@@ -97,102 +293,50 @@ body, html {
     }
 }
 
-.button-container {
-    display: flex; /* Keeps buttons in a row */
-    gap: 50px; /* Space between buttons */
-    justify-content: center; /* Center buttons horizontally */
-    flex-wrap: wrap; /* Allows wrapping for smaller screens */
-    position: relative; /* Needed for absolute positioning of the pseudo-element */
-    animation: slideUpFadeIn 0.7s ease-out forwards; /* Apply the animation to the container */
-}
 
-.button {
-    width: 30vw; /* Set the width */
-    height: 20vw; /* Make the height equal to the width to ensure a square */
-    border-radius: 0; /* This removes the rounded corners to make the shape a square */
-    overflow: hidden;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    border: 1px solid white;
-}
-
-.button:hover {
-    transform: scale(1.05); /* Makes the button slightly larger */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-.button img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-}
-
-#engage:hover, #play:hover {
-}
-
-.profile-container {
+.login-streak-container {
     position: absolute;
-    right: 27px; /* Adjust this value as needed to position it from the right edge of the viewport */
-    top: 20px; /* You can also adjust the vertical position if needed */
-}
-
-.profile-pic:hover {
-    transform: scale(1.05); /* Slightly larger on hover */
-    border-color: #fdb740; /* Change border color */
-}
-
-.profile-pic {
-    width: 50px;
-    height: 50px;
-    border-radius: 70%;
-    border: 3px solid #243A4E;
-    cursor: pointer;
-    object-fit: cover;
-}
-
-.dropdown-menu {
-    font-family: "Electrolize", sans-serif;
-    display: none;
-    position: absolute;
-    background-color: #14202B;
-    min-width: 160px;
-    z-index: 1;
-    right: 100%;
-    top: 100%;
-    transform: translateX(50%);
-    border: none;
-    border-radius: 6px;
-    margin-top: 33px;
-}
-
-.dropdown-menu .arrow {
-    position: absolute;
-    top: -10px; /* Position it above the dropdown */
-    left: 66.5%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 10px solid #14202B; /* Same color as your dropdown background */
-}
-
-
-.dropdown-menu a {
+    bottom: 0; /* Position near the bottom of the viewport */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Correctly center it */
+    text-align: center;
+    font-size: 1.5em;
     color: white;
-    padding: 13px 16px;
-    text-decoration: none;
-    display: block;
-    font-weight: bold;
+    background-color: rgba(44, 62, 80, 0.8); /* Dark background with some transparency */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 80%; /* Make the container wider to fit all days comfortably */
+    max-width: 600px; /* Limit maximum width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.dropdown-menu a:hover {
-    background-color: #fdb740;
-    color: black;
+.streak-days {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 20px; /* Spacing between title and days */
 }
+
+.day {
+    width: 40px; /* Size of each day box */
+    height: 40px;
+    background-color: #fff; /* Light background for days */
+    color: #333; /* Dark text color for contrast */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0%; /* Circular days */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    cursor: pointer; /* Pointer to indicate it's interactive */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transitions */
+}
+
+.day.crossed-off {
+    background-color: #2ecc71; /* Green background for completed days */
+    color: #fff; /* White text to stand out against the green */
+    text-decoration: line-through;
+}
+

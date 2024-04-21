@@ -30,35 +30,65 @@
     <!-- Your custom script -->
     <script type="module" src="user_landing_page_script.js"></script>
 </head>
-
 <body>
-    <header class="header">
-        <img src="S4S.png" alt="Your Logo" class="logo">
-
-                    <div class="profile-container">
-                <img src="https://www.meophamschool.org.uk/_site/images/design/logo.png" alt="Profile" class="profile-pic" onclick="toggleDropdown()"/>
-                <div class="dropdown-menu" id="dropdownMenu">
-            <div class="arrow"></div>
-                    <a href="edit_profile.html">Edit Profile</a>
-                    <a href="index.html">Log Out</a>
-                </div>
+    <div class="logo-container">
+                <img src="https://github.com/Strategy4Schools/Strategy4Schools/blob/main/S4S.png?raw=true" alt="logo">
             </div>
 
-    </header>
+             <div class="profile-container">
+                <img src="https://www.meophamschool.org.uk/_site/images/design/logo.png" alt="Profile" class="profile-pic"/> 
+                <div class="status-badge"></div>
 
-    <div class="title-container">
+                <div id="profilePopup" style="display: none;" class="profile-popup">
+    <div class="popup-content">
+        <span class="close-button" id="closePopupButton">&times;</span>       
+        <div class="profile-header">
+            <img class="profile-picture" src="link_to_your_profile_picture_image" alt="Profile Picture">
+            <h2>MagicPumpkin.8Fbi</h2>
+            <p>mikecock@gmail.com</p>
+        </div>
+        <div class="profile-links">
+            <a href="profile.html">My profile</a>
+            <a href="edit_profile.html">Edit profile</a>
+            <a href="account_settings.html">Account settings</a>
+            <a href="logout.html">Log out</a>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<div class="title-container">
         <div class="welcome">Welcome</div>
         <div class="name"></div>
     </div>
-        
+
+    <div class="login-streak-container">
+    <h2>Daily Login Streak</h2>
+    <div class="streak-days">
+        <div class="day" id="day1">1</div>
+        <div class="day" id="day2">2</div>
+        <div class="day" id="day3">3</div>
+        <div class="day" id="day4">4</div>
+        <div class="day" id="day5">5</div>
+        <div class="day" id="day6">6</div>
+        <div class="day" id="day7">7</div>
+    </div>
+</div>
+
+
     <div class="container">
-        <div class="button-container">
-            <a href="brain_engage_home.html" class="button" id="engage">
-                <img src="Brain%20Engage%20with%20desc.png" alt="Brain Engage">
-            </a>
-            <a href="brain_play_home.html" class="button" id="play">
-                <img src="Brain%20Play%20with%20desc.png" alt="Brain Play">
-            </a>
+           
+        <div class="left" onclick="window.location.href='https://example.com';">
+            <h1>Brain Engage</h1>
+            <p>Modernising Revision</p>
+        </div>
+
+        <div class="simple-divider"></div>
+
+        <div class="right" onclick="window.location.href='https://example.com';">
+            <h1>Brain Play</h1>
+            <p>Learning through play</p>
         </div>
     </div>
 
@@ -66,12 +96,7 @@
         function toggleDropdown() {
             var dropdown = document.getElementById("dropdownMenu");
             dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
-        }
-
-        function toggleInfo(infoId) {
-            var info = document.getElementById(infoId);
-            info.style.display = info.style.display === "block" ? "none" : "block";
-        }
+             }
     </script>
     
 </body>
