@@ -534,7 +534,7 @@ footer {
     left: 0;
     top: 80px;
     bottom: 0;
-    width: 60px; /* Original width for icons */
+    width: 70px; /* Original width for icons */
     transition: width 0.5s ease;
     overflow-x: hidden;
     z-index: 1000;
@@ -703,5 +703,9 @@ footer {
     height: 1px; /* Thickness of the line */
     background-color: white; /* Color of the line */
     margin: 50px 0; /* Increase vertical space around the divider */
+}
+
+.menu-button .nav-menu-icon:hover {
+    filter: brightness(0.5); /* Example effect to darken the icon */
 }
 

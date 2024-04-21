@@ -556,8 +556,6 @@ footer {
     transition: background-color 0.3s ease;
 }
 
-
-
 /* Icon styles */
 .dropdown-icon {
     flex-shrink: 0; /* Prevents the icon from resizing */
@@ -580,7 +578,6 @@ footer {
 /* Show text on sidebar hover */
 .nav-menu-dropdown:hover .nav-text {
     display: block;
-
 }
 
 .dropdown-link:hover .nav-text {
@@ -643,9 +640,7 @@ footer {
     width: 20px; /* Arrow width */
     height: 20px; /* Arrow height */
 }
-
-
-
+    
 /* Left arrow facing left */
 #left-arrow {
     left: -10px;
@@ -705,3 +700,29 @@ footer {
     margin: 50px 0; /* Increase vertical space around the divider */
 }
 
+.menu-button .nav-menu-icon:hover {
+    filter: brightness(0.5); /* Example effect to darken the icon */
+}
+
+/* Customizes the whole scrollbar */
+::-webkit-scrollbar {
+    width: 12px;  /* Scrollbar width */
+}
+
+/* Customizes the draggable part of the scrollbar */
+::-webkit-scrollbar-thumb {
+    background-color: #2D4A61; /* Thumb color */
+    border-radius: 6px; /* Rounded corners for the thumb */
+    border: 3px solid #243A4E; /* Creates a border around the thumb */
+}
+
+/* Customizes the part of the scrollbar where the thumb isn't */
+::-webkit-scrollbar-track {
+    background: #1C2D3D; /* Track color */
+    border-radius: 6; /* Optional: could set to '6px' for consistency with thumb */
+}
+
+/* Adding hover effects to the scrollbar thumb */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #364E70; /* Thumb hover color */
+}

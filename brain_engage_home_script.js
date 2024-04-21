@@ -137,7 +137,7 @@ function toggleNavMenu() {
         menuButtonIcon.src = 'https://github.com/Strategy4Schools/Strategy4Schools/blob/main/hamburger%20closed%20menu%20icon.png?raw=true'; // Closed icon
     } else {
         // Sidebar is closed, so we open it and change the icon to the 'open' icon
-        navMenu.style.display = "block";
+        navMenu.style.display = "hide";
         menuButtonIcon.src = 'https://github.com/Strategy4Schools/Strategy4Schools/blob/main/hamburger%20open%20menu%20icon.png?raw=true'; // Open icon
     }
 }

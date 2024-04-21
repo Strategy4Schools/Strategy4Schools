@@ -1,0 +1,24 @@
+{
+    "cards": [
+        {
+            "id": 1,
+            "type": "word",
+            "content": "Apple"
+        },
+        {
+            "id": 1,
+            "type": "definition",
+            "content": "A fruit"
+        },
+        {
+            "id": 2,
+            "type": "word",
+            "content": "Blue"
+        },
+        {
+            "id": 2,
+            "type": "definition",
+            "content": "A color"
+        }
+    ]
+}

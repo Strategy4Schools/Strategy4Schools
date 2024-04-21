@@ -1,0 +1,60 @@
+body {
+    font-family: "Electrolize", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Change from 'center' to 'flex-start' */
+    height: 100vh;
+    background-color: #243A4E;
+    margin: 0;
+    color: white;
+    padding-top: 10px;
+    background: linear-gradient(to bottom, #243A4E 0%, #2D4A61 50%, #364E70 100%);
+    overflow: hidden;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 200px); /* Spacing for larger cards */
+    gap: 20px; /* Larger gap for better layout and visibility */
+    margin-top: 50px; /* Added margin to avoid overlap with the title */
+}
+
+.card {
+    width: 200px;
+    height: 200px;
+    background-color: #f3f3f3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 18px;
+    color: #333;
+    border: 3px solid #ddd;
+    transition: background-color 0.3s, transform 0.3s;
+    padding: 15px;
+    text-align: center;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.card:hover {
+    background-color: #e0e0e0; /* Slightly darker shade on hover */
+}
+
+.card.flip {
+    background-color: #b0b0b0; /* Even darker color when selected (flipped) */
+    color: #333;
+}
+
+.card.correct {
+    background-color: #4CAF50; /* Green for correct matches */
+    color: white;
+}
+
+.card.wrong {
+    background-color: #f44336; /* Red for incorrect matches */
+    color: white;
+}
+
